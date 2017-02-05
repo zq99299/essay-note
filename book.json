@@ -1,0 +1,47 @@
+{
+  "title": "essay-note",
+  "description": "随笔记未分类，也就是大杂烩的一本笔记",
+  "language": "zh-hans",
+   "plugins": [
+       "splitter",
+       "-github",
+       "prism",
+       "-highlight",
+       "-tbfed-pagefooter",
+       "expandable-chapters",
+       "anchors",
+       "anchor-navigation-ex",
+       "-tbfed-pagefooter",
+       "advanced-emoji",
+	   "bootstrap-callout"
+    ],
+  "pluginsConfig": {
+    "prism": {
+       "css": [
+         "prismjs/themes/prism-okaidia.css"
+       ]
+    },
+    "disqus": {
+      "shortName": "gitbook-guide"
+    },
+    "github": {
+      "url": "https://github.com/zq99299/gitbook-guide"
+    },
+    "github-buttons": {
+      "repo": "zq99299/gitbook-guide",
+      "types": [
+        "star",
+        "watch"
+      ],
+      "size": "large"
+    },
+    "tbfed-pagefooter": {
+        "copyright":"Copyright &copy mrcode.cn",
+        "modify_label": "该文件修订时间：",
+        "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+	"anchor-navigation-ex":{
+		"isRewritePageTitle":true
+	}
+  }
+} 
