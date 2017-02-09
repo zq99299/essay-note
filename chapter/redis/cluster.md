@@ -20,6 +20,7 @@ yum install rubygems
 ## 安装redis cluster 和 配置config  
 1. gem install redis
 2. 下载redis指定版本，集群模式（redis3.0 以上版本）
+
 ```bash
 rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/jemalloc-3.6.0-1.el6.x86_64.rpm
 rpm -ivh ftp://fr2.rpmfind.net/linux/remi/enterprise/6/remi/x86_64/redis-3.2.3-1.el6.remi.x86_64.rpm
@@ -27,6 +28,7 @@ rpm -ivh ftp://fr2.rpmfind.net/linux/remi/enterprise/6/remi/x86_64/redis-3.2.3-1
 wget http://download.redis.io/releases/redis-3.2.3.tar.gz 
 cp redis-3.2.3/src/redis-trib.rb /usr/local/bin/redis-trib 
 ```
+
 共三台机器；每台机器装两个redis实例
 
 ### 准备config文件
