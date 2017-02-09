@@ -7,11 +7,9 @@
        "-github",
        "prism",
        "-highlight",
-       "-tbfed-pagefooter",
        "expandable-chapters",
-       "anchors",
+       "page-footer-ex",
        "anchor-navigation-ex",
-       "-tbfed-pagefooter",
        "advanced-emoji",
 	   "bootstrap-callout"
     ],
@@ -20,25 +18,6 @@
        "css": [
          "prismjs/themes/prism-okaidia.css"
        ]
-    },
-    "disqus": {
-      "shortName": "gitbook-guide"
-    },
-    "github": {
-      "url": "https://github.com/zq99299/gitbook-guide"
-    },
-    "github-buttons": {
-      "repo": "zq99299/gitbook-guide",
-      "types": [
-        "star",
-        "watch"
-      ],
-      "size": "large"
-    },
-    "tbfed-pagefooter": {
-        "copyright":"Copyright &copy mrcode.cn",
-        "modify_label": "该文件修订时间：",
-        "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
 	"anchor-navigation-ex":{
 		"isRewritePageTitle":true
