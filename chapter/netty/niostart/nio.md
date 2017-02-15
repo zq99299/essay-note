@@ -32,4 +32,6 @@
    简单来说：`Selector`会不断轮训注册在其上的`Channel`，如果某个`Channel`上面发送读或则写事件，这个`Channel`就处于就绪状态，会被`Selector`轮询出来，然后通过`SelectorKey`可以获取就绪`Channel`的集合，进行后续的I/O操作
    
 - 一个多路复用`Selector`可同时轮训多个`Channel`.JDK使用`eplll()`实现`select`，所以可以用一个线程负责`Selector`的轮训，就可以接入成千上万的客户端。   
-    
+
+## 服务端通信序列图
+        
