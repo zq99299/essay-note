@@ -23,3 +23,10 @@
 前三层几乎上都是接口定义`Channel`功能。可分为两大类：
 - SelectableChannel ： 网络读写
 - FileChannel : 文件读写
+
+## 多路复用器 Selector
+多路复用是NIO的基础，非常重要！
+
+- 提供选择已经就绪的任务的能力
+    简单来说：`Selector`会不断轮训注册在其上的`Channel`，如果某个`Channel`上面发送读或则写事件，这个`Channel`就处于就绪状态，会被`Selector`轮询出来，然后通过`SelectorKey`可以获取就绪`Channel`的集合，进行后续的I/O操作
+    
