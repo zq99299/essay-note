@@ -11,7 +11,7 @@
   * [windows](chapter/redis/windows.md)
   * [集群](chapter/redis/cluster.md)
 * [Netty](chapter/netty/README.md)
-  * [Netty](chapter/netty/传统BIO编程.md)
+  * [传统BIO编程](chapter/netty/传统BIO编程.md)
 
   
   
