@@ -12,3 +12,14 @@
 ![](/assets/image/netty-niostart-nio-buffer.jpg)
 
 除了`ByteBuffer`外，其他的实例都有完全一样的操作。`ByteBuffer`方便网络的读写
+
+## 通道 Channel
+`Channel` 像自来水管一样，网络数据通过`Channel`读取和写入
+- 通道是双向的（流是单向的且必须是InputStream和OutputStream的子类），读写可同时进行
+- 全双工的；能更好的映射系统API,如UNIX网络模型中，底层操作系统的通道都是全双工的。同时支持读写操作。
+
+![](/assets/netty-niostart-nio-channel.jpg)
+
+前三层几乎上都是接口定义`Channel`功能。可分为两大类：
+- SelectableChannel ： 网络读写
+- FileChannel : 文件读写
