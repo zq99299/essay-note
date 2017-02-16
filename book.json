@@ -12,7 +12,7 @@
        "anchor-navigation-ex",
        "advanced-emoji",
        "bootstrap-callout",
-       "toggle2"
+       "expandable-chapters-small"
     ],
   "pluginsConfig": {
     "prism": {
