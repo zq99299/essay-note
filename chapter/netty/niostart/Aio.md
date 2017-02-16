@@ -218,3 +218,7 @@ class TimeClientHandler implements Runnable, CompletionHandler<Void, TimeClientH
 }
 
 ```
+运行后，能正常通信，但是还是不能用web浏览器直接访问。不能接收消息，但是服务端能接收到请求
+
+# 总结
+从打印的日志来看，回调函数是通过线程回调的。所以说，新的异步大量基于回调函数，而每个客户端的链接通道是通过jdk底层的线程框架来运行的。
