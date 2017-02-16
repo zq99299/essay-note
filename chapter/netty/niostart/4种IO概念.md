@@ -23,3 +23,9 @@ JDKNIO使用的是多路复用器，核心是通过`Selector`来轮训注册在�
 | 调试难度      | 简单    | 简单    | 复杂     | 复杂
 | 可靠性        | 非常差  | 差      | 高      | 高   
 | 吞吐量        | 底      | 中      | 高      | 高
+
+# 不选择Java原生NIO编程的原因
+1. nio类型和api繁杂。`Selector`,`ServcrSocketChannel`,`SocketChannel`,`ByteBuffer`等
+2. 需要熟悉Java多线程,网络编程等
+3. 重连、网络闪断、半包读写、失败缓存、网络拥塞、异常码流处理等问题，都需要自己解决
+4. JDK NIO bug。epoll bug。导致Selector空轮（CPU上升到100%）询等问题。
