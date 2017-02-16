@@ -7,11 +7,12 @@
        "-github",
        "prism",
        "-highlight",
-       "expandable-chapters",
+       "-expandable-chapters",
        "page-footer-ex",
        "anchor-navigation-ex",
        "advanced-emoji",
-       "bootstrap-callout"
+       "bootstrap-callout",
+       "toggle2"
     ],
   "pluginsConfig": {
     "prism": {
