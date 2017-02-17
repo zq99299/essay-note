@@ -23,5 +23,30 @@
 4. 更复杂的应用层协议。
 
 # 不考虑粘包/拆包案例
+直接拿上面的入门例子改造。改造思路很简单。
+1. 在服务端统计下 读取的次数
+2. 在客户端连续发送100次
+```java
 
+        /**
+         * 客户端和服务端TCP链路建立成功之后，该方法被调用
+         * @param ctx
+         * @throws Exception
+         */
+        @Override
+        public void channelActive(ChannelHandlerContext ctx) throws Exception {
+            // 主要更改这里。连续发送100条消息
+            for (int i = 0; i < 100; i++) {
+                firstMessage = Unpooled.buffer(req.length);
+                firstMessage.writeBytes(req);
+                ctx.writeAndFlush(firstMessage);
+            }
+        }
+```
+
+运行之后你会发现：（每个人的机器上测试的不同）
+1. 服务端只接收了5次，且每一次的信息 是好几条的合集，而且还有不完整的句子（中途被截断那种）
+2. 客户端只接收了一次。
+
+明显的出现了问题。我们需要的是发送100次就接收100次
 # 使用Netty解决半包问题
