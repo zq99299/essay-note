@@ -26,7 +26,7 @@
     * [NIO](chapter/netty/niostart/nio.md)
     * [AIO](chapter/netty/niostart/Aio.md)
     * [4种IO概念](chapter/netty/niostart/4种IO概念.md)
-  * [概念入门](chapter/netty/nettystart/README.md)
+  * [Netty入门](chapter/netty/nettystart/README.md)
     * [Nio入门](chapter/netty/niostart/README.md)
     * [入门应用](chapter/netty/nettystart/入门应用.md)
     * [TCP粘包/拆包](chapter/netty/nettystart/TCP粘包_拆包.md)
