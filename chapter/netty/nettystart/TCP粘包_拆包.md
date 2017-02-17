@@ -13,7 +13,7 @@
 1. 应用程序write写入的自己大小大于套接接口发送缓冲区大小
 2. 进行MSS大小的TCP分段
 3. 以太网的帧 `payload`大于`MTU`进行IP分片
-
+![](/assets/netty-niostart-nio-粘包拆包原因.jpg)
 
 
 # 不考虑粘包/拆包案例
