@@ -19,8 +19,11 @@
          "prismjs/themes/prism-okaidia.css"
        ]
     },
-	"anchor-navigation-ex":{
-		"isRewritePageTitle":true
-	}
+    "anchor-navigation-ex":{
+	"isRewritePageTitle":true
+    },
+    "theme-default": {
+       "showLevel": true
+    }
   }
 } 
