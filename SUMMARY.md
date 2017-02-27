@@ -30,5 +30,11 @@
     * [入门应用](chapter/netty/nettystart/入门应用.md)
     * [TCP粘包/拆包](chapter/netty/nettystart/TCP粘包_拆包.md)
     * [分隔符和定长解码器](chapter/netty/nettystart/分隔符和定长解码器.md)  
+ * [终极篇-编解码开发指南](chapter/netty/middleCodec/README.md)   
+    * [编解码技术](chapter/netty/middleCodec/编解码技术.md)
+    * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
+    * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
+    * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
+ 
     
 ---
