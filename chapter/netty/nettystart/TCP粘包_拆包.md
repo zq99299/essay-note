@@ -56,3 +56,90 @@
 
 // 刚才有粘包问题的加上换上符号结果也是一样的。
 ```
+
+
+```java
+public class TimeSrver {
+    private Logger log = LoggerFactory.getLogger(getClass());
+
+    public static void main(String[] args) throws InterruptedException {
+        int port = 8086;
+        new TimeSrver().bind(port);
+    }
+
+    public void bind(int port) throws InterruptedException {
+        // 配置服务端的NIO线程组
+        // 包含一组NIO线程，专门用于网络事件的处理
+        // 实际上他们就是Reactor线程组。
+
+        //用于接收客户端的链接
+        NioEventLoopGroup bossGroup = new NioEventLoopGroup();
+        // 用于SocketChannel的网络读写
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        // 引导配置
+        ServerBootstrap starp = new ServerBootstrap();
+        try {
+            starp.group(bossGroup, workerGroup)
+                    .channel(NioServerSocketChannel.class) // 指定通道类型
+                    .option(ChannelOption.SO_BACKLOG, 1024) // 缓存大小？
+                    .childHandler(new ChildChannelHandler()); // 绑定处理器
+            // 绑定端口，同步等待成功。 ChannelFuture： 类似Jdk.Future, 用于异步操作的通知回调
+            ChannelFuture channelFuture = starp.bind(port).sync();
+            // 等待服务器监听端口关闭。该方法会阻塞，链路关闭后，会被唤醒
+            channelFuture.channel().closeFuture().sync();
+        } finally {
+            //优雅退出，释放线程池资源
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
+        }
+    }
+
+    private class ChildChannelHandler extends ChannelInitializer<SocketChannel> {
+
+        @Override
+        protected void initChannel(SocketChannel ch) throws Exception {
+            // 增加解码器
+            ch.pipeline().addLast(new LineBasedFrameDecoder(1024));
+            ch.pipeline().addLast(new StringDecoder());
+            ch.pipeline().addLast(new TimeServerHanler());
+        }
+    }
+
+    private int count = 0;
+
+    public int getCount() {
+        return count;
+    }
+
+    private class TimeServerHanler extends ChannelHandlerAdapter {
+        @Override
+        public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+            count++;
+            log.info("== 请求消息：{}", msg);
+
+            ByteBuf resp = Unpooled.copiedBuffer(("current time" + new Date().toString() + System.getProperty("line.separator")).getBytes());
+            ctx.write(resp); // 异步发送应答
+            log.error("== 接收次数：" + count);
+        }
+
+        @Override
+        public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+            // 将消息发送队列中的消息写入到 SocketChannel中发送给对方
+            // 性能考虑，放置频繁唤醒Selector进行消息发送。
+            // Netty的方法并不直接将消息写入 SocketChannel中
+            // 调用write只是把消息放到了发送缓冲数组中。
+            // 通过flush方法将缓冲区中的消息全部写入到SocketChannel中
+            ctx.flush();
+            // 但是通过实际测试，在请求先进来的时候，会先执行该方法是什么原因呢？
+        }
+
+        @Override
+        public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+            // 发生异常，释放相关句柄资源
+            ctx.close();
+            cause.printStackTrace();
+        }
+    }
+}
+
+````
