@@ -82,3 +82,60 @@ $ protoc --java_out=./ ./SubscribeResp.proto
 ```
 
 ## 编码解码开发
+写一个测试用例，怎么编码解码。
+```java
+public class SubscribeReqProtoTest {
+    public static void main(String[] args) throws InvalidProtocolBufferException {
+        SubscribeReqProto.SubscribeReq req = createSubscribeReq();
+        System.out.println("编码前：" + req.toString());
+
+        byte[] bodys = encode(req);
+        System.out.println("编码后:" + bodys.length);
+        SubscribeReqProto.SubscribeReq afterReq = decode(bodys);
+        System.out.println("解码后：" + afterReq.toString());
+        System.out.println("是否相等：" + (req == afterReq));
+        System.out.println("是否相等：" + (req.equals(afterReq)));
+
+        String str = req.getSubReqId() + req.getUserName() + req.getProductName() + req.getAddress() + "userNamesubReqIdproductNameaddress";
+        System.out.println("对比下自己把所有字符相加得到的字节大小：" + str.getBytes().length);
+
+    }
+
+    private static SubscribeReqProto.SubscribeReq decode(byte[] body) throws InvalidProtocolBufferException {
+        return SubscribeReqProto.SubscribeReq.parseFrom(body);
+    }
+
+    private static byte[] encode(SubscribeReqProto.SubscribeReq req) {
+        return req.toByteArray();
+    }
+
+    private static SubscribeReqProto.SubscribeReq createSubscribeReq() {
+        SubscribeReqProto.SubscribeReq.Builder builder = SubscribeReqProto.SubscribeReq.newBuilder();
+        builder.setSubReqId(1);
+        builder.setUserName("张小凡");
+        builder.setProductName("Star");
+        builder.setAddress("青云门");
+        return builder.build();
+    }
+}
+```
+
+输出：
+```java
+编码前：subReqId: 1
+userName: "\345\274\240\345\260\217\345\207\241"
+productName: "Star"
+address: "\351\235\222\344\272\221\351\227\250"
+
+编码后:30
+解码后：subReqId: 1
+userName: "\345\274\240\345\260\217\345\207\241"
+productName: "Star"
+address: "\351\235\222\344\272\221\351\227\250"
+
+是否相等：false
+是否相等：true
+对比下自己把所有字符相加得到的字节大小：57
+```
+
+这里可以看到编码后的大小才30，而我们自己手动把所有的值和字段名称放在一起直接变成57. 虽然不知道为什么，但是感觉好厉害的样子。 因为要保留类型等信息。
