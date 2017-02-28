@@ -209,9 +209,9 @@ public class UserInfo {
          if (!$3 && $1.trySkipNil()) {
          return null;
          }
-         messagepack.UserInfo _$$_t;
+         messagepack.UserInfo _(双$)_t;
          if ($2 == null) {
-         _$$_t = new messagepack.UserInfo();
+         _(双$)_t = new messagepack.UserInfo();
          } else {
          _$$_t = (messagepack.UserInfo) $2;
          }
