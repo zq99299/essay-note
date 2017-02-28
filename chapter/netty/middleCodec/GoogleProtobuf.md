@@ -13,3 +13,18 @@
 - 开发支持`Protobuf`的`Netty`服务端
 - 开发支持`Protobuf`的`Netty`客户端
 - 运行基于`Netty`开发的`Protobuf`程序
+
+# `Protobuf`的入门
+## 开发环境
+
+在以下网站
+https://github.com/google/protobuf/releases/tag/v3.0.0
+中找到 `protoc-3.0.0-win32.zip`,解压之后：会得到`bin\protoc.exe`
+
+通过该命令生成类；
+
+## 编写一个.protoc文件
+Idea中有相应的插件：
+Plugin homepage
+http://github.com/nnmatveev/idea-plugin-protobuf
+和 Google Protobuf
