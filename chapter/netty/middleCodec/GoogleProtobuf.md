@@ -71,3 +71,12 @@ $ protoc --java_out=./ ./SubscribeResp.proto
 语法是：$ protoc --java_out=输出目录 具体的.proto文件
 
 ```
+
+生成完类之后，拷贝到相对应的项目中的包路径下。
+却发现报错了。缺少依赖。
+```groovy
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.2.0'
+    
+这里同样也引用v3版本的jar。因为使用v3版本的编译器生成的，我发现如果引用v2版本的，还是会报错。
+```
