@@ -11,7 +11,8 @@
        "page-footer-ex",
        "anchor-navigation-ex",
        "advanced-emoji",
-       "bootstrap-callout"
+       "bootstrap-callout",
+       "mermaid"
     ],
   "pluginsConfig": {
     "prism": {
