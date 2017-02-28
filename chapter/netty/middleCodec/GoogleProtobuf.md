@@ -80,3 +80,5 @@ $ protoc --java_out=./ ./SubscribeResp.proto
     
 这里同样也引用v3版本的jar。因为使用v3版本的编译器生成的，我发现如果引用v2版本的，还是会报错。
 ```
+
+## 编码解码开发
