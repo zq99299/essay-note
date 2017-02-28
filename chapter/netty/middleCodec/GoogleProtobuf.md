@@ -23,8 +23,13 @@ https://github.com/google/protobuf/releases/tag/v3.0.0
 
 通过该命令生成类；
 
+`注:` 需要将`protoc.exe` 所在目录路径添加到path系统环境变量中，方便在任何地方都能访问`protoc`命令
+
 ## 编写一个.protoc文件
 Idea中有相应的插件：
 Plugin homepage
 http://github.com/nnmatveev/idea-plugin-protobuf
 和 Google Protobuf
+
+插件也不知道怎么使用，但是有语法高亮，却没有语法提示
+
