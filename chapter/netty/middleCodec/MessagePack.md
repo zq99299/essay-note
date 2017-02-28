@@ -13,3 +13,10 @@
 * 序列化之后的码流小
 
 ## API介绍
+{% mermaid %}
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+{% endmermaid %}
