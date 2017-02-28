@@ -33,3 +33,41 @@ http://github.com/nnmatveev/idea-plugin-protobuf
 
 插件也不知道怎么使用，但是有语法高亮，却没有语法提示
 
+**SubscribeReq.proto**
+
+```java
+syntax = "proto2"; // 2和3的语法感觉很多不一样吧。如 required 在3中不允许。还是先按照书上使用2的语法(因为之前下载的3的命令版本所以这里不写语法的话，会提示你写上语法版本)
+package netty;
+option java_package = "cn.mrcode.d20170227nettycodec.protobuf";
+option java_outer_classname = "SubscribeReqProto"; // 这里的类名不能和 定义的名称一致
+
+message SubscribeReq {
+    required int32 subReqId = 1;
+    required string userName = 2;
+    required string productName = 3;
+    required string address = 4;
+}
+```
+
+**SubscribeResp.proto**
+```java
+syntax = "proto2"; 
+package netty;
+option java_package = "cn.mrcode.d20170227nettycodec.protobuf";
+option java_outer_classname = "SubscribeRespProto";
+
+message SubscribeResp {
+    required int32 subReqId = 1;
+    required int32 respCode = 2;
+    required string desc = 3;
+}
+```
+编译命令：
+```bash
+$ protoc --java_out=./ ./SubscribeReq.proto
+$ protoc --java_out=./ ./SubscribeResp.proto
+
+
+语法是：$ protoc --java_out=输出目录 具体的.proto文件
+
+```
