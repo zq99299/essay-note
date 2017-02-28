@@ -12,7 +12,7 @@
        "anchor-navigation-ex",
        "advanced-emoji",
        "bootstrap-callout",
-       "mermaid"
+       "-mermaid"
     ],
   "pluginsConfig": {
     "prism": {
