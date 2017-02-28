@@ -241,3 +241,22 @@ public class UserInfo {
     }
 }
 ```
+
+## 粘包/拆包解决
+这里使用常用的，在消息头中增加报文长度策略：使用netty自带的`LengthFieldBasedFrameDecoder`解码器和`LengthFieldPrepender`编码处理器；
+
+客户端和服务端的配置都是一样的。都需要增加
+```java
+ChannelPipeline pipeline = ch.pipeline();
+// 这里使用在请求里增加 消息长度解决方案
+
+// 在自定义解码之前增加处理半包的解码器
+pipeline.addLast("frame decoder", new LengthFieldBasedFrameDecoder(65535,0,2,0,2));
+// 这里接收到的就永远是整包消息了
+pipeline.addLast("msgpack decoder", new MsgpackDecoder());
+// 编码之前增加 两个字节的消息长度，
+pipeline.addLast("frame encoder",new LengthFieldPrepender(2));
+pipeline.addLast("msgpack encoder", new MsgpackEncoder());
+pipeline.addLast(new EchoServerHandler());
+
+```
