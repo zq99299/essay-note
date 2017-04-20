@@ -39,3 +39,7 @@
     
 ---
 * [GIT](chapter/git/README.md)
+
+---
+* [IDEA](chapter/idea/README.md)
+
