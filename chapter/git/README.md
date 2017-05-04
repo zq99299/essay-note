@@ -15,7 +15,7 @@ git config --system core.longpaths true
 
 
 ### 解决问题
-解决问题的思路如下：
+解决问题的思路如下：（以下思路还需要测试是否有效）
 
 1. 本地回退到某一个提交点
 2. 强制push到服务端
@@ -23,7 +23,7 @@ git config --system core.longpaths true
 
 命令如下：
 
-1. checkout 某一个版本，或则reset到某一个版本（具体方案以后再自测解决）
+1. checkout 某一个版本，或则reset到某一个版本
 2. git push -u -f origin master （某些仓库有强推权限需要打开）
 3. 让本地代码版本与服务器版本更新到一致
     1. git fetch origin master
