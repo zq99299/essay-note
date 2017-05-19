@@ -45,7 +45,7 @@
 
 ---
 * [Mysql](chapter/mysql/README.md)
-  * [Mysql](chapter/mysql/导出导入.md)
+  * [导出导入](chapter/mysql/导出导入.md)
 
 
 
