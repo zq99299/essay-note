@@ -39,6 +39,7 @@
     
 ---
 * [GIT](chapter/git/README.md)
+  - [GIT远程仓库回退](chapter/git/远程仓库回退.md)
 
 ---
 * [IDEA](chapter/idea/README.md)
