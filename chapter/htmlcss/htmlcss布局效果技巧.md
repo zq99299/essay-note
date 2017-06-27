@@ -10,3 +10,6 @@ text-indent 属性规定文本块中首行文本的缩进。
 ```css
 text-indent
 ``` 
+
+## float
+> 历史：设计的初衷是为了文字图文环绕效果
