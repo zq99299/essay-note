@@ -25,7 +25,7 @@ text-indent
 2. bfc
 
 ```css
-// ie8 以上
+// ie8 以上 .clearfix 是塌陷的元素
 .clearfix:after{content:'';display:block;height:0;overflow:hidden;clear:both}
 
 // ie6/7
