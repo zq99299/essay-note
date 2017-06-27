@@ -41,5 +41,8 @@ text-indent
     border 1px solid
     &:after{content:'';display:block;height:0;overflow:hidden;clear:both}
     img
-      float left      
+      float left   
+
+比如上面的示例，给div加了边框，不加任何其他css的时候，能看到图片在边框里面，这个时候div的高度被图片撑高的。
+如果给图片加了浮动，那么父元素div的高度就塌陷了。使用清除浮动的方式，让高度回来。                  
 ```
