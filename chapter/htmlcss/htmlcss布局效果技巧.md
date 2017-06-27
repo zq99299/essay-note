@@ -22,3 +22,11 @@ text-indent
 ### 如何降低父元素高度塌陷的影响
 1. clear
 2. bfc
+
+```css
+// ie8 以上
+.clearfix:after{content:'';display:block;height:0;overflow:hidden;clear:both}
+
+// ie6/7
+.clearfix {*zoom:1;}
+```
