@@ -31,3 +31,16 @@ text-indent
 // ie6/7
 .clearfix {*zoom:1;}
 ```
+
+```css
+<div class="test-float">
+  <img src="~@/assets/logo.png"/>
+</div>
+
+.test-float{
+    border 1px solid
+    &:after{content:'';display:block;height:0;overflow:hidden;clear:both}
+    img
+      float left 
+ }       
+```
