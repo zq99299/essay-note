@@ -37,10 +37,9 @@ text-indent
   <img src="~@/assets/logo.png"/>
 </div>
 
-.test-float{
+  .test-float
     border 1px solid
     &:after{content:'';display:block;height:0;overflow:hidden;clear:both}
     img
-      float left 
- }       
+      float left      
 ```
