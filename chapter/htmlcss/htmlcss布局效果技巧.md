@@ -27,6 +27,8 @@ text-indent
 ```css
 // ie8 以上 .clearfix 是塌陷的元素
 .clearfix:after{content:'';display:block;height:0;overflow:hidden;clear:both}
+// 该方法也是可以的，代码更简洁了
+.clearfix:after{content:'';display:table;clear:both}
 
 // ie6/7
 .clearfix {*zoom:1;}
