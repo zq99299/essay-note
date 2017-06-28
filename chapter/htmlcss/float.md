@@ -98,8 +98,7 @@ css
     margin-right: auto;
     border 1px solid royalblue
     padding 20px
-    clear both
-    img {
+    .photo {
       float left
       width 100px
       margin-right: 20px;
