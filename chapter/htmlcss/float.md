@@ -158,7 +158,7 @@ css
   }
 ```
 
-上面有两个示例，一个使用 `display: table-cell;`,触发bfc效果，清除浮动的影响。让文字
+上面有两个示例，一个使用 `display: table-cell;`,触发bfc效果，清除浮动的影响。但是不兼容ie8以下
 一个使用`overflow: hidden`清除了浮动，让div始终包裹边框，但是内容还是会包裹头像，所以结合计算头像所占用的宽度，使用`margin-left`隔离。
 
 
