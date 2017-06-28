@@ -76,7 +76,7 @@ text-align:center(中间标题 )
 ![](/assets/image/htmlcss/float/文字环绕单侧固定流体布局.png)
 ```html
     <div class="webolist">
-      <img src="~@/assets/logo.png"/>
+      <img src="~@/assets/logo.png" class="photo"/>
       <div class="right">
         <p class="mib_sms">
           <a title="徐若瑄VIVIAN" href="#">徐若瑄VIVIAN<i title="新浪认证" class="mib_vip"></i></a>
@@ -89,7 +89,6 @@ text-align:center(中间标题 )
         </div>
       </div>
     </div>
-  </div>  
 ```
 css
 ```css
