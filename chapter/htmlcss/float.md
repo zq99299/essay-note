@@ -74,5 +74,42 @@ text-align:center(中间标题 )
 
 ### 文字环绕衍生 - 单侧固定
 ![](/assets/image/htmlcss/float/文字环绕单侧固定流体布局.png)
+```html
+    <div class="webolist">
+      <img src="~@/assets/logo.png"/>
+      <div class="right">
+        <p class="mib_sms">
+          <a title="徐若瑄VIVIAN" href="#">徐若瑄VIVIAN<i title="新浪认证" class="mib_vip"></i></a>
+          ：一個人的晚餐！茶泡飯！飯、飯、飯… 今日不減肥，先把病治好再說！ 我認真吃完這，燒就會退了吧？！ 開動啦~~~~~~~~~~~~~~~~~~
+        </p>
+        <div class="feed_img">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+        </div>
+      </div>
+    </div>
+  </div>  
+```
+css
+```css
+  .webolist {
+    width 600px
+    margin-left: auto;
+    margin-right: auto;
+    border 1px solid royalblue
+    padding 20px
+    clear both
+    img {
+      float left
+      width 100px
+      margin-right: 20px;
+    }
+    .right {
+      display: table-cell;
+      .mib_sms { line-height: 22px; padding-bottom: 6px; font-size: 14px; }
+    }
+  }
+```
 
 
