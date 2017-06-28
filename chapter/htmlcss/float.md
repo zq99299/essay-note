@@ -75,12 +75,14 @@ text-align:center(中间标题 )
 ### 文字环绕衍生 - 单侧固定
 ![](/assets/image/htmlcss/float/文字环绕单侧固定流体布局.png)
 ```html
+  <div>
+    <h5>文字环绕衍生 - 单侧固定-微博列表</h5>
     <div class="webolist">
       <img src="~@/assets/logo.png" class="photo"/>
       <div class="right">
         <p class="mib_sms">
           <a title="徐若瑄VIVIAN" href="#">徐若瑄VIVIAN<i title="新浪认证" class="mib_vip"></i></a>
-          ：一個人的晚餐！茶泡飯！飯、飯、飯… 今日不減肥，先把病治好再說！ 我認真吃完這，燒就會退了吧？！ 開動啦~~~~~~~~~~~~~~~~~~
+          ：一個人的晚餐！茶泡飯！飯 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡、飯、飯… 今日不減肥，先把病治好再說！ 我認真吃完這，燒就會退了吧？！ 開動啦~~~~~~~~~~~~~~~~~~
         </p>
         <div class="feed_img">
           <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
@@ -89,6 +91,21 @@ text-align:center(中间标题 )
         </div>
       </div>
     </div>
+    <div class="webolist2">
+      <img src="~@/assets/logo.png" class="photo"/>
+      <div class="right">
+        <p class="mib_sms">
+          <a title="徐若瑄VIVIAN" href="#">徐若瑄VIVIAN<i title="新浪认证" class="mib_vip"></i></a>
+          ：一個人的晚餐！茶泡飯！飯 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡 ：一個人的晚餐！茶泡、飯、飯… 今日不減肥，先把病治好再說！ 我認真吃完這，燒就會退了吧？！ 開動啦~~~~~~~~~~~~~~~~~~
+        </p>
+        <div class="feed_img">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+          <img src="http://img.mukewang.com/53e2e9b10001948000890120.jpg" height="120">
+        </div>
+      </div>
+    </div>
+  </div>
 ```
 css
 ```css
@@ -104,8 +121,39 @@ css
       margin-right: 20px;
     }
     .right {
+    // 触发bfc清除浮动的影响，不然等右边文字足够长的时候，就会包裹头像
       display: table-cell;
-      .mib_sms { line-height: 22px; padding-bottom: 6px; font-size: 14px; }
+      .mib_sms {
+        line-height: 22px;
+        padding-bottom: 6px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .webolist2 {
+    width 600px
+    margin-left: auto;
+    margin-right: auto;
+    border 1px solid royalblue
+  // 使用overflow清除浮动，让边框始终包裹住内容，但是文字足够长的时候，还是会包裹左边的头像
+    overflow hidden
+    padding 20px
+    .photo {
+      float left
+      width 100px
+      margin-right: 20px;
+    }
+    .right {
+      // 这里是关键，让内容区域 距离边框足够的宽度（头像的宽度和css的宽度）
+      // 这里是 photo.width 100px + photo.margin-right: 20px = 120px
+      // 这样内容和头像始终分离
+      margin-left: 120px;
+      .mib_sms {
+        line-height: 22px;
+        padding-bottom: 6px;
+        font-size: 14px;
+      }
     }
   }
 ```
