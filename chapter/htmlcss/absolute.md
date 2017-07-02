@@ -357,3 +357,8 @@ export default {
 1. 容器无需固定width/height值，内部元素亦可以拉伸
 2. 容器是绝对定位拉伸的话，内部元素支持百分比width/height值
 
+### 相互合作性
+```css
+position: absolute; top: 0; left: 0; right: 0; width: 50%; 
+```
+这个时候的实际宽度是50%而不是100%。所以width设置的宽度会覆盖拉伸的宽度
