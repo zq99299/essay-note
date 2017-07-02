@@ -13,6 +13,8 @@ absolute不要和relative一起用，更强大
 
 无依赖的意思是指，不受`relative`限制的`absolute`定位，行为表现上是不使用`top、right/bottom/left`任何一个属性或使用`auto`作为值
 
+上面的relative是指在父元素中使用了 relative。当前元素又使用了absolute
+
 **定位的行为表现形式**
 
 1. 多里文档流
