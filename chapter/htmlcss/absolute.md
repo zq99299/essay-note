@@ -339,7 +339,7 @@ export default {
       left 0
     }
 ```
-还可以用下面的方法来做
+还可以用下面的方法来做,没有
 ```css
 .overlay{
       position absolute
@@ -350,4 +350,6 @@ export default {
       right 0
 }      
 ```
+
+所以说在很多情况下，absolute的翅膀拉伸和宽度和高度是可以相互替代的
 
