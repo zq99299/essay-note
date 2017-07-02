@@ -270,4 +270,29 @@ export default {
 4. 星号时有时没有，破坏对象不用愁
 5. 图文对齐兼容差，绝对定位来开挂
 6. 文字溢出不够放，不值一提就小样 
-整合在一个实例中
+整合在一个实例中，但是4.5 就不贴代码了。思路都是跟随位置加精确定位。说下文字逸出，也是我经常遇到的一个问题
+
+![](/assets/image/htmlcss/absolute/文字逸出提示定位.png)
+
+```html
+    <div class="item5">
+      <div>
+        <input type="text"/> <span>密码错误或则账户错误，超过了容器尺寸但是还是在后面显示不换行</span>
+      </div>
+    </div>
+```
+```css
+    .item5{
+      background-color antiquewhite
+      padding:50px 0 50px 0px
+      input{
+        height 30px
+        border 1px solid #ddd
+      }
+      span{
+        position absolute
+        line-height  30px
+        margin-left 20px
+      }
+    }
+```
