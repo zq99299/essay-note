@@ -330,7 +330,7 @@ export default {
 
 通常会如下做：
 ```css
--overlay{
+.overlay{
       position absolute
       background-color rgba(17, 17, 17, 0.5)
       height 100%
@@ -339,6 +339,15 @@ export default {
       left 0
     }
 ```
-
-但是我发现一个问题，如果页面内容很长，那么遮罩只有当前可是区域的高度，下拉后下面是没有的
+还可以用下面的方法来做
+```css
+.overlay{
+      position absolute
+      background-color rgba(17, 17, 17, 0.5)
+      top 0
+      left 0
+      bottom 0
+      right 0
+}      
+```
 
