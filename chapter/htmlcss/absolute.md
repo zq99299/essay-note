@@ -202,3 +202,8 @@ export default {
     }
   }
 ```
+
+### 3. 对齐居中或边缘，定位实现有脸面
+![](/assets/image/htmlcss/absolute/居中边缘定位.png)
+
+居中显示或则边缘定位
