@@ -328,3 +328,17 @@ export default {
 已知页面已有样式：`html,body{height:100%}`
 实现一个**全屏自适应**的50%黑色半透明遮罩层
 
+通常会如下做：
+```css
+-overlay{
+      position absolute
+      background-color rgba(17, 17, 17, 0.5)
+      height 100%
+      width 100%
+      top 0
+      left 0
+    }
+```
+
+但是我发现一个问题，如果页面内容很长，那么遮罩只有当前可是区域的高度，下拉后下面是没有的
+
