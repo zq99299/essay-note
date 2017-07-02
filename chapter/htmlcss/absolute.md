@@ -174,3 +174,31 @@ absolute不要和relative一起用，更强大
       }
     }
 ```
+```javascript
+export default {
+    data () {
+      return {}
+    },
+    mounted () {
+      let result = document.getElementById('result')
+      let searchInput = document.getElementById('search-input')
+
+      if (searchInput && result) {
+        searchInput.onfocus = function () {
+          this.parentNode.className = 'course-sidebar-search focus'
+          if (this.value !== '') {
+            // show datalist
+            result.style.display = 'block'
+          }
+        }
+        searchInput.onblur = function () {
+          if (this.value === '') {
+            this.parentNode.className = 'course-sidebar-search'
+          }
+          // hide datalist
+          result.style.display = 'none'
+        }
+      }
+    }
+  }
+```
