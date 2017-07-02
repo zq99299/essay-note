@@ -324,3 +324,7 @@ export default {
 
 ## top/right/bottom/left 与width/height 异曲同工与特殊表现
 
+### 相互替代性
+已知页面已有样式：`html,body{height:100%}`
+实现一个**全屏自适应**的50%黑色半透明遮罩层
+
