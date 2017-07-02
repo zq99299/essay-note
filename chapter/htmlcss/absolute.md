@@ -316,4 +316,7 @@ export default {
   
   因为绝对定位的元素不止一个，后来的会在最上面
   z-index潜在的误区：绝对定位元素都需要z-index控制层级，确定其显示的垂直位置
+  
+## 天使的翅膀
+`top/right/bottom/left`
 
