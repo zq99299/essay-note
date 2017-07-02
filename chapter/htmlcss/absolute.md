@@ -35,3 +35,35 @@ absolute不要和relative一起用，更强大
 4. 星号时有时没有，破坏对象不用愁
 5. 图文对齐兼容差，绝对定位来开挂
 6. 文字溢出不够放，不值一提就小样 
+
+### 
+```html
+<div class="item2">
+       <i class="tj">推荐</i>
+       <img src="~@/assets/demo-java.jpg"><!--
+       这里使用注释来消灭换行符带来的空格
+       --><i class="vip"></i>
+</div>
+
+```
+```css
+    .item2{
+      .tj{
+        position absolute
+        background-color #fa3af6
+        color white
+        padding 5px
+      }
+      .vip{
+        position absolute
+        width 36px
+        height 36px
+        margin-left -36px
+        background-color #fa0523
+        background url("~@/assets/logo.png")
+        background-size 100%
+        overflow hidden
+        text-indent -9em
+      }
+    }
+```
