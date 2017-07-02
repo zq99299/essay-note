@@ -38,6 +38,7 @@ absolute不要和relative一起用，更强大
 
 ### 图片图标来覆盖，无依赖、真不赖
 以下html结构位置很将就，因为利用了absolute的位置跟随特性，加margin的精确定位，达到自适应性更好
+![](/assets/image/htmlcss/absolute/snipaste_20170702_154822.png)
 ```html
 <div class="item2">
        <i class="tj">推荐</i>
