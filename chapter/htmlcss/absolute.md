@@ -393,3 +393,27 @@ position: absolute; top: 0; left: 0; right: 0; width: 50%;
         bottom 0px
       }
     }
+```
+
+上面是全屏的绝对定位居中。那么如果是需要容器内部绝对定位居中呢?如下改成相对于父容器就可以了
+```css
+ .item7{
+      height 600px
+      background-color antiquewhite
+      // 容器内部绝对居中，让下面的 position absolute 相对与该容器，就能达到在容器内部绝对定位居中了
+      position relative
+      .course-loading-x{
+        background-color #080808
+      }
+      img{
+        position absolute
+        margin auto
+        height 52px
+        width 52px
+        left 0px
+        right 0px
+        top 0px
+        bottom 0px
+      }
+    }
+```
