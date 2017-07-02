@@ -52,3 +52,5 @@
 * [HTML/CSS随笔记](chapter/htmlcss/README.md)
   - [css与html布局效果技巧](chapter/htmlcss/htmlcss布局效果技巧.md)
   - [float](chapter/htmlcss/float.md)
+  - [absolute](chapter/htmlcss/absolute.md)
+
