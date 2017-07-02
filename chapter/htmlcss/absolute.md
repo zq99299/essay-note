@@ -362,3 +362,5 @@ export default {
 position: absolute; top: 0; left: 0; right: 0; width: 50%; 
 ```
 这个时候的实际宽度是50%而不是100%。所以width设置的宽度会覆盖拉伸的宽度
+
+当尺寸限制、拉伸以及`margin: auto`同时出现的时候，就会有绝对定位元素的绝对居中效果！
