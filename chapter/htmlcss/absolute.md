@@ -45,7 +45,7 @@ absolute不要和relative一起用，更强大
 <div class="item2">
        <i class="tj">推荐</i>
        <img src="~@/assets/demo-java.jpg"><!--
-       这里使用注释来消灭换行符带来的空格
+       这里使用注释来消灭换行符带来的空格，font-size:0;(在外层元素上)也可以消除空行
        --><i class="vip"></i>
 </div>
 
