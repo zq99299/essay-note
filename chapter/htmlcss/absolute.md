@@ -320,3 +320,7 @@ export default {
 ## 天使的翅膀
 `top/right/bottom/left`
 
+与上面的属性公用，能快速定位到指定区域
+
+## top/right/bottom/left 与width/height 异曲同工与特殊表现
+
