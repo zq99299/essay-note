@@ -419,3 +419,8 @@ position: absolute; top: 0; left: 0; right: 0; width: 50%;
 ```
 
 ## absolute网页整体布局-适合移动web的布局策略
+与fixed, relative一样，absolute设计的初衷确实是定位(position)，
+但与fixed, relative不同的是，absolute包含更多特有且强大的特性，
+如果仅仅是使用其实现一些覆盖与定位，则未免大材小用了，
+不妨发挥其潜力，试试使用absolute实现网页的整体布局，
+你会发现：兼容性好，自适应强，扩展方便，性能优异，可以方便实现诸多效果，适合移动端，PC端同样精彩。
