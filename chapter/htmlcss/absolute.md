@@ -417,3 +417,5 @@ position: absolute; top: 0; left: 0; right: 0; width: 50%;
       }
     }
 ```
+
+## absolute网页整体布局-适合移动web的布局策略
