@@ -74,3 +74,103 @@ absolute不要和relative一起用，更强大
 ```
 
 ## 2. 如何定位下拉框，最佳实践来分享
+![](/assets/image/htmlcss/absolute/下拉框定位.png)
+```html
+ <div class="item3">
+      <div class="constr">
+        <div class="course-sidebar">
+          <div class="course-sidebar-search">
+            <ul id="result" class="course-sidebar-result">
+              <li><a href="http://www.imooc.com/view/121">分享：CSS深入理解之float浮动</a></li>
+              <li><a href="http://www.imooc.com/view/118">案例：CSS圆角进化论</a></li>
+              <li><a href="http://www.imooc.com/view/93">案例：CSS Sprite雪碧图应用</a></li>
+              <li><a href="http://www.imooc.com/view/77">案例：CSS3 3D 特效</a></li>
+              <li><a href="http://www.imooc.com/view/57">案例：如何用CSS进行网页布局</a></li>
+            </ul>
+            <input id="search-input" class="course-search-input" placeholder="课程搜索">
+            <a href="javascript:" class="course-search-btn">搜索</a>
+          </div>
+        </div>
+      </div>
+    </div>
+```
+```css
+.item3 {
+      // 该div不是下拉框一起的。只是为了布局好看
+      .constr {
+        width: 1200px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 300px;
+        overflow: hidden;
+      }
+      .course-sidebar {
+        width: 262px;
+        float: left;
+        .course-sidebar-search {
+          margin-top 20px
+          overflow hidden /*清除浮动影响，包裹元素*/
+          border 1px solid #e6e8e9 /*绘制边框*/
+          box-shadow 0px 1px 2px #d5d7d8 /*绘制边框阴影*/
+          background-color #fff
+          &.focus { // 同时拥有该class的时候，让边框有反馈的颜色，但是需要禁用掉inpu的边框
+            border-color: #2ea7e0;
+          }
+          .course-search-input {
+            width 200px
+            line-height 18px
+            padding 10px /*这里的数值 是根据计算得来的，行高18+上下padding10x2=38px，刚好是右边图标的高度,也就是相当于是设置这个input的占位高度了*/
+            margin 0px
+            border 0 none
+            font-size 12px
+            font-family inherit
+            float left
+            &:focus {
+              outline: 0 none; // 让输入框的轮廓没有样式
+            }
+            &::-ms-clear {
+              display: none;
+            }
+          }
+          // 搜索按钮示意按钮
+          .course-search-btn {
+            width: 38px;
+            height: 38px;
+            float: right;
+            background: url(http://img.mukewang.com/545305ba0001f3f600380076.png);
+            text-indent: -9em; /*!* 文字缩进，为了把文字去掉不显示*!*/
+            overflow: hidden; /*!* 隐藏文字缩进到负数，为了把文字去掉不显示*!*/
+          }
+          // 下拉框
+          .course-sidebar-result {
+            display none
+            position absolute /*绝对定位，脱离文档流悬空，让下面的input位置到最顶端*/
+            width 260px
+            margin 39px 0 0 -1px /*精确定位到inpu下面，input高度38px*/
+            padding-left 0px
+            list-style-type none
+            border 1px solid #e6e8e9
+            background-color #fff
+            box-shadow 0px 1px 2px #d5d7d8
+            font-size 12px
+            > li {
+              line-height 30px
+              padding-left 12px
+              &:hover {
+                background-color #f9f9f9
+              }
+              a {
+                display block /* a标签块状化以后，宽度会充满，鼠标移动上去就不只是文字部分有效果了*/
+                color #5e5e5e
+                text-decoration none
+                &:hover {
+                  color: #000
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+```
