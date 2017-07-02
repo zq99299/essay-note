@@ -333,6 +333,8 @@ export default {
 -overlay{
       position absolute
       background-color rgba(17, 17, 17, 0.5)
+      height 100%
+      width 100%
       top 0
       left 0
     }
