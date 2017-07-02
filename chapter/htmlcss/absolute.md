@@ -265,3 +265,9 @@ export default {
       .goto_top_feed:hover { background-position: -144px -50px; }
     }
 ```
+
+### 各种逸出技巧
+4. 星号时有时没有，破坏对象不用愁
+5. 图文对齐兼容差，绝对定位来开挂
+6. 文字溢出不够放，不值一提就小样 
+整合在一个实例中
