@@ -364,3 +364,32 @@ position: absolute; top: 0; left: 0; right: 0; width: 50%;
 这个时候的实际宽度是50%而不是100%。所以width设置的宽度会覆盖拉伸的宽度
 
 当尺寸限制、拉伸以及`margin: auto`同时出现的时候，就会有绝对定位元素的绝对居中效果！
+
+下面来一个全屏的绝对居中图片
+```html
+    <div class="item6">
+      <div class="course-loading-x">
+        &nbsp;<img src="http://img.mukewang.com/5453077400015bba00010001.gif" class="course-loading"
+                   alt="加载中...">
+      </div>
+    </div>
+```
+```css
+    .item6 {
+      .course-loading-x{
+        height 600px
+      }
+      img {
+        position absolute  // 绝对定位
+       // position fixed   // 始终跟随固定
+        margin auto
+        height 52px
+        width 52px
+        left 0px
+        right 0px
+        // 上面的是 横向绝对居中
+        // 下面的是 垂直绝对居中
+        top 0px
+        bottom 0px
+      }
+    }
