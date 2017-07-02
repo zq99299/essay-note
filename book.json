@@ -3,16 +3,14 @@
   "description": "随笔记未分类，也就是大杂烩的一本笔记",
   "language": "zh-hans",
    "plugins": [
-       "splitter",
-       "-github",
-       "prism",
-       "-highlight",
-       "expandable-chapters",
-       "page-footer-ex",
-       "anchor-navigation-ex",
-       "advanced-emoji",
-       "bootstrap-callout",
-       "-mermaid"
+      "splitter",
+      "-github",
+      "prism",
+      "-highlight",
+      "expandable-chapters",
+      "page-footer-ex",
+      "anchor-navigation-ex",
+      "advanced-emoji"
     ],
   "pluginsConfig": {
     "prism": {
