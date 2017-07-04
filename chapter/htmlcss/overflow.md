@@ -106,3 +106,22 @@ console.log(400 - document.getElementById('in').clientWidth)
 ### 自定义滚动条-webkit内核
 ::-webkit-scrollbar 开头的，但是我自己也不知道怎么去用，随意尝试了下没有什么效果
 
+经过尝试，只能修改容器的滚动条样式，浏览器的没有作用。
+直接把这个放在css中就可以了。但是要有滚动条出现才有效果。
+且只要定义了-webkit-scrollbar，那么下面都要定义，不然滚动条就会消失，应该是把自定义默认的都给重置未无了吧。
+```css
+  ::-webkit-scrollbar { /*血槽宽度*/
+    width 8px;   // 控制垂直滚动条宽度
+    height 8px; // 控制水平高度
+  }
+  ::-webkit-scrollbar-track { /*背景槽*/
+    background-color #dd
+    border-radius 6px
+  }
+  ::-webkit-scrollbar-thumb { /*拖动条*/
+    background-color: rgba(0, 0, 0, .3)
+    border-radius 6px
+  }
+
+```
+
