@@ -132,3 +132,11 @@ console.log(400 - document.getElementById('in').clientWidth)
 
 ```
 
+### ie滚动条自定义
+
+看介绍说 太丑太丑，自定义都太丑，就不贴代码了，反正自己也只学习ie10+的浏览器。
+
+jquery滚动条自定义插件：
+https://github.com/malihu/malihu-custom-scrollbar-plugin
+
+
