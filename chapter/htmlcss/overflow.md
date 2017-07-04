@@ -99,6 +99,7 @@ console.log(400 - document.getElementById('in').clientWidth)
 ```css
 // ie9 +
 // 100vw - 浏览器宽度； 100% - 可用内容宽度
+// 自己测试在html上。内容貌似也没有怎么跳动了
 .container{padding-left: calc(100vw - 100%);}
 ```
 
