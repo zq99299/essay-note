@@ -41,6 +41,7 @@ html{ overflow: hidden;}
 
 目前，两者不会同时存在，因为，坊间流传这类写法：
 ```javascript
+// 因为必然有一个为0
 var st = document.body.scrollTop + document.documentElement.scrollTop
 ```
 
