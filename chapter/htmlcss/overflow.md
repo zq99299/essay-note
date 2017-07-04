@@ -95,4 +95,10 @@ console.log(400 - document.getElementById('in').clientWidth)
   ```css
   html { overflow-y:scroll; }
   ```
+2. 动态宽度
+```css
+// ie9 +
+// 100vw - 浏览器宽度； 100% - 可用内容宽度
+.container{padding-left: calc(100vw - 100%);}
+```
 
