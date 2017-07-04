@@ -139,4 +139,6 @@ console.log(400 - document.getElementById('in').clientWidth)
 jquery滚动条自定义插件：
 https://github.com/malihu/malihu-custom-scrollbar-plugin
 
+### ios 原生滚动回调效果
+-webkit-overflow-scrolling : touch
 
