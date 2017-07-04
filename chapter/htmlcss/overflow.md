@@ -58,5 +58,23 @@ var st = document.body.scrollTop + document.documentElement.scrollTop
 
 一句话：滚动条会占用容器的可用宽度或高度
 
+怎么计算滚动条的宽度呢？
+```html
+  <div class="box">
+    <div id="in" class="in"></div>
+  </div>
+```
+```css
+  .box {
+    width 400px
+    height  400px
+    overflow scroll
+    .in {*zoom:1 /* for ie7*/}
+  }
+```
+```javascript
+// 结果是17
+console.log(400 - document.getElementById('in').clientWidth)
+```
 
 
