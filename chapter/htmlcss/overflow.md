@@ -89,4 +89,10 @@ console.log(400 - document.getElementById('in').clientWidth)
 ```
 这类布局在自己的使用中也是出现滚动条一出现，内容就往左跳动
 
+那怎么修复呢？有以下几点
+
+1. 让页面一开始就显示垂直滚动条
+  ```css
+  html { overflow-y:scroll; }
+  ```
 
