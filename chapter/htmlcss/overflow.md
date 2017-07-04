@@ -77,4 +77,6 @@ var st = document.body.scrollTop + document.documentElement.scrollTop
 console.log(400 - document.getElementById('in').clientWidth)
 ```
 
+结果：ie7/chrome/fireFox 宽度应该都是17
+
 
