@@ -104,7 +104,14 @@ console.log(400 - document.getElementById('in').clientWidth)
 ```
 
 ### 自定义滚动条-webkit内核
-::-webkit-scrollbar 开头的，但是我自己也不知道怎么去用，随意尝试了下没有什么效果
+
+- 整体部分::-webkit-scrollbar 
+- 两端按钮::-webkit-scrollbar-button
+- 外层轨道::-webkit-scrollbar-track 
+- 内层轨道::-webkit-scrollbar-track-piece 
+- 滚动滑块::-webkit-scrollbar-thumb 
+- 边角::-webkit-scrollbar-corner 
+
 
 经过尝试，只能修改容器的滚动条样式，浏览器的没有作用。
 直接把这个放在css中就可以了。但是要有滚动条出现才有效果。
