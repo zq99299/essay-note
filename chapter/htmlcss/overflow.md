@@ -104,5 +104,5 @@ console.log(400 - document.getElementById('in').clientWidth)
 ```
 
 ### 自定义滚动条-webkit内核
-
+::-webkit-scrollbar 开头的，但是我自己也不知道怎么去用，随意尝试了下没有什么效果
 
