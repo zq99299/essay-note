@@ -52,4 +52,8 @@ var st = document.body.scrollTop + document.documentElement.scrollTop
 ```
 以上代码在chrome浏览器中能得到想要的效果，其他浏览器中，上下padding=100px的效果消失了
 
+导致：不一样的scrollHeight(元素内容高度)
+
+
+
 
