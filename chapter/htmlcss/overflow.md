@@ -19,4 +19,7 @@
 
 ## overflow 与 滚动条
 
-###
+### 滚动条出现的条件
+
+1. overflow:auto/scroll ; `<html><textarea>` 自带滚动条
+2. 
