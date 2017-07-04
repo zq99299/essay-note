@@ -22,4 +22,4 @@
 ### 滚动条出现的条件
 
 1. overflow:auto/scroll ; `<html><textarea>` 自带滚动条
-2. 
+2. 内容尺寸超出了容器的限制
