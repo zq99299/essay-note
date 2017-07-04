@@ -41,7 +41,7 @@ html{ overflow: hidden;}
 
 目前，两者不会同时存在，因为，坊间流传这类写法：
 ```javascript
-// 因为必然有一个为0
+// 因为必然有一个为0，但是应该很容易出错吧。会出现undefined吧？ 用 || 双或 来代替+号更好
 var st = document.body.scrollTop + document.documentElement.scrollTop
 ```
 
