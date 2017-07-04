@@ -23,3 +23,8 @@
 
 1. overflow:auto/scroll ; `<html><textarea>` 自带滚动条
 2. 内容尺寸超出了容器的限制
+
+### body/html 与滚动条
+
+无论什么浏览器，默认滚动条均来自html标签，而不是body标签。
+**原因：**新建一个空白的HTML页面，body默认`.5em`margin值，如果滚动条出现在body上，那么滚动条与浏览器边缘则会有间距
