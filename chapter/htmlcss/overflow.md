@@ -45,4 +45,11 @@ html{ overflow: hidden;}
 var st = document.body.scrollTop + document.documentElement.scrollTop
 ```
 
+### overflow的padding-bottom缺失现象
+
+```css
+.box { width:400px; height:100px; overflow:auto; padding:100px 0 }
+```
+以上代码在chrome浏览器中能得到想要的效果，其他浏览器中，上下padding=100px的效果消失了
+
 
