@@ -33,3 +33,15 @@
 ```css
 html{ overflow: hidden;}
 ```
+
+### body/html 与滚动条 - js与滚动高度
+
+* chrome浏览器是： `document.body.scrollTop`
+* 其他浏览器是：`document.documentElement.scrollTop`
+
+目前，两者不会同时存在，因为，坊间流传这类写法：
+```javascript
+var st = document.body.scrollTop + document.documentElement.scrollTop
+```
+
+
