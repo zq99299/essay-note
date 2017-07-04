@@ -54,6 +54,9 @@ var st = document.body.scrollTop + document.documentElement.scrollTop
 
 导致：不一样的scrollHeight(元素内容高度)
 
+## 滚动条的宽度机制
+
+一句话：滚动条会占用容器的可用宽度或高度
 
 
 
