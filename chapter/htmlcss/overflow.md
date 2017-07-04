@@ -54,7 +54,7 @@ var st = document.body.scrollTop + document.documentElement.scrollTop
 
 导致：不一样的scrollHeight(元素内容高度)
 
-## 滚动条的宽度机制
+### 滚动条的宽度机制
 
 一句话：滚动条会占用容器的可用宽度或高度
 
@@ -78,5 +78,15 @@ console.log(400 - document.getElementById('in').clientWidth)
 ```
 
 结果：ie7/chrome/fireFox 宽度应该都是17
+
+### overflow:auto的潜在布局隐患
+
+因为有滚动条出现占用宽度，那么在这类布局下，就有可能会出现直接崩溃，布局错乱
+
+### 水平居中跳动问题
+```css
+.container { width:1150px; margin: 0 auto;}
+```
+这类布局在自己的使用中也是出现滚动条一出现，内容就往左跳动
 
 
