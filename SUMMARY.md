@@ -40,6 +40,7 @@
 ---
 * [GIT](chapter/git/README.md)
   - [GIT远程仓库回退](chapter/git/远程仓库回退.md)
+  - [分支管理](chapter/git/branch.md)
 
 ---
 * [IDEA](chapter/idea/README.md)
