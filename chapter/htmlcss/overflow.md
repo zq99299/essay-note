@@ -167,4 +167,12 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
  3. 两栏自适应布局 
   
 ### 内部浮动无影响 ie7+
-内部浮动元素。只要被父级元素增加 bfc 效果，则会清除浮动影响
+内部浮动元素。只要被父级元素增加 bfc 效果，则会清除浮动影响.
+
+```css
+.clearfix {overflow:hidden;_zoom;1}
+上面的代码在一些情况下，会隐藏一些元素？个人经验太少，没有发现
+
+下面的是广为流传的：
+.clearfix:after {content:'';display:table;clear:both;}
+```
