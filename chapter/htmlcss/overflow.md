@@ -176,3 +176,7 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 下面的是广为流传的：
 .clearfix:after {content:'';display:table;clear:both;}
 ```
+
+### 避免margin穿透问题
+什么叫argin穿透？
+一个图片设置了margin，但是背景颜色没有平铺到margin的区域
