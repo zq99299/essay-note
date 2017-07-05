@@ -35,9 +35,14 @@ Git branch -d xxxxx
 git push origin :br-1.0.0  
 ```
 
-## 在代码都相同的情况下怎么把修改的代码推向指定分支
+## 把修改代码推向多个分支
 
-以下是把 本地分支的prod修改的提交推向master，但是仅仅限于两个分支代码都是一样的，否则会出错
+以下是把 本地分支的prod修改的提交推向master，**但是仅仅限于两个分支代码都是一样的，否则会出错**
 ```bash
 git push origin prod:master
+```
+
+怎么切换分支之后，发现 git pull 报错了。要加上远程分支完整名称才可以
+```bash
+git pull origin prod
 ```
