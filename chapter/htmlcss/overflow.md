@@ -166,3 +166,5 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
  2. 避免margin穿透问题
  3. 两栏自适应布局 
   
+### 内部浮动无影响 ie7+
+内部浮动元素。只要被父级元素增加 bfc 效果，则会清除浮动影响
