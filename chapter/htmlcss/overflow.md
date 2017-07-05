@@ -148,3 +148,7 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 
 ## overflow与BFC
 清除浮动、自适应布局等
+
+什么是BFC?
+
+ Block formatting context : 块级格式化上下文 
