@@ -154,4 +154,10 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
   Block formatting context : 块级格式化上下文 ；
   页面之结界，内部元素再怎么翻云覆雨都不会影响外部。
   
+以下熟悉会触发bFC:
+
+1. auto
+2. scroll
+3. hidden
+  
   
