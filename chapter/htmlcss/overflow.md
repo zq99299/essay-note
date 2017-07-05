@@ -151,6 +151,7 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 
 **什么是BFC?**
 
-  Block formatting context : 块级格式化上下文 
+  Block formatting context : 块级格式化上下文 ；
+  页面之结界，内部元素再怎么翻云覆雨都不会影响外部。
   
   
