@@ -42,7 +42,7 @@ git push origin :br-1.0.0
 git push origin prod:master
 ```
 
-怎么切换分支之后，发现 git pull 报错了。要加上远程分支完整名称才可以
+怎么切换分支之后，发现 git pull 报错了。要加上远程分支完整路径才可以
 ```bash
 git pull origin prod
 ```
