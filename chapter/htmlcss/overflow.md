@@ -160,4 +160,9 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 2. scroll
 3. hidden
   
+一般有以下几点应用：
+
+ 1. 清除浮动影响
+ 2. 避免margin穿透问题
+ 3. 两栏自适应布局 
   
