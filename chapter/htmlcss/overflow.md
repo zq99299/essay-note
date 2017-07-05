@@ -143,3 +143,8 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 -webkit-overflow-scrolling:touch
 
 哈哈。不知道这个是怎么用的。没有尝试出来
+
+------------------
+
+## overflow与BFC
+清除浮动、自适应布局等
