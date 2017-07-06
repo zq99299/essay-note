@@ -198,3 +198,18 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
       width 2000px
 }
 ```
+
+--------------
+
+## overflow 与绝对定位
+隐藏失效与滚动固定
+
+当容器使用 overflow 的时候，内部元素如果使用绝对定位，则会失效，不会被剪裁。
+
+**失效原因：**
+绝对定位元素不总是被父级overflow属性剪裁，尤其当overflow在绝对定位元素及包含块之间的时候。
+
+什么是包含块：含`position:relative/absolute/fixed`声明的父级元素，没有则body元素
+
+
+
