@@ -212,4 +212,10 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 什么是包含块：含`position:relative/absolute/fixed`声明的父级元素，没有则body元素
 
 
+**如何避免失效**
+
+1. overflow 元素自身为包含块
+2. overflow 元素的子元素为包含块
+3. 任意合法 transform 声明当做包含块
+
 
