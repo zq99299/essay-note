@@ -190,3 +190,11 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 4. display:inline-block；包裹性，无法自适应
 5. display:table-cell; 包裹性，但天生无溢出特性，绝对宽度页能自适应
 
+
+### 两栏自适应布局
+```css
+.right {
+        display table-cell
+      width 2000px
+    }
+```
