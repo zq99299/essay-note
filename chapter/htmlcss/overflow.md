@@ -196,5 +196,5 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 .right {
         display table-cell
       width 2000px
-    }
+}
 ```
