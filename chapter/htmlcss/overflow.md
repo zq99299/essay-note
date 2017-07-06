@@ -218,4 +218,18 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 2. overflow 元素的子元素为包含块
 3. 任意合法 transform 声明当做包含块（IE9+和fireFox）
 
+--------------
+
+## 依赖overflow的样式表现
+
+### 跪舔css3：resize拉伸
+
+* resize：both 水平垂直两边拉
+* resize：horizontal 只有水平方向拉
+* resize：vertical 只有垂直方向拉
+
+但是，要想此声明起作用，元素的overflow属性值態是visible
+
+
+
 
