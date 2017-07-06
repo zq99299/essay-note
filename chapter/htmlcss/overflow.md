@@ -241,7 +241,7 @@ texttext-overflow:ellipsis  顾名思义，文本溢出省略号表示
 
 ## overflow与锚点技术
 
-锚点：地址栏中 #xxx 的就是锚链也是hash值
+锚点：地址栏中 #xxx 的就是锚链也是hash值。对应锚点，元素中id=#xxx
 
 
 
