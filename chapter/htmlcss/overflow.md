@@ -235,6 +235,7 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 ### 跪舔css3：ellipsis文字溢出点点点省略
 
 texttext-overflow:ellipsis  顾名思义，文本溢出省略号表示
+必须要元素声明是：overflow:hidden 才有效果
 
 
 
