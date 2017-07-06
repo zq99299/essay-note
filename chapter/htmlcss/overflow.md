@@ -257,6 +257,6 @@ texttext-overflow:ellipsis  顾名思义，文本溢出省略号表示
 ### 锚点定位的作用
 
 1. 快速定位
-2. 锚点定位与overflow选项卡技术
+2. 锚点定位与overflow选项卡技术（太影响体验）
 
 
