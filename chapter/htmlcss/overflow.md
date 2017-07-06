@@ -232,6 +232,11 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 
 这里的拉伸指：出现一个标识，可以让用户拖动改变元素的宽高。就如同文本域一样
 
+### 跪舔css3：ellipsis文字溢出点点点省略
+
+texttext-overflow:ellipsis
+
+
 
 
 
