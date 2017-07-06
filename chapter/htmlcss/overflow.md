@@ -230,6 +230,8 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 
 但是，要想此声明起作用，元素的overflow属性值態是visible
 
+这里的拉伸指：出现一个标识，可以让用户拖动改变元素的宽高
+
 
 
 
