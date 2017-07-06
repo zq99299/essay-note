@@ -216,6 +216,6 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 
 1. overflow 元素自身为包含块
 2. overflow 元素的子元素为包含块
-3. 任意合法 transform 声明当做包含块
+3. 任意合法 transform 声明当做包含块（IE9+和fireFox）
 
 
