@@ -180,3 +180,13 @@ https://github.com/malihu/malihu-custom-scrollbar-plugin
 ### 避免margin穿透问题
 什么叫argin穿透？
 一个图片设置了margin，但是背景颜色没有平铺到margin的区域
+
+### 是不是所有的BFC属性都有如此表现？
+是的，但是由于自身特性，具体的表现不一：
+
+1. overflow:hidden ; 自适应，旦“溢出不可见”限制应用场景
+2. float + float ； 包裹性 + 破坏性，无法自适应，块状浮动布局
+3. position:absolutr; 脱离文档流，自娱自乐
+4. display:inline-block；包裹性，无法自适应
+5. display:table-cell; 包裹性，但天生无溢出特性，绝对宽度页能自适应
+
