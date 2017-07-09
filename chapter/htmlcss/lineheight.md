@@ -128,4 +128,11 @@ em{
     根据当前元素的font-size大小计算，假设文字大小=20px，则实际的行高像素值是：
     line-height = 1.5 *20px = 30px
 
-**length**
+3. **length**
+```css
+line-height:1.5em
+line-height:1.5rem
+line-height:20px;
+line-height:20pt
+
+```
