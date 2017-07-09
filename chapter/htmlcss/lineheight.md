@@ -9,3 +9,5 @@
 下图是微软雅黑的字母基线示意图。字体不同基线的位置可能不同。
 红色之间的距离就是基线
 ![](/assets/image/htmlcss/line_height/baseline与line-height.png)
+
+如果定义 `line-height:200px`,那么第二行文字的基线将距离第一行文字的基线200px处
