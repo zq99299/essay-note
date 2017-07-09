@@ -11,3 +11,5 @@
 ![](/assets/image/htmlcss/line_height/baseline与line-height.png)
 
 如果定义 `line-height:200px`,那么第二行文字的基线将距离第一行文字的基线200px处
+
+**为何line-height可以让单行文本垂直居中？**
