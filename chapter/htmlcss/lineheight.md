@@ -62,7 +62,10 @@
 只不过正好：内容区域高度 + 行间距 = 行高
 只不过正好：content area + vertical spacing = line-height
 
+### 内容区域
 
+1. 内容区域高度只与 字号 以及 字体 有关系，与line-height没有任何关系
+2. 在simsun字体下，内容区域高度等于文字大小值
 
 
 
