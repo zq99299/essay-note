@@ -129,6 +129,7 @@ em{
     line-height = 1.5 *20px = 30px
 
 3. **length**
+    使用具体长度值作为行高值：如
     ```css
     line-height:1.5em
     line-height:1.5rem
