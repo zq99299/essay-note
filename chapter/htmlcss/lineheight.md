@@ -69,10 +69,14 @@
 
     font-size + 行间距 = line-height
 
+### 行间距
 ```csss
 font-size:240px
 line-height:360px
 则行间距 = 360px - 240px = 120px
+```
+
+行间距上下拆分，就有了 “半行间距”
 
 
 
