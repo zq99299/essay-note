@@ -172,4 +172,4 @@ body{ font-size:14px; line-height:?}
 
 博客类：1.5 以上，方便阅读
 应用类：匹配20像素，方便心算
-line-height = 20px/14px 约等于1.42857 
+line-height = 20px/14px 约等于1.42857  (在谷歌浏览器下等于19px)
