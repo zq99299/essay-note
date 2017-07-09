@@ -143,5 +143,9 @@ em{
     假设文字大小是20px,则实际的行高像素值是：
     line-height = 150% * 20px = 30px
 5. inherit
-    
+    行高继承。ie8+
+    ```css
+    input{line-height:inherit;}
+    ```
+    input 框等元素默认行高是normal，使用inherit可以让文本框样式可控性更强
  
