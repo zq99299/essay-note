@@ -123,4 +123,7 @@ em{
 
 normal值 = 字体像素 / 100;
 
-nu
+**number:**
+使用数值作为行高，如`line-height:1.5`;
+根据当前元素的font-size大小计算，假设文字大小=20px，则实际的行高像素值是：
+line-height = 1.5 *20px = 30px
