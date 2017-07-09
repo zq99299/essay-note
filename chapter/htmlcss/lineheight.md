@@ -148,4 +148,14 @@ em{
     input{line-height:inherit;}
     ```
     input 框等元素默认行高是normal，使用inherit可以让文本框样式可控性更强
+    
+   
+**下面集合有什么区别?**
+```css
+line-height:1.5em
+line-height:1.5rem
+line-height:1.5em;
+```
+    
+    
  
