@@ -181,3 +181,8 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
 
 
 ```
+
+----
+
+## line-height 与图片的表现
+深入探讨行高和图片的样式表现
