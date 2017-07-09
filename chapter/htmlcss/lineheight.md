@@ -139,4 +139,7 @@ em{
     ```
 4. **percent**
     使用百分比作为行高值。例如`line-height:150%`.
-    相对于设置了该`line-height`属性的元素的`font-size`大小计算   
+    相对于设置了该`line-height`属性的元素的`font-size`大小计算  
+5. inherit
+    
+ 
