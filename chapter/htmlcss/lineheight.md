@@ -118,13 +118,14 @@ em{
 4. `<percent>`
 5. inherit
 
-**normal :**
-默认属性值，跟着用户的浏览器走，且与元素字体关联
-normal值 = 字体像素 / 100;
 
-**number:**
-使用数值作为行高，如`line-height:1.5`;
-根据当前元素的font-size大小计算，假设文字大小=20px，则实际的行高像素值是：
-line-height = 1.5 *20px = 30px
+1. **normal :**
+    默认属性值，跟着用户的浏览器走，且与元素字体关联
+    normal值 = 字体像素 / 100;
+
+2. **number:**
+    使用数值作为行高，如`line-height:1.5`;
+    根据当前元素的font-size大小计算，假设文字大小=20px，则实际的行高像素值是：
+    line-height = 1.5 *20px = 30px
 
 **length**
