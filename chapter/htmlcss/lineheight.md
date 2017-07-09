@@ -164,5 +164,12 @@ line-height:1.5em;
 ![](/assets/image/htmlcss/line_height/行高应用元素的差别.png)
 
 右边的文字容器（父级元素）的font-size = 24px;所以子元素（文字）按照父级的font-size来计算行高的
-    
- 
+
+### body全局数值行高使用经验
+```css
+body{ font-size:14px; line-height:?}
+```
+
+博客类：1.5 以上，方便阅读
+应用类：匹配20像素，方便心算
+line-height = 20px/14px 约等于1.42857 
