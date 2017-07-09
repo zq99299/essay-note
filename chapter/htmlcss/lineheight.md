@@ -140,6 +140,8 @@ em{
 4. **percent**
     使用百分比作为行高值。例如`line-height:150%`.
     相对于设置了该`line-height`属性的元素的`font-size`大小计算  
+    假设文字大小是20px,则实际的行高像素值是：
+    line-height = 150% * 20px = 30px
 5. inherit
     
  
