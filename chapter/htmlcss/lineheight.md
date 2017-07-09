@@ -113,12 +113,14 @@ em{
 ### line-height 支持属性值
 
 1. normal
-2. `<numerb>`
+2. `<number>`
 3. `<length>`
 4. `<percent>`
 5. inherit
 
-normal :
+**normal :**
 默认属性值，跟着用户的浏览器走，且与元素字体关联
 
 normal值 = 字体像素 / 100;
+
+nu
