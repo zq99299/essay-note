@@ -175,3 +175,9 @@ body{ font-size:14px; line-height:?}
 line-height = 20px/14px 约等于1.42857  (在谷歌浏览器下等于19px)
 
 所以最后使用：1.4286
+```css
+body{ font-size:14px; line-height:1.4286}
+body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
+
+
+```
