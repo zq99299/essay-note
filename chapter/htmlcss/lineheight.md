@@ -69,6 +69,10 @@
 
     font-size + 行间距 = line-height
 
+```csss
+font-size:240px
+line-height:360px
+则行间距 = 360px - 240px = 120px
 
 
 
