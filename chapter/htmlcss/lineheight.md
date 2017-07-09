@@ -110,4 +110,12 @@ em{
 ## line-height 各类属性值
 深入理解line-height不同类别值的不同表现
 
+### line-height 支持属性值
+
+1. normal
+2. `<numerb>`
+3. `<length>`
+4. `<percent>`
+5. inherit
+
 
