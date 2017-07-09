@@ -152,10 +152,13 @@ em{
    
 **下面集合有什么区别?**
 ```css
-line-height:1.5em
+line-height:1.5
 line-height:1.5rem
 line-height:1.5em;
 ```
-    
+计算无差别。应用元素有差别
+
+* line-height:1.5 ：所有可继承元素根据font-size重计算行高
+* line-height:150%、1.5em 当前元素根据font-size计算行高，继承给下面的元素
     
  
