@@ -77,3 +77,21 @@
     }
   }
 ```
+
+```html
+文字和图片居中，并不是在父级容器中垂直居中。
+    <div class="item5">
+      左青龙<img src="~@/assets/pic.jpg"/>右白虎
+    </div>
+```
+```css
+  .item5 {
+    margin-top 10px
+    background-color antiquewhite
+    height 250px
+    img {
+      height 200px
+      vertical-align middle
+    }
+  }
+```
