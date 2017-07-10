@@ -40,5 +40,5 @@
 ## vertical-align起作用的前提
 探讨各种display值对vertical-align的影响
 
-
-说明：
+文档上面：应用于inline水平以及table-cell元素
+> 这种定义和说明，在w3c中有，但是说得比较晦涩，如果不懂一些术语，肯定是不知道的。多看视频多了解，才能看懂
