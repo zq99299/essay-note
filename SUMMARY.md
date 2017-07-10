@@ -58,6 +58,7 @@
   - [line-height](chapter/htmlcss/lineheight.md)
 
 * [linux](chapter/linux/README.md)
+  - [各种压缩/解压命令](chapter/linux/zip.md)
   - [常用软件安装](chapter/linux/install.md)
     
 

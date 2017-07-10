@@ -29,5 +29,13 @@ export PATH=$GRADLE_HOME/bin:$PATH
 ```
 
 ## node
+node 8+ 的包后缀是xz结尾的。所以要先安装xz
+```bash
+yum install xz
+# 解压
+xz -d nodexxx
+
+# 解压完成之后，发现。后缀没有了。再使用
+```
 
 ## nginx
