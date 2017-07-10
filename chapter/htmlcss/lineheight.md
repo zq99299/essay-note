@@ -253,7 +253,7 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
     text-align center
     img {
       height 200px // 这里可以随意改变图片大小
-      vertical-align middle
+      vertical-align middle // 基线1/2X高度
     }
   }
 ```
