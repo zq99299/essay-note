@@ -117,6 +117,5 @@ cd /usr/local/nginx
 修改了配置文件，重启
 ```bash
 ./nginx -s reload
-
 ```
 
