@@ -2,11 +2,11 @@
 
 ## 安装
 
-官网下载好压缩包，并解压后。
+1. 官网下载好压缩包，并解压后。
 
-**进入安装目录运行  ./configure  进行初始化**
+2. 进入安装目录运行  ./configure  进行初始化
 ```bash
-出现以下错误，则需要安装第二步的依赖    
+出现以下错误，则需要安装依赖  
 ./configure: error: the HTTP rewrite module requires the PCRE library.
 You can either disable the module by using --without-http_rewrite_module
 option, or install the PCRE library into the system, or build the PCRE library
