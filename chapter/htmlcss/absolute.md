@@ -7,7 +7,7 @@
 absolute不要和relative一起用，更强大
 
 **超越overflow**
-    独立的absolute可以拜托overflow的限制，无论是滚动还是隐藏
+    独立的absolute可以摆脱overflow的限制，无论是滚动还是隐藏
     
 ## 无依赖的绝对定位
 
