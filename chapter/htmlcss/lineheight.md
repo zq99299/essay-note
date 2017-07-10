@@ -258,3 +258,26 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
   }
 ```
 
+多行文本的垂直居中
+```html
+    <div class="item3">
+     <p>多行文本水平居中实现的原理跟上一页图片的实现是一样的，区别在于要把多行文本所在的容器的
+      display水平转成和图片一样的，也就是inline-block,
+      以及重置外部继承的 text-align和line-height属性值</p>
+    </div>
+```
+```css
+  .item3 {
+    margin-top 10px // 和这个无关
+    line-height 250px
+    background-color antiquewhite
+    text-align center
+    p{
+      display inline-block
+      line-height normal
+      text-align left
+      vertical-align middle
+    }
+  }
+```
+
