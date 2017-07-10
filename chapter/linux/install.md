@@ -22,8 +22,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 环境变量配置：
 ```bash
 export GRADLE_HOME=/mnt/sit/app/gradle-3.2.1
-# 这个是指定仓库文件下载到哪里
-GRADLE_USER_HOME=/home
+# 这个是指定仓库文件下载到哪里,没有特殊需求可以不配置
+export GRADLE_USER_HOME=/home
+export PATH=$GRADLE_HOME/bin:$PATH
+
 ```
 
 ## node
