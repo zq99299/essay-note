@@ -75,6 +75,8 @@
       height 200px
     }
     p{
+      height 250px
+      /*display table-cell*/ // 改成这个，就能居中了，也是近似
       vertical-align middle
     }
   }
