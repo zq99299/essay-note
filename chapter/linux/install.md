@@ -36,6 +36,9 @@ yum install xz
 xz -d nodexxx
 
 # 解压完成之后，发现。后缀没有了。再使用
+# 配置环境变量
+export NODE_HOME=/mnt/sit/app/node-v8.1.3-linux-x64
+export PATH=$NODE_HOME/bin:$PATH
 ```
 
 ## nginx
