@@ -30,3 +30,5 @@
 1. 都待数字：20px,20em,20%
 2. 都支持负值:margin,letter-spacing,word-spacing,vertical-align
 3. 行为表现一致
+    1. 数值：在基线的基础上偏移
+    2. 百分比：是基于行高来计算数值，然后再基于基线偏移
