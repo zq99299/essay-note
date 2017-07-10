@@ -104,3 +104,29 @@
 ### 实战
 个数不定文字内容和图片垂直居中对齐
 ![](/assets/image/htmlcss/verticalalign/文字个数不定和图片居中对齐.png)
+
+```html
+    个数不定文字内容和图片垂直居中对齐
+    <div class="item6">
+      <span>
+        周末看大片，科幻高效动画片周末看大片，科幻高效动画片周末看大片，科幻高效动画片周末看大片，科幻高效动画片
+        周末看大片，科幻高效动画片周末看大片，科幻高效动画片周末看大片，科幻高效动画片周末看大片，科幻高效动画片
+      </span>
+      <img src="~@/assets/pic.jpg"/>
+    </div>
+```
+```css
+  .item6 {
+    margin-top 10px
+    background-color antiquewhite
+    img {
+      height 200px
+      vertical-align middle
+    }
+    span{
+      display inline-block
+      width 300px
+      vertical-align middle
+    }
+  }
+```
