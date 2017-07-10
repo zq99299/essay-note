@@ -78,3 +78,5 @@ $ make install
 http://www.nginx.cn/install
 
 亲测装成功了。
+
+装成功之后的目录是在 初始化显示的 `nginx path prefix: "/usr/local/nginx"` 目录中
