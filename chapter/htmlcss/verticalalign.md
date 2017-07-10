@@ -56,3 +56,24 @@
 
 1. display ： 更改元素的显示水平
 2. css声明更改元素的显示水平
+
+### 一些例子
+```html
+不起效果的示例,原因是：p标签是block元素
+    <div class="item4">
+      <p><img src="~@/assets/pic.jpg"/></p>
+    </div>
+```
+```css
+  .item4 {
+    margin-top 10px
+    background-color antiquewhite
+    height 250px
+    img {
+      height 200px
+    }
+    p{
+      vertical-align middle
+    }
+  }
+```
