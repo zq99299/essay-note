@@ -56,6 +56,9 @@
   - [absolute](chapter/htmlcss/absolute.md)
   - [overflow](chapter/htmlcss/overflow.md)
   - [line-height](chapter/htmlcss/lineheight.md)
+  - [vertical-align](chapter/htmlcss/verticalalign.md)
+
+  
 
 * [linux](chapter/linux/README.md)
   - [各种压缩/解压命令](chapter/linux/zip.md)
