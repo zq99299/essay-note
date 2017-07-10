@@ -29,7 +29,7 @@ export PATH=$GRADLE_HOME/bin:$PATH
 ```
 
 ## node
-node 8+ 的包后缀是xz结尾的。所以要先安装xz
+node 包后缀是xz结尾的。所以要先安装xz
 ```bash
 yum install xz
 # 解压
@@ -40,6 +40,19 @@ xz -d nodexxx
 export NODE_HOME=/mnt/sit/app/node-v8.1.3-linux-x64
 export PATH=$NODE_HOME/bin:$PATH
 ```
+### 修改缓存和修改淘宝源
+命令行的方式修改：
+```bash
+npm config set prefix “D:\Program Files\node\node-global”
+```
+
+直接修改文件.npmrc.该文件地址在 /当前按照用户 目录下。如果执行了上面的命令就会生成一个。没有的话自己创建
+```
+prefix=/mnt/sit/app/node/node-global
+cache=/mnt/sit/app/node/node-cache
+registry = https://registry.npm.taobao.org 
+```
+
 
 ## nginx
 
