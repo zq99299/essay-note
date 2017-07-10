@@ -42,3 +42,8 @@ export PATH=$NODE_HOME/bin:$PATH
 ```
 
 ## nginx
+
+## git安装
+```bash
+yum install git 
+```
