@@ -234,3 +234,8 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
 基本上高度受行高控制。
 剩下的就是图文的 垂直对齐了：`vertical-align`
 
+----
+
+## 行高的实际应用
+
+
