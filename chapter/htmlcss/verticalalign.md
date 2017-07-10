@@ -59,7 +59,9 @@
 
 ### 一些例子
 ```html
-不起效果的示例,原因是：p标签是block元素
+    不起效果的示例,原因是：p标签是block元素
+    这里item4不是父级元素，只是为了在同一个页面做不同的示例
+    p才是img的父元素。
     <div class="item4">
       <p><img src="~@/assets/pic.jpg"/></p>
     </div>
