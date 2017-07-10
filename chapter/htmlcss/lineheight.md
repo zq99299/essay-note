@@ -189,4 +189,24 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
 **行高会不会影响图片实际占据的高度？**
 答：不会！影响的是其他的高度
 
+```html
+     <div class="item1">
+       <img src="~@/assets/pic.jpg"/>
+       <span>xxxx</span>
+     </div>
+```
+```css
+  .item1{
+    background-color antiquewhite
+    line-height 90px
+    img{
+      height 200px
+    }
+    span{
+      display inline-block  // 内联块装化，就能看到行高了
+      background-color royalblue
+    }
+  }
+```
+
 
