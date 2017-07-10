@@ -152,4 +152,5 @@
       width 300px
       vertical-align middle
     }
+  }
 ```
