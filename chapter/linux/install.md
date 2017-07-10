@@ -10,6 +10,8 @@ source /etc/profile
 ```
 
 ## jdk
+环境变量配置：
+
 ```bash
 export JAVA_HOME=/mnt/sit/app/jdk1.8.0_111/
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
@@ -17,6 +19,12 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 ## gradle
+环境变量配置：
+```bash
+GRADLE_HOME=/mnt/sit/app/gradle-3.2.1
+# 这个是指定仓库文件下载到哪里
+GRADLE_USER_HOME=/home
+```
 
 ## node
 
