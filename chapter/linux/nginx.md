@@ -78,6 +78,32 @@ $ make install
 http://www.nginx.cn/install
 
 就是最后初始化的时候，除了openssl需要指定地址外。剩下的不用再指定了。会自动找到的
-亲测装成功了。
-
 装成功之后的目录是在 初始化显示的 `nginx path prefix: "/usr/local/nginx"` 目录中
+
+
+```bash
+# 启动
+sudo /usr/local/nginx/nginx
+# 如果报错  /usr/local/nginx/nginx: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory
+
+## 先查看
+ldd $(which /usr/local/nginx/sbin/nginx)
+
+[root@localhost lib]# ldd $(which /usr/local/nginx/sbin/nginx)
+	linux-vdso.so.1 =>  (0x00007ffe91ffd000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x0000003123e00000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000003124600000)
+	libcrypt.so.1 => /lib64/libcrypt.so.1 (0x0000003128a00000)
+	libpcre.so.1 => not found
+	libz.so.1 => /lib64/libz.so.1 (0x0000003124a00000)
+	libc.so.6 => /lib64/libc.so.6 (0x0000003124200000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000003123a00000)
+	libfreebl3.so => /lib64/libfreebl3.so (0x0000003129200000)
+
+# 可以看到上面的确是未找到。
+# 手动关联一下
+cd /lib
+ln -s /lib/libpcre.so.0.0.1 /lib/libpcre.so.1
+# 会发现还是没有找到.有可能你的机器是x64的。执行以下代码
+ln -s /usr/local/lib/libpcre.so.1 /lib64/
+```
