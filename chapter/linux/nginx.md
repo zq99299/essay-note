@@ -110,8 +110,13 @@ ln -s /usr/local/lib/libpcre.so.1 /lib64/
 
 ## 启动命令等
 指定配置文件启动：
-```
+```bash
 cd /usr/local/nginx
 ./nginx -c ./conf/nginx.conf
+```
+修改了配置文件，重启
+```bash
+./nginx -s reload
+
 ```
 
