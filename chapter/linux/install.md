@@ -50,7 +50,7 @@ npm config set prefix “D:\Program Files\node\node-global”
 ```
 prefix=/mnt/sit/app/node/node-global
 cache=/mnt/sit/app/node/node-cache
-registry = https://registry.npm.taobao.org 
+registry = https://registry.npm.taobao.org  # 修改成淘宝的镜像源，加快国内的构建速度
 ```
 
 
