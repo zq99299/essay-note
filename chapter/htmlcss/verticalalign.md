@@ -42,3 +42,12 @@
 
 文档上面：应用于inline水平以及table-cell元素
 > 这种定义和说明，在w3c中有，但是说得比较晦涩，如果不懂一些术语，肯定是不知道的。多看视频多了解，才能看懂
+
+**inline 水平元素**
+
+* inline : img,span,strong,em,未知元素,...
+* inline-blokc:input(IE8+),button(IE8+)...
+
+**table-cell 元素**
+
+* table-cell:td
