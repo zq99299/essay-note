@@ -80,6 +80,7 @@
 
 ```html
 文字和图片居中，并不是在父级容器中垂直居中。
+这个时候，文字是匿名的inline元素
     <div class="item5">
       左青龙<img src="~@/assets/pic.jpg"/>右白虎
     </div>
