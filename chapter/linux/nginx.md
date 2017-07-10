@@ -107,3 +107,11 @@ ln -s /lib/libpcre.so.0.0.1 /lib/libpcre.so.1
 # 会发现还是没有找到.有可能你的机器是x64的。执行以下代码
 ln -s /usr/local/lib/libpcre.so.1 /lib64/
 ```
+
+## 启动命令等
+指定配置文件启动：
+```
+cd /usr/local/nginx
+./nginx -c ./conf/nginx.conf
+```
+
