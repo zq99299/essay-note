@@ -46,7 +46,7 @@ export PATH=$NODE_HOME/bin:$PATH
 npm config set prefix “D:\Program Files\node\node-global”
 ```
 
-直接修改文件.npmrc.该文件地址在 /当前按照用户 目录下。如果执行了上面的命令就会生成一个。没有的话自己创建
+直接修改文件.npmrc该文件地址在 /当前按照用户 目录下。如果执行了上面的命令就会生成一个。没有的话自己创建
 使用 `npm -h` 命令也会告诉你.npmrc的文件地址在哪里
 ```
 prefix=/mnt/sit/app/node/node-global
