@@ -239,7 +239,7 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
 ## 行高的实际应用
 ### 大小不固定的图片，多行文字垂直居中
 
-图片垂直居中：近似垂直； IE8+
+**图片垂直居中：近似垂直； IE8+**
 ```html
     <div class="item2">
       <img src="~@/assets/pic.jpg"/>
@@ -258,7 +258,7 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
   }
 ```
 
-多行文本的垂直居中
+**多行文本的垂直居中 IE8+**
 ```html
     <div class="item3">
      <p>多行文本水平居中实现的原理跟上一页图片的实现是一样的，区别在于要把多行文本所在的容器的
