@@ -238,4 +238,21 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
 
 ## 行高的实际应用
 ### 大小不固定的图片，多行文字垂直居中
+```html
+    <div class="item2">
+      <img src="~@/assets/pic.jpg"/>
+    </div>
+```
+```css
+  .item2 {
+    margin-top 10px
+    background-color antiquewhite
+    line-height 300px
+    text-align center
+    img {
+      height 200px // 这里可以随意改变图片大小
+      vertical-align middle
+    }
+  }
+```
 
