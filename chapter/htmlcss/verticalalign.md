@@ -134,3 +134,22 @@
 这里主要设置span的宽度，不会占据右边图片的位置，让图片环绕文字，造成左右对开的布局，然后使用middle就能垂直居中了。
 
 扩展：如果要做成图片始终靠右，文字还能垂直居中的话，就得使用以下的css了。
+```css
+  .item6 {
+    margin-top 10px
+    background-color antiquewhite
+    height 200px
+    line-height 200px
+    img {
+      position absolute
+      right 0
+      height 200px
+      vertical-align middle
+    }
+    span{
+      display inline-block
+      line-height normal
+      width 300px
+      vertical-align middle
+    }
+```
