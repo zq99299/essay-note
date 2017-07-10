@@ -27,6 +27,6 @@
 
 他们的共性：
 
-1. 都待数字
-2. 都支持负值
+1. 都待数字：20px,20em,20%
+2. 都支持负值:margin,letter-spacing,word-spacing,vertical-align
 3. 行为表现一致
