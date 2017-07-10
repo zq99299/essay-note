@@ -37,6 +37,19 @@
         /usr/local/nginx/conf 下的 nginx.conf 会把原来解压目录下的给拷贝过来
         也就是说以后配置的话是在这里修改配置文件的
     ```
+    如果装完第三步的依赖还是同样的错误，或许就一开始就执行下面的命令:
+    ```bash
+    # 全盘找搜索pcre
+    find / -name pcre
+    下面是结果：
+    /mnt/sit/app/nginx-1.13.2/auto/lib/pcre
+    /usr/share/doc/man-pages-overrides-6.7.5/pcre
+    第一个是路径是nginx自带的。第二个是刚刚yum安装的。  
+    那么加上该路径执行试试看  
+    ./configure --with-pcre=/mnt/sit/app/nginx-1.13.2/auto/lib/pcre
+    ```
+    如果安装失败，就按照上面的方法查找zlib的路径追加到configure命令中`--with-zlib=xx`
+    
 3. 安装依赖
     
     ```bash
@@ -54,6 +67,7 @@
         	pcre-7.8-6.el6.i686
         	[root@localhost /]# rpm -ql pcre-7.8-6.el6.i686
     2. 安装编译依赖库yum install gcc gcc-c++ openssl openssl-devel  zib-devel zib 	
+
     ```
     
     
