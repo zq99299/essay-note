@@ -77,6 +77,7 @@ $ make install
 ## 上面的安装依然失败了，直接按照官网的安装文档
 http://www.nginx.cn/install
 
+就是最后初始化的时候，除了openssl需要指定地址外。剩下的不用再指定了。
 亲测装成功了。
 
 装成功之后的目录是在 初始化显示的 `nginx path prefix: "/usr/local/nginx"` 目录中
