@@ -103,3 +103,4 @@
 
 ### 实战
 个数不定文字内容和图片垂直居中对齐
+![](/assets/image/htmlcss/verticalalign/文字个数不定和图片居中对齐.png)
