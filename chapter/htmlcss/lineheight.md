@@ -229,4 +229,8 @@ body{ font-size:14px/1.4286; 'microsoft yahei'} // 缩写
     .box{ line-height : 0}
     ```    
     
+### 小图片和大文字
+小图标和大文字排版在一起的情况
+基本上高度受行高控制。
+剩下的就是图文的 垂直对齐了：`vertical-align`
 
