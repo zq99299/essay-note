@@ -118,4 +118,18 @@ cd /usr/local/nginx
 ```bash
 ./nginx -s reload
 ```
-
+## nginx vue History模式配置
+```bash
+        location / {
+            root   /mnt/sit/gitCode/net.tidebuy.shop/shopmarketing-vue/dist;
+            # index  index.html index.htm;
+            try_files $uri $uri/ /index.html =404;
+        }
+	location ^~ /api/ {
+            proxy_pass http://192.168.7.45:9101;
+        }
+        location ^~ /download/ {
+            root  /;
+            rewrite ^/(download)/(.*)$ /mnt/sit/release/resources/shopmarketing/$2 break;
+        }
+```
