@@ -123,13 +123,17 @@ cd /usr/local/nginx
         location / {
             root   /mnt/sit/gitCode/net.tidebuy.shop/shopmarketing-vue/dist;
             # index  index.html index.htm;
+            # history模式下使用，不然会被转到404
             try_files $uri $uri/ /index.html =404;
         }
+        # 拦截api开头的请求，代理到目标地址
 	location ^~ /api/ {
             proxy_pass http://192.168.7.45:9101;
         }
+        # 如果nginx和文件存储服务器在一起，就可以直接拦截映射到目标文件
         location ^~ /download/ {
             root  /;
+            # 重写url，正则匹配，然后转发到的地址只取第二部分，达到替换url部分地址的功能
             rewrite ^/(download)/(.*)$ /mnt/sit/release/resources/shopmarketing/$2 break;
         }
 ```
