@@ -54,9 +54,6 @@ cache=/mnt/sit/app/node/node-cache
 registry = https://registry.npm.taobao.org  # 修改成淘宝的镜像源，加快国内的构建速度
 ```
 
-
-## nginx
-
 ## git安装
 ```bash
 yum install git 
