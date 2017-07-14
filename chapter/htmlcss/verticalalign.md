@@ -185,3 +185,5 @@ vertical-align百分比是相对于line-height值计算的。
     line-height 0px
   }
 ```
+
+对于内联元素，vertical-align与line-height虽然看不见，但实际上到处都是
