@@ -221,3 +221,22 @@ vertical-align百分比是相对于line-height值计算的。
 上面的代码能能达到随意数量的图片两端对齐。最主要的是：`text-align justify`但是不加两个空的i标签，就有部分图片不会对齐。
 
 在图上也可以看出来，图片上下之间有缝隙，这个是行高产生的，但是最下面的缝隙明显大得多。把行高设置为0的话。图片间的缝隙是没有了。下面的还在。
+
+```css
+  .item7{
+    background #111111
+    margin-top 20px
+    margin-bottom 20px
+    text-align justify
+    line-height 0   // 行高为0
+    img{
+      width 360px
+    }
+    .justify-fix{
+      display inline-block
+      width 360px
+      line-height 0   // 这里也是，但是可以不用写，因为继承
+      vertical-align baseline  // 改变对齐方式，默认是基线对齐，就有缝隙
+      vertical-align top  // 改变对齐方式，
+    }
+```
