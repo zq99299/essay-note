@@ -199,6 +199,7 @@ vertical-align百分比是相对于line-height值计算的。
       <img src="~@/assets/demo-java.jpg"/>
       <i class="justify-fix"></i>
       <i class="justify-fix"></i>
+      // 如果不能对齐就多加一个
     </div>
 ```
 ```css
