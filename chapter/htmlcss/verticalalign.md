@@ -199,7 +199,6 @@ vertical-align百分比是相对于line-height值计算的。
       <img src="~@/assets/demo-java.jpg"/>
       <i class="justify-fix"></i>
       <i class="justify-fix"></i>
-      <i class="justify-fix"></i>
     </div>
 ```
 ```css
@@ -213,10 +212,10 @@ vertical-align百分比是相对于line-height值计算的。
     }
     .justify-fix{
       display inline-block
-      width 360px
+      width 360px  // 这里的宽度需要和图片宽度一致
     }
   }
 ```
 ![](/assets/image/htmlcss/verticalalign/两端对齐.png)
 
-上面的代码能能达到随意数量的图片两端对齐。
+上面的代码能能达到随意数量的图片两端对齐。最主要的是：`text-align justify`但是不加两个空的i标签，就有部分图片不会对齐。
