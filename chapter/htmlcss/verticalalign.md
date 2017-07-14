@@ -217,3 +217,4 @@ vertical-align百分比是相对于line-height值计算的。
     }
   }
 ```
+![](/assets/image/htmlcss/verticalalign/两端对齐.png)
