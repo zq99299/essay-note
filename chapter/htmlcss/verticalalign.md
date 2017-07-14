@@ -162,3 +162,11 @@
 
 ## verical-aligin 与 行高
 有点深度，有点看头
+
+vertical-align百分比是相对于line-height值计算的。
+```css
+{
+  line-height:30px;
+  vertical-align:-10%;  // 等于 -3px,30 * -10% = -3
+}
+```
