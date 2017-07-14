@@ -188,7 +188,7 @@ vertical-align百分比是相对于line-height值计算的。
 
 对于内联元素，vertical-align与line-height虽然看不见，但实际上到处都是
 
-### 复杂
+### 通过简单现象看复杂现象
 
 ```html
     <div class="item7">
@@ -219,3 +219,5 @@ vertical-align百分比是相对于line-height值计算的。
 ![](/assets/image/htmlcss/verticalalign/两端对齐.png)
 
 上面的代码能能达到随意数量的图片两端对齐。最主要的是：`text-align justify`但是不加两个空的i标签，就有部分图片不会对齐。
+
+在图上也可以看出来，图片上下之间有缝隙，这个是行高产生的，但是最下面的缝隙明显大得多。把行高设置为0的话。图片间的缝隙是没有了。下面的还在。
