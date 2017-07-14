@@ -187,3 +187,33 @@ vertical-align百分比是相对于line-height值计算的。
 ```
 
 对于内联元素，vertical-align与line-height虽然看不见，但实际上到处都是
+
+### 复杂
+
+```html
+    <div class="item7">
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <i class="justify-fix"></i>
+      <i class="justify-fix"></i>
+      <i class="justify-fix"></i>
+    </div>
+```
+```css
+  .item7{
+    background #111111
+    margin-top 20px
+    margin-bottom 20px
+    text-align justify
+    img{
+      width 360px
+    }
+    .justify-fix{
+      display inline-block
+      width 360px
+    }
+  }
+```
