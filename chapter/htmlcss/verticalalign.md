@@ -170,3 +170,18 @@ vertical-align百分比是相对于line-height值计算的。
   vertical-align:-10%;  // 等于 -3px,30 * -10% = -3
 }
 ```
+
+一张图片随意放在一个容器中，给容器添加背景色，能看到在图片底部有一条小缝隙，这就是line-height影响的。
+```html
+<div class="item7">
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item7{
+    background #111111
+    margin-top 20px
+    margin-bottom 20px
+    line-height 0px
+  }
+```
