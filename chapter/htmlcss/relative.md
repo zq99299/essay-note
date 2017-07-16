@@ -60,6 +60,8 @@ realtive除了限制同源属性，自身也具有定位属性
 指的是：尽量降低relative属性对其他元素或布局的潜在影响
 
 1. 尽量避免使用relative
+    
+    absolute不依赖relative
 2. 如果非要使用，那么最小化影响
 
     
