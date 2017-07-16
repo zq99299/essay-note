@@ -280,6 +280,25 @@ vertical-align百分比是相对于line-height值计算的。
 
 那上面的是啥意思呢？
 ![](/assets/image/htmlcss/verticalalign/空元素基线与linebox的关系.png)
+
+```html
+    <div class="item9">
+      <span class="dib-baseline"></span>
+      <span class="dib-baseline">x-baseline</span>
+    </div>
+```
+```css
+  .item9{
+    text-align center
+    .dib-baseline{
+      display inline-block
+      width 150px
+      height 150px
+      border 1px solid #cad5eb
+      background-color #f0f3f9
+    }
+  }
+```
 ----
 
 ## verical-aligin 线类属性值深入理解
