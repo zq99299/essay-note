@@ -299,6 +299,7 @@ vertical-align百分比是相对于line-height值计算的。
     }
   }
 ```
+
 ----
 
 ## verical-aligin 线类属性值深入理解
