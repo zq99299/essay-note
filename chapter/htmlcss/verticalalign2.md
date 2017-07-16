@@ -134,6 +134,12 @@ html中也有上标下标:`<sup>`、`<sub>`
  2. 0 宽度100%高度辅助元素
  3. vertical-align:middle 
  
+```html
+    <p class="item12">
+      <img src="~@/assets/demo-java.jpg"/>
+      <i></i>
+    </p>
+```
  
  
  
