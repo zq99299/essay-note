@@ -90,3 +90,4 @@
 
 ## 深入理解verical-aligin 上标下标
 也就是 sub/super
+html中也有上标下标:`<sup>`、`<sub>`
