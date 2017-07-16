@@ -304,6 +304,9 @@ vertical-align百分比是相对于line-height值计算的。
 
 第一个框中没有内容所以没有line boxes，他的基线就是元素的margin底边缘，而第二个盒子有文字内容（被line boxes包裹）。那么就以该line boxes的基线作为自己的基线**，所以可以看到第一个盒子的底边缘和第二个盒子的文字的基线是对齐的**。 他们的基线不一致导致看到的效果不一致。
 
+
+明白了上面的，再来看看看之前缝隙的问题
+![](/assets/image/htmlcss/verticalalign/空元素基线与行框基线关系2.png)
 ```html
     <div class="item7">
       <img src="~@/assets/demo-java.jpg"/>
@@ -330,6 +333,8 @@ vertical-align百分比是相对于line-height值计算的。
     }
   }
 ```
+
+这次没有在justify-fix元素中加字符，那么他们就是空元素，基线以margin底边缘为准。所以i标签和图片之间就撑开了一个2分之1x字符的高度。
 
 ----
 
