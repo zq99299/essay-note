@@ -1,4 +1,7 @@
 # overflow
+本节能学到的知识:
+
+overflow的基本特性表现，overflow与滚动条千丝万缕的瓜葛，overflow在清除浮动以及自适应布局中的应用，overflow与绝对定位之间的暧昧关系，依赖overflow的一些CSS样式表现，以及overflow与锚点技术。
 
 ## 基本属性
 
