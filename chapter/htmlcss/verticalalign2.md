@@ -22,3 +22,21 @@
 
 
 （近视）垂直居中
+![](/assets/image/htmlcss/verticalalign/近视垂直居中.png)
+```html
+    <p class="item10">
+      <img src="~@/assets/demo-java.jpg"/>x
+    </p>
+```
+```css
+  .item10{
+    line-height 250px
+    background #8c8c8c
+    text-align center
+    img{
+      vertical-align middle
+    }
+  }
+```
+
+x轴的高度假设是10；2分之1=5，-字符x的高度（假设是2），5-2 = 3；那么就是图片下层
