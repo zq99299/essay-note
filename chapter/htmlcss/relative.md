@@ -82,6 +82,7 @@ realtive除了限制同源属性，自身也具有定位属性
   }
 ```
 需求二：让.xiao的元素定位到div的右上角
+这里就没有办法只用absolute来达到定位了，常见的用法就是使用 relative来限制 .xiao 的absolute的区域。
 ```css
   .item14{
     background #8c8c8c
@@ -95,4 +96,29 @@ realtive除了限制同源属性，自身也具有定位属性
   }
 ```
 
+上面的达到了效果，那怎么最小化呢？
+```html
+    <div class="item15-xiao-box">
+      <img class="xiao" src="~@/assets/xiao.gif"/>
+    </div>
+    <div class="item15">
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item15-xiao-box{
+    position relative
+    img{
+      position absolute
+      right 0
+      top 0
+    }
+  }
+  .item15{
+    background #8c8c8c
+    height 250px
+  }
+```
+
+把要定位的元素单独踢出去，用空的div套出，然后让这个div. relative，且.xiao 使用absolute，这个时候就会脱离文档流，但是被relative限制了，视觉上就造成了.xiao在item15的区域内
     
