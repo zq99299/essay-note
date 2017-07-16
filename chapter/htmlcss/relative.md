@@ -53,4 +53,8 @@ realtive除了限制同源属性，自身也具有定位属性
     如果被realtive的元素的z-index=auto的时候，那么如果此时元素内有其他absolute元素使用了z-index=数值的话，那么该元素不会被限制，应该是相对于真个dom流的。（不包括IE6/7）
 
                 
+----
+
+## realtive的最小化影响原则
+
     
