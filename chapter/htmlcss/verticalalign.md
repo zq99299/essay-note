@@ -304,7 +304,32 @@ vertical-align百分比是相对于line-height值计算的。
 
 第一个框中没有内容所以没有line boxes，他的基线就是元素的margin底边缘，而第二个盒子有文字内容（被line boxes包裹）。那么就以该line boxes的基线作为自己的基线**，所以可以看到第一个盒子的底边缘和第二个盒子的文字的基线是对齐的**。 他们的基线不一致导致看到的效果不一致。
 
-
+```html
+    <div class="item7">
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <i class="justify-fix"></i>
+      <i class="justify-fix"></i>
+      <i class="justify-fix"></i>x  // 这里加了一个x方便看到效果
+    </div>
+```
+```css
+  .item7{
+    background #a8a8a8
+    text-align justify
+    line-height 0   // 行高为0
+    img{
+      width 360px
+    }
+    .justify-fix{
+      display inline-block
+      width 360px
+    }
+  }
+```
 
 ----
 
