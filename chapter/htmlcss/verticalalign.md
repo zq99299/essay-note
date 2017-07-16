@@ -200,6 +200,8 @@ vertical-align百分比是相对于line-height值计算的。
       <i class="justify-fix"></i>
       <i class="justify-fix"></i>
       // 如果不能对齐就多加一个
+      // <i class="justify-fix">&nbsp;</i>  在该元素中加上nbsp，就只需要item7中写行高=0就行了
+      // 原理就是，item7的行高控制的是图片的。i标签中没有元素或则是有隐藏的文本节点？这个还是没有搞明白
     </div>
 ```
 ```css
