@@ -120,5 +120,7 @@ realtive除了限制同源属性，自身也具有定位属性
   }
 ```
 
-把要定位的元素单独踢出去，用空的div套出，然后让这个div. relative，且.xiao 使用absolute，这个时候就会脱离文档流，但是被relative限制了，视觉上就造成了.xiao在item15的区域内
+把要定位的元素单独踢出去，用空的div套出，然后让这个div. relative，且.xiao 使用absolute，这个时候就会脱离文档流，但是被relative限制了，视觉上就造成了.xiao在item15的区域内。
+
+但是有一个问题：前提是 item15和item15-xiao-box的宽度要一致，才能在视觉上导致重合的效果
     
