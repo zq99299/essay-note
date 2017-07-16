@@ -1,4 +1,9 @@
 # relative
+本节能学到的知识：
+
+1. relative与absolute；
+2. relative与z-index；
+3. relative的最小化影响准则。
 
 ## realtive 和 absolute相煎关系
 
