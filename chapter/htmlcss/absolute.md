@@ -1,4 +1,9 @@
 # absolute
+本节能学到的知识:
+
+absolute基本特性的感性认知。absolute可能的理解误区纠正。absolute诸多高级技巧的应用实例。absolute在移动web布局中的大放异彩。
+
+
 ## absolute 与 浮动的相似性
 1. 包裹性
 2. 破坏性
