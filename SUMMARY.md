@@ -57,7 +57,7 @@
   - [overflow](chapter/htmlcss/overflow.md)
   - [line-height](chapter/htmlcss/lineheight.md)
   - [vertical-align](chapter/htmlcss/verticalalign.md)
-  - [vertical-align2](chapter/htmlcss/verticalalign.md) 
+  - [vertical-align2](chapter/htmlcss/verticalalign2.md) 
   
 
 * [linux](chapter/linux/README.md)
