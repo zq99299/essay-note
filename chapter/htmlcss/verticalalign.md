@@ -278,6 +278,7 @@ vertical-align百分比是相对于line-height值计算的。
 如果justify-fix元素里面没有任何字符，在css2的可视化格式的模型文档里面的说明是：
 > 'inline-block'的基线是正常流中最后一个line box 的基线，除非，这个line box 里面既没有line boxes 或则本身'overflow'属性的计算值而不是'visible',这种情况下基线是margin底边缘。
 
+那上面的是啥意思呢？
 ----
 
 ## verical-aligin 线类属性值深入理解
