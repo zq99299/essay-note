@@ -64,4 +64,35 @@ realtive除了限制同源属性，自身也具有定位属性
     absolute不依赖relative
 2. 如果非要使用，那么最小化影响
 
+```html
+    <div class="item14">
+      <img class="xiao" src="~@/assets/xiao.gif"/>
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+需求一：让.xiao的元素定位到div的左上角
+这里可以直接使用 absolute 的跟随特性，只要该元素在第一个位置，那么就自动定位到左上角了。
+```css
+  .item14{
+    background #8c8c8c
+    height 250px
+    .xiao{
+      position absolute
+    }
+  }
+```
+需求二：让.xiao的元素定位到div的右上角
+```css
+  .item14{
+    background #8c8c8c
+    height 250px
+    position: relative;
+    .xiao{
+      position absolute
+      right 0px
+      top:0
+    }
+  }
+```
+
     
