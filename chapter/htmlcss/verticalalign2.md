@@ -124,7 +124,7 @@ html中也有上标下标:`<sup>`、`<sub>`
  ###小图标与文字布局
  ![](/assets/image/htmlcss/verticalalign/小图标与文字对齐.png)
  
- 应该只适合一些固定的场景。比如图标高度固定，font-size 固定
+ 应该只适合一些固定的场景。比如图标高度固定，font-size 固定，因为使用的是基线
  
  
  
