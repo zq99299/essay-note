@@ -1,4 +1,13 @@
 # vertical-align
+
+本节能学到的知识：
+
+1. 教你区别vertical-align与line-height；
+2. 深入讲解vertical-align各类属性值；
+3. 帮你理解vertical-align前后不一的作用机制；
+了解vertical-align的糟糕兼容性；
+4. vertical-align的实际应用。
+
 顾名思义，垂直居中。
 定义： 属性设置元素的垂直对齐方式。
 
