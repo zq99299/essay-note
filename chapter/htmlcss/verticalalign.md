@@ -242,3 +242,33 @@ vertical-align百分比是相对于line-height值计算的。
       vertical-align top  // 改变对齐方式，
     }
 ```
+
+还有一种方法来去掉该缝隙。还是通过改变基线来 
+```html
+    <div class="item7">
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <img src="~@/assets/demo-java.jpg"/>
+      <i class="justify-fix">&nbsp;x</i>
+      <i class="justify-fix">&nbsp;x</i>
+      <i class="justify-fix">&nbsp;x</i>
+    </div>
+```
+```css
+.item7{
+    background #a8a8a8
+    margin-top 20px
+    margin-bottom 20px
+    text-align justify
+    line-height 0   // 行高为0
+    img{
+      width 360px
+    }
+    .justify-fix{
+      display inline-block
+      width 360px
+    }
+  }
+```
