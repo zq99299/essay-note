@@ -140,6 +140,21 @@ html中也有上标下标:`<sup>`、`<sub>`
       <i></i>
     </p>
 ```
+```css
+  .item12{
+    height 250px
+    background #8c8c8c
+    text-align center
+    img{
+      vertical-align middle
+    }
+    i{
+      display inline-block
+      height 100%
+      vertical-align middle
+    }
+  }
+```
  
  
  
