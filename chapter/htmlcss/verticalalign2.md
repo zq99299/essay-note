@@ -43,3 +43,4 @@
 ----
 
 ## verical-aligin 文本类属性值深入理解
+说说 text-top/text-bottom
