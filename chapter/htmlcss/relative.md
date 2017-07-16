@@ -50,7 +50,7 @@ realtive除了限制同源属性，自身也具有定位属性
 
     就是被realtive的元素中如果还有其他元素使用了z-index的话，那么这个元素的层级定位被重新新建了，限制在被realtive元素中。而不是相对于整个dom
     
-    如果被realtive的元素的z-index=auto的时候，那么如果此时元素内有其他absolute元素使用了z-index=数值的话，那么该元素不会被限制，应该是相对于真个dom流的。
+    如果被realtive的元素的z-index=auto的时候，那么如果此时元素内有其他absolute元素使用了z-index=数值的话，那么该元素不会被限制，应该是相对于真个dom流的。（不包括IE6/7）
 
                 
     
