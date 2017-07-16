@@ -1,4 +1,8 @@
 # line-height
+本节能学到的知识：
+
+line-height的定义、line-height与行内框盒子模型、line-height的高度机理、line-height的各类属性值、line-height与图片的表现，以及实际应用经验分享
+
 
 行高，两行文字基线之间的距离
 
