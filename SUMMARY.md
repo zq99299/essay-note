@@ -26,51 +26,45 @@
     * [NIO](chapter/netty/niostart/nio.md)
     * [AIO](chapter/netty/niostart/Aio.md)
     * [4种IO概念](chapter/netty/niostart/4种IO概念.md)
-  * [Netty入门](chapter/netty/nettystart/README.md)   
+  * [Netty入门](chapter/netty/nettystart/README.md)
     * [入门应用](chapter/netty/nettystart/入门应用.md)
     * [TCP粘包/拆包](chapter/netty/nettystart/TCP粘包_拆包.md)
-    * [分隔符和定长解码器](chapter/netty/nettystart/分隔符和定长解码器.md)  
- * [中级篇-编解码开发指南](chapter/netty/middleCodec/README.md)   
+    * [分隔符和定长解码器](chapter/netty/nettystart/分隔符和定长解码器.md)
+  * [中级篇-编解码开发指南](chapter/netty/middleCodec/README.md)
     * [编解码技术](chapter/netty/middleCodec/编解码技术.md)
     * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
     * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
     * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
- 
-    
----
-* [GIT](chapter/git/README.md)
-  - [GIT远程仓库回退](chapter/git/远程仓库回退.md)
-  - [分支管理](chapter/git/branch.md)
 
 ---
+
+* [GIT](chapter/git/README.md)
+  * [GIT远程仓库回退](chapter/git/远程仓库回退.md)
+  * [分支管理](chapter/git/branch.md)
+
+---
+
 * [IDEA](chapter/idea/README.md)
 
 ---
+
 * [Mysql](chapter/mysql/README.md)
   * [导出导入](chapter/mysql/导出导入.md)
 
 ---
-* [HTML/CSS随笔记](chapter/htmlcss/README.md)
-  - [css与html布局效果技巧](chapter/htmlcss/htmlcss布局效果技巧.md)
-  - [float](chapter/htmlcss/float.md)
-  - [absolute](chapter/htmlcss/absolute.md)
-  - [overflow](chapter/htmlcss/overflow.md)
-  - [line-height](chapter/htmlcss/lineheight.md)
-  - [vertical-align](chapter/htmlcss/verticalalign.md)
-  - [vertical-align2](chapter/htmlcss/verticalalign2.md) 
-  - [relative](chapter/htmlcss/relative.md) 
 
+* [CSS深入理解-张星旭系列](chapter/htmlcss/README.md)
+  * [css与html布局效果技巧](chapter/htmlcss/htmlcss布局效果技巧.md)
+  * [float](chapter/htmlcss/float.md)
+  * [absolute](chapter/htmlcss/absolute.md)
+  * [overflow](chapter/htmlcss/overflow.md)
+  * [line-height](chapter/htmlcss/lineheight.md)
+  * [vertical-align](chapter/htmlcss/verticalalign.md)
+  * [vertical-align2](chapter/htmlcss/verticalalign2.md)
+  * [relative](chapter/htmlcss/relative.md)
 * [linux](chapter/linux/README.md)
-  - [各种压缩/解压命令](chapter/linux/zip.md)
-  - [常用软件安装](chapter/linux/install.md)
-  - [端口管理](chapter/linux/port.md)
-  - [nginx](chapter/linux/nginx.md)
-
-    
-
-
-
-
-
-
+  * [各种压缩/解压命令](chapter/linux/zip.md)
+  * [常用软件安装](chapter/linux/install.md)
+  * [端口管理](chapter/linux/port.md)
+  * [nginx](chapter/linux/nginx.md)
 
