@@ -48,3 +48,5 @@
 定义：
 1. text-top : 盒子的顶部和父级content area的顶部对齐
 2. text-bottom: 盒子的底部和父级content area的底部对齐
+
+提示：content area 内容区域高度受font-size 大小影响，一般认为鼠标选中文字后出现的蓝色背景是 内容区域高度。
