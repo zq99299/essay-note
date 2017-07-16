@@ -25,3 +25,5 @@
 1. 支持负值
 2. 支持css3 animation动画
 3. 在css2.1时代，需要和定位元素配合使用
+
+如果不考虑css3，只有定位元素（position：relative/absolute/fixed/sticky）的z-index才有作用，在css3中有例外
