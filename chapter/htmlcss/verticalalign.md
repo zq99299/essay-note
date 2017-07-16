@@ -279,6 +279,7 @@ vertical-align百分比是相对于line-height值计算的。
 > 'inline-block'的基线是正常流中最后一个line box 的基线，除非，这个line box 里面既没有line boxes 或则本身'overflow'属性的计算值而不是'visible',这种情况下基线是margin底边缘。
 
 那上面的是啥意思呢？
+![](/assets/image/htmlcss/verticalalign/空元素基线与linebox的关系.png)
 ----
 
 ## verical-aligin 线类属性值深入理解
