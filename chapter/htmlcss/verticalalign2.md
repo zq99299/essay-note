@@ -9,3 +9,9 @@
 
 1. inline/inline-block：元素底部和正行的底部对齐
 2. table-cell 元素：单元格底padding边缘和表格行的底部对齐
+
+## TOP
+
+1. inline/inline-block：元素顶部和正行的顶部对齐
+2. table-cell 元素：单元格顶padding边缘和表格行的顶部对齐
+
