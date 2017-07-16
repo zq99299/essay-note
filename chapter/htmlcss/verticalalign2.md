@@ -73,7 +73,7 @@
     }
     span{
       font-size 14px
-      background-color royalblue
+      background-color royalblue****
     }
   }
 ```
@@ -96,3 +96,9 @@ html中也有上标下标:`<sup>`、`<sub>`
 这是一个帅锅<sup>[1]</sup>
 ```
 这里就是达到一个浇注的效果，被sup标注的文字大小会被缩写至75%
+
+
+**定义**
+
+1. super : 提高盒子的基线到父级合适的上标基线位置
+2. sub   : 降低盒子的基线到父级合适的下标基线位置
