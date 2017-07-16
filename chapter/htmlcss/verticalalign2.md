@@ -15,3 +15,7 @@
 1. inline/inline-block：元素顶部和正行的顶部对齐
 2. table-cell 元素：单元格顶padding边缘和表格行的顶部对齐
 
+## middle
+
+1. inline/inline-block：元素的垂直中心点和元素基线上1/2x-height处对齐
+2. table-cell 元素：单元格填充盒子相对于外面的表格行居中对齐
