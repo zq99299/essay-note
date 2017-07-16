@@ -57,7 +57,26 @@
 
 ## 实际作用
 表情图片（或原始尺寸背景图标）与文字的对齐效果
+![](/assets/image/htmlcss/verticalalign/表情图片与文字类对齐属性.png)
 
+```html
+    <div class="item11">
+      <img src="~@/assets/xiao.gif"/> <span>笑（vertical-align:middle）</span>
+    </div>
+```
+```css
+  .item11{
+    text-align center
+    img{
+      background-color royalblue
+      /*vertical-align text-bottom*/
+    }
+    span{
+      font-size 14px
+      background-color royalblue
+    }
+  }
+```
 
 
 
