@@ -107,5 +107,5 @@ html中也有上标下标:`<sup>`、`<sub>`
 
 ----
 
-##
+## vertical-align前后不一的作用机制
 相邻前后元素的vertical-align值不一样，该如何表现
