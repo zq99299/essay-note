@@ -91,6 +91,7 @@
 ![](/assets/image/htmlcss/zindex/为何内容元素比float元素高.png)
 
 
+![](/assets/image/htmlcss/zindex/内容元素比float元素层叠水平高.png)
 ```html
     <div class="item1">
       <img src="~@/assets/demo-java.jpg"/>
