@@ -136,5 +136,15 @@
 ## 其他css属性与层叠上下文
 介绍其他也会创建层叠上下文的css属性
 
+1. z-index 值不为auto的flex项（父元素display:flex|inline-flex）
+2. 元素的opacity值不是1
+3. 元素的transform值不是none
+4. 元素mix-blend-mode值不是normal
+5. 元素的filter值不是none
+6. 元素的isolation值是isolate
+7. postion:fixed声明 （chrome等blink/webkit内核浏览器）
+8. will-change指定的属性值为上面任意一个
+9. 元素的-webkit-overflow-scrolling设为touch 
+
 
 
