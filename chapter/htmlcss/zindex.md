@@ -88,6 +88,23 @@
 
     比如float元素不是应该更屌一点，为什么inline元素还在float元素上呢？     
     因为：更符合页面加载的功能和视觉呈现
+![](/assets/image/htmlcss/zindex/为何内容元素比float元素高.png)
 
 
+```html
+    <div class="item1">
+      <img src="~@/assets/demo-java.jpg"/>
+      以前浮动课程就讲过，浮动原本设计的作用是实现文章环绕图片的效果。
+      如果图片和文字发生重叠，显然，是后面的文字要优先显示的，因为，文字比让图片重要。
+      就像这里，我就放一个美女图片，你再有洪荒之力也猜不到我想表达的内容吧，嘿嘿
+    </div>
+```
+```css
+  .item1{
+    img {
+      float left
+      margin-right -30px   // 浮动后右移，和文字重叠
+    }
+  }
+```
 
