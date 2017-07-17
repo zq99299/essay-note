@@ -146,5 +146,10 @@
 8. will-change指定的属性值为上面任意一个
 9. 元素的-webkit-overflow-scrolling设为touch 
 
+---
+
+## z-index 与其他css属性层叠上下文
+非定位元素层叠上下文和z-index关系大揭秘
+
 
 
