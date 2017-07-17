@@ -108,4 +108,6 @@
     }
   }
 ```
+![](/assets/image/htmlcss/zindex/层叠水平内容高示例2.png)
 
+文字是内联元素，在7阶层叠水平中，内联元素和inline-block是平级，所以是后来居上
