@@ -118,6 +118,11 @@ cd /usr/local/nginx
 ```bash
 ./nginx -s reload
 ```
+停止服务
+```
+./nginx -s stop
+```
+
 ## nginx vue History模式配置
 ```bash
         location / {
