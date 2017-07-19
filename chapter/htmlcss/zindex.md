@@ -151,5 +151,12 @@
 ## z-index 与其他css属性层叠上下文
 非定位元素层叠上下文和z-index关系大揭秘
 
+1. 不支持z-index的层叠上下文元素的层叠顺序均是z-index:auto级别
 
+![](/assets/image/htmlcss/zindex/更完整的7阶层叠水平.png)
 
+2. 依赖z-index的层叠上下文元素的层叠顺序取决于z-index值
+  
+   依赖z-index值创建层叠上下文的情况：
+   1. position值为relative/absolute或fixed
+   2. display:flex|inline-flex容器的子flex项
