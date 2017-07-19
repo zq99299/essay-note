@@ -160,3 +160,44 @@
    依赖z-index值创建层叠上下文的情况：
    1. position值为relative/absolute或fixed
    2. display:flex|inline-flex容器的子flex项
+   
+层叠上下文导致的有趣的现象
+![](/assets/image/htmlcss/zindex/层叠上下文的有趣的例子.png)
+```html
+ <div class="item2">
+      <div class="box">
+        <p>看什么看，还不赶快叫师娘</p>
+        <img src="~@/assets/demo-java.jpg"/>
+      </div>
+    </div>
+```   
+```css
+.item2{
+    text-align center
+    img{
+      animation:fadein 3s infinite;
+    }
+    .box{
+      position relative
+      display inline-block
+    }
+    p{
+      position absolute
+      bottom 2px
+      left 0
+      right 0
+      color #fff
+      font-size 15px
+      line-height 2
+      background rgba(1, 8, 5, 0.38)
+    }
+    @keyframes fadein{
+      from{
+        opacity 0
+      }
+      to{
+        opacity 1
+      }
+    }
+  }
+```
