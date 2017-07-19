@@ -251,6 +251,38 @@
 ** 可访问性隐藏： ** 人肉眼不可见，但是辅助设备可以识别（比如把文字设置left为负数-999，人烟看不见了，但是屏幕阅读器能看到）
 
 z-index负值元素在层叠上下文的背景之上，其他元素之下
+
+利用这种特性我们实现一个小示例
+![](/assets/image/htmlcss/zindex/利用可访问隐藏特性制作好看的按钮.png)
+```html
+<div class="item3">
+      <h3>原始按钮</h3>
+      <form>
+        <input required/>
+        <input type="submit">
+      </form>
+      <h3>帅气按钮</h3>
+      <form>
+        <input required/>
+        <input type="submit" id="submit">
+        <label for="submit">提交</label>
+      </form>
+    </div>
+```
+```css
+  .item3{
+    [type=submit]{
+      position absolute
+      z-index -1
+    }
+    label{
+      background #0f5499
+      padding 10px
+      color #fff
+    }
+  }
+```
+原始的按钮比较丑陋，用自定义标签然后使用 for指向id，for的标签就有指向的功能了，但是我们要利用"可访问性隐藏"特性来把原始按钮隐藏，这里的隐藏不是看不见，就必须第一个按钮，在我们的css里面也把第一个原始按钮也作用上了，能看到但是点击不了，所以在第二帅气按钮里面，只要我们把 新的lable元素增加背景色就能把原始的按钮挡住了。
  
  
  
