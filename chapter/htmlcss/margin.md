@@ -58,3 +58,26 @@ margin可以改变容器的尺寸
 
 ### 一侧宽的自适应布局
 经典的布局，一栏固定。另一栏自适应
+```html
+    <div class="item2">
+      <img src="~@/assets/demo-java.jpg"/>
+      <p>
+        图片左浮动，跟随文字自然环绕效果。给 p 标签增加 margin-left,
+        可视尺寸减少，实现自适应效果；如果希望右侧固定，左侧自适应，
+        直接让图片右浮动，文字右margin即可；如果你希望DOM的前后顺序符合最终元素展现的前后顺序，
+        需要略微调整HTML嵌套结构，以及使用margin负值进行定位，
+        具体实现可参考，下面章节的：margin负值定位
+      </p>
+    </div>
+```
+```css
+  .item2 {
+    img {
+      float left
+      width 150px
+    }
+    p{
+      margin-left 150px  // 为什么要固定呢，是因为要减少图片所占用的宽度
+    }
+  }
+```
