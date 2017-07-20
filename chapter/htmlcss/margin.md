@@ -7,3 +7,8 @@
 - 剖析CSS margin负值定位的常见应用、
 - 剖析在使用margin时容易发生困惑的无效情形、
 - 扩展介绍margin-start/margin-end属性
+
+--- 
+
+## margin与容器的尺寸
+了解margin与元素尺寸之间关系
