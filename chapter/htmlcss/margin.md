@@ -81,3 +81,9 @@ margin可以改变容器的尺寸
     }
   }
 ```
+
+### margin 与占据尺寸
+
+1. block/inline-block水平元素均适用
+2. 与有没有设定width/height值无关
+3. 适用于水平放行和垂直方向
