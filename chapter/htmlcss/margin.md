@@ -91,3 +91,21 @@ margin可以改变容器的尺寸
 比如，平时很常见的按钮内的内容和边框间的间距，使用margin能增加这个按钮占用的尺寸
 
 如何利用这一特性？
+
+在滚动容器中让图片上下留白
+```html
+    <div class="item3">
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item3{
+    background: #8c8c8c
+    height 200px
+    overflow auto
+    img{
+      /*padding 50px 0*/  // 在视频中说使用padding在火狐浏览器中底部没有留白，测试的时候没有发现，可能是修复了这个bug？
+      margin 50px 0
+    }
+  }
+```
