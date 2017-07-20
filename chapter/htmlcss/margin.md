@@ -42,8 +42,8 @@ margin可以改变容器的尺寸
     .content {
       background blue
       color #fff
-      margin-left -50px  # 增加或则减少该值查看js的打印
-      margin-top -50px
+      margin-left -50px  // 增加或则减少该值查看js的打印
+      margin-top -50px  // 修改此项不会影响高度的尺寸
     }
   }
 ```
