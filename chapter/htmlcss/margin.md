@@ -53,3 +53,8 @@ margin可以改变容器的尺寸
       console.log('clientHight:', this.$refs.content.clientHeight)
     }
 ```
+
+那么我们如何利用这一特性？
+
+### 一侧宽的自适应布局
+经典的布局，一栏固定。另一栏自适应
