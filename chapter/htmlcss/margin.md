@@ -24,4 +24,32 @@ margin可以改变容器的尺寸
     
     float、absolute/fixed、inline水平、table-cell...这些已经不属于普通的blokc元素了
     
-2. 指适用于水平方向尺寸
+2. 只适用于水平方向尺寸
+
+大致意思就是说，margin为负值的时候，会让可视宽度变大，比如下面的
+```html
+    <div class="item1">
+      <div class="content" ref="content">
+        <p>clientWidth:724px</p>
+        <p>clientHeight:92px</p>
+      </div>
+    </div>
+```
+```css
+  .item1 {
+    background: #8c8c8c
+    height 300px
+    .content {
+      background blue
+      color #fff
+      margin-left -50px  # 增加或则减少该值查看js的打印
+      margin-top -50px
+    }
+  }
+```
+```javascript
+    mounted () {
+      console.log('clientWidth:', this.$refs.content.clientWidth)
+      console.log('clientHight:', this.$refs.content.clientHeight)
+    }
+```
