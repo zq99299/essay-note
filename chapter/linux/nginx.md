@@ -121,6 +121,7 @@ cd /usr/local/nginx/sbin
 ``
 指定配置文件启动：
 ```bash
+# 这里的conf文件使用的相对路径需要区分当前目录是sbin还是根目录
 ./nginx -c ./conf/nginx.conf
 ```
 修改了配置文件，重启
