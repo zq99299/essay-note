@@ -125,22 +125,142 @@ cd /usr/local/nginx
 
 ## nginx vue History模式配置
 ```bash
+
+#user  nobody;
+worker_processes  auto;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  2048;
+    multi_accept on;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    gzip  on;
+    gzip_disable "msie6";
+    # gzip_static on; 
+    gzip_proxied any;
+    gzip_min_length 1000; 
+    gzip_comp_level 4; 
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+    server {
+        listen       9100;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
         location / {
             root   /mnt/sit/gitCode/net.tidebuy.shop/shopmarketing-vue/dist;
             # index  index.html index.htm;
-            # history模式下使用，不然会被转到404
+			# history模式下使用，不然会被转到404
             try_files $uri $uri/ /index.html =404;
         }
-        # 拦截api开头的请求，代理到目标地址
-	location ^~ /api/ {
-            proxy_pass http://192.168.7.45:9101;
+		# 拦截api开头的请求，代理到目标地址
+		location ^~ /api/ {
+            proxy_pass http://127.0.0.1:18801;
+			client_max_body_size 500M;
         }
-        # 如果nginx和文件存储服务器在一起，就可以直接拦截映射到目标文件
+		# 如果nginx和文件存储服务器在一起，就可以直接拦截映射到目标文件
         location ^~ /download/ {
             root  /;
-            # 添加请求头，让浏览器下载文件而不是直接打开预览
-            add_header Content-Disposition: 'attachment;';
-            # 重写url，正则匹配，然后转发到的地址只取第二部分，达到替换url部分地址的功能
+			add_header Content-Disposition: 'attachment;';
             rewrite ^/(download)/(.*)$ /mnt/sit/release/resources/shopmarketing/$2 break;
         }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+
+
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+}
+
 ```
