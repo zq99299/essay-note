@@ -138,6 +138,8 @@ cd /usr/local/nginx
         # 如果nginx和文件存储服务器在一起，就可以直接拦截映射到目标文件
         location ^~ /download/ {
             root  /;
+            # 添加请求头，让浏览器下载文件而不是直接打开预览
+            add_header Content-Disposition: 'attachment;';
             # 重写url，正则匹配，然后转发到的地址只取第二部分，达到替换url部分地址的功能
             rewrite ^/(download)/(.*)$ /mnt/sit/release/resources/shopmarketing/$2 break;
         }
