@@ -109,9 +109,18 @@ ln -s /usr/local/lib/libpcre.so.1 /lib64/
 ```
 
 ## 启动命令等
-指定配置文件启动：
+首先进入nginx安装目录，下面的命令都是在该目录中执行的
 ```bash
 cd /usr/local/nginx
+# 如果执行不了nginx命令的话就进入sbin目录
+cd /usr/local/nginx/sbin
+```
+测试配置文件是否有异常
+```bash
+./nginx -t
+``
+指定配置文件启动：
+```bash
 ./nginx -c ./conf/nginx.conf
 ```
 修改了配置文件，重启
