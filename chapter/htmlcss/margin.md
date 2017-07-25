@@ -148,3 +148,13 @@ margin可以改变容器的尺寸
 如果把box设置为宽高为1px的正方形，就能看到其实被撑开的是一个正方形（宽高相差一个宽度不知道是为什么），那么当box为0的时候，撑开的其实就是一个真正的正方形。但是为什么 item4的高度变成了宽度的2分之1呢？
 
 那么请看下回的margin重叠知识，可以解开这个疑惑
+
+---
+
+## 正确看待CSS的margin重叠
+margin重叠如何发生，存在的价值
+
+margin重叠通常特性
+
+1. block水平元素（不包括float和absolute元素）
+2. 不考虑writing-mode，指发生在垂直方向（margin-top、margin-bottom）
