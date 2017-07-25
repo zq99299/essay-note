@@ -285,7 +285,7 @@ margin重叠如何发生，存在的价值
 如果说把上面的加上宽度,那么默认margin:0px,所以在这个示例里面是居左显示的而右边有一部分空间貌似被截断了，原本应该填充的尺寸被width/height强制变更，而margin:auto就是为了填充这个变更的尺寸而设计的，如果使用margin:auto,那么该元素将会居中显示；
 ```html
     <div class="item7">
-      <div style="background: lightcoral;width: 200px;margin: auto">我的宽度自动填满容器</div>
+      <div style="background: lightcoral;width: 200px;margin-left: auto;margin-right:auto;">左右均auto，居中显示</div>
     </div>
 ```
 
