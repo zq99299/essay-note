@@ -272,7 +272,14 @@ margin重叠如何发生，存在的价值
 
 **作用机制：**
 
-元素有时候，就算没有设置width或则height，也会自动填充
-
+元素有时候，就算没有设置width或则height，也会自动填充;
+```html
+    <div class="item7">
+      <div style="background: lightcoral">我的宽度自动填满容器</div>
+    </div>
+    <div class="item8">
+      <div style="position:absolute;left:0;right:0;background: lightcoral">我的宽度自动填满容器</div>
+    </div>
+```
 
 
