@@ -330,9 +330,11 @@ margin重叠如何发生，存在的价值
   .item8{
     background gray
     height 300px
+    width 100%
     .son{
       background lightcoral
-      height 200px
+      height 100px
+      width 200px
       margin auto 0
     }
   }
@@ -341,5 +343,20 @@ margin重叠如何发生，存在的价值
 在垂直方向要居中的元素不会占据更多的空间，在F12里面能看到，没有更多的空间了和block元素的水平方向不是一样的规则。
 
 那垂直方向的元素就无法使用margin垂直居中了吗？
+```css
+  .item8{
+    background gray
+    height 300px
+    width 100%
+    writing-mode vertical-lr
+    .son{
+      background lightcoral
+      height 100px
+      width 200px
+      margin auto
+    }
+  }
+```
+css3的语法：writing-mode vertical-lr改变文档流的方向，但是不会水平居中了，因为更改为垂直流了
 
 
