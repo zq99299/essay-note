@@ -183,5 +183,28 @@ margin重叠3种情景
 ```
 在浏览器的 F12调试界面能看到dom的盒子模型，鼠标移动上去就能看到上下两个p标签的 margin-bottom 和 margin-top 合并了
 
-
-
+```html
+    父级和第一个/最后一个子元素
+    <div class="item6">
+      <div class="father">
+        <div class="son" style="margin-top: 80px">我是son</div>
+      </div>
+      <div class="father" style="margin-top: 80px">
+        <div class="son">我是son</div>
+      </div>
+      <div class="father" style="margin-top: 80px">
+        <div class="son" style="margin-top: 80px">我是son</div>
+      </div>
+    </div>
+```
+```css
+  .item6{
+    .father{
+      background sandybrown
+      line-height 2em
+    }
+  }
+```
+上面三个的表现方式都是一样的，都被合并了。
+第一个： father的margin-bottom = 0,子元素son的margin-top=80px，他们一合并，就公用margin-top=80px。后面的两个类似
+ 
