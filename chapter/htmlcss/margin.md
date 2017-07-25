@@ -294,4 +294,16 @@ margin重叠如何发生，存在的价值
 * 如果一侧是固定值，一侧是auto，auto为剩余空间大小
 * 如果两侧均是auto，则平分剩余空间
 
-
+### 为什么图片margin：auto不水平居中呢？
+```html
+    <div class="item7">
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item7{
+    img{
+      margin 0 auto
+    }
+  }
+```
