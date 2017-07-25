@@ -223,3 +223,10 @@ margin重叠如何发生，存在的价值
 3. 父元素没有padding-bottom设置
 4. 父元素和最后一个子元素之间没有inline元素分割
 5. 父元素没有height,min-height,max-height限制
+
+### 空block元素margin重叠其他条件
+
+1. 元素没有borde设置
+2. 元素没有padding值
+3. 里面没有inline元素
+4. 没有height，或则min-height
