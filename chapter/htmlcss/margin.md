@@ -157,4 +157,31 @@ margin重叠如何发生，存在的价值
 margin重叠通常特性
 
 1. block水平元素（不包括float和absolute元素）
-2. 不考虑writing-mode，指发生在垂直方向（margin-top、margin-bottom）
+2. 不考虑writing-mode（类似古文从上往下排列），只发生在垂直方向（margin-top、margin-bottom）
+
+margin重叠3种情景
+
+1. 相邻兄弟元素
+2. 父级和第一个/最后一个子元素
+3. 空的block元素
+
+```html
+相邻兄弟元素margin重叠
+    <div class="item5">
+      <p>第一行</p>
+      <p>第二行</p>
+    </div>
+```
+```css
+  .item5{
+    p{
+      line-height 2em
+      background sandybrown
+      margin 1em 0
+    }
+  }
+```
+在浏览器的 F12调试界面能看到dom的盒子模型，鼠标移动上去就能看到上下两个p标签的 margin-bottom 和 margin-top 合并了
+
+
+
