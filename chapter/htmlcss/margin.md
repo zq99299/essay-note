@@ -321,6 +321,21 @@ margin重叠如何发生，存在的价值
 ```
 
 **为什么明明容器定高，元素定高，`margin:aruo 0`无法垂直居中** 
+```html
+    <div class="item8">
+      <div class="son"></div>
+    </div>
+```
+```css
+  .item8{
+    background gray
+    height 300px
+    .son{
+      background lightcoral
+      height 200px
+      margin auto 0
+    }
+  }
+```
 
-
-
+在垂直方向要居中的元素不会占据更多的空间，在F12里面能看到，没有更多的空间了
