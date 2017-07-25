@@ -360,7 +360,7 @@ margin重叠如何发生，存在的价值
 css3的语法：writing-mode vertical-lr改变文档流的方向（高度自动撑满），但是不会水平居中了，因为更改为垂直流了
 
 
-**绝对定位元素的margin:auto 居中**
+### 绝对定位元素的margin:auto 居中
 ```html
   <div class="item9">
       <div class="son"></div>
