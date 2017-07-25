@@ -342,7 +342,7 @@ margin重叠如何发生，存在的价值
 
 在垂直方向要居中的元素不会占据更多的空间，在F12里面能看到，没有更多的空间了和block元素的水平方向不是一样的规则。
 
-那垂直方向的元素就无法使用margin垂直居中了吗？
+**那垂直方向的元素就无法使用margin垂直居中了吗？**
 ```css
   .item8{
     background gray
@@ -360,3 +360,32 @@ margin重叠如何发生，存在的价值
 css3的语法：writing-mode vertical-lr改变文档流的方向（高度自动撑满），但是不会水平居中了，因为更改为垂直流了
 
 
+**绝对定位元素的margin:auto 居中**
+```html
+  <div class="item9">
+      <div class="son"></div>
+    </div>
+```
+```css
+  .item9{
+    background gray
+    height 300px
+    width 100%
+    position relative
+    .son{
+      position absolute
+      left 0
+      bottom 0
+      top 0
+      right 0
+      background lightcoral
+    }
+  }
+```
+利用拉伸充满父元素容器。接下来
+```css
+给son增加宽高，强制截断，但是通过F12查看是占据了整个容器，所以就水平垂直居中了，IE8+
+      width 200px
+      height: 100px
+      margin auto
+```
