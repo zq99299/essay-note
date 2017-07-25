@@ -154,12 +154,12 @@ margin可以改变容器的尺寸
 ## 正确看待CSS的margin重叠
 margin重叠如何发生，存在的价值
 
-margin重叠通常特性
+**margin重叠通常特性**
 
 1. block水平元素（不包括float和absolute元素）
 2. 不考虑writing-mode（类似古文从上往下排列），只发生在垂直方向（margin-top、margin-bottom）
 
-margin重叠3种情景
+**margin重叠3种情景**
 
 1. 相邻兄弟元素
 2. 父级和第一个/最后一个子元素
@@ -207,4 +207,19 @@ margin重叠3种情景
 ```
 上面三个的表现方式都是一样的，都被合并了。
 第一个： father的margin-bottom = 0,子元素son的margin-top=80px，他们一合并，就公用margin-top=80px。后面的两个类似
- 
+
+### 父子margin重叠其他条件
+**margin-top重叠：**
+
+1. 父元素非块状格式化上下文
+2. 父元素没有border-top设置
+3. 父元素没有padding-top设置
+4. 父元素和第一个子元素之间没有inline元素分割
+
+**margin-bottom重叠:**
+
+1. 父元素非块状格式化上下文元素
+2. 父元素没有border-bottom设置
+3. 父元素没有padding-bottom设置
+4. 父元素和最后一个子元素之间没有inline元素分割
+5. 父元素没有height,min-height,max-height限制
