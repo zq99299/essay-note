@@ -133,7 +133,7 @@
   .item13{
     overflow hidden
     img{
-      float right
+      float left
       width 200px
       margin-left -200px
     }
@@ -173,4 +173,6 @@
   }
 ```
 就是根据item12的代码，调整了dom顺序，并且给p元素左浮动，
-外加margin-right-200px 留下的空白间距。这个时候p标签其实就是宽度百分百的。然后图片就被挤掉了，只要把图片margin-left -200px就能刚好落在p标签margin-right 200px留下的空白处
+外加margin-right-200px 留下的空白间距。这个时候p标签其实就是宽度百分百的。然后图片就被挤掉了，只要把图片margin-left -200px就能刚好落在p标签margin-right 200px留下的空白处;
+
+如果按照p元素是百分比宽度的话，那么图片和p的left同方浮动也没有什么必要了，因为都是卡200图片的宽度。
