@@ -43,3 +43,37 @@
 
 ### margin负值下的等高布局
 利用 margin改变元素占据空间 的特性
+
+![](/assets/image/htmlcss/margin/margin负值等高布局示例.png)
+
+我们想让左右等高，就算右边只有一行也要等高。
+
+```html
+ <div class="item11">
+      <div class="orange">
+        <p>左黄</p>
+        <p>左黄</p>
+      </div>
+      <div class="green">
+        <p>右绿</p>
+      </div>
+</div>
+
+```
+```css
+  .item11{
+    overflow hidden
+    resize vertical  // 这个也没有看出来有什么用？暂时
+    text-align center
+    .orange{
+      background orange
+      float left
+      width 50%
+    }
+    .green{
+      background green
+      float right
+      width 50%
+    }
+  }
+```
