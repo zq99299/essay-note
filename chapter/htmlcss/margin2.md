@@ -146,3 +146,31 @@
     }
   }
 ```
+
+根据上面的原理,动手实现了下，下面的也可以，而且改动比较小，就是不知道和老师上面说的有啥隐藏的兼容性的没
+```html
+    <div class="item12">
+      <p>
+        图片右浮动，文字自然环绕效果，给p元素增加 margin-right，
+        可视尺寸减少，实现自适应效果；如果你希望dom的前后顺序符合最终元素展示的前后顺序，需要略微调整html嵌套结构，
+        以及使用margin负值定位
+      </p>
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item12{
+    overflow hidden
+    img{
+      float right
+      width 200px
+      margin-left -200px
+    }
+    p{
+      float left
+      margin-right 200px
+    }
+  }
+```
+就是根据item12的代码，调整了dom顺序，并且给p元素左浮动，
+外加margin-right-200px 留下的空白间距。这个时候p标签其实就是宽度百分百的。然后图片就被挤掉了，只要把图片margin-left -200px就能刚好落在p标签margin-right 200px留下的空白处
