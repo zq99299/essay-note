@@ -86,3 +86,7 @@
 ```
 这个负值要比等高的元素高度大才有效果，否则无效。
 原理：margin-bottom -10px,元素整体往下沉，而父元素又是overflow hidden；所以视觉上被截断了。再使用padding-bottom 10px再补回来，由于panding是可以显示背景色的，所以视觉效果上就是等高的
+
+
+### margin负值下的两栏自适应布局
+元素占据空间跟随margin移动 特性
