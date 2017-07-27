@@ -4,11 +4,10 @@
 负值应用实例展示
 
 ### margin负值下的两端对齐
-margin改变元素尺寸
+利用 margin改变元素尺寸 的特性
 ![](/assets/image/htmlcss/margin/两端对齐示例-待解决前.png)
 如上的效果图，加入说这个列表是根据后端数据进行循环渲染的。那么列表三后面还有margin不是和边框对齐的。那么这个怎么处理呢？
 
-处理前的源码和css
 ```html
     <div class="item10">
       <div class="ul">
@@ -41,3 +40,6 @@ margin改变元素尺寸
     }
   }
 ```
+
+### margin负值下的等高布局
+利用 margin改变元素占据空间 的特性
