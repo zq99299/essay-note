@@ -90,3 +90,27 @@
 
 ### margin负值下的两栏自适应布局
 元素占据空间跟随margin移动 特性
+
+右侧固定宽度，左侧margin-right固定的宽度，达到左侧自适应
+```html
+<div class="item12">
+      <img src="~@/assets/demo-java.jpg"/>
+      <p>
+        图片右浮动，文字自然环绕效果，给p元素增加 margin-right，
+        可视尺寸减少，实现自适应效果；如果你希望dom的前后顺序符合最终元素展示的前后顺序，需要略微调整html嵌套结构，
+        以及使用margin负值定位
+      </p>
+    </div>
+```
+```css
+  .item12{
+    overflow hidden
+    img{
+      float right
+      width 200px
+    }
+    p{
+      margin-right 200px
+    }
+  }
+```
