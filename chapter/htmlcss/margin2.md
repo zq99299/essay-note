@@ -115,3 +115,34 @@
   }
 ```
 上面的缺点就是 dom顺序和最终视觉看到的顺序比符合。
+
+```html
+ <div class="item13">
+      <div class="textp">
+        <p>
+          这里略微调整HTML结构，构建一个宽度100%的浮动容器（如无需兼容ie8，可以使用css calc）
+          👈浮动，后面跟随的图片也是同方向浮动，但是margin-left负值自身的宽度大小，
+          配合p元素margin-right留下的补间空白，实现自适应效果
+        </p>
+      </div>
+
+      <img src="~@/assets/demo-java.jpg"/>
+    </div>
+```
+```css
+  .item13{
+    overflow hidden
+    img{
+      float right
+      width 200px
+      margin-left -200px
+    }
+    p{
+      margin-right 200px
+    }
+    .textp{
+      float left
+      width 100%
+    }
+  }
+```
