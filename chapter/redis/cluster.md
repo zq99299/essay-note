@@ -181,11 +181,11 @@ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 
 
 
-# redis集群的管理
+## redis集群的管理
 redis-trib.rb 命令，用来管理集群，在redis安装目录下的 src中
 参考文档：http://blog.csdn.net/huwei2003/article/details/50973967
 
-## trib 配置
+### trib 配置
 前面说道，创建集群之前不要设置密码，原因是 trib的命令是不带密码的，所以不能设置，这里可以修改配置来支持密码：
 配置文件所在的路径（默认在线安装）：/usr/lib/ruby/gems/1.8/gems/redis-3.2.1/lib/redis/client.rb
 
@@ -215,18 +215,18 @@ class Redis
 
 ``` 
 
-## 关闭单个服务
+### 关闭单个服务
 ```bash
 redis-cli [-c] -h 192.168.1.185 -p 7000 shutdown 
 ```
 
-## redis-cli
+### redis-cli
 ```bash
 -c 进入集群模式:如获取213机器上的一个key，如果该机器上不存在，则会自动跳转到其他有的机器上面
 redis-cli -c -h 192.168.7.213
 ```
 
-## 创建集群create
+### 创建集群create
 初次需要创建集群，使用以下命令，前提是：
 1. 防火墙关闭（会有一些通信端口）
 2. ruby和rubygems命令能正常使用：（在准备步骤中4.1中使用gem install redis能安装的话，一般都行）
@@ -235,14 +235,14 @@ redis-cli -c -h 192.168.7.213
 ./redis-trib.rb  create --replicas 1 192.168.7.225:6379 192.168.7.63:6379 192.168.7.225:7000 192.168.7.63:7000 192.168.7.213:6379 192.168.7.213:7000
 ```
 
-## 检查集群状态check
+### 检查集群状态check
  ```bash
 #redis-trib.rb的check子命令构建  ,在redis安装目录下的 src下
 #ip:port可以是集群的任意节点  
 ./redis-trib.rb check 192.168.1.185:6380 
 ```
 
-## 查看集群信息info
+### 查看集群信息info
 
 info命令用来查看集群的信息。info命令也是先执行load_cluster_info_from_node获取完整的集群信息。然后显示ClusterNode的info_string结果，示例如下：
 ```bash
@@ -254,7 +254,7 @@ info命令用来查看集群的信息。info命令也是先执行load_cluster_in
 0.00 keys per slot on average.
 ```
 
-##add-node将新节点加入集群
+### add-node将新节点加入集群
 add-node命令可以将新节点加入集群，节点可以为master，也可以为某个master节点的slave。
 ```bash
 add-node    new_host:new_port existing_host:existing_port
