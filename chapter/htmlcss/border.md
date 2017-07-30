@@ -177,10 +177,27 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 ```
 这里是使用border的宽度，且把font-size设置为0，让这个span中没有内容，然后边框加上颜色组成上下左右的拼成的一个长方形或则正方形。这里只设置了上右的颜色，下和左边的颜色透明了，在视觉上就组成了一个右上的角标效果。这里故意设置成不同的颜色，方便看清除边框的组成，是对角线分开组成的。
 
-这里三角形不是等边的，全靠边框宽度控制；原理如下图展示。中间空白区域就是文字内容区域
+这里三角形不是等边的，全靠边框宽度控制；原理如下图展示。中间空白区域就是元素的宽高
 ![](/assets/image/htmlcss/border/边框形成的样式.png)
 
-
+看了上面的图形之后，再来画梯形
+```html
+    <div class="item7">
+      <!--span是行内元素没法指定宽高-->
+      <div class="box"></div>
+    </div>
+```
+```css
+  .item7 {
+    .box {
+      font-size 0px
+      width 30px
+      border-style solid
+      border-width 20px 20px
+      border-color transparent transparent red transparent
+    }
+  }
+```
 
 ## border与透明边框
 ## border在布局中的应用
