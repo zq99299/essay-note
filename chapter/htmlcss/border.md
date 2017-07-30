@@ -128,7 +128,7 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
     border 1px solid
     height 260px
     background url('~@/assets/demo-java.jpg') no-repeat
-    background-position 50px 40px
+    background-position 50px 40px // 水平位置50px，垂直位置40px
   }
 ```
 上面示例中，背景距离左边边缘50px，就算容器大小改变左边边缘都是5opx，但是距离右边缘..
