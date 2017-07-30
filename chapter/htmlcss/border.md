@@ -90,6 +90,31 @@ border-color默认颜色就是color
 类似的还有box-shadow,text-shadow等
 
 这个特性有啥用呢？
+![](/assets/image/htmlcss/border/hover与图形变色.png)
+下面是利用border实现（仅1处）
+```html
+    <div class="item3">
+      <div class="add">
+        +
+      </div>
+    </div>
+```
+```css
+  .item3 {
+    .add {
+      text-align center
+      margin 0 auto
+      width 60px
+      font-size 60px
+      border 1px solid
+      color #ccc
+      &:hover{
+        color #06c
+      }
+    }
+  }
+```
+
 
 ## border与background定位
 ## border与三角等图片构建
