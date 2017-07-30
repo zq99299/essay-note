@@ -141,14 +141,15 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
   .item4 {
     border 1px solid
     .box {
-      border 50px solid transparent  // 添加5px的边框
+      border 50px solid transparent  // 添加50px的边框，颜色设置为透明色
       height 260px
       background url('~@/assets/demo-java.jpg') no-repeat
-      background-position 100% 40px
+      background-position 100% 40px // 水平位置100%
     }
   }
 ```
-这里
+这里利用边框宽度撑开box容器与父容器的间距为50px。颜色透明，且水平100%也就是紧贴着右侧。
+
 
 ## border与三角等图片构建
 ## border与透明边框
