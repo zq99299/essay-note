@@ -271,6 +271,32 @@
 ## 了解margin-start、end等
 进一步拓展对margin的深广度的理解  
 
+margin-start/end 是css3中的属性
+结论：
+
+- 正常的流向，margin-start等同于margin-left，两则重叠不累加
+- 水平流是从右往左，margin-start等于于margin-right
+- 在垂直流下(writing-mode:vertical-*),margin-start等同于margin-top
+
+![](/assets/image/htmlcss/margin/margin-start示例.png)
+```html
+<div class="item17">
+      <img src="~@/assets/demo-java.jpg"/>
+      我是辅助元素
+    </div>
+```
+```css
+  .item17{
+    background grey
+    img{
+      margin-left 100px
+      -webkit-margin-start 100px
+      margin-start 100px
+      direction ltl  // 默认值
+      direction rtl  // 从右往左
+    }
+  }
+```
   
     
       
