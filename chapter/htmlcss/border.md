@@ -120,21 +120,35 @@ border-color默认颜色就是color
 ## border与background定位
 background定位的局限：只能相对左上角，不能想对右下（css2.1）
 ```html
- <div class="item4">
+    <div class="item4">
+      <div class="box"></div>
     </div>
 ```
 ```css
   .item4 {
     border 1px solid
-    height 260px
-    background url('~@/assets/demo-java.jpg') no-repeat
-    background-position 50px 40px // 水平位置50px，垂直位置40px
+    .box {
+      height 260px
+      background url('~@/assets/demo-java.jpg') no-repeat
+      background-position 50px 40px // 水平位置50px，垂直位置40px
+    }
   }
 ```
 上面示例中，背景距离左边边缘50px，就算容器大小改变左边边缘都是5opx，但是距离右边缘..
 
 那怎么办呢？方法很多，借助border
-
+```css
+  .item4 {
+    border 1px solid
+    .box {
+      border 50px solid transparent  // 添加5px的边框
+      height 260px
+      background url('~@/assets/demo-java.jpg') no-repeat
+      background-position 100% 40px
+    }
+  }
+```
+这里
 
 ## border与三角等图片构建
 ## border与透明边框
