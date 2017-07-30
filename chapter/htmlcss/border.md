@@ -63,6 +63,8 @@
     }
     ```
     利用了双线的计算规则，60px平均为分成3份，然后实现了等高一个图形
+
+- inset ： 内凹，大眼瞪小眼    
 ## border与color
 ## border与background定位
 ## border与三角等图片构建
