@@ -154,5 +154,10 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 
 
 ## border与三角等图片构建
+- border-style:dotted : 实现ie7/8 圆角
+- double ： 实现三道杠图标
+- solid ： 三角和梯形
+
+
 ## border与透明边框
 ## border在布局中的应用
