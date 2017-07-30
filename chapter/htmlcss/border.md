@@ -206,6 +206,7 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 
 更高级的应用，模拟圆角
 ![](/assets/image/htmlcss/border/边框模拟圆角.png)
+不是使用css3实现的，是用边框模拟的
 
 ## border与透明边框
 ## border在布局中的应用
