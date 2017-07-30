@@ -89,6 +89,7 @@ border-color默认颜色就是color
 不单独指定border的颜色，那么就使用color的
 类似的还有box-shadow,text-shadow等
 
+这个特性有啥用呢？
 
 ## border与background定位
 ## border与三角等图片构建
