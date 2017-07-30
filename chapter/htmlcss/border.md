@@ -75,6 +75,21 @@
 
 ## border-color与color
 border-color默认颜色就是color
+```html
+     <div class="item2">
+       我的颜色是
+     </div>
+```
+```css
+  .item2{
+    border 10px solid
+    color red
+  }
+```
+不单独指定border的颜色，那么就使用color的
+
+
+
 ## border与background定位
 ## border与三角等图片构建
 ## border与透明边框
