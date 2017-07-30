@@ -44,7 +44,24 @@
     ```
     这就能看出来了，至少是3px才能看到两条线；
     兼容性非常好，可以利用它来绘制图形
-
+    ![](/assets/image/htmlcss/border/border绘制图形1.png)
+    ```html
+         绘制图形
+     <div class="item1">
+       <div class="figure">
+       </div>
+     </div>
+    ```
+    ```css
+    .item1{
+      .figure{
+        width 120px
+        height 20px
+        border-bottom 20px solid
+        border-top 60px double red
+      }
+    }
+    ```
 ## border与color
 ## border与background定位
 ## border与三角等图片构建
