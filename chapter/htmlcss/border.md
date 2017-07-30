@@ -108,6 +108,7 @@ border-color默认颜色就是color
       font-size 60px
       border 1px solid
       color #ccc
+      /*transition color 250ms*/  // 过度效果的话也很好加
       &:hover{
         color #06c
       }
