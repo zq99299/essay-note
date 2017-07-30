@@ -118,6 +118,11 @@ border-color默认颜色就是color
 
 
 ## border与background定位
+background定位的局限：只能相对左上角，不能想对右下（css2.1）
+
+
+
+
 ## border与三角等图片构建
 ## border与透明边框
 ## border在布局中的应用
