@@ -73,7 +73,8 @@
 
 
 
-## border与color
+## border-color与color
+border-color默认颜色就是color
 ## border与background定位
 ## border与三角等图片构建
 ## border与透明边框
