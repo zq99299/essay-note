@@ -24,6 +24,10 @@
 因为 border-style:double至少3px才有效果
 
 ## 深入了解各种border-style类型
+- solid : 实线
+- dashed : 虚线；在ie和其他浏览器下兼容性有问题，边框宽高2:1和3:1
+
+
 ## border与color
 ## border与background定位
 ## border与三角等图片构建
