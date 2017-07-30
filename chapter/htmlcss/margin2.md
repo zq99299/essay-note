@@ -206,7 +206,49 @@
   ```
   上面这个例子，水平方向的margin有效果，垂直方向的没有
   
-### margin重叠
+2. margin重叠
 
-有可能是和父级或则兄弟元素重叠了，在前面margin重叠章节中有讲过
+  有可能是和父级或则兄弟元素重叠了，在前面margin重叠章节中有讲过
+3. table-cell与margin
+  
+    mdn上有一段描述(https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin)
+    > all elements, except elements with table display types other than table-caption, table and inline-table. It also applies to ::first-letter.
+    > margin应用于：除了display为table相关类型（不包括table-caption，table以及inline-table）的所有。甚至也可以应用于::first-letter
+    display:table-cell/table-row 等声明的margin无效
 
+4. position:absolute 与margin   
+     
+   绝对定位元素非定位的margin值“无效”
+   什么是非定位呢？left=100%,right=10%,这个叫定位，没有设置的未非定位。
+   “无效”：给如果是子元素定位了，要想有margin有效果，需要给父容器添加postion:relative
+   结论：绝对定位的margin值一直有效,只是不像普通元素那样，可以和兄弟元素插科打混（脱离文档流，和相邻元素么有关系）
+   
+5. 鞭长莫及导致无效
+  ```html
+  <div class="item15">
+      <img src="~@/assets/demo-java.jpg"/>
+      <div class="info">信息栏</div>
+    </div>
+  ```   
+  ```css
+    .item15{
+    background grey
+    overflow hidden
+    img{
+      float left
+    }
+    .info{
+      margin-left 100px
+    }
+  }
+  ```
+  上面的例子是经典的两栏自适应布局，左边图片，右边文字，我们给文字增加margin-left,但是没有看到效果，如果继续加大值（此时图片的宽度是360px），当我们加大到大于360px之后，发现有效果了。
+  结论：这种情况下，是相对于父元素，而不是图片
+   
+   
+   
+   
+   
+   
+   
+   
