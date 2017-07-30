@@ -158,6 +158,23 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 - double ： 实现三道杠图标
 - solid ： 三角和梯形
 
+三角形
+```html
+    <div class="item6">
+      <span class="box"></span>
+    </div>
+```
+```css
+  .item6 {
+    .box {
+      font-size 0px
+      border-style solid
+      border-width 12px 20px  // 上下12px，左右20px
+      border-color grey red transparent transparent
+    }
+  }
+```
+这里是使用border的宽度，且把font-size设置为0，让这个span中没有内容，然后边框加上颜色组成上下左右的拼成的一个长方形或则正方形。这里只设置了上右的颜色，下和左边的颜色透明了，在视觉上就组成了一个右上的角标效果。这里故意设置成不同的颜色，方便看清除边框的组成，是对角线分开组成的
 
 ## border与透明边框
 ## border在布局中的应用
