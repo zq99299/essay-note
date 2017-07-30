@@ -207,6 +207,44 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 更高级的应用，模拟圆角
 ![](/assets/image/htmlcss/border/边框模拟圆角.png)
 不是使用css3实现的，是用边框模拟的
+![](/assets/image/htmlcss/border/边框模拟圆角原理.png)
+代码如下:
+```html
+    <div class="item8">
+      <div class="box1"></div>
+      <div class="info">
+        border梯形组合而成
+      </div>
+      <div class="box2"></div>
+    </div>
+    <hr/>
+```
+```css
+.item8{
+    text-align center
+    .info{
+      background-color red
+      width 200px
+      margin 0 auto
+    }
+    .box1 {
+      width 196px
+      margin 0 auto
+      border-style solid
+      border-width 2px 2px
+      border-color transparent transparent red transparent
+    }
+    .box2 {
+      width 196px
+      margin 0 auto
+      border-style solid
+      border-width 2px 2px
+      border-color red transparent transparent transparent
+    }
+  }
+```
+
+
 
 ## border与透明边框
 ## border在布局中的应用
