@@ -42,6 +42,7 @@
     4px:1+2+1
     5px:2+1+2
     ```
+    这就能看出来了，至少是3px才能看到两条线
 
 ## border与color
 ## border与background定位
