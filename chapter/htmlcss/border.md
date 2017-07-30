@@ -247,4 +247,41 @@ background定位的局限：只能相对左上角，不能想对右下（css2.1�
 
 
 ## border与透明边框
+border的边框透明度使用非常广。
+因为，始于ie7，足够兼容
+除了前面讲到过的案例，下面还有
+![](/assets/image/htmlcss/border/复选框效果，且增加响应区域的大小.png)
+
+这个例子测试过无效，不知道是不是 html代码没有写对，教程的评论区也有好多人说无效。
+
+### 增加可视渲染区域
+![](/assets/image/htmlcss/border/drop-shadow可以给png图标赋色.png)
+```html
+    <div class="item10">
+      <img src="~@/assets/logo.png">
+    </div>
+```
+```css
+  .item10{
+    img{
+      width 50px
+      height  50px
+      filter drop-shadow(50px 0 #ff8040)
+    }
+  }
+```
+这个效果貌似也没有什么效果哇，图片中的细节全部没有了。只有一个轮廓。
+
+原理上说可以使用css把原始原始图片使用overflow hidden隐藏掉，然后显示投影出来的，但是我写不出来啊。还说在谷歌浏览器中不可视的元素连投影也不能显示，那么利用边框透明增加可视区域，投影到透明边框上。
+
+
+
+
+
+
+
+
+
+
+
 ## border在布局中的应用
