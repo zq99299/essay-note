@@ -15,10 +15,13 @@
 
 所以不支持百分比单位；类似的还有outline，box-shadow,text-shadow...
 
-白支持关键字：
+白支持关键字：（ie7除外）
 - thin : 薄薄的 1px
-- medium ：薄厚均匀 3px
+- medium ：薄厚均匀 3px（默认值）
 - thick : 厚厚的 5px
+
+**为什么medium是默认值而不是常用的1px呢？**
+因为 border-style:double至少3px才有效果
 
 ## 深入了解各种border-style类型
 ## border与color
