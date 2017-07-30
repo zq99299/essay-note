@@ -183,25 +183,30 @@
 ## margin无效情形解析
 有时候margin无效，为什么呢？
 
-### inline水平元素的垂直margin无效
+1. inline水平元素的垂直margin无效
 
-2个前提：
-
-1. 非替换元素，例如，不是`<img>`元素
-2. 正常书写模式
-
-```html
- inline水平元素的垂直margin无效
-    <div class="item14">
-      <span>margin:233px</span>
-    </div>
-```
-```css
-  .item14{
-    background gray
-    span{
-      margin 233px
+  2个前提：
+  
+  1. 非替换元素，例如，不是`<img>`元素
+  2. 正常书写模式
+  
+  ```html
+   inline水平元素的垂直margin无效
+      <div class="item14">
+        <span>margin:233px</span>
+      </div>
+  ```
+  ```css
+    .item14{
+      background gray
+      span{
+        margin 233px
+      }
     }
-  }
-```
-上面这个例子，水平方向的margin有效果，垂直方向的没有
+  ```
+  上面这个例子，水平方向的margin有效果，垂直方向的没有
+  
+### margin重叠
+
+有可能是和父级或则兄弟元素重叠了，在前面margin重叠章节中有讲过
+
