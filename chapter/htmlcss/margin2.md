@@ -292,12 +292,14 @@ margin-start/end 是css3中的属性
       margin-left 100px
       -webkit-margin-start 100px
       margin-start 100px
-      direction ltl  // 默认值
-      direction rtl  // 从右往左
+      // direction rtl  // 从右往左
+      writing-mode vertical-lr  // 垂直方向的文档流，默认值
+      // writing-mode vertical-rr
     }
   }
 ```
-  
+如果我们把图片的文档流设置成默认值，他的start和left是重合的。
+如果设置成从右往左，那么可以看到图中两边都有100px的margin值，左边的是marg-left的，那么右边的就是margin-start的造成的。然后改变垂直方向的文档流，验证结论的第3点。
     
       
         
