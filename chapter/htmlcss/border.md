@@ -280,6 +280,41 @@ border的边框透明度使用非常广。
 如：有限标签下的标题栏；不常用
 
 ### border与等高布局
+```html
+    <div class="item11">
+      <nav class="left">
+        <h3>导航1</h3>
+        <h3>导航1</h3>
+        <h3>导航1</h3>
+        <h3>导航3</h3>
+      </nav>
+      <section>
+        <div class="module">模块1</div>
+      </section>
+    </div>
+```
+```css
+ .item11 {
+    background grey
+    border-left 300px solid #222
+    // 必须清除浮动，否则元素高度塌陷，无效果
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+      overflow: hidden;
+      clear: both
+    }
+    .left {
+      float left
+      width 300px
+      // 负值定位到父元素的边框上
+      margin-left -300px
+      color #fff
+    }
+  }
+```
+上面的示例其实是使用了，子元素能撑开父元素的特性，让高度始终是一致的特性。然后把浮动元素负值定位到父元素的边框上去。
 
 
 
