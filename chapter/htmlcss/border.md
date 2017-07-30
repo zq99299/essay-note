@@ -119,7 +119,18 @@ border-color默认颜色就是color
 
 ## border与background定位
 background定位的局限：只能相对左上角，不能想对右下（css2.1）
-
+```html
+ <div class="item4">
+    </div>
+```
+```css
+  .item4 {
+    border 1px solid
+    height 260px
+    background url('~@/assets/demo-java.jpg') no-repeat
+    background-position 50px 40px
+  }
+```
 
 
 
