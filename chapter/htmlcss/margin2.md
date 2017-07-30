@@ -301,7 +301,15 @@ margin-start/end 是css3中的属性
 如果我们把图片的文档流设置成默认值，他的start和left是重合的。
 如果设置成从右往左，那么可以看到图中两边都有100px的margin值，左边的是marg-left的，那么右边的就是margin-start的造成的。然后改变垂直方向的文档流，验证结论的第3点。
     
-      
+###  -webkit的margin的其他属性    
+
+- -webkit-margin-before : 默认流向情况下，等同于margin-top  
+- -webkit-margin-collapse : `<collapse>|<discard>|separate`
+  
+  控制margin重叠：
+  collapse ： 默认
+  discard ： 取消（取消margin）
+  separate ：分隔（让margin不重叠）
         
           
             
