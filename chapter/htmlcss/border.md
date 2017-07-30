@@ -13,7 +13,7 @@
 
 拿手机和显示器边框来对比下，他们的内容边框，不会随着设备变大就按比例变大的。
 
-所以不支持百分比单位；类似的还有outline，box-shadow,text-shadow，、、
+所以不支持百分比单位；类似的还有outline，box-shadow,text-shadow...
 
 ## 深入了解各种border-style类型
 ## border与color
