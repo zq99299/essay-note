@@ -19,7 +19,8 @@
        ]
     },
     "anchor-navigation-ex":{
-       "multipleH1":false
+       "multipleH1":false,
+       "mode": ""
     },
     "theme-default": {
        "showLevel": true
