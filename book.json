@@ -20,6 +20,9 @@
     },
     "anchor-navigation-ex":{
        "multipleH1":false
+    },
+    "theme-default": {
+       "showLevel": true
     }
   }
 } 
