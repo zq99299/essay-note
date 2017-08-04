@@ -82,6 +82,8 @@
 * [Node](chapter/node/README.md)
   - [Npm](chapter/node/npm.md)
 
+---
+* [ZooKeeper](chapter/zooKeeper/README.md)
 
 
 
