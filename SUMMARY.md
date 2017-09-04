@@ -45,6 +45,9 @@
 ---
 
 * [IDEA](chapter/idea/README.md)
+    - [快捷键篇](chapter/idea/快捷键篇.md)
+
+
 
 ---
 
