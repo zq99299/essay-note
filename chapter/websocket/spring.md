@@ -89,6 +89,7 @@ public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
     .withSockJS().setClientLibraryUrl("//cdn.jsdelivr.net/sockjs/1/sockjs.min.js");
 }
 ```
+上面的cdn指向的地址就是 [sockjs官网](https://github.com/sockjs/sockjs-client) 起步实例中的cdn文件。
 
 
 
