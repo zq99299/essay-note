@@ -93,8 +93,6 @@
 * [WebSocket](chapter/websocket/index.md)
   * [Spring-WebSocket](chapter/websocket/spring.md)
 
-compile "org.springframework:spring-websocket:${springframeworkVersion}"
-
 
 
 
