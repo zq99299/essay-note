@@ -44,6 +44,8 @@ public class MyHandler extends TextWebSocketHandler {
 }
 ```
 
+##
+
 ## 前端
 由于使用的vue，只能在npm中安装`"sockjs-client": "^1.1.4"`
 
@@ -67,4 +69,12 @@ sock.onclose = function () {
 }
 ```
 
+## 开始测试-5个小时的错误解决
+
+**第一个错误：**
+打开谷歌浏览器的控制台，查看会有一堆的错误提示出现，最开始的是下面的错误：
+```
+EventSource's response has a MIME type ("application/json") that is not "text/event-stream". Aborting the connection.
+sockjs.min.js:2 Uncaught Error: Incompatibile SockJS! Main site uses: "1.1.4", the iframe: "1.0.0".
+```
 
