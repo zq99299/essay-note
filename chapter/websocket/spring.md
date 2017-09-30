@@ -44,7 +44,6 @@ public class MyHandler extends TextWebSocketHandler {
 }
 ```
 
-##
 
 ## 前端
 由于使用的vue，只能在npm中安装`"sockjs-client": "^1.1.4"`
