@@ -71,6 +71,7 @@ sock.onclose = function () {
 
 ## 开始测试-5个小时的错误解决
 
+### 主要错误解决
 打开谷歌浏览器的控制台，查看会有一堆的错误提示出现，最开始的是下面的错误：
 ```
 EventSource's response has a MIME type ("application/json") that is not "text/event-stream". Aborting the connection.
@@ -120,6 +121,11 @@ Caused by: java.lang.IllegalArgumentException: Async support must be enabled on 
 
 只要有 `<filter>`的地方都要添加`<async-supported>true</async-supported>`,还有就是mvcDispatcher的入口处
 
+
+最主要的是上面两个错误，解决完成之后就可以链接上并也能前端往后端发送信息了。就是又冒出来一个如下的错误：
+```javascript
+websocket.js?0f24:6 WebSocket connection to 'ws://localhost:9105/api/myHandler/761/czzeyw3z/websocket' failed: Connection closed before receiving a handshake response
+```
 
 
 
