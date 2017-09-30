@@ -127,7 +127,17 @@ Caused by: java.lang.IllegalArgumentException: Async support must be enabled on 
 websocket.js?0f24:6 WebSocket connection to 'ws://localhost:9105/api/myHandler/761/czzeyw3z/websocket' failed: Connection closed before receiving a handshake response
 ```
 
-出现这个错误后，但是能正常的通信，不知道是什么原因。也不知道是否有什么影响
+出现这个错误后，但是能正常的通信；只是在打印open之前报错了。后来找到了问题；
+
+我使用的是vue-cli开发，用了代理转发到后台，所以在链接的时候使用了前端的地址，让代理转发的。代码如下
+```javascript
+var sock = new SockJS('/api/myHandler')
+```
+
+把相对路径更改为后端服务的直接路径，
+```javascript
+var sock = new SockJS('http://localhost:9104/api/myHandler')
+```
 
 
 
