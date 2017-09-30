@@ -7,7 +7,7 @@
 compile "org.springframework:spring-websocket:4.2.3"
 ```
 
-遵循spring官网文档，尝试该
+遵循spring官网文档，尝试；https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-fallback
 
 **websocket配置**
 ```java
@@ -18,7 +18,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         HandshakeInterceptor handshakeInterceptor = new HandshakeInterceptor();
-        registry.addHandler(new MyHandler(), "/api/echo");
+        registry.addHandler(new MyHandler(), "/api/echo"); //
         registry.addHandler(new MyHandler(), "/api/myHandler").setAllowedOrigins("*")
 //                .addInterceptors(new HttpSessionHandshakeInterceptor())
 //                .addInterceptors(handshakeInterceptor)
