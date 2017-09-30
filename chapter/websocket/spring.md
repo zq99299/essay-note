@@ -71,10 +71,25 @@ sock.onclose = function () {
 
 ## 开始测试-5个小时的错误解决
 
-**第一个错误：**
+### 第一个错误
 打开谷歌浏览器的控制台，查看会有一堆的错误提示出现，最开始的是下面的错误：
 ```
 EventSource's response has a MIME type ("application/json") that is not "text/event-stream". Aborting the connection.
 sockjs.min.js:2 Uncaught Error: Incompatibile SockJS! Main site uses: "1.1.4", the iframe: "1.0.0".
 ```
+
+主主要的错误应该就是说 服务器端使用的版本是1.0.0,而js中使用的是1.1.4; 解决这个问题其实在[官网文档](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-fallback-xhr-vs-iframe)中已经写到了
+
+解决方案：在配置类中配置和前端js使用相同版本的js
+```java
+public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+// 这里开启sockjs协议支持
+registry.addHandler(new MyHandler(), "/api/myHandler").setAllowedOrigins("*")
+.addInterceptors(new HttpSessionHandshakeInterceptor())
+.withSockJS().setClientLibraryUrl("//cdn.jsdelivr.net/sockjs/1/sockjs.min.js");
+}
+```
+
+
+
 
