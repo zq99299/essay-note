@@ -122,10 +122,12 @@ Caused by: java.lang.IllegalArgumentException: Async support must be enabled on 
 只要有 `<filter>`的地方都要添加`<async-supported>true</async-supported>`,还有就是mvcDispatcher的入口处
 
 ### 失败：连接在收到握手响应之前关闭
-最主要的是上面两个错误，解决完成之后就可以链接上并也能前端往后端发送信息了。就是又冒出来一个如下的错误：
+最主要的是上面两个错误，解决完成之后就可以链接上并也能前端往后端发送信息了。在前端控制台中，又冒出来一个如下的错误：
 ```javascript
 websocket.js?0f24:6 WebSocket connection to 'ws://localhost:9105/api/myHandler/761/czzeyw3z/websocket' failed: Connection closed before receiving a handshake response
 ```
+
+出现这个错误后，但是能正常的通信，不知道是什么原因。也不知道是否有什么影响
 
 
 
