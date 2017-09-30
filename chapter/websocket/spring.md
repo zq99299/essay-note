@@ -83,10 +83,10 @@ sockjs.min.js:2 Uncaught Error: Incompatibile SockJS! Main site uses: "1.1.4", t
 解决方案：在配置类中配置和前端js使用相同版本的js
 ```java
 public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-// 这里开启sockjs协议支持
-registry.addHandler(new MyHandler(), "/api/myHandler").setAllowedOrigins("*")
-.addInterceptors(new HttpSessionHandshakeInterceptor())
-.withSockJS().setClientLibraryUrl("//cdn.jsdelivr.net/sockjs/1/sockjs.min.js");
+    // 这里开启sockjs协议支持
+    registry.addHandler(new MyHandler(), "/api/myHandler").setAllowedOrigins("*")
+    .addInterceptors(new HttpSessionHandshakeInterceptor())
+    .withSockJS().setClientLibraryUrl("//cdn.jsdelivr.net/sockjs/1/sockjs.min.js");
 }
 ```
 
