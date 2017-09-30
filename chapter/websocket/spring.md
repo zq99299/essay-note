@@ -134,7 +134,7 @@ websocket.js?0f24:6 WebSocket connection to 'ws://localhost:9105/api/myHandler/7
 var sock = new SockJS('/api/myHandler')
 ```
 
-把相对路径更改为后端服务的直接路径，
+把相对路径更改为后端服务的直接路径，成功链接上
 ```javascript
 var sock = new SockJS('http://localhost:9104/api/myHandler')
 ```
