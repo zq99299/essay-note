@@ -71,7 +71,6 @@ sock.onclose = function () {
 
 ## 开始测试-5个小时的错误解决
 
-### 第一个错误
 打开谷歌浏览器的控制台，查看会有一堆的错误提示出现，最开始的是下面的错误：
 ```
 EventSource's response has a MIME type ("application/json") that is not "text/event-stream". Aborting the connection.
@@ -90,6 +89,36 @@ public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 }
 ```
 上面的cdn指向的地址就是 [sockjs官网](https://github.com/sockjs/sockjs-client) 起步实例中的cdn文件。
+
+**服务器端的错误则是：**
+```java
+Caused by: java.lang.IllegalArgumentException: Async support must be enabled on a servlet and for all filters involved in async request processing. This is done in Java code using the Servlet API or by adding "<async-supported>true</async-supported>" to servlet and filter declarations in web.xml. Also you must use a Servlet 3.0+ container
+```
+
+看这里要开启异步支持。由于我这里使用的是web.xml 所以在web.xml中开启,
+
+这个在[官网文档中提到过要开启异步支持](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-fallback-sockjs-servlet3-async)
+
+在网上查了下 web.xml中开启方法如下;
+```xml
+    <filter>
+        <filter-name>httpPutFormFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+     <servlet>
+        <servlet-name>mvcDispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+```
+
+只要有 `<filter>`的地方都要添加`<async-supported>true</async-supported>`,还有就是mvcDispatcher的入口处
 
 
 
