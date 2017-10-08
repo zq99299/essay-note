@@ -138,5 +138,12 @@ var sock = new SockJS('/api/myHandler')
 var sock = new SockJS('http://localhost:9104/api/myHandler')
 ```
 
+## 几个概念
+
+1. `WebSocketSession` 有几个？
+
+    在spring中通过测试，addHandler对应的地址相同的在一个session周期中都是同一个sessionId.
+
+
 
 
