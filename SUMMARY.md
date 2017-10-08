@@ -13,7 +13,7 @@
 
 ---
 
-* [Redis](chapter/redisREADME.md)
+* [Redis](chapter/redis/README.md)
   * [windows](chapter/redis/windows.md)
   * [集群](chapter/redis/cluster.md)
 
