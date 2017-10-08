@@ -93,7 +93,7 @@
 * [WebSocket](chapter/websocket/index.md)
   * [Spring-WebSocket](chapter/websocket/spring.md)
 
-* [监控相关文章](chapter/monitor/index.md)
+* [监控相关](chapter/monitor/index.md)
 
 
 
