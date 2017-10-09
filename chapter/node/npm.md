@@ -53,3 +53,8 @@ Waiting for installers... -
 # 在npm install过程中打印当前的请求下载日志
 loglevel=http
 ```
+
+## npm install 与 lock
+[Yarn vs npm: 你需要知道的一切](http://web.jobbole.com/88459/)
+
+在install的时候由于绝大部分js库依赖的版本号都是动态的，小版本号最新，就会造成在每台机器上install的版本不一致的问题。
