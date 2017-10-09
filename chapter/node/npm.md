@@ -31,7 +31,7 @@ MSBUILD : error MSB6006: “VCBuild.exe”已退出，代码为 -1。 [e:\IdeaPr
 ```bash
 npm install --global --production windows-build-tools
 ```
-安装的时候卡在下面很久,在[issues/307](https://github.com/nodejs/node-gyp/issues/307)中说道，可能要等待一个小时左右。
+安装的时候卡在下面很久,在[issues/307](https://github.com/nodejs/node-gyp/issues/307)中说道，可能要等待一个小时左右。而我自己等了快两个小时，最好开始的时候 加上 `--debug` 查看一部分日志
 ```bash
 > windows-build-tools@1.3.2 postinstall e:\node\node_global\node_modules\windows-build-tools
 > node ./lib/index.js
