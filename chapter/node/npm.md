@@ -31,3 +31,9 @@ MSBUILD : error MSB6006: “VCBuild.exe”已退出，代码为 -1。 [e:\IdeaPr
 ```bash
 npm install --global --production windows-build-tools
 ```
+
+## `.npmrc`
+```bash
+# 在npm install过程中打印当前的请求下载日志
+loglevel=http
+```
