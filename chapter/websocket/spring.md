@@ -52,6 +52,8 @@ gradle 构建项目；包含三个子模块websock 和 sockJS 、stomp
 
 由于前面的比较简单，着重讲解我对stomp的一些理解。
 
+
+
 # spring-websocket
 
 之前用过spring-websocket写过一个聊天demo。两年时间了。由于工作需要再次接触。记录下这次遇到的坑
