@@ -9,3 +9,20 @@
 ```
 compile "org.springframework:spring-websocket:${springframeworkVersion}"
 ```
+
+接下来就开始写了。
+## 创建并配置WebSocketHandler
+
+WebSocketHandler的作用是，当有消息进入的时候，你要怎么处理？
+
+spring提供给我们两种可用接口 TextWebSocketHandler或BinaryWebSocketHandler：
+```java
+public class MyHandler extends TextWebSocketHandler {
+    private Logger log = LoggerFactory.getLogger(getClass());
+
+    @Override
+    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        log.info("收到消息：sessionId={},msg={}", session.getId(), message);
+    }
+}
+```
