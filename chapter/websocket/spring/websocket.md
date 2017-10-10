@@ -26,3 +26,23 @@ public class MyHandler extends TextWebSocketHandler {
     }
 }
 ```
+
+上面的处理器有专门的配置映射到一个url上。
+```java
+@Configuration
+@EnableWebSocket  // 开启websocket支持
+public class WebSocketConfig implements WebSocketConfigurer {
+
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        // 添加处理器
+        registry.addHandler(myHandler(), "/myHandler");
+    }
+
+    @Bean
+    public WebSocketHandler myHandler() {
+        return new MyHandler();
+    }
+}
+
+```
