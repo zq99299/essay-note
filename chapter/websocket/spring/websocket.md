@@ -60,3 +60,11 @@ public class WebSocketConfig implements WebSocketConfigurer {
 ```
 
 官方说到 ：Spring的WebSocket支持不依赖于Spring MVC。WebSocketHandler 在[WebSocketHttpRequestHandler](https://docs.spring.io/spring-framework/docs/5.0.0.RELEASE/javadoc-api/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.html)的帮助下将其集成到其他HTTP服务环境中 相对比较简单。在这里我明白去研究其他的方式。
+
+## 前端链接服务
+
+前端使用的vue-cli开发，不懂的同学可能要费点事，但是不要慌。这里只记录重要的代码和思路。同样也会放在git上。
+
+
+
+
