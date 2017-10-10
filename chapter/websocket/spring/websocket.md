@@ -112,3 +112,20 @@ mounted @ HelloWorld.vue?8664:16
 ```
 
 403 错误，一般来说链接上了服务器，但是拒绝服务；这里的问题就是前后分离的方式开发的，两个项目的域名和端口不一样，导致跨域了。
+
+
+## 配置允许链接的源
+从Spring Framework 4.1.5开始，WebSocket和SockJS的默认行为是**仅接受相同的源请求**。也可以允许所有或指定的起始列表。此检查主要是为浏览器客户端设计的。
+
+所以这里我们在后端配置中配置允许的源
+**cn.mrcode.javawebsocketdemo.websocket.ws.WebSocketConfig**
+
+```java
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        // 添加处理器
+        registry.addHandler(myHandler(), "/myHandler")
+                .setAllowedOrigins("*")
+        ;
+    }
+```
