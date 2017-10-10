@@ -42,6 +42,13 @@ WebSocket 可以看成是消息架构，但不要求使用任何特定的消息�
 * 基于sockJS的使用
 * 重点-基于STOMP的使用
 
+### 后端项目介绍
+不会使用spring-boot，因为我不太会，使用原始的web.xml 的方式。
+
+gradle 构建项目；包含三个子模块websock 和 sockJS 、stomp
+
+### 前端项目介绍
+前端使用 vue-cli 来构建，一个项目，分为3个页面。分别来讲解低级的，和sockJS,和
 
 # spring-websocket
 
