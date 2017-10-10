@@ -58,3 +58,5 @@ public class WebSocketConfig implements WebSocketConfigurer {
 ```xml
 <context:component-scan base-package="cn.mrcode.javawebsocketdemo.websocket"/>
 ```
+
+官方说到 ：Spring的WebSocket支持不依赖于Spring MVC。WebSocketHandler 在[WebSocketHttpRequestHandler](https://docs.spring.io/spring-framework/docs/5.0.0.RELEASE/javadoc-api/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.html)的帮助下将其集成到其他HTTP服务环境中 相对比较简单。在这里我明白去研究其他的方式。
