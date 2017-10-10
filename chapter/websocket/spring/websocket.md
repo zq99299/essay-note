@@ -117,6 +117,14 @@ mounted @ HelloWorld.vue?8664:16
 ## 配置允许链接的源
 从Spring Framework 4.1.5开始，WebSocket和SockJS的默认行为是**仅接受相同的源请求**。也可以允许所有或指定的起始列表。此检查主要是为浏览器客户端设计的。
 
+3种可能的行为是：
+
+ * 只允许相同的原始请求（默认）：在此模式下，当启用SockJS时，将Iframe HTTP响应头X-Frame-Options设置为SAMEORIGIN，并禁用JSONP传输，因为它不允许检查请求的来源。因此，当启用此模式时，不支持IE6和IE7。
+
+* 允许指定的起始列表：每个提供的允许的起始必须以http:// 或开始https://。在这种模式下，当启用SockJS时，基于IFrame和JSONP的传输都被禁用。因此，启用此模式时，不支持IE6至IE9。
+
+* 允许所有来源：启用此模式，您应该提供*作为允许的原始值。在这种模式下，所有的运输都可用。
+
 所以这里我们在后端配置中配置允许的源
 **cn.mrcode.javawebsocketdemo.websocket.ws.WebSocketConfig**
 
