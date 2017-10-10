@@ -51,3 +51,10 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
 这个是什么意思呢？前面说到过
 > HTTP仅用于初始握手，这取决于内置于HTTP中的机制来请求协议升级（或在这种情况下为协议交换机），服务器可以使用HTTP状态101对其进行响应（切换协议）如果它同意。假设握手成功，HTTP升级请求下面的TCP套接字保持打开，客户端和服务器都可以使用它来彼此发送消息。
+
+那么这个就是说只能用于websocket协议来访问。
+
+如果说你想问这个链接为404，那么请检查spring-mvc的配置，和是否把WebSocketConfig所在的路径扫描了,如
+```xml
+<context:component-scan base-package="cn.mrcode.javawebsocketdemo.websocket"/>
+```
