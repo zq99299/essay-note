@@ -46,3 +46,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
 }
 
 ```
+
+启动项目，访问`http://localhost:8080/myHandler`,如果没有问题的话，你会看到`Can "Upgrade" only to "WebSocket".`字样的输出。
+
+这个是什么意思呢？前面说到过
+> HTTP仅用于初始握手，这取决于内置于HTTP中的机制来请求协议升级（或在这种情况下为协议交换机），服务器可以使用HTTP状态101对其进行响应（切换协议）如果它同意。假设握手成功，HTTP升级请求下面的TCP套接字保持打开，客户端和服务器都可以使用它来彼此发送消息。
