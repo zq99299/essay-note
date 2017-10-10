@@ -92,7 +92,9 @@
 
 * [WebSocket](chapter/websocket/index.md)
   * [Spring-WebSocket](chapter/websocket/spring.md)
-
+    * [websocketDemo](chapter/websocket/spring/websocket.md)
+    * [sockJsDemo](chapter/websocket/spring/sockjs.md)
+    * [stompDemo](chapter/websocket/spring/stomp.md)
 * [监控相关](chapter/monitor/index.md)
 
 
