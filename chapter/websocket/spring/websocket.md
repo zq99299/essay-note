@@ -129,3 +129,4 @@ mounted @ HelloWorld.vue?8664:16
         ;
     }
 ```
+`.setAllowedOrigins("*")`:这里配置成允许所有的host访问。当然你也可以配置只允许`http://mydomain.com`的请求链接
