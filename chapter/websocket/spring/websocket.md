@@ -100,5 +100,9 @@ public class WebSocketConfig implements WebSocketConfigurer {
   }
 </script>
 ```
+上面的代码，在mounted函数中(看成一个钩子函数，进入该页面后，该函数会被执行)，里面的代码是标准的 [w3c-html5-websocket](https://www.w3cschool.cn/html5/html5-websocket.html) 内容。只不过被转成了es6的语法。 
 
+这里代码展示的效果是，进入该页面的时候，会去链接到我们后端暴露的websocket服务，（要记得找一个高版本的浏览器，否则可能不支持websocket）。
+
+分别在他的链接成功事件回调函数中，在页面显示不同的字符串。
 
