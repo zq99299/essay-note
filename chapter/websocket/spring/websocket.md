@@ -104,3 +104,10 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
 这里代码展示的效果是，进入该页面的时候，会去链接到我们后端暴露的websocket服务，（要记得找一个高版本的浏览器，否则可能不支持websocket）。分别在他的链接成功/关闭/收到消息事件回调函数中，在页面显示不同的字符串。
 
+好了问题来了，按照现在的代码，肯定是链接不上的。页面一闪而过然后显示`状态：连接已关闭...`; 这个时候你按F12打开浏览器控制台就会发现报错了。
+```bash
+WebSocket connection to 'ws://localhost:8080/myHandler' failed: Error during WebSocket handshake: Unexpected response code: 403
+mounted @ HelloWorld.vue?8664:16
+...
+```
+
