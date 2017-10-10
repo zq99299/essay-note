@@ -168,3 +168,5 @@ cn.mrcode.javawebsocketdemo.websocket.ws.MyHandler handleTextMessage 19    - 收
 ```java
  session.sendMessage(new TextMessage("Hello Word"));
 ```
+
+再次刷新页面，则会看到`状态：数据已接收...：Hello Word`的输出。
