@@ -140,3 +140,31 @@ mounted @ HelloWorld.vue?8664:16
 `.setAllowedOrigins("*")`:这里配置成允许所有的host访问。当然你也可以配置只允许`http://mydomain.com`的请求链接
 
 配置完成后，重启后端服务重新刷新页面，就能看到已经链接成功了。
+
+后台则会打印日志
+```java
+cn.mrcode.javawebsocketdemo.websocket.ws.MyHandler handleTextMessage 19    - 收到消息：sessionId=0,msg=TextMessage payload=[发送数据], byteCount=12, last=true]
+```
+这个是由于在前端onopen链接成功后还发送了一个字符串到后端`ws.send('发送数据')`. 
+
+那么问题来了，后端怎么发送消息给前端呢？
+
+
+## 后端发送消息
+
+后端在接收到消息之后，还想给前端发送一个交互消息。这里就很简单了。
+
+`cn.mrcode.javawebsocketdemo.websocket.ws.MyHandler` 中我们覆盖了一个接收消息的方法。
+```java
+    @Override
+    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        log.info("收到消息：sessionId={},msg={}", session.getId(), message);
+    }
+```
+
+`WebSocketSession session` : 注意这个对象，顾名思义是一个session对象，这个session表示的意思是，一个链接对应一个session。前端中 `new WebSocket` 则是一个不同的session。 
+
+所以这里的session和mvc中的session不是同一个概念。那么信息的发送也是通过这个session。
+```java
+ session.sendMessage(new TextMessage("Hello Word"));
+```
