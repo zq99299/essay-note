@@ -45,4 +45,6 @@ Stomp库官网文档：http://jmesnil.net/stomp-websocket/doc/
 
 直接按照文档的几个简单的api来
 
+小提示，在部署后端服务的时候，一定要记得更改 部署的端口没和前端链接的一致
+
 
