@@ -170,3 +170,10 @@ cn.mrcode.javawebsocketdemo.websocket.ws.MyHandler handleTextMessage 19    - 收
 ```
 
 再次刷新页面，则会看到`状态：数据已接收...：Hello Word`的输出。
+
+
+## 其他概念
+
+1. `WebSocketSession` 有几个？
+
+在spring中通过测试，addHandler对应的地址相同的在一个session周期中都是同一个sessionId.
