@@ -47,4 +47,64 @@ Stomp库官网文档：http://jmesnil.net/stomp-websocket/doc/
 
 小提示，在部署后端服务的时候，一定要记得更改 部署的端口没和前端链接的一致
 
+```html
+<template>
+  <div class="stomp-demo">
+    <p> 链接状态：{{status}}</p>
+  </div>
+</template>
+```
+```javascript
+<script>
+  /**
+   *
+   * <pre>
+   *  Version         Date            Author          Description
+   * ---------------------------------------------------------------------------------------
+   *  1.0.0           2017/11/07     zhuqiang        -
+   * </pre>
+   * @author zhuqiang
+   * @version 1.0.0 2017/11/7 17:07
+   * @date 2017/11/7 17:07
+   * @since 1.0.0
+   */
+  import SockJS from 'sockjs-client'
+  import Stomp from 'stompjs'
+
+  export default {
+    data () {
+      return {
+        status: '未链接'
+      }
+    },
+    mounted () {
+      // 注意这里的地址，和之前的不是一个项目了
+      var ws = new SockJS('http://localhost:8082/stomp')
+      var client = Stomp.over(ws)
+
+      // 注意这里的header 暂时不是必须的。
+      var headers = {
+        login: 'mylogin',
+        passcode: 'mypasscode',
+        // additional header
+        'client-id': 'my-client-id'
+      }
+      client.connect(headers,
+        () => {
+          this.status = '已链接'
+        },
+        (error) => {
+          this.status = '链接失败:' + error
+        })
+    }
+  }
+</script>
+```
+
+进入该页面后，发现一切都很顺利，链接成功。
+
+接下来就用一个小例子来演示 消息路由 怎么使用。
+
+
+
 
