@@ -92,4 +92,18 @@ AbstractXHRObject._start @ abstract-xhr.js?c769:132
 ## 后端配置
 
 ```java
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        // 这个是支持原生websocket的节点
+        registry.addHandler(myHandler(), "/myHandler").setAllowedOrigins("*");
+        // 对sockjs的支持节点
+        registry.addHandler(myHandler(), "/myHandlerSockjs").setAllowedOrigins("*")
+                .withSockJS()
+
+        ;
+    }
 ```
+
+这里注意下，为什么注册了两个节点，是为了演示。如果只注册一个，那么必然会有另外一个链接不上。因为使用的协议不一致。
+
+
