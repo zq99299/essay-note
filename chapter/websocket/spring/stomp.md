@@ -41,4 +41,8 @@ compile "org.springframework:spring-messaging:${springframeworkVersion}"
 
 ## 前端初体验
 
+Stomp库官网文档：http://jmesnil.net/stomp-websocket/doc/
+
+直接按照文档的几个简单的api来
+
 
