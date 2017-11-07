@@ -14,6 +14,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
+        // 增加一个入口节点，并开其sockjs的支持，和相关的配置
         registry.addEndpoint("/stomp").setAllowedOrigins("*")
                 .withSockJS()
                 .setMessageCodec(new FastjsonSockJsMessageCodec())
