@@ -47,7 +47,7 @@ sockjs-client：NPM库链接 https://www.npmjs.com/package/sockjs-client
       }
     },
     mounted () {
-      let sock = new SockJS('http://localhost:8080/myHandler')
+      let sock = new SockJS('http://localhost:8080/myHandlerSockjs')
       this.sock = sock
       sock.onopen = () => {
         this.status = '已链接'
@@ -74,3 +74,22 @@ sockjs-client：NPM库链接 https://www.npmjs.com/package/sockjs-client
 上面的页面，提供了一个链接状态的展示，还提供了一个发送消息的按钮。接收消息的展示
 
 怎么链接后端都是从`sockjs-client`库的教程中复制的链接代码。
+
+
+访问该页面却发现报错了：
+
+```javascript
+ET http://localhost:8080/myHandler/info?t=1510041413326 404 (Not Found)
+AbstractXHRObject._start @ abstract-xhr.js?c769:132
+(anonymous) @ abstract-xhr.js?c769:21
+:8081/#/sockjs-client:1 XMLHttpRequest cannot load http://localhost:8080/myHandler/info?t=1510041413326. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8081' is therefore not allowed access. The response had HTTP status code 404.
+```
+
+上面的错误一共是两个。第一个错误，告诉我们这个链接没有访问到；第二个说是跨域了。先来解决第一个
+
+这里注意`new SockJS('http://localhost:8080/myHandler')` 地址写的http,而不是ws。那么在后端我们也要配置上 对sockjs的支持。
+
+## 后端配置
+
+```java
+```
