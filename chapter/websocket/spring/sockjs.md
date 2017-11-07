@@ -122,6 +122,10 @@ AbstractXHRObject._start @ abstract-xhr.js?c769:132
                 .withSockJS().setMessageCodec(new FastjsonSockJsMessageCodec());
 ```
 
+到此sockjs也引入配置好了。但是现在还是原生websocket。因为你没有发现编码有什么改变。
+如果想在一个链接上传递不同种类的消息，需要自己写消息类型，然后路由到不同的消息处理中去。
+
+那么接下来就使用 stomp 来演示怎么通过消息路径来路由到我们指定的处理中去。
 
 
 
