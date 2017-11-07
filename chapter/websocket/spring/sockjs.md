@@ -16,10 +16,9 @@ sockjs-client：NPM库链接 https://www.npmjs.com/package/sockjs-client
 <template>
   <div>
     <p>状态： {{status}} </p>
-    <input type="button" value="发送测试消息" @send="send" :disabled="!sock"/>
-    <p>消息： {{status}} </p>
+    <input type="button" value="发送测试消息" @click="send" :disabled="!sock"/>
+    <p>消息： {{msg}} </p>
   </div>
-
 </template>
 ```
 ```javascript
@@ -36,7 +35,7 @@ sockjs-client：NPM库链接 https://www.npmjs.com/package/sockjs-client
    * @date 2017/11/7 15:32
    * @since 1.0.0
    */
-  import SockJS from 'sockjs-client'
+ import SockJS from 'sockjs-client'
 
   export default {
     data () {
@@ -64,6 +63,7 @@ sockjs-client：NPM库链接 https://www.npmjs.com/package/sockjs-client
     methods: {
       send () {
         this.sock.send('test')
+        console.log('发送消息')
       }
     }
   }
@@ -105,5 +105,25 @@ AbstractXHRObject._start @ abstract-xhr.js?c769:132
 ```
 
 这里注意下，为什么注册了两个节点，是为了演示。如果只注册一个，那么必然会有另外一个链接不上。因为使用的协议不一致。
+
+
+重启服务后，测试：可以链接上；但是发送消息的时候却报错了
+
+```java
+ java.lang.IllegalStateException: A SockJsMessageCodec is required but not available: Add Jackson 2 to the classpath, or configure a custom SockJsMessageCodec.
+```
+
+好把这个很明显的说明了，需要一个消息解码器，要么添加 `Jackson`库到classpath，要么自定义解码器
+
+这里我尝试了下自定义的,因为我引入的是fastjson。发现该库还专门对spring的sockjs提供了支持
+
+```java
+        registry.addHandler(myHandler(), "/myHandlerSockjs").setAllowedOrigins("*")
+                .withSockJS().setMessageCodec(new FastjsonSockJsMessageCodec());
+```
+
+
+
+
 
 
