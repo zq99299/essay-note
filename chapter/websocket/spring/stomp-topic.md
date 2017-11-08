@@ -93,8 +93,52 @@ public class DemoController extends BaseController {
 }
 ```
 
-后端服务写好后
+后端服务写好后来实现前端的逻辑。
 ## 前端订阅
+
+在之前的代码基础上，链接成功后，调用该方法；
+```javascript
+topicPublicNews () {
+        // 注意这里的地址，和 后端发送消息的地址是一致的
+        this.varStore.stomp.subscribe('/topic/public_news', message => {
+          let news = JSON.parse(message.body)
+          // 把获取到的列表赋值给该变量，页面中会循环出该信息
+          this.publicNews = news
+        })
+      }
+```
+
+打开页面测试该功能，并查看浏览器控制台打印出来的信息如下：
+
+```javascript
+Opening Web Socket...
+stomp.js?f746:134 Web Socket Opened...
+stomp.js?f746:134 >>> CONNECT
+login:mylogin
+passcode:mypasscode
+client-id:my-client-id
+accept-version:1.1,1.0
+heart-beat:10000,10000
+
+<<< CONNECTED            // 服务器推送链接链接成功事件
+version:1.1
+heart-beat:0,0
+
+connected to server undefined
+stomp.js?f746:134 >>> SUBSCRIBE  // 客户端发送订阅请求
+id:sub-0
+destination:/topic/public_news
+
+<<< MESSAGE            // 服务器推送消息
+destination:/topic/public_news
+content-type:text/plain;charset=UTF-8
+subscription:sub-0
+message-id:2voe0bmd-45
+content-length:220
+
+["清华大学16位学霸为一事现身PK 简历吓坏网友 - 738","闹市区树上长出6斤多蘑菇 保安大叔炒着吃了(图) - 415","女司机第2次上路撞死过路老人 教练被抓走 司法频道 - 491"]
+
+```
 
 
     
