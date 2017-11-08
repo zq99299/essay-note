@@ -112,6 +112,8 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 </script>
 ```
 
+基础代码完成之后，接下来重点来了。怎么进行广播订阅。一对多
+
 
 
 
