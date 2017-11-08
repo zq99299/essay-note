@@ -23,3 +23,108 @@
 3. 广播订阅：服务链接上之后，自动订阅公共新闻
 3. 点对点订阅：动漫和八卦类目需要用户自己订阅：订阅哪一种则接收哪一种类型的数据
 4. 点击其他页面，在控制台(F12)打印断开链接的消息。后端也要相应的不推送该用户的所有消息
+
+接下来我们一步一步的做；
+
+## 链接服务和断开
+
+后端配置,和前面一章节的一样,这里我们从最简单的需求开始做起。然后不断完善改程序
+```java
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
+
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        registry.addEndpoint("/stomp").setAllowedOrigins("*")
+                .withSockJS()
+                .setMessageCodec(new FastjsonSockJsMessageCodec())
+        ;
+    }
+}
+```
+
+前端主要的js代码。
+
+```javascript
+<script>
+  import SockJS from 'sockjs-client'
+  import Stomp from 'stompjs'
+
+  export default {
+    data () {
+      return {
+        msg: {
+          status: 0,
+          info: '~'
+        },
+        connectLoading: false,
+        isConnect: false
+      }
+    },
+    created () {
+      this.varStore = {
+        stomp: null // 链接实例
+      }
+    },
+    mounted () {
+
+    },
+    methods: {
+      // 链接到后端服务
+      connect () {
+        this.connectLoading = true
+        // 注意这里的链接地址
+        let ws = new SockJS('http://localhost:8082/stomp')
+        let stomp = Stomp.over(ws)
+
+        // 注意这里的header 暂时不是必须的。
+        let headers = {
+          login: 'mylogin',
+          passcode: 'mypasscode',
+          // additional header
+          'client-id': 'my-client-id'
+        }
+        stomp.connect(headers,
+          () => {
+            this.varStore.stomp = stomp
+            this.connectLoading = false
+            this.msg.status = 1
+            this.msg.info = '链接成功'
+            this.isConnect = true
+          },
+          (error) => {
+            this.connectLoading = false
+            this.msg.status = 0
+            this.msg.info = `链接失败: ${error}，或许是后端服务未开启`
+            this.isConnect = false
+          })
+      },
+      // 端口链接
+      disconnect () {
+        this.varStore.stomp.disconnect()
+        this.msg.status = 0
+        this.msg.info = `链接断开: 手动断开`
+        this.isConnect = false
+      }
+    }
+  }
+</script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

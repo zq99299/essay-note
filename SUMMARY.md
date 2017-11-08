@@ -96,6 +96,9 @@
     * [sockJsDemo](chapter/websocket/spring/sockjs.md)
     * [stompDemo](chapter/websocket/spring/stomp.md)
     * [stomp-新闻展示示例](chapter/websocket/spring/stomp-demo.md)
+    * [stomp-广播-公共新闻订阅](chapter/websocket/spring/stomp-topic.md)
+
+
 
 * [监控相关](chapter/monitor/index.md)
 
