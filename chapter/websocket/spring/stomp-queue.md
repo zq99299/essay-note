@@ -32,7 +32,7 @@
 ```javascript
       comicSubscribe () {
         // 发送信息
-        this.stomp.send('/app/queue/other', {
+        this.varStore.stomp.send('/app/queue/other', {
           type: 1, // 订阅
           body: 'comic' // 订阅的内容是动漫
         })
