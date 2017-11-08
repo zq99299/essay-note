@@ -150,11 +150,13 @@ template.convertAndSend("/topic/public_news", JSON.toJSONString(list));
 前端订阅代码
 ```java
 this.varStore.stomp.subscribe('/topic/public_news', message => {
-let news = JSON.parse(message.body)
-// 把获取到的列表赋值给该变量，页面中会循环出该信息
-this.publicNews = news
+    let news = JSON.parse(message.body)
+    // 把获取到的列表赋值给该变量，页面中会循环出该信息
+    this.publicNews = news
 })
 ```
+
+一定要注意这里的地址，广播地址，前后都一致。后面的点对点地址前后是不一样的。
 
 
 
