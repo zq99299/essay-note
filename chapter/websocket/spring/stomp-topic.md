@@ -140,5 +140,22 @@ content-length:220
 
 ```
 
+## 总结
+
+后端发送代码:
+```java
+template.convertAndSend("/topic/public_news", JSON.toJSONString(list));
+```
+
+前端订阅代码
+```java
+this.varStore.stomp.subscribe('/topic/public_news', message => {
+let news = JSON.parse(message.body)
+// 把获取到的列表赋值给该变量，页面中会循环出该信息
+this.publicNews = news
+})
+```
+
+
 
     
