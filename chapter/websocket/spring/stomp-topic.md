@@ -83,7 +83,7 @@ public class DemoController extends BaseController {
 
 
             // 广播消息，注意记住这里的地址
-            template.convertAndSend("/topic/public_news", JSON.toJSON(list));
+            template.convertAndSend("/topic/public_news", JSON.toJSONString(list));
         }
     }
 
@@ -92,6 +92,9 @@ public class DemoController extends BaseController {
     }
 }
 ```
+
+后端服务写好后
+## 前端订阅
 
 
     
