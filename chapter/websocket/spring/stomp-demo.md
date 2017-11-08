@@ -7,6 +7,25 @@
 3. 提供用户取消订阅功能，取消订阅之后，则不能再继续推送了。
 4. 用户离开页面后，自动取消推该用户的订阅消息推送
 
+## 为什么要选用 stomp呢？
+
+来看看stomp的一部分基础.下面是一个发送报文
+
+```java
+SEND
+destination:/queue/trade
+content-type:application/json
+content-length:44
+
+{"action":"BUY","ticker":"MMM","shares",44}^@
+```
+
+可以看到上面包含了两部分，一部分是消息的类型，目标地址，内容长度。一部分是内容。 最重要的这里有了地址的概念。这样一来就很好理解了。
+
+我们可以把指定的消息发送到指定的路径中去，订阅我们感兴趣的消息。
+
+其他的概念请参阅[ spring-websocket-stomp 章节](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-stomp)
+
 ## 本节说明
 
 由于是一个小例子，不会把每个步骤都贴上来。我只会记录下关键的配置代码和实现思路。
