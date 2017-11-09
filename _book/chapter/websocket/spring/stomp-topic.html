@@ -1,0 +1,1494 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>stomp-广播-公共新闻订阅 · essay-note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="stomp-queue.html" />
+    
+    
+    <link rel="prev" href="stomp-demo.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../dongnaoeduo_open/">
+            
+                <a href="../../dongnaoeduo_open/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    动脑学院公开课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                <a href="../../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    常见网站攻击方式以及防范手段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                <a href="../../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    阿里双11秒杀模式管理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                <a href="../../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    缓存并发的解决和抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                <a href="../../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    性能优化之数据库连接池原理详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                <a href="../../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    Tomcat实现原理之手写实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../redis/README.md">
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../redis/windows.html">
+            
+                <a href="../../redis/windows.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../redis/cluster.html">
+            
+                <a href="../../redis/cluster.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../netty/">
+            
+                <a href="../../netty/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Netty
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../netty/niostart/">
+            
+                <a href="../../netty/niostart/">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    Nio入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../netty/niostart/传统BIO编程.html">
+            
+                <a href="../../netty/niostart/传统BIO编程.html">
+            
+                    
+                        <b>4.1.1.1.</b>
+                    
+                    传统BIO编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../netty/niostart/伪异步IO模型编程.html">
+            
+                <a href="../../netty/niostart/伪异步IO模型编程.html">
+            
+                    
+                        <b>4.1.1.2.</b>
+                    
+                    伪异步I/O模型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../netty/niostart/nio.html">
+            
+                <a href="../../netty/niostart/nio.html">
+            
+                    
+                        <b>4.1.1.3.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../netty/niostart/Aio.html">
+            
+                <a href="../../netty/niostart/Aio.html">
+            
+                    
+                        <b>4.1.1.4.</b>
+                    
+                    AIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../../netty/niostart/4种IO概念.html">
+            
+                <a href="../../netty/niostart/4种IO概念.html">
+            
+                    
+                        <b>4.1.1.5.</b>
+                    
+                    4种IO概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../netty/nettystart/">
+            
+                <a href="../../netty/nettystart/">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    Netty入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../netty/nettystart/入门应用.html">
+            
+                <a href="../../netty/nettystart/入门应用.html">
+            
+                    
+                        <b>4.1.2.1.</b>
+                    
+                    入门应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../netty/nettystart/TCP粘包_拆包.html">
+            
+                <a href="../../netty/nettystart/TCP粘包_拆包.html">
+            
+                    
+                        <b>4.1.2.2.</b>
+                    
+                    TCP粘包/拆包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../../netty/nettystart/分隔符和定长解码器.html">
+            
+                <a href="../../netty/nettystart/分隔符和定长解码器.html">
+            
+                    
+                        <b>4.1.2.3.</b>
+                    
+                    分隔符和定长解码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../netty/middleCodec/">
+            
+                <a href="../../netty/middleCodec/">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    中级篇-编解码开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../netty/middleCodec/编解码技术.html">
+            
+                <a href="../../netty/middleCodec/编解码技术.html">
+            
+                    
+                        <b>4.1.3.1.</b>
+                    
+                    编解码技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../netty/middleCodec/MessagePack.html">
+            
+                <a href="../../netty/middleCodec/MessagePack.html">
+            
+                    
+                        <b>4.1.3.2.</b>
+                    
+                    MessagePack编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../../netty/middleCodec/GoogleProtobuf.html">
+            
+                <a href="../../netty/middleCodec/GoogleProtobuf.html">
+            
+                    
+                        <b>4.1.3.3.</b>
+                    
+                    GoogleProtobuf编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../../netty/middleCodec/JBossMarshalling.html">
+            
+                <a href="../../netty/middleCodec/JBossMarshalling.html">
+            
+                    
+                        <b>4.1.3.4.</b>
+                    
+                    JBossMarshalling编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../git/">
+            
+                <a href="../../git/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    GIT
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../git/远程仓库回退.html">
+            
+                <a href="../../git/远程仓库回退.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    GIT远程仓库回退
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../git/branch.html">
+            
+                <a href="../../git/branch.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../idea/">
+            
+                <a href="../../idea/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../idea/快捷键篇.html">
+            
+                <a href="../../idea/快捷键篇.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    快捷键篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../mysql/">
+            
+                <a href="../../mysql/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../mysql/导出导入.html">
+            
+                <a href="../../mysql/导出导入.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    导出导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../htmlcss/">
+            
+                <a href="../../htmlcss/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    CSS深入理解-张星旭系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../htmlcss/htmlcss布局效果技巧.html">
+            
+                <a href="../../htmlcss/htmlcss布局效果技巧.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    css与html布局效果技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../htmlcss/float.html">
+            
+                <a href="../../htmlcss/float.html">
+            
+                    
+                        <b>8.1.2.</b>
+                    
+                    float
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../htmlcss/absolute.html">
+            
+                <a href="../../htmlcss/absolute.html">
+            
+                    
+                        <b>8.1.3.</b>
+                    
+                    absolute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../htmlcss/overflow.html">
+            
+                <a href="../../htmlcss/overflow.html">
+            
+                    
+                        <b>8.1.4.</b>
+                    
+                    overflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../../htmlcss/lineheight.html">
+            
+                <a href="../../htmlcss/lineheight.html">
+            
+                    
+                        <b>8.1.5.</b>
+                    
+                    line-height
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../../htmlcss/verticalalign.html">
+            
+                <a href="../../htmlcss/verticalalign.html">
+            
+                    
+                        <b>8.1.6.</b>
+                    
+                    vertical-align
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../../htmlcss/verticalalign2.html">
+            
+                <a href="../../htmlcss/verticalalign2.html">
+            
+                    
+                        <b>8.1.7.</b>
+                    
+                    vertical-align2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.8" data-path="../../htmlcss/relative.html">
+            
+                <a href="../../htmlcss/relative.html">
+            
+                    
+                        <b>8.1.8.</b>
+                    
+                    relative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.9" data-path="../../htmlcss/zindex.html">
+            
+                <a href="../../htmlcss/zindex.html">
+            
+                    
+                        <b>8.1.9.</b>
+                    
+                    z-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.10" data-path="../../htmlcss/margin.html">
+            
+                <a href="../../htmlcss/margin.html">
+            
+                    
+                        <b>8.1.10.</b>
+                    
+                    margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.11" data-path="../../htmlcss/margin2.html">
+            
+                <a href="../../htmlcss/margin2.html">
+            
+                    
+                        <b>8.1.11.</b>
+                    
+                    margin2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.12" data-path="../../htmlcss/border.html">
+            
+                <a href="../../htmlcss/border.html">
+            
+                    
+                        <b>8.1.12.</b>
+                    
+                    border
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../linux/zip.html">
+            
+                <a href="../../linux/zip.html">
+            
+                    
+                        <b>9.1.1.</b>
+                    
+                    各种压缩/解压命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../linux/install.html">
+            
+                <a href="../../linux/install.html">
+            
+                    
+                        <b>9.1.2.</b>
+                    
+                    常用软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../linux/port.html">
+            
+                <a href="../../linux/port.html">
+            
+                    
+                        <b>9.1.3.</b>
+                    
+                    端口管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="../../linux/nginx.html">
+            
+                <a href="../../linux/nginx.html">
+            
+                    
+                        <b>9.1.4.</b>
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../node/npm.html">
+            
+                <a href="../../node/npm.html">
+            
+                    
+                        <b>10.1.1.</b>
+                    
+                    Npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../zooKeeper/">
+            
+                <a href="../../zooKeeper/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    ZooKeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../spring.html">
+            
+                <a href="../spring.html">
+            
+                    
+                        <b>12.1.1.</b>
+                    
+                    Spring-WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1.1" data-path="websocket.html">
+            
+                <a href="websocket.html">
+            
+                    
+                        <b>12.1.1.1.</b>
+                    
+                    websocketDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.2" data-path="sockjs.html">
+            
+                <a href="sockjs.html">
+            
+                    
+                        <b>12.1.1.2.</b>
+                    
+                    sockJsDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.3" data-path="stomp.html">
+            
+                <a href="stomp.html">
+            
+                    
+                        <b>12.1.1.3.</b>
+                    
+                    stompDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.4" data-path="stomp-demo.html">
+            
+                <a href="stomp-demo.html">
+            
+                    
+                        <b>12.1.1.4.</b>
+                    
+                    stomp-新闻展示示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="12.1.1.5" data-path="stomp-topic.html">
+            
+                <a href="stomp-topic.html">
+            
+                    
+                        <b>12.1.1.5.</b>
+                    
+                    stomp-广播-公共新闻订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.6" data-path="stomp-queue.html">
+            
+                <a href="stomp-queue.html">
+            
+                    
+                        <b>12.1.1.6.</b>
+                    
+                    stomp-点对点-自由订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../../monitor/">
+            
+                <a href="../../monitor/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    监控相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >stomp-广播-公共新闻订阅</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;"><b>12.1.1.5. </b>stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x7AEF;&#x8BA2;&#x9605;"><b>12.1.1.5.1. </b>&#x524D;&#x7AEF;&#x8BA2;&#x9605;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>12.1.1.5.2. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;"><a name="stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;" class="anchor-navigation-ex-anchor" href="#stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.5. stomp-&#x5E7F;&#x64AD;-&#x516C;&#x5171;&#x65B0;&#x95FB;&#x8BA2;&#x9605;</h1>
+<p>&#x4E4B;&#x524D;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4EE3;&#x7801;&#x5DF2;&#x7ECF;&#x6EE1;&#x8DB3;&#x4E0D;&#x4E86;&#x73B0;&#x5728;&#x7684;&#x9700;&#x6C42;&#x4E86;&#x3002;&#x5148;&#x6765;&#x770B;&#x770B;&#x540E;&#x7AEF;&#x7684;&#x65B0;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@EnableWebSocketMessageBroker</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebSocketConfig</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractWebSocketMessageBrokerConfigurer</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">registerStompEndpoints</span><span class="token punctuation">(</span>StompEndpointRegistry registry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        registry<span class="token punctuation">.</span><span class="token function">addEndpoint</span><span class="token punctuation">(</span><span class="token string">&quot;/stomp&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAllowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withSockJS</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setMessageCodec</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FastjsonSockJsMessageCodec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//                .setClientLibraryUrl(&quot;//cdn.jsdelivr.net/sockjs/1/sockjs.min.js&quot;);</span>
+        <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">configureMessageBroker</span><span class="token punctuation">(</span>MessageBrokerRegistry config<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// &#x524D;&#x7AEF;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x548C;&#x4E3B;&#x52A8;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x6D88;&#x606F;&#x5730;&#x5740;&#x524D;&#x7F00;</span>
+        config<span class="token punctuation">.</span><span class="token function">setApplicationDestinationPrefixes</span><span class="token punctuation">(</span><span class="token string">&quot;/app&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// &#x5F00;&#x542F;&#x6D88;&#x606F;&#x4EE3;&#x7406;</span>
+        config<span class="token punctuation">.</span><span class="token function">enableSimpleBroker</span><span class="token punctuation">(</span><span class="token string">&quot;/topic&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;/queue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// &#x70B9;&#x5BF9;&#x70B9;&#x652F;&#x6301;&#x524D;&#x7F00;</span>
+        config<span class="token punctuation">.</span><span class="token function">setUserDestinationPrefix</span><span class="token punctuation">(</span><span class="token string">&quot;/user/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x65B0;&#x589E;&#x4E86;<code>configureMessageBroker</code>&#x914D;&#x7F6E;&#x3002;</p>
+<ul>
+<li><p><code>config.setApplicationDestinationPrefixes(&quot;/app&quot;)</code> </p>
+<p>  &#x4EE5;<code>/app</code> &#x524D;&#x7F00;&#x5F00;&#x5934;&#x7684;&#x6D88;&#x606F;&#x8BF7;&#x6C42; &#x5C06;&#x88AB;&#x8DEF;&#x7531;&#x5230; &#x5E94;&#x7528;&#x7A0B;&#x5E8F; Controller &#x4E2D;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;,&#x88AB;&#x6D88;&#x606F;&#x76F8;&#x5173;&#x6CE8;&#x89E3;&#x58F0;&#x660E;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BB2;&#x5230;</p>
+</li>
+<li><p><code>config.enableSimpleBroker(&quot;/topic&quot;, &quot;/queue&quot;);</code></p>
+<p>  &#x8FD9;&#x91CC;&#x6CE8;&#x518C;&#x4E86;&#x4E24;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5206;&#x522B;&#xFF0C;&#x53EA;&#x662F;&#x8BED;&#x4E49;&#x5316;&#x7684;&#x533A;&#x5206;&#x3002;topic &#x4F5C;&#x7528;&#x5E7F;&#x64AD;&#x524D;&#x7F00;&#xFF0C;queue&#x4F5C;&#x4E3A;&#x70B9;&#x5BF9;&#x70B9;&#x7684;&#x524D;&#x7F00;. &#x4EE5;&#x8FD9;&#x4E9B;&#x524D;&#x7F00;&#x5F00;&#x59CB;&#x7684;&#x8DEF;&#x5F84;&#x5C06;&#x4F1A;&#x88AB;&#x8DEF;&#x7531;&#x5230;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x4E2D;&#x53BB;&#x3002;</p>
+<p>  <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-stomp-message-flow" target="_blank">&#x8FD9;&#x91CC;&#x662F;&#x5B98;&#x7F51;&#x7684;&#x793A;&#x610F;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;&#x770B;&#x4E00;&#x4E0B;</a>&#xFF0C;&#x5982;&#x679C;&#x73B0;&#x5728;&#x770B;&#x4E0D;&#x61C2;&#xFF0C;&#x4E0D;&#x8981;&#x7D27;&#xFF0C;&#x672C;&#x8282;&#x8BB2;&#x5B8C;&#xFF0C;&#x5927;&#x6982;&#x5C31;&#x80FD;&#x660E;&#x767D;&#x4E86; </p>
+</li>
+<li><p><code>config.setUserDestinationPrefix(&quot;/user/&quot;)</code>;</p>
+<p>  &#x4EE5;user&#x5F00;&#x5934;&#x7684;&#x5C06;&#x4F1A;&#x88AB;&#x6846;&#x67B6;&#x4EE3;&#x7406;&#xFF0C;&#x5B9E;&#x9645;&#x4EA7;&#x751F;&#x7684;&#x8DEF;&#x5F84;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x5199;&#x7684;&#x90A3;&#x6837;&#x3002;&#x8FD9;&#x4E2A;&#x540E;&#x9762;&#x4E5F;&#x4F1A;&#x8BB2;</p>
+</li>
+</ul>
+<p>&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x3002;&#x8FD8;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6765;&#x5B9A;&#x65F6;&#x53D1;&#x9001;&#x6570;&#x636E;&#x3002;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x6709;&#x65B0;&#x7684;&#x65B0;&#x95FB;&#x51FA;&#x73B0;</p>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x628A;&#x6A21;&#x62DF;&#x7EBF;&#x7A0B;&#x76F4;&#x63A5;&#x5199;&#x5728; DemoController &#x4E2D;&#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>produces <span class="token operator">=</span> BaseController<span class="token punctuation">.</span>CHARSET_UTF8_JSON<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DemoController</span> <span class="token keyword">extends</span> <span class="token class-name">BaseController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> SimpMessagingTemplate template<span class="token punctuation">;</span>
+
+    <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">mockPublicNews</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * &#x6A21;&#x62DF;&#x516C;&#x5171;&#x65B0;&#x95FB;&#x63A8;&#x9001;
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mockPublicNews</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                TimeUnit<span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment" spellcheck="true">// &#x6A21;&#x62DF;&#x4EA7;&#x751F;3&#x6761;</span>
+            list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6E05;&#x534E;&#x5927;&#x5B66;16&#x4F4D;&#x5B66;&#x9738;&#x4E3A;&#x4E00;&#x4E8B;&#x73B0;&#x8EAB;PK &#x7B80;&#x5386;&#x5413;&#x574F;&#x7F51;&#x53CB; - &quot;</span> <span class="token operator">+</span> <span class="token function">randomInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;&#x95F9;&#x5E02;&#x533A;&#x6811;&#x4E0A;&#x957F;&#x51FA;6&#x65A4;&#x591A;&#x8611;&#x83C7; &#x4FDD;&#x5B89;&#x5927;&#x53D4;&#x7092;&#x7740;&#x5403;&#x4E86;(&#x56FE;) - &quot;</span> <span class="token operator">+</span> <span class="token function">randomInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5973;&#x53F8;&#x673A;&#x7B2C;2&#x6B21;&#x4E0A;&#x8DEF;&#x649E;&#x6B7B;&#x8FC7;&#x8DEF;&#x8001;&#x4EBA; &#x6559;&#x7EC3;&#x88AB;&#x6293;&#x8D70; &#x53F8;&#x6CD5;&#x9891;&#x9053; - &quot;</span> <span class="token operator">+</span> <span class="token function">randomInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+            <span class="token comment" spellcheck="true">// &#x5E7F;&#x64AD;&#x6D88;&#x606F;&#xFF0C;&#x6CE8;&#x610F;&#x8BB0;&#x4F4F;&#x8FD9;&#x91CC;&#x7684;&#x5730;&#x5740;</span>
+            template<span class="token punctuation">.</span><span class="token function">convertAndSend</span><span class="token punctuation">(</span><span class="token string">&quot;/topic/public_news&quot;</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> <span class="token function">randomInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> RandomUtils<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5199;&#x597D;&#x540E;&#x6765;&#x5B9E;&#x73B0;&#x524D;&#x7AEF;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<h2 id="&#x524D;&#x7AEF;&#x8BA2;&#x9605;"><a name="&#x524D;&#x7AEF;&#x8BA2;&#x9605;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x7AEF;&#x8BA2;&#x9605;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.5.1. &#x524D;&#x7AEF;&#x8BA2;&#x9605;</h2>
+<p>&#x5728;&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x94FE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF1B;</p>
+<pre class="language-"><code class="lang-javascript">topicPublicNews <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x548C; &#x540E;&#x7AEF;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E00;&#x81F4;&#x7684;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>varStore<span class="token punctuation">.</span>stomp<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">&apos;/topic/public_news&apos;</span><span class="token punctuation">,</span> message <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> news <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+          <span class="token comment" spellcheck="true">// &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5217;&#x8868;&#x8D4B;&#x503C;&#x7ED9;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x4F1A;&#x5FAA;&#x73AF;&#x51FA;&#x8BE5;&#x4FE1;&#x606F;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>publicNews <span class="token operator">=</span> news
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6253;&#x5F00;&#x9875;&#x9762;&#x6D4B;&#x8BD5;&#x8BE5;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x6D4F;&#x89C8;&#x5668;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-javascript">Opening Web Socket<span class="token operator">...</span>
+stomp<span class="token punctuation">.</span>js<span class="token operator">?</span>f746<span class="token punctuation">:</span><span class="token number">134</span> Web Socket Opened<span class="token operator">...</span>
+stomp<span class="token punctuation">.</span>js<span class="token operator">?</span>f746<span class="token punctuation">:</span><span class="token number">134</span> <span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> CONNECT
+login<span class="token punctuation">:</span>mylogin
+passcode<span class="token punctuation">:</span>mypasscode
+client<span class="token operator">-</span>id<span class="token punctuation">:</span>my<span class="token operator">-</span>client<span class="token operator">-</span>id
+accept<span class="token operator">-</span>version<span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span><span class="token number">1.0</span>
+heart<span class="token operator">-</span>beat<span class="token punctuation">:</span><span class="token number">10000</span><span class="token punctuation">,</span><span class="token number">10000</span>
+
+<span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span> CONNECTED            <span class="token comment" spellcheck="true">// &#x670D;&#x52A1;&#x5668;&#x63A8;&#x9001;&#x94FE;&#x63A5;&#x94FE;&#x63A5;&#x6210;&#x529F;&#x4E8B;&#x4EF6;</span>
+version<span class="token punctuation">:</span><span class="token number">1.1</span>
+heart<span class="token operator">-</span>beat<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span>
+
+connected to server undefined
+stomp<span class="token punctuation">.</span>js<span class="token operator">?</span>f746<span class="token punctuation">:</span><span class="token number">134</span> <span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span> SUBSCRIBE  <span class="token comment" spellcheck="true">// &#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8BA2;&#x9605;&#x8BF7;&#x6C42;</span>
+id<span class="token punctuation">:</span>sub<span class="token number">-0</span>
+destination<span class="token punctuation">:</span><span class="token operator">/</span>topic<span class="token operator">/</span>public_news
+
+<span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token operator">&lt;</span> MESSAGE            <span class="token comment" spellcheck="true">// &#x670D;&#x52A1;&#x5668;&#x63A8;&#x9001;&#x6D88;&#x606F;</span>
+destination<span class="token punctuation">:</span><span class="token operator">/</span>topic<span class="token operator">/</span>public_news
+content<span class="token operator">-</span>type<span class="token punctuation">:</span>text<span class="token operator">/</span>plain<span class="token punctuation">;</span>charset<span class="token operator">=</span>UTF<span class="token number">-8</span>
+subscription<span class="token punctuation">:</span>sub<span class="token number">-0</span>
+message<span class="token operator">-</span>id<span class="token punctuation">:</span>2voe0bmd<span class="token number">-45</span>
+content<span class="token operator">-</span>length<span class="token punctuation">:</span><span class="token number">220</span>
+
+<span class="token punctuation">[</span><span class="token string">&quot;&#x6E05;&#x534E;&#x5927;&#x5B66;16&#x4F4D;&#x5B66;&#x9738;&#x4E3A;&#x4E00;&#x4E8B;&#x73B0;&#x8EAB;PK &#x7B80;&#x5386;&#x5413;&#x574F;&#x7F51;&#x53CB; - 738&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x95F9;&#x5E02;&#x533A;&#x6811;&#x4E0A;&#x957F;&#x51FA;6&#x65A4;&#x591A;&#x8611;&#x83C7; &#x4FDD;&#x5B89;&#x5927;&#x53D4;&#x7092;&#x7740;&#x5403;&#x4E86;(&#x56FE;) - 415&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x5973;&#x53F8;&#x673A;&#x7B2C;2&#x6B21;&#x4E0A;&#x8DEF;&#x649E;&#x6B7B;&#x8FC7;&#x8DEF;&#x8001;&#x4EBA; &#x6559;&#x7EC3;&#x88AB;&#x6293;&#x8D70; &#x53F8;&#x6CD5;&#x9891;&#x9053; - 491&quot;</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.5.2. &#x603B;&#x7ED3;</h2>
+<p>&#x540E;&#x7AEF;&#x53D1;&#x9001;&#x4EE3;&#x7801;:</p>
+<pre class="language-"><code class="lang-java">template<span class="token punctuation">.</span><span class="token function">convertAndSend</span><span class="token punctuation">(</span><span class="token string">&quot;/topic/public_news&quot;</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x524D;&#x7AEF;&#x8BA2;&#x9605;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">this</span><span class="token punctuation">.</span>varStore<span class="token punctuation">.</span>stomp<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">&apos;/topic/public_news&apos;</span><span class="token punctuation">,</span> message <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    let news <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>message<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// &#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x5217;&#x8868;&#x8D4B;&#x503C;&#x7ED9;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x9875;&#x9762;&#x4E2D;&#x4F1A;&#x5FAA;&#x73AF;&#x51FA;&#x8BE5;&#x4FE1;&#x606F;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>publicNews <span class="token operator">=</span> news
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5E7F;&#x64AD;&#x5730;&#x5740;&#xFF0C;&#x524D;&#x540E;&#x90FD;&#x4E00;&#x81F4;&#x3002;&#x540E;&#x9762;&#x7684;&#x70B9;&#x5BF9;&#x70B9;&#x5730;&#x5740;&#x524D;&#x540E;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2017-11-08 16:52:56 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="stomp-demo.html" class="navigation navigation-prev " aria-label="Previous page: stomp-新闻展示示例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="stomp-queue.html" class="navigation navigation-next " aria-label="Next page: stomp-点对点-自由订阅">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"stomp-广播-公共新闻订阅","level":"12.1.1.5","depth":3,"next":{"title":"stomp-点对点-自由订阅","level":"12.1.1.6","depth":3,"path":"chapter/websocket/spring/stomp-queue.md","ref":"chapter/websocket/spring/stomp-queue.md","articles":[]},"previous":{"title":"stomp-新闻展示示例","level":"12.1.1.4","depth":3,"path":"chapter/websocket/spring/stomp-demo.md","ref":"chapter/websocket/spring/stomp-demo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","-github","prism","-highlight","expandable-chapters","page-footer-ex","anchor-navigation-ex","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"essay-note","language":"zh-hans","gitbook":"*","description":"随笔记未分类，也就是大杂烩的一本笔记"},"file":{"path":"chapter/websocket/spring/stomp-topic.md","mtime":"2017-11-08T08:52:56.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-09T08:39:30.471Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

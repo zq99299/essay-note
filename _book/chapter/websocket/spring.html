@@ -1,0 +1,1390 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spring-WebSocket · essay-note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="spring/websocket.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../dongnaoeduo_open/">
+            
+                <a href="../dongnaoeduo_open/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    动脑学院公开课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                <a href="../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    常见网站攻击方式以及防范手段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                <a href="../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    阿里双11秒杀模式管理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                <a href="../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    缓存并发的解决和抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                <a href="../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    性能优化之数据库连接池原理详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                <a href="../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    Tomcat实现原理之手写实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../redis/README.md">
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../redis/windows.html">
+            
+                <a href="../redis/windows.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../redis/cluster.html">
+            
+                <a href="../redis/cluster.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../netty/">
+            
+                <a href="../netty/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Netty
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../netty/niostart/">
+            
+                <a href="../netty/niostart/">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    Nio入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../netty/niostart/传统BIO编程.html">
+            
+                <a href="../netty/niostart/传统BIO编程.html">
+            
+                    
+                        <b>4.1.1.1.</b>
+                    
+                    传统BIO编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../netty/niostart/伪异步IO模型编程.html">
+            
+                <a href="../netty/niostart/伪异步IO模型编程.html">
+            
+                    
+                        <b>4.1.1.2.</b>
+                    
+                    伪异步I/O模型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../netty/niostart/nio.html">
+            
+                <a href="../netty/niostart/nio.html">
+            
+                    
+                        <b>4.1.1.3.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../netty/niostart/Aio.html">
+            
+                <a href="../netty/niostart/Aio.html">
+            
+                    
+                        <b>4.1.1.4.</b>
+                    
+                    AIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../netty/niostart/4种IO概念.html">
+            
+                <a href="../netty/niostart/4种IO概念.html">
+            
+                    
+                        <b>4.1.1.5.</b>
+                    
+                    4种IO概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../netty/nettystart/">
+            
+                <a href="../netty/nettystart/">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    Netty入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../netty/nettystart/入门应用.html">
+            
+                <a href="../netty/nettystart/入门应用.html">
+            
+                    
+                        <b>4.1.2.1.</b>
+                    
+                    入门应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../netty/nettystart/TCP粘包_拆包.html">
+            
+                <a href="../netty/nettystart/TCP粘包_拆包.html">
+            
+                    
+                        <b>4.1.2.2.</b>
+                    
+                    TCP粘包/拆包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../netty/nettystart/分隔符和定长解码器.html">
+            
+                <a href="../netty/nettystart/分隔符和定长解码器.html">
+            
+                    
+                        <b>4.1.2.3.</b>
+                    
+                    分隔符和定长解码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../netty/middleCodec/">
+            
+                <a href="../netty/middleCodec/">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    中级篇-编解码开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../netty/middleCodec/编解码技术.html">
+            
+                <a href="../netty/middleCodec/编解码技术.html">
+            
+                    
+                        <b>4.1.3.1.</b>
+                    
+                    编解码技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../netty/middleCodec/MessagePack.html">
+            
+                <a href="../netty/middleCodec/MessagePack.html">
+            
+                    
+                        <b>4.1.3.2.</b>
+                    
+                    MessagePack编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../netty/middleCodec/GoogleProtobuf.html">
+            
+                <a href="../netty/middleCodec/GoogleProtobuf.html">
+            
+                    
+                        <b>4.1.3.3.</b>
+                    
+                    GoogleProtobuf编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../netty/middleCodec/JBossMarshalling.html">
+            
+                <a href="../netty/middleCodec/JBossMarshalling.html">
+            
+                    
+                        <b>4.1.3.4.</b>
+                    
+                    JBossMarshalling编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    GIT
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../git/远程仓库回退.html">
+            
+                <a href="../git/远程仓库回退.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    GIT远程仓库回退
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../git/branch.html">
+            
+                <a href="../git/branch.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../idea/">
+            
+                <a href="../idea/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../idea/快捷键篇.html">
+            
+                <a href="../idea/快捷键篇.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    快捷键篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../mysql/导出导入.html">
+            
+                <a href="../mysql/导出导入.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    导出导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../htmlcss/">
+            
+                <a href="../htmlcss/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    CSS深入理解-张星旭系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../htmlcss/htmlcss布局效果技巧.html">
+            
+                <a href="../htmlcss/htmlcss布局效果技巧.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    css与html布局效果技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../htmlcss/float.html">
+            
+                <a href="../htmlcss/float.html">
+            
+                    
+                        <b>8.1.2.</b>
+                    
+                    float
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../htmlcss/absolute.html">
+            
+                <a href="../htmlcss/absolute.html">
+            
+                    
+                        <b>8.1.3.</b>
+                    
+                    absolute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../htmlcss/overflow.html">
+            
+                <a href="../htmlcss/overflow.html">
+            
+                    
+                        <b>8.1.4.</b>
+                    
+                    overflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../htmlcss/lineheight.html">
+            
+                <a href="../htmlcss/lineheight.html">
+            
+                    
+                        <b>8.1.5.</b>
+                    
+                    line-height
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../htmlcss/verticalalign.html">
+            
+                <a href="../htmlcss/verticalalign.html">
+            
+                    
+                        <b>8.1.6.</b>
+                    
+                    vertical-align
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../htmlcss/verticalalign2.html">
+            
+                <a href="../htmlcss/verticalalign2.html">
+            
+                    
+                        <b>8.1.7.</b>
+                    
+                    vertical-align2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.8" data-path="../htmlcss/relative.html">
+            
+                <a href="../htmlcss/relative.html">
+            
+                    
+                        <b>8.1.8.</b>
+                    
+                    relative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.9" data-path="../htmlcss/zindex.html">
+            
+                <a href="../htmlcss/zindex.html">
+            
+                    
+                        <b>8.1.9.</b>
+                    
+                    z-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.10" data-path="../htmlcss/margin.html">
+            
+                <a href="../htmlcss/margin.html">
+            
+                    
+                        <b>8.1.10.</b>
+                    
+                    margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.11" data-path="../htmlcss/margin2.html">
+            
+                <a href="../htmlcss/margin2.html">
+            
+                    
+                        <b>8.1.11.</b>
+                    
+                    margin2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.12" data-path="../htmlcss/border.html">
+            
+                <a href="../htmlcss/border.html">
+            
+                    
+                        <b>8.1.12.</b>
+                    
+                    border
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../linux/zip.html">
+            
+                <a href="../linux/zip.html">
+            
+                    
+                        <b>9.1.1.</b>
+                    
+                    各种压缩/解压命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../linux/install.html">
+            
+                <a href="../linux/install.html">
+            
+                    
+                        <b>9.1.2.</b>
+                    
+                    常用软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../linux/port.html">
+            
+                <a href="../linux/port.html">
+            
+                    
+                        <b>9.1.3.</b>
+                    
+                    端口管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="../linux/nginx.html">
+            
+                <a href="../linux/nginx.html">
+            
+                    
+                        <b>9.1.4.</b>
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../node/">
+            
+                <a href="../node/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../node/npm.html">
+            
+                <a href="../node/npm.html">
+            
+                    
+                        <b>10.1.1.</b>
+                    
+                    Npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../zooKeeper/">
+            
+                <a href="../zooKeeper/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    ZooKeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="12.1.1" data-path="spring.html">
+            
+                <a href="spring.html">
+            
+                    
+                        <b>12.1.1.</b>
+                    
+                    Spring-WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1.1" data-path="spring/websocket.html">
+            
+                <a href="spring/websocket.html">
+            
+                    
+                        <b>12.1.1.1.</b>
+                    
+                    websocketDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.2" data-path="spring/sockjs.html">
+            
+                <a href="spring/sockjs.html">
+            
+                    
+                        <b>12.1.1.2.</b>
+                    
+                    sockJsDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.3" data-path="spring/stomp.html">
+            
+                <a href="spring/stomp.html">
+            
+                    
+                        <b>12.1.1.3.</b>
+                    
+                    stompDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.4" data-path="spring/stomp-demo.html">
+            
+                <a href="spring/stomp-demo.html">
+            
+                    
+                        <b>12.1.1.4.</b>
+                    
+                    stomp-新闻展示示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.5" data-path="spring/stomp-topic.html">
+            
+                <a href="spring/stomp-topic.html">
+            
+                    
+                        <b>12.1.1.5.</b>
+                    
+                    stomp-广播-公共新闻订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.6" data-path="spring/stomp-queue.html">
+            
+                <a href="spring/stomp-queue.html">
+            
+                    
+                        <b>12.1.1.6.</b>
+                    
+                    stomp-点对点-自由订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../monitor/">
+            
+                <a href="../monitor/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    监控相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Spring-WebSocket</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#spring-websocket"><b>12.1.1. </b>spring-websocket</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b>12.1.1.1. </b>&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket"><b>12.1.1.2. </b>&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket?</a></li><li><span class="title-icon "></span><a href="#websocket&#x3001;sockjs&#x3001;stomp-&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><b>12.1.1.3. </b>websocket&#x3001;sockJS&#x3001;STOMP &#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</a></li><ul><li><span class="title-icon "></span><a href="#websocket"><b>12.1.1.3.1. </b>websocket</a></li><li><span class="title-icon "></span><a href="#sockjs"><b>12.1.1.3.2. </b>sockJS</a></li><li><span class="title-icon "></span><a href="#stomp"><b>12.1.1.3.3. </b>STOMP</a></li></ul><li><span class="title-icon "></span><a href="#&#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;"><b>12.1.1.4. </b>&#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><b>12.1.1.4.1. </b>&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><b>12.1.1.4.2. </b>&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;</a></li></ul></ul></ul></div><a href="#spring-websocket" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spring-websocket"><a name="spring-websocket" class="anchor-navigation-ex-anchor" href="#spring-websocket"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1. spring-websocket</h1>
+<h2 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.1. &#x4ECB;&#x7ECD;</h2>
+<p>WebSocket<a href="https://tools.ietf.org/html/rfc6455" target="_blank">&#x534F;&#x8BAE;RFC 6455</a>&#x4E3A;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x5168;&#x53CC;&#x5DE5;&#xFF0C;&#x53CC;&#x5411;&#x901A;&#x4FE1;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x4ED6;&#x4F1A;&#x4F7F;&#x7528;HTTP&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x63E1;&#x624B;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x5185;&#x7F6E;&#x4E8E;HTTP&#x4E2D;&#x7684;&#x673A;&#x5236;&#x6765;&#x8BF7;&#x6C42;&#x534F;&#x8BAE;&#x5347;&#x7EA7;&#xFF08;&#x6216;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4E3A;&#x534F;&#x8BAE;&#x4EA4;&#x6362;&#x673A;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;HTTP&#x72B6;&#x6001;101&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#xFF08;&#x5207;&#x6362;&#x534F;&#x8BAE;&#xFF09;&#x5982;&#x679C;&#x5B83;&#x540C;&#x610F;&#x3002;&#x5047;&#x8BBE;&#x63E1;&#x624B;&#x6210;&#x529F;&#xFF0C;HTTP&#x5347;&#x7EA7;&#x8BF7;&#x6C42;&#x4E0B;&#x9762;&#x7684;TCP&#x5957;&#x63A5;&#x5B57;&#x4FDD;&#x6301;&#x6253;&#x5F00;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x5F7C;&#x6B64;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<p>Spring Framework 4&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5168;&#x9762;&#x7684;WebSocket&#x652F;&#x6301;&#x6A21;&#x5757;spring-websocket&#x3002;&#x5B83;&#x4E0E;Java WebSocket API&#x6807;&#x51C6;&#xFF08;<a href="https://jcp.org/en/jsr/detail?id=356" target="_blank">JSR-356</a>&#xFF09;&#x517C;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x989D;&#x5916;&#x7684;&#x9644;&#x52A0;&#x503C;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket"><a name="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2. &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9002;&#x5408;&#x4F7F;&#x7528;websocket?</h2>
+<p>WebSocket&#x6700;&#x9002;&#x5408;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x4EE5;&#x9AD8;&#x9891;&#x7387;&#x548C;&#x4F4E;&#x5EF6;&#x8FDF;&#x4EA4;&#x6362;&#x4E8B;&#x4EF6;&#x3002;&#x534F;&#x540C;&#xFF0C;&#x6E38;&#x620F;&#xFF0C;&#x804A;&#x5929;&#xFF0C;&#x91D1;&#x878D;&#x80A1;&#x7968;&#x5C55;&#x793A;&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5E94;&#x7528;&#x5BF9;&#x65F6;&#x95F4;&#x5EF6;&#x8FDF;&#x975E;&#x5E38;&#x654F;&#x611F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x9700;&#x8981;&#x4EE5;&#x9AD8;&#x9891;&#x7387;&#x4EA4;&#x6362;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x4F4E;&#x5EF6;&#x8FDF;&#x548C;&#x9AD8;&#x9891;&#x7387;&#x7684;&#x6D88;&#x606F;&#x7684;&#x7EC4;&#x5408;&#x53EF;&#x4EE5;&#x4F7F;WebSocket&#x534F;&#x8BAE;&#x7684;&#x4F7F;&#x7528;&#x6210;&#x4E3A;&#x5173;&#x952E;&#x3002;</p>
+<p>Spring&#x6846;&#x67B6;&#x5141;&#x8BB8;@Controller&#x548C;@RestController&#x7C7B;&#x5177;&#x6709;HTTP&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x548C;WebSocket&#x6D88;&#x606F;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x3002;&#x6B64;&#x5916;&#xFF0C;Spring MVC&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#x6216;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x5411;&#x6240;&#x6709;&#x611F;&#x5174;&#x8DA3;&#x7684;WebSocket&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x7279;&#x5B9A;&#x7528;&#x6237;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#x3002;</p>
+<h2 id="websocket&#x3001;sockjs&#x3001;stomp-&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><a name="websocket&#x3001;sockjs&#x3001;stomp-&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#websocket&#x3001;sockjs&#x3001;stomp-&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.3. websocket&#x3001;sockJS&#x3001;STOMP &#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</h2>
+<h3 id="websocket"><a name="websocket" class="anchor-navigation-ex-anchor" href="#websocket"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.3.1. websocket</h3>
+<p>WebSocket &#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x6D88;&#x606F;&#x67B6;&#x6784;&#xFF0C;&#x4F46;&#x4E0D;&#x8981;&#x6C42;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7279;&#x5B9A;&#x7684;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x534F;&#x8BAE;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x8584;&#x7684;TCP&#x5C42;&#xFF0C;&#x5C06;&#x5B57;&#x8282;&#x6D41;&#x8F6C;&#x6362;&#x4E3A;&#x6D88;&#x606F;&#x6D41;&#xFF08;&#x6587;&#x672C;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#xFF09;&#xFF0C;&#x7531;&#x5E94;&#x7528;&#x6765;&#x89E3;&#x91CA;&#x6D88;&#x606F;&#x7684;&#x542B;&#x4E49;&#x3002;&#x4E0E;HTTP&#xFF08;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7EA7;&#x534F;&#x8BAE;&#xFF09;&#x4E0D;&#x540C;&#xFF0C;&#x5728;WebSocket&#x534F;&#x8BAE;&#x4E2D;&#xFF0C;&#x6846;&#x67B6;&#x6216;&#x5BB9;&#x5668;&#x7684;&#x4F20;&#x5165;&#x6D88;&#x606F;&#x4E2D;&#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x4FE1;&#x606F;&#x6765;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x8DEF;&#x7531;&#x6216;&#x5904;&#x7406;&#x5B83;&#x3002;&#x56E0;&#x6B64;&#xFF0C;WebSocket&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x592A;&#x4F4E;&#x7EA7;&#x522B;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h3 id="sockjs"><a name="sockjs" class="anchor-navigation-ex-anchor" href="#sockjs"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.3.2. sockJS</h3>
+<p>&#x662F;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x662F;websocket&#x7684;&#x5907;&#x80CE;&#xFF0C;&#x4E00;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;websocket&#x7684;&#x8BDD;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x5219;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7684;ajax&#x8F6E;&#x8BE2;&#x7B49;&#x624B;&#x6BB5;&#x6765;&#x6A21;&#x4EFF;&#x652F;&#x6301;websocket&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<h3 id="stomp"><a name="stomp" class="anchor-navigation-ex-anchor" href="#stomp"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.3.3. STOMP</h3>
+<p> STOMP&#x662F;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#xFF0C;&#x6700;&#x521D;&#x521B;&#x5EFA;&#x7528;&#x4E8E;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x5177;&#x6709;&#x7075;&#x611F;&#x6765;&#x81EA;HTTP&#x7684;&#x6846;&#x67B6;&#x3002;STOMP&#x5F97;&#x5230;&#x5E7F;&#x6CDB;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x5728;WebSocket&#x548C;Web&#x4E0A;&#x4F7F;&#x7528;&#x3002;</p>
+<p> &#x7B80;&#x5355;&#x8BF4;&#x5C31;&#x662F;STOMP&#x9002;&#x5408;&#x5C01;&#x88C5;&#x5728;websocket&#x4E0A;&#x9762;&#x3002;&#x63D0;&#x4F9B;&#x4E86;&#x6D88;&#x606F;&#x8DEF;&#x7531;&#x7684;&#x529F;&#x80FD;&#xFF08;&#x7ED9;&#x6211;&#x6700;&#x5927;&#x7684;&#x611F;&#x53D7;&#xFF09;&#xFF0C;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E0E;Java&#x4E2D;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x578B;&#x3002;&#x57FA;&#x4E8E;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x6D88;&#x606F;&#x7684;&#x8DEF;&#x7531;&#x3002;</p>
+<h2 id="&#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;"><a name="&#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.4. &#x672C;&#x7B14;&#x8BB0;&#x7684;&#x5E72;&#x8D27;&#x4ECB;&#x7ECD;</h2>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4ECB;&#x7ECD;&#x662F;&#x56F0;&#x6270;&#x4E86;&#x6211;&#x5F88;&#x4E45;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x548C;&#x7CBE;&#x529B;&#x53BB;&#x7814;&#x7A76;&#x3002;&#x7B80;&#x5355;&#x6765;&#x770B;&#x5DEE;&#x4E0D;&#x591A;&#x662F;ok&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x672C;&#x7B14;&#x8BB0;&#x5C06;&#x4F1A;&#x6709;3&#x4E2A;demo&#x8FDB;&#x884C;&#x8BB2;&#x89E3;spring websocket&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<ul>
+<li>&#x4F4E;&#x7EA7;&#x7684;spring-websocket&#x4F7F;&#x7528;</li>
+<li>&#x57FA;&#x4E8E;sockJS&#x7684;&#x4F7F;&#x7528;</li>
+<li>&#x91CD;&#x70B9;-&#x57FA;&#x4E8E;STOMP&#x7684;&#x4F7F;&#x7528;</li>
+</ul>
+<h3 id="&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><a name="&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.4.1. &#x540E;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;</h3>
+<p>&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;spring-boot&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4E0D;&#x592A;&#x4F1A;&#xFF0C;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7684;web.xml &#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>gradle &#x6784;&#x5EFA;&#x9879;&#x76EE;&#xFF1B;&#x5305;&#x542B;&#x5B50;&#x6A21;&#x5757;websock &#x548C; stomp</p>
+<h3 id="&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><a name="&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.4.2. &#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;</h3>
+<p>&#x524D;&#x7AEF;&#x4F7F;&#x7528; vue-cli &#x6765;&#x6784;&#x5EFA;&#xFF0C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x5206;&#x4E3A;3&#x4E2A;&#x9875;&#x9762;&#x3002;&#x5206;&#x522B;&#x6765;&#x8BB2;&#x89E3;&#x4F4E;&#x7EA7;&#x7684;&#xFF0C;sockJS,stomp &#x600E;&#x4E48;&#x4E0E;&#x540E;&#x7AEF;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x524D;&#x9762;&#x7684;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x7740;&#x91CD;&#x8BB2;&#x89E3;&#x6211;&#x5BF9;stomp&#x7684;&#x4E00;&#x4E9B;&#x7406;&#x89E3;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2017-11-07 17:37:54 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: WebSocket">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="spring/websocket.html" class="navigation navigation-next " aria-label="Next page: websocketDemo">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spring-WebSocket","level":"12.1.1","depth":2,"next":{"title":"websocketDemo","level":"12.1.1.1","depth":3,"path":"chapter/websocket/spring/websocket.md","ref":"chapter/websocket/spring/websocket.md","articles":[]},"previous":{"title":"WebSocket","level":"12.1","depth":1,"path":"chapter/websocket/index.md","ref":"chapter/websocket/index.md","articles":[{"title":"Spring-WebSocket","level":"12.1.1","depth":2,"path":"chapter/websocket/spring.md","ref":"chapter/websocket/spring.md","articles":[{"title":"websocketDemo","level":"12.1.1.1","depth":3,"path":"chapter/websocket/spring/websocket.md","ref":"chapter/websocket/spring/websocket.md","articles":[]},{"title":"sockJsDemo","level":"12.1.1.2","depth":3,"path":"chapter/websocket/spring/sockjs.md","ref":"chapter/websocket/spring/sockjs.md","articles":[]},{"title":"stompDemo","level":"12.1.1.3","depth":3,"path":"chapter/websocket/spring/stomp.md","ref":"chapter/websocket/spring/stomp.md","articles":[]},{"title":"stomp-新闻展示示例","level":"12.1.1.4","depth":3,"path":"chapter/websocket/spring/stomp-demo.md","ref":"chapter/websocket/spring/stomp-demo.md","articles":[]},{"title":"stomp-广播-公共新闻订阅","level":"12.1.1.5","depth":3,"path":"chapter/websocket/spring/stomp-topic.md","ref":"chapter/websocket/spring/stomp-topic.md","articles":[]},{"title":"stomp-点对点-自由订阅","level":"12.1.1.6","depth":3,"path":"chapter/websocket/spring/stomp-queue.md","ref":"chapter/websocket/spring/stomp-queue.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["splitter","-github","prism","-highlight","expandable-chapters","page-footer-ex","anchor-navigation-ex","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"essay-note","language":"zh-hans","gitbook":"*","description":"随笔记未分类，也就是大杂烩的一本笔记"},"file":{"path":"chapter/websocket/spring.md","mtime":"2017-11-07T09:37:54.163Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-09T08:39:30.471Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

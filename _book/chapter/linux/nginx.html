@@ -1,0 +1,1546 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>nginx · essay-note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../node/" />
+    
+    
+    <link rel="prev" href="port.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../dongnaoeduo_open/">
+            
+                <a href="../dongnaoeduo_open/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    动脑学院公开课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                <a href="../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    常见网站攻击方式以及防范手段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                <a href="../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    阿里双11秒杀模式管理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                <a href="../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    缓存并发的解决和抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                <a href="../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    性能优化之数据库连接池原理详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                <a href="../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    Tomcat实现原理之手写实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../redis/README.md">
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../redis/windows.html">
+            
+                <a href="../redis/windows.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../redis/cluster.html">
+            
+                <a href="../redis/cluster.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../netty/">
+            
+                <a href="../netty/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Netty
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../netty/niostart/">
+            
+                <a href="../netty/niostart/">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    Nio入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../netty/niostart/传统BIO编程.html">
+            
+                <a href="../netty/niostart/传统BIO编程.html">
+            
+                    
+                        <b>4.1.1.1.</b>
+                    
+                    传统BIO编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../netty/niostart/伪异步IO模型编程.html">
+            
+                <a href="../netty/niostart/伪异步IO模型编程.html">
+            
+                    
+                        <b>4.1.1.2.</b>
+                    
+                    伪异步I/O模型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../netty/niostart/nio.html">
+            
+                <a href="../netty/niostart/nio.html">
+            
+                    
+                        <b>4.1.1.3.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../netty/niostart/Aio.html">
+            
+                <a href="../netty/niostart/Aio.html">
+            
+                    
+                        <b>4.1.1.4.</b>
+                    
+                    AIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../netty/niostart/4种IO概念.html">
+            
+                <a href="../netty/niostart/4种IO概念.html">
+            
+                    
+                        <b>4.1.1.5.</b>
+                    
+                    4种IO概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../netty/nettystart/">
+            
+                <a href="../netty/nettystart/">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    Netty入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../netty/nettystart/入门应用.html">
+            
+                <a href="../netty/nettystart/入门应用.html">
+            
+                    
+                        <b>4.1.2.1.</b>
+                    
+                    入门应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../netty/nettystart/TCP粘包_拆包.html">
+            
+                <a href="../netty/nettystart/TCP粘包_拆包.html">
+            
+                    
+                        <b>4.1.2.2.</b>
+                    
+                    TCP粘包/拆包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../netty/nettystart/分隔符和定长解码器.html">
+            
+                <a href="../netty/nettystart/分隔符和定长解码器.html">
+            
+                    
+                        <b>4.1.2.3.</b>
+                    
+                    分隔符和定长解码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../netty/middleCodec/">
+            
+                <a href="../netty/middleCodec/">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    中级篇-编解码开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../netty/middleCodec/编解码技术.html">
+            
+                <a href="../netty/middleCodec/编解码技术.html">
+            
+                    
+                        <b>4.1.3.1.</b>
+                    
+                    编解码技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../netty/middleCodec/MessagePack.html">
+            
+                <a href="../netty/middleCodec/MessagePack.html">
+            
+                    
+                        <b>4.1.3.2.</b>
+                    
+                    MessagePack编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../netty/middleCodec/GoogleProtobuf.html">
+            
+                <a href="../netty/middleCodec/GoogleProtobuf.html">
+            
+                    
+                        <b>4.1.3.3.</b>
+                    
+                    GoogleProtobuf编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../netty/middleCodec/JBossMarshalling.html">
+            
+                <a href="../netty/middleCodec/JBossMarshalling.html">
+            
+                    
+                        <b>4.1.3.4.</b>
+                    
+                    JBossMarshalling编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    GIT
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../git/远程仓库回退.html">
+            
+                <a href="../git/远程仓库回退.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    GIT远程仓库回退
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../git/branch.html">
+            
+                <a href="../git/branch.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../idea/">
+            
+                <a href="../idea/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../idea/快捷键篇.html">
+            
+                <a href="../idea/快捷键篇.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    快捷键篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../mysql/导出导入.html">
+            
+                <a href="../mysql/导出导入.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    导出导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../htmlcss/">
+            
+                <a href="../htmlcss/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    CSS深入理解-张星旭系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../htmlcss/htmlcss布局效果技巧.html">
+            
+                <a href="../htmlcss/htmlcss布局效果技巧.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    css与html布局效果技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../htmlcss/float.html">
+            
+                <a href="../htmlcss/float.html">
+            
+                    
+                        <b>8.1.2.</b>
+                    
+                    float
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../htmlcss/absolute.html">
+            
+                <a href="../htmlcss/absolute.html">
+            
+                    
+                        <b>8.1.3.</b>
+                    
+                    absolute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../htmlcss/overflow.html">
+            
+                <a href="../htmlcss/overflow.html">
+            
+                    
+                        <b>8.1.4.</b>
+                    
+                    overflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../htmlcss/lineheight.html">
+            
+                <a href="../htmlcss/lineheight.html">
+            
+                    
+                        <b>8.1.5.</b>
+                    
+                    line-height
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../htmlcss/verticalalign.html">
+            
+                <a href="../htmlcss/verticalalign.html">
+            
+                    
+                        <b>8.1.6.</b>
+                    
+                    vertical-align
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../htmlcss/verticalalign2.html">
+            
+                <a href="../htmlcss/verticalalign2.html">
+            
+                    
+                        <b>8.1.7.</b>
+                    
+                    vertical-align2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.8" data-path="../htmlcss/relative.html">
+            
+                <a href="../htmlcss/relative.html">
+            
+                    
+                        <b>8.1.8.</b>
+                    
+                    relative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.9" data-path="../htmlcss/zindex.html">
+            
+                <a href="../htmlcss/zindex.html">
+            
+                    
+                        <b>8.1.9.</b>
+                    
+                    z-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.10" data-path="../htmlcss/margin.html">
+            
+                <a href="../htmlcss/margin.html">
+            
+                    
+                        <b>8.1.10.</b>
+                    
+                    margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.11" data-path="../htmlcss/margin2.html">
+            
+                <a href="../htmlcss/margin2.html">
+            
+                    
+                        <b>8.1.11.</b>
+                    
+                    margin2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.12" data-path="../htmlcss/border.html">
+            
+                <a href="../htmlcss/border.html">
+            
+                    
+                        <b>8.1.12.</b>
+                    
+                    border
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="zip.html">
+            
+                <a href="zip.html">
+            
+                    
+                        <b>9.1.1.</b>
+                    
+                    各种压缩/解压命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                        <b>9.1.2.</b>
+                    
+                    常用软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="port.html">
+            
+                <a href="port.html">
+            
+                    
+                        <b>9.1.3.</b>
+                    
+                    端口管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.1.4" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                        <b>9.1.4.</b>
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../node/">
+            
+                <a href="../node/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../node/npm.html">
+            
+                <a href="../node/npm.html">
+            
+                    
+                        <b>10.1.1.</b>
+                    
+                    Npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../zooKeeper/">
+            
+                <a href="../zooKeeper/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    ZooKeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../websocket/">
+            
+                <a href="../websocket/">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../websocket/spring.html">
+            
+                <a href="../websocket/spring.html">
+            
+                    
+                        <b>12.1.1.</b>
+                    
+                    Spring-WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1.1" data-path="../websocket/spring/websocket.html">
+            
+                <a href="../websocket/spring/websocket.html">
+            
+                    
+                        <b>12.1.1.1.</b>
+                    
+                    websocketDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.2" data-path="../websocket/spring/sockjs.html">
+            
+                <a href="../websocket/spring/sockjs.html">
+            
+                    
+                        <b>12.1.1.2.</b>
+                    
+                    sockJsDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.3" data-path="../websocket/spring/stomp.html">
+            
+                <a href="../websocket/spring/stomp.html">
+            
+                    
+                        <b>12.1.1.3.</b>
+                    
+                    stompDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.4" data-path="../websocket/spring/stomp-demo.html">
+            
+                <a href="../websocket/spring/stomp-demo.html">
+            
+                    
+                        <b>12.1.1.4.</b>
+                    
+                    stomp-新闻展示示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.5" data-path="../websocket/spring/stomp-topic.html">
+            
+                <a href="../websocket/spring/stomp-topic.html">
+            
+                    
+                        <b>12.1.1.5.</b>
+                    
+                    stomp-广播-公共新闻订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.6" data-path="../websocket/spring/stomp-queue.html">
+            
+                <a href="../websocket/spring/stomp-queue.html">
+            
+                    
+                        <b>12.1.1.6.</b>
+                    
+                    stomp-点对点-自由订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../monitor/">
+            
+                <a href="../monitor/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    监控相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#nginx"><b>9.1.4. </b>nginx</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b>9.1.4.1. </b>&#x5B89;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;"><b>9.1.4.1.1. </b>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><b>9.1.4.1.2. </b>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</a></li><li><span class="title-icon "></span><a href="#&#x6267;&#x884C;-configure-&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;"><b>9.1.4.1.3. </b>&#x6267;&#x884C; ./configure &#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;"><b>9.1.4.2. </b>&#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;"><b>9.1.4.3. </b>&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;</a></li><li><span class="title-icon "></span><a href="#nginx-vue-history&#x6A21;&#x5F0F;&#x914D;&#x7F6E;"><b>9.1.4.4. </b>nginx vue History&#x6A21;&#x5F0F;&#x914D;&#x7F6E;</a></li></ul></ul></div><a href="#nginx" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="nginx"><a name="nginx" class="anchor-navigation-ex-anchor" href="#nginx"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4. nginx</h1>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.1. &#x5B89;&#x88C5;</h2>
+<h3 id="&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;"><a name="&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;" class="anchor-navigation-ex-anchor" href="#&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.1.1. &#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x597D;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;</h3>
+<h3 id="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><a name="&#x5B89;&#x88C5;&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.1.2. &#x5B89;&#x88C5;&#x4F9D;&#x8D56;</h3>
+<pre class="language-"><code class="lang-bash">yum -y <span class="token function">install</span> gcc automake autoconf libtool <span class="token function">make</span>
+</code></pre>
+<h3 id="&#x6267;&#x884C;-configure-&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;"><a name="&#x6267;&#x884C;-configure-&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x6267;&#x884C;-configure-&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.1.3. &#x6267;&#x884C; ./configure &#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x8FDB;&#x5165;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x8FD0;&#x884C;  ./configure  &#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</p>
+<pre class="language-"><code class="lang-bash">./configure: error: the HTTP rewrite module requires the PCRE library.
+You can either disable the module by using --without-http_rewrite_module
+option, or <span class="token function">install</span> the PCRE library into the system, or build the PCRE library
+statically from the <span class="token function">source</span> with nginx by using --with-pcre<span class="token operator">=</span><span class="token operator">&lt;</span>path<span class="token operator">&gt;</span> option.
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF1A;&#x9996;&#x5148;&#x5C1D;&#x8BD5;nginx&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x81EA;&#x5E26;&#x4F9D;&#x8D56;&#x5305;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x67E5;&#x627E;pcre&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x627E;&#x5230;&#x4E4B;&#x540E;&#x8FFD;&#x52A0;&#x5230;&#x521D;&#x59CB;&#x5316;&#x547D;&#x4EE4;&#x540E;&#x9762;</span>
+$ <span class="token function">find</span> / -name pcre  
+
+<span class="token comment" spellcheck="true"># &#x5148;&#x5C1D;&#x8BD5;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x662F;&#x5426;&#x80FD;&#x6210;&#x529F;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#x6210;&#x518D;&#x8FFD;&#x52A0; --with-zlib=/mnt/sit/app/nginx-1.13.2/auto/lib/zlib</span>
+$ ./configure --with-pcre<span class="token operator">=</span>/mnt/sit/app/nginx-1.13.2/auto/lib/pcre --with-zlib<span class="token operator">=</span>/mnt/sit/app/nginx-1.13.2/auto/lib/zlib --with-openssl<span class="token operator">=</span>/mnt/sit/app/nginx-1.13.2/auto/lib/openssl
+</code></pre>
+<p>&#x5982;&#x679C;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x5219;&#x4F1A;&#x663E;&#x793A;&#x5982;&#x4E0B;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">..</span>.
+Configuration summary
+  + using PCRE library: /mnt/sit/app/nginx-1.13.2/auto/lib/pcre
+  + OpenSSL library is not used
+  + using system zlib library
+
+  nginx path prefix: <span class="token string">&quot;/usr/local/nginx&quot;</span>
+  nginx binary file: <span class="token string">&quot;/usr/local/nginx/sbin/nginx&quot;</span>
+  nginx modules path: <span class="token string">&quot;/usr/local/nginx/modules&quot;</span>
+  nginx configuration prefix: <span class="token string">&quot;/usr/local/nginx/conf&quot;</span>
+  nginx configuration file: <span class="token string">&quot;/usr/local/nginx/conf/nginx.conf&quot;</span>
+  nginx pid file: <span class="token string">&quot;/usr/local/nginx/logs/nginx.pid&quot;</span>
+  nginx error log file: <span class="token string">&quot;/usr/local/nginx/logs/error.log&quot;</span>
+  nginx http access log file: <span class="token string">&quot;/usr/local/nginx/logs/access.log&quot;</span>
+  nginx http client request body temporary files: <span class="token string">&quot;client_body_temp&quot;</span>
+  nginx http proxy temporary files: <span class="token string">&quot;proxy_temp&quot;</span>
+  nginx http fastcgi temporary files: <span class="token string">&quot;fastcgi_temp&quot;</span>
+  nginx http uwsgi temporary files: <span class="token string">&quot;uwsgi_temp&quot;</span>
+  nginx http scgi temporary files: <span class="token string">&quot;scgi_temp&quot;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#x3002;&#x8BF7;&#x624B;&#x52A8;&#x5B89;&#x88C5;&#x501A;&#x8D56;&#x5305;</p>
+<pre class="language-"><code class="lang-bash">1. &#x5B89;&#x88C5;pcre
+    1. &#x68C0;&#x67E5;CentOS&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x5B89;&#x88C5;prce&#xFF0C;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x5B89;&#x88C5;&#x5219;&#x4F1A;&#x663E;&#x793A;pcre&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -qa pcre</span>
+        pcre-7.8-6.el6.i686
+    2.&#x5220;&#x9664;pcre&#x5305;
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -e --nodeps pcre</span>
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -qa pcre</span>
+    3.&#x5728;&#x7EBF;&#x5B89;&#x88C5;pcre
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># yum install pcre</span>
+    4.&#x67E5;&#x770B;pcre&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -qa pcre</span>
+    pcre-7.8-6.el6.i686
+        <span class="token punctuation">[</span>root@localhost /<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># rpm -ql pcre-7.8-6.el6.i686</span>
+2. &#x5B89;&#x88C5;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x5E93;yum <span class="token function">install</span> gcc gcc-c++ openssl openssl-devel zib-devel zib
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<h2 id="&#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;"><a name="&#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.2. &#x4E0A;&#x9762;&#x7684;&#x5B89;&#x88C5;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x7167;&#x5B98;&#x7F51;&#x7684;&#x5B89;&#x88C5;&#x6587;&#x6863;</h2>
+<p><a href="http://www.nginx.cn/install" target="_blank">http://www.nginx.cn/install</a></p>
+<p>&#x5C31;&#x662F;&#x6700;&#x540E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9664;&#x4E86;openssl&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x5916;&#x3002;&#x5269;&#x4E0B;&#x7684;&#x4E0D;&#x7528;&#x518D;&#x6307;&#x5B9A;&#x4E86;&#x3002;&#x4F1A;&#x81EA;&#x52A8;&#x627E;&#x5230;&#x7684;
+&#x88C5;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x7684;&#x76EE;&#x5F55;&#x662F;&#x5728; &#x521D;&#x59CB;&#x5316;&#x663E;&#x793A;&#x7684; <code>nginx path prefix: &quot;/usr/local/nginx&quot;</code> &#x76EE;&#x5F55;&#x4E2D;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x542F;&#x52A8;</span>
+<span class="token function">sudo</span> /usr/local/nginx/nginx
+<span class="token comment" spellcheck="true"># &#x5982;&#x679C;&#x62A5;&#x9519;  /usr/local/nginx/nginx: error while loading shared libraries: libpcre.so.1: cannot open shared object file: No such file or directory</span>
+
+<span class="token comment" spellcheck="true">## &#x5148;&#x67E5;&#x770B;</span>
+ldd <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> /usr/local/nginx/sbin/nginx<span class="token variable">)</span></span>
+
+<span class="token punctuation">[</span>root@localhost lib<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># ldd $(which /usr/local/nginx/sbin/nginx)</span>
+    linux-vdso.so.1 <span class="token operator">=</span><span class="token operator">&gt;</span>  <span class="token punctuation">(</span>0x00007ffe91ffd000<span class="token punctuation">)</span>
+    libdl.so.2 <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libdl.so.2 <span class="token punctuation">(</span>0x0000003123e00000<span class="token punctuation">)</span>
+    libpthread.so.0 <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libpthread.so.0 <span class="token punctuation">(</span>0x0000003124600000<span class="token punctuation">)</span>
+    libcrypt.so.1 <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libcrypt.so.1 <span class="token punctuation">(</span>0x0000003128a00000<span class="token punctuation">)</span>
+    libpcre.so.1 <span class="token operator">=</span><span class="token operator">&gt;</span> not found
+    libz.so.1 <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libz.so.1 <span class="token punctuation">(</span>0x0000003124a00000<span class="token punctuation">)</span>
+    libc.so.6 <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libc.so.6 <span class="token punctuation">(</span>0x0000003124200000<span class="token punctuation">)</span>
+    /lib64/ld-linux-x86-64.so.2 <span class="token punctuation">(</span>0x0000003123a00000<span class="token punctuation">)</span>
+    libfreebl3.so <span class="token operator">=</span><span class="token operator">&gt;</span> /lib64/libfreebl3.so <span class="token punctuation">(</span>0x0000003129200000<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x786E;&#x662F;&#x672A;&#x627E;&#x5230;&#x3002;</span>
+<span class="token comment" spellcheck="true"># &#x624B;&#x52A8;&#x5173;&#x8054;&#x4E00;&#x4E0B;</span>
+<span class="token function">cd</span> /lib
+<span class="token function">ln</span> -s /lib/libpcre.so.0.0.1 /lib/libpcre.so.1
+<span class="token comment" spellcheck="true"># &#x4F1A;&#x53D1;&#x73B0;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x627E;&#x5230;.&#x6709;&#x53EF;&#x80FD;&#x4F60;&#x7684;&#x673A;&#x5668;&#x662F;x64&#x7684;&#x3002;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;</span>
+<span class="token function">ln</span> -s /usr/local/lib/libpcre.so.1 /lib64/
+</code></pre>
+<h2 id="&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;"><a name="&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.3. &#x542F;&#x52A8;&#x547D;&#x4EE4;&#x7B49;</h2>
+<p>&#x9996;&#x5148;&#x8FDB;&#x5165;nginx&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E2D;&#x6267;&#x884C;&#x7684;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">cd</span> /usr/local/nginx
+<span class="token comment" spellcheck="true"># &#x5982;&#x679C;&#x6267;&#x884C;&#x4E0D;&#x4E86;nginx&#x547D;&#x4EE4;&#x7684;&#x8BDD;&#x5C31;&#x8FDB;&#x5165;sbin&#x76EE;&#x5F55;</span>
+<span class="token function">cd</span> /usr/local/nginx/sbin
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6709;&#x5F02;&#x5E38;</p>
+<pre class="language-"><code class="lang-bash">./nginx -t
+`<span class="token variable"><span class="token variable">`</span>
+&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x52A8;&#xFF1A;
+<span class="token variable">`</span></span>``bash
+<span class="token comment" spellcheck="true"># &#x8FD9;&#x91CC;&#x7684;conf&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x9700;&#x8981;&#x533A;&#x5206;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x662F;sbin&#x8FD8;&#x662F;&#x6839;&#x76EE;&#x5F55;</span>
+./nginx -c ./conf/nginx.conf
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x4E86;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x91CD;&#x542F;</p>
+<pre class="language-"><code class="lang-bash">./nginx -s reload
+</code></pre>
+<p>&#x505C;&#x6B62;&#x670D;&#x52A1;</p>
+<pre class="language-"><code>./nginx -s stop
+</code></pre><h2 id="nginx-vue-history&#x6A21;&#x5F0F;&#x914D;&#x7F6E;"><a name="nginx-vue-history&#x6A21;&#x5F0F;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#nginx-vue-history&#x6A21;&#x5F0F;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>9.1.4.4. nginx vue History&#x6A21;&#x5F0F;&#x914D;&#x7F6E;</h2>
+<pre class="language-"><code class="lang-bash">
+<span class="token comment" spellcheck="true">#user  nobody;</span>
+worker_processes  auto<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#error_log  logs/error.log;</span>
+<span class="token comment" spellcheck="true">#error_log  logs/error.log  notice;</span>
+<span class="token comment" spellcheck="true">#error_log  logs/error.log  info;</span>
+
+<span class="token comment" spellcheck="true">#pid        logs/nginx.pid;</span>
+
+
+events <span class="token punctuation">{</span>
+    worker_connections  2048<span class="token punctuation">;</span>
+    multi_accept on<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+http <span class="token punctuation">{</span>
+    include       mime.types<span class="token punctuation">;</span>
+    default_type  application/octet-stream<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">#log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span>
+    <span class="token comment" spellcheck="true">#                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span>
+    <span class="token comment" spellcheck="true">#                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span>
+
+    <span class="token comment" spellcheck="true">#access_log  logs/access.log  main;</span>
+
+    sendfile        on<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">#tcp_nopush     on;</span>
+
+    <span class="token comment" spellcheck="true">#keepalive_timeout  0;</span>
+    keepalive_timeout  65<span class="token punctuation">;</span>
+
+    <span class="token function">gzip</span>  on<span class="token punctuation">;</span>
+    gzip_disable <span class="token string">&quot;msie6&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true"># gzip_static on; </span>
+    gzip_proxied any<span class="token punctuation">;</span>
+    gzip_min_length 1000<span class="token punctuation">;</span> 
+    gzip_comp_level 4<span class="token punctuation">;</span> 
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript<span class="token punctuation">;</span>
+
+    server <span class="token punctuation">{</span>
+        listen       80<span class="token punctuation">;</span>
+        server_name  localhost<span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">#charset koi8-r;</span>
+
+        <span class="token comment" spellcheck="true">#access_log  logs/host.access.log  main;</span>
+
+        location / <span class="token punctuation">{</span>
+            root   /mnt/prod/release/vue/shopmarketing-vue<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true"># index  index.html index.htm;</span>
+            <span class="token comment" spellcheck="true"># history&#x6A21;&#x5F0F;&#x4E0B;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x88AB;&#x8F6C;&#x5230;404</span>
+            try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /index.html <span class="token operator">=</span>404<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true"># &#x62E6;&#x622A;api&#x5F00;&#x5934;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE3;&#x7406;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;</span>
+        location ^~ /api/ <span class="token punctuation">{</span>
+            proxy_pass http://127.0.0.1:18801<span class="token punctuation">;</span>
+            client_max_body_size 500M<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true"># &#x5982;&#x679C;nginx&#x548C;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x670D;&#x52A1;&#x5668;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x62E6;&#x622A;&#x6620;&#x5C04;&#x5230;&#x76EE;&#x6807;&#x6587;&#x4EF6;</span>
+        location ^~ /download/ <span class="token punctuation">{</span>
+            root  /<span class="token punctuation">;</span>
+            add_header Content-Disposition: <span class="token string">&apos;attachment;&apos;</span><span class="token punctuation">;</span>
+            rewrite ^/<span class="token punctuation">(</span>download<span class="token punctuation">)</span>/<span class="token punctuation">(</span>.*<span class="token punctuation">)</span>$ /mnt/sit/release/resources/shopmarketing/<span class="token variable">$2</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">#error_page  404              /404.html;</span>
+
+        <span class="token comment" spellcheck="true"># redirect server error pages to the static page /50x.html</span>
+        <span class="token comment" spellcheck="true">#</span>
+        error_page   500 502 503 504  /50x.html<span class="token punctuation">;</span>
+        location <span class="token operator">=</span> /50x.html <span class="token punctuation">{</span>
+            root   html<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2017-07-21 11:48:22 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="port.html" class="navigation navigation-prev " aria-label="Previous page: 端口管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../node/" class="navigation navigation-next " aria-label="Next page: Node">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"nginx","level":"9.1.4","depth":2,"next":{"title":"Node","level":"10.1","depth":1,"path":"chapter/node/README.md","ref":"chapter/node/README.md","articles":[{"title":"Npm","level":"10.1.1","depth":2,"path":"chapter/node/npm.md","ref":"chapter/node/npm.md","articles":[]}]},"previous":{"title":"端口管理","level":"9.1.3","depth":2,"path":"chapter/linux/port.md","ref":"chapter/linux/port.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","-github","prism","-highlight","expandable-chapters","page-footer-ex","anchor-navigation-ex","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"essay-note","language":"zh-hans","gitbook":"*","description":"随笔记未分类，也就是大杂烩的一本笔记"},"file":{"path":"chapter/linux/nginx.md","mtime":"2017-07-21T03:48:22.238Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-09T08:39:30.471Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

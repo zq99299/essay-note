@@ -1,0 +1,1506 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>sockJsDemo · essay-note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="stomp.html" />
+    
+    
+    <link rel="prev" href="websocket.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../dongnaoeduo_open/">
+            
+                <a href="../../dongnaoeduo_open/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    动脑学院公开课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                <a href="../../dongnaoeduo_open/常见网站攻击方式以及防范手段.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    常见网站攻击方式以及防范手段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                <a href="../../dongnaoeduo_open/阿里双11秒杀模式管理与实现.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    阿里双11秒杀模式管理与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                <a href="../../dongnaoeduo_open/缓存并发的解决和抽象.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    缓存并发的解决和抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                <a href="../../dongnaoeduo_open/性能优化之数据库连接池原理详解.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    性能优化之数据库连接池原理详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                <a href="../../dongnaoeduo_open/Tomcat实现原理之手写实现.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    Tomcat实现原理之手写实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../redis/README.md">
+            
+                <span>
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../redis/windows.html">
+            
+                <a href="../../redis/windows.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../redis/cluster.html">
+            
+                <a href="../../redis/cluster.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../netty/">
+            
+                <a href="../../netty/">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Netty
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../netty/niostart/">
+            
+                <a href="../../netty/niostart/">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    Nio入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../netty/niostart/传统BIO编程.html">
+            
+                <a href="../../netty/niostart/传统BIO编程.html">
+            
+                    
+                        <b>4.1.1.1.</b>
+                    
+                    传统BIO编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../netty/niostart/伪异步IO模型编程.html">
+            
+                <a href="../../netty/niostart/伪异步IO模型编程.html">
+            
+                    
+                        <b>4.1.1.2.</b>
+                    
+                    伪异步I/O模型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../netty/niostart/nio.html">
+            
+                <a href="../../netty/niostart/nio.html">
+            
+                    
+                        <b>4.1.1.3.</b>
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../netty/niostart/Aio.html">
+            
+                <a href="../../netty/niostart/Aio.html">
+            
+                    
+                        <b>4.1.1.4.</b>
+                    
+                    AIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../../netty/niostart/4种IO概念.html">
+            
+                <a href="../../netty/niostart/4种IO概念.html">
+            
+                    
+                        <b>4.1.1.5.</b>
+                    
+                    4种IO概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../netty/nettystart/">
+            
+                <a href="../../netty/nettystart/">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    Netty入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../netty/nettystart/入门应用.html">
+            
+                <a href="../../netty/nettystart/入门应用.html">
+            
+                    
+                        <b>4.1.2.1.</b>
+                    
+                    入门应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../netty/nettystart/TCP粘包_拆包.html">
+            
+                <a href="../../netty/nettystart/TCP粘包_拆包.html">
+            
+                    
+                        <b>4.1.2.2.</b>
+                    
+                    TCP粘包/拆包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../../netty/nettystart/分隔符和定长解码器.html">
+            
+                <a href="../../netty/nettystart/分隔符和定长解码器.html">
+            
+                    
+                        <b>4.1.2.3.</b>
+                    
+                    分隔符和定长解码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../netty/middleCodec/">
+            
+                <a href="../../netty/middleCodec/">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    中级篇-编解码开发指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../netty/middleCodec/编解码技术.html">
+            
+                <a href="../../netty/middleCodec/编解码技术.html">
+            
+                    
+                        <b>4.1.3.1.</b>
+                    
+                    编解码技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../netty/middleCodec/MessagePack.html">
+            
+                <a href="../../netty/middleCodec/MessagePack.html">
+            
+                    
+                        <b>4.1.3.2.</b>
+                    
+                    MessagePack编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../../netty/middleCodec/GoogleProtobuf.html">
+            
+                <a href="../../netty/middleCodec/GoogleProtobuf.html">
+            
+                    
+                        <b>4.1.3.3.</b>
+                    
+                    GoogleProtobuf编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../../netty/middleCodec/JBossMarshalling.html">
+            
+                <a href="../../netty/middleCodec/JBossMarshalling.html">
+            
+                    
+                        <b>4.1.3.4.</b>
+                    
+                    JBossMarshalling编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../git/">
+            
+                <a href="../../git/">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    GIT
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../git/远程仓库回退.html">
+            
+                <a href="../../git/远程仓库回退.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    GIT远程仓库回退
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../git/branch.html">
+            
+                <a href="../../git/branch.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../idea/">
+            
+                <a href="../../idea/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../idea/快捷键篇.html">
+            
+                <a href="../../idea/快捷键篇.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    快捷键篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../mysql/">
+            
+                <a href="../../mysql/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../mysql/导出导入.html">
+            
+                <a href="../../mysql/导出导入.html">
+            
+                    
+                        <b>7.1.1.</b>
+                    
+                    导出导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../htmlcss/">
+            
+                <a href="../../htmlcss/">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    CSS深入理解-张星旭系列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../htmlcss/htmlcss布局效果技巧.html">
+            
+                <a href="../../htmlcss/htmlcss布局效果技巧.html">
+            
+                    
+                        <b>8.1.1.</b>
+                    
+                    css与html布局效果技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../htmlcss/float.html">
+            
+                <a href="../../htmlcss/float.html">
+            
+                    
+                        <b>8.1.2.</b>
+                    
+                    float
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../htmlcss/absolute.html">
+            
+                <a href="../../htmlcss/absolute.html">
+            
+                    
+                        <b>8.1.3.</b>
+                    
+                    absolute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../htmlcss/overflow.html">
+            
+                <a href="../../htmlcss/overflow.html">
+            
+                    
+                        <b>8.1.4.</b>
+                    
+                    overflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../../htmlcss/lineheight.html">
+            
+                <a href="../../htmlcss/lineheight.html">
+            
+                    
+                        <b>8.1.5.</b>
+                    
+                    line-height
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../../htmlcss/verticalalign.html">
+            
+                <a href="../../htmlcss/verticalalign.html">
+            
+                    
+                        <b>8.1.6.</b>
+                    
+                    vertical-align
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../../htmlcss/verticalalign2.html">
+            
+                <a href="../../htmlcss/verticalalign2.html">
+            
+                    
+                        <b>8.1.7.</b>
+                    
+                    vertical-align2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.8" data-path="../../htmlcss/relative.html">
+            
+                <a href="../../htmlcss/relative.html">
+            
+                    
+                        <b>8.1.8.</b>
+                    
+                    relative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.9" data-path="../../htmlcss/zindex.html">
+            
+                <a href="../../htmlcss/zindex.html">
+            
+                    
+                        <b>8.1.9.</b>
+                    
+                    z-index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.10" data-path="../../htmlcss/margin.html">
+            
+                <a href="../../htmlcss/margin.html">
+            
+                    
+                        <b>8.1.10.</b>
+                    
+                    margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.11" data-path="../../htmlcss/margin2.html">
+            
+                <a href="../../htmlcss/margin2.html">
+            
+                    
+                        <b>8.1.11.</b>
+                    
+                    margin2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.12" data-path="../../htmlcss/border.html">
+            
+                <a href="../../htmlcss/border.html">
+            
+                    
+                        <b>8.1.12.</b>
+                    
+                    border
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../linux/zip.html">
+            
+                <a href="../../linux/zip.html">
+            
+                    
+                        <b>9.1.1.</b>
+                    
+                    各种压缩/解压命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../linux/install.html">
+            
+                <a href="../../linux/install.html">
+            
+                    
+                        <b>9.1.2.</b>
+                    
+                    常用软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../linux/port.html">
+            
+                <a href="../../linux/port.html">
+            
+                    
+                        <b>9.1.3.</b>
+                    
+                    端口管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="../../linux/nginx.html">
+            
+                <a href="../../linux/nginx.html">
+            
+                    
+                        <b>9.1.4.</b>
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../node/npm.html">
+            
+                <a href="../../node/npm.html">
+            
+                    
+                        <b>10.1.1.</b>
+                    
+                    Npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../zooKeeper/">
+            
+                <a href="../../zooKeeper/">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    ZooKeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../spring.html">
+            
+                <a href="../spring.html">
+            
+                    
+                        <b>12.1.1.</b>
+                    
+                    Spring-WebSocket
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1.1" data-path="websocket.html">
+            
+                <a href="websocket.html">
+            
+                    
+                        <b>12.1.1.1.</b>
+                    
+                    websocketDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="12.1.1.2" data-path="sockjs.html">
+            
+                <a href="sockjs.html">
+            
+                    
+                        <b>12.1.1.2.</b>
+                    
+                    sockJsDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.3" data-path="stomp.html">
+            
+                <a href="stomp.html">
+            
+                    
+                        <b>12.1.1.3.</b>
+                    
+                    stompDemo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.4" data-path="stomp-demo.html">
+            
+                <a href="stomp-demo.html">
+            
+                    
+                        <b>12.1.1.4.</b>
+                    
+                    stomp-新闻展示示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.5" data-path="stomp-topic.html">
+            
+                <a href="stomp-topic.html">
+            
+                    
+                        <b>12.1.1.5.</b>
+                    
+                    stomp-广播-公共新闻订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.1.6" data-path="stomp-queue.html">
+            
+                <a href="stomp-queue.html">
+            
+                    
+                        <b>12.1.1.6.</b>
+                    
+                    stomp-点对点-自由订阅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../../monitor/">
+            
+                <a href="../../monitor/">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    监控相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >sockJsDemo</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#sockjsdemo"><b>12.1.1.2. </b>sockJsDemo</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x7AEF;&#x9875;&#x9762;"><b>12.1.1.2.1. </b>&#x524D;&#x7AEF;&#x9875;&#x9762;</a></li><li><span class="title-icon "></span><a href="#&#x540E;&#x7AEF;&#x914D;&#x7F6E;"><b>12.1.1.2.2. </b>&#x540E;&#x7AEF;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x9519;&#x8BEF;"><b>12.1.1.2.3. </b>&#x5176;&#x4ED6;&#x9519;&#x8BEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;"><b>12.1.1.2.3.1. </b>&#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;</a></li></ul></ul></ul></div><a href="#sockjsdemo" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sockjsdemo"><a name="sockjsdemo" class="anchor-navigation-ex-anchor" href="#sockjsdemo"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2. sockJsDemo</h1>
+<blockquote>
+<p>&#x662F;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x662F;websocket&#x7684;&#x5907;&#x80CE;&#xFF0C;&#x4E00;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;websocket&#x7684;&#x8BDD;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x5219;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7684;ajax&#x8F6E;&#x8BE2;&#x7B49;&#x624B;&#x6BB5;&#x6765;&#x6A21;&#x4EFF;&#x652F;&#x6301;websocket&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+</blockquote>
+<p>&#x5927;&#x81F4;&#x7684;&#x80FD;&#x770B;&#x51FA;&#x6765;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x67D0;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;websocket&#x529F;&#x80FD;&#x3002;&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x624B;&#x6BB5;&#x6765;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x6A21;&#x62DF;&#x51FA;websocket&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x4F1A;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x70B9;</p>
+<p>sockjs-client&#xFF1A;NPM&#x5E93;&#x94FE;&#x63A5; <a href="https://www.npmjs.com/package/sockjs-client" target="_blank">https://www.npmjs.com/package/sockjs-client</a></p>
+<p>&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h2 id="&#x524D;&#x7AEF;&#x9875;&#x9762;"><a name="&#x524D;&#x7AEF;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x7AEF;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2.1. &#x524D;&#x7AEF;&#x9875;&#x9762;</h2>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>&#x72B6;&#x6001;&#xFF1A;  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x53D1;&#x9001;&#x6D4B;&#x8BD5;&#x6D88;&#x606F;<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>send<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:disabled</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>!sock<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>&#x6D88;&#x606F;&#xFF1A;  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-"><code class="lang-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token comment" spellcheck="true">/**
+   *
+   * &lt;pre&gt;
+   *  Version         Date            Author          Description
+   * ---------------------------------------------------------------------------------------
+   *  1.0.0           2017/11/07     zhuqiang        -
+   * &lt;/pre&gt;
+   * @author zhuqiang
+   * @version 1.0.0 2017/11/7 15:32
+   * @date 2017/11/7 15:32
+   * @since 1.0.0
+   */</span>
+ <span class="token keyword">import</span> SockJS <span class="token keyword">from</span> <span class="token string">&apos;sockjs-client&apos;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        status<span class="token punctuation">:</span> <span class="token string">&apos;&#x672A;&#x94FE;&#x63A5;&apos;</span><span class="token punctuation">,</span>
+        msg<span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+        sock<span class="token punctuation">:</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> sock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SockJS</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:8080/myHandlerSockjs&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>sock <span class="token operator">=</span> sock
+      sock<span class="token punctuation">.</span>onopen <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token string">&apos;&#x5DF2;&#x94FE;&#x63A5;&apos;</span>
+      <span class="token punctuation">}</span>
+      sock<span class="token punctuation">.</span>onmessage <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>msg <span class="token operator">=</span> <span class="token string">&apos;&#x5DF2;&#x6536;&#x5230;&#x6D88;&#x606F;&#xFF1A;&apos;</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>data
+      <span class="token punctuation">}</span>
+      sock<span class="token punctuation">.</span>onclose <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token string">&apos;&#x94FE;&#x63A5;&#x5DF2;&#x5173;&#x95ED;&apos;</span>
+      <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//      sock.close()</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      send <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sock<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x53D1;&#x9001;&#x6D88;&#x606F;&apos;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x5C55;&#x793A;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x6309;&#x94AE;&#x3002;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x7684;&#x5C55;&#x793A;</p>
+<p>&#x600E;&#x4E48;&#x94FE;&#x63A5;&#x540E;&#x7AEF;&#x90FD;&#x662F;&#x4ECE;<code>sockjs-client</code>&#x5E93;&#x7684;&#x6559;&#x7A0B;&#x4E2D;&#x590D;&#x5236;&#x7684;&#x94FE;&#x63A5;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8BBF;&#x95EE;&#x8BE5;&#x9875;&#x9762;&#x5374;&#x53D1;&#x73B0;&#x62A5;&#x9519;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-javascript">ET http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">8080</span><span class="token operator">/</span>myHandler<span class="token operator">/</span>info<span class="token operator">?</span>t<span class="token operator">=</span><span class="token number">1510041413326</span> <span class="token number">404</span> <span class="token punctuation">(</span>Not Found<span class="token punctuation">)</span>
+AbstractXHRObject<span class="token punctuation">.</span>_start @ abstract<span class="token operator">-</span>xhr<span class="token punctuation">.</span>js<span class="token operator">?</span>c769<span class="token punctuation">:</span><span class="token number">132</span>
+<span class="token punctuation">(</span>anonymous<span class="token punctuation">)</span> @ abstract<span class="token operator">-</span>xhr<span class="token punctuation">.</span>js<span class="token operator">?</span>c769<span class="token punctuation">:</span><span class="token number">21</span>
+<span class="token punctuation">:</span><span class="token number">8081</span><span class="token operator">/</span>#<span class="token operator">/</span>sockjs<span class="token operator">-</span>client<span class="token punctuation">:</span><span class="token number">1</span> XMLHttpRequest cannot load http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">8080</span><span class="token operator">/</span>myHandler<span class="token operator">/</span>info<span class="token operator">?</span>t<span class="token operator">=</span><span class="token number">1510041413326</span><span class="token punctuation">.</span> No <span class="token string">&apos;Access-Control-Allow-Origin&apos;</span> header is present on the requested resource<span class="token punctuation">.</span> Origin <span class="token string">&apos;http://localhost:8081&apos;</span> is therefore not allowed access<span class="token punctuation">.</span> The response had HTTP status code <span class="token number">404</span><span class="token punctuation">.</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x9519;&#x8BEF;&#x4E00;&#x5171;&#x662F;&#x4E24;&#x4E2A;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5;&#x6CA1;&#x6709;&#x8BBF;&#x95EE;&#x5230;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x8BF4;&#x662F;&#x8DE8;&#x57DF;&#x4E86;&#x3002;&#x5148;&#x6765;&#x89E3;&#x51B3;&#x7B2C;&#x4E00;&#x4E2A;</p>
+<p>&#x8FD9;&#x91CC;&#x6CE8;&#x610F;<code>new SockJS(&apos;http://localhost:8080/myHandler&apos;)</code> &#x5730;&#x5740;&#x5199;&#x7684;http,&#x800C;&#x4E0D;&#x662F;ws&#x3002;&#x90A3;&#x4E48;&#x5728;&#x540E;&#x7AEF;&#x6211;&#x4EEC;&#x4E5F;&#x8981;&#x914D;&#x7F6E;&#x4E0A; &#x5BF9;sockjs&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<h2 id="&#x540E;&#x7AEF;&#x914D;&#x7F6E;"><a name="&#x540E;&#x7AEF;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x540E;&#x7AEF;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2.2. &#x540E;&#x7AEF;&#x914D;&#x7F6E;</h2>
+<pre class="language-"><code class="lang-java">    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">registerWebSocketHandlers</span><span class="token punctuation">(</span>WebSocketHandlerRegistry registry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// &#x8FD9;&#x4E2A;&#x662F;&#x652F;&#x6301;&#x539F;&#x751F;websocket&#x7684;&#x8282;&#x70B9;</span>
+        registry<span class="token punctuation">.</span><span class="token function">addHandler</span><span class="token punctuation">(</span><span class="token function">myHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;/myHandler&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAllowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// &#x5BF9;sockjs&#x7684;&#x652F;&#x6301;&#x8282;&#x70B9;</span>
+        registry<span class="token punctuation">.</span><span class="token function">addHandler</span><span class="token punctuation">(</span><span class="token function">myHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;/myHandlerSockjs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAllowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withSockJS</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#x4E0B;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x6CE8;&#x518C;&#x4E86;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x6F14;&#x793A;&#x3002;&#x5982;&#x679C;&#x53EA;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x7136;&#x4F1A;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x4E0D;&#x4E0A;&#x3002;&#x56E0;&#x4E3A;&#x4F7F;&#x7528;&#x7684;&#x534F;&#x8BAE;&#x4E0D;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x91CD;&#x542F;&#x670D;&#x52A1;&#x540E;&#xFF0C;&#x6D4B;&#x8BD5;&#xFF1A;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E0A;&#xFF1B;&#x4F46;&#x662F;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#x5374;&#x62A5;&#x9519;&#x4E86;</p>
+<pre class="language-"><code class="lang-java"> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>IllegalStateException<span class="token operator">:</span> A SockJsMessageCodec is required but not available<span class="token operator">:</span> Add Jackson <span class="token number">2</span> to the classpath<span class="token punctuation">,</span> or configure a custom SockJsMessageCodec<span class="token punctuation">.</span>
+</code></pre>
+<p>&#x597D;&#x628A;&#x8FD9;&#x4E2A;&#x5F88;&#x660E;&#x663E;&#x7684;&#x8BF4;&#x660E;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x89E3;&#x7801;&#x5668;&#xFF0C;&#x8981;&#x4E48;&#x6DFB;&#x52A0; <code>Jackson</code>&#x5E93;&#x5230;classpath&#xFF0C;&#x8981;&#x4E48;&#x81EA;&#x5B9A;&#x4E49;&#x89E3;&#x7801;&#x5668;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x5C1D;&#x8BD5;&#x4E86;&#x4E0B;&#x81EA;&#x5B9A;&#x4E49;&#x7684;,&#x56E0;&#x4E3A;&#x6211;&#x5F15;&#x5165;&#x7684;&#x662F;fastjson&#x3002;&#x53D1;&#x73B0;&#x8BE5;&#x5E93;&#x8FD8;&#x4E13;&#x95E8;&#x5BF9;spring&#x7684;sockjs&#x63D0;&#x4F9B;&#x4E86;&#x652F;&#x6301;</p>
+<pre class="language-"><code class="lang-java">        registry<span class="token punctuation">.</span><span class="token function">addHandler</span><span class="token punctuation">(</span><span class="token function">myHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;/myHandlerSockjs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAllowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">withSockJS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMessageCodec</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FastjsonSockJsMessageCodec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5230;&#x6B64;sockjs&#x4E5F;&#x5F15;&#x5165;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x8FD8;&#x662F;&#x539F;&#x751F;websocket&#x3002;&#x56E0;&#x4E3A;&#x4F60;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x7F16;&#x7801;&#x6709;&#x4EC0;&#x4E48;&#x6539;&#x53D8;&#x3002;
+&#x5982;&#x679C;&#x60F3;&#x5728;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x4E0A;&#x4F20;&#x9012;&#x4E0D;&#x540C;&#x79CD;&#x7C7B;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5199;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x8DEF;&#x7531;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x6D88;&#x606F;&#x5904;&#x7406;&#x4E2D;&#x53BB;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x4F7F;&#x7528; stomp &#x6765;&#x6F14;&#x793A;&#x600E;&#x4E48;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x8DEF;&#x5F84;&#x6765;&#x8DEF;&#x7531;&#x5230;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x5904;&#x7406;&#x4E2D;&#x53BB;&#x3002;</p>
+<h2 id="&#x5176;&#x4ED6;&#x9519;&#x8BEF;"><a name="&#x5176;&#x4ED6;&#x9519;&#x8BEF;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x9519;&#x8BEF;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2.3. &#x5176;&#x4ED6;&#x9519;&#x8BEF;</h2>
+<p>&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x5728;&#x5199;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x5E76;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x4F7F;&#x7528;&#x4E86; &#x9AD8;&#x7248;&#x672C;&#x7684;spring&#x7684;&#x539F;&#x56E0;&#x3002;&#x4E4B;&#x524D;&#x51FA;&#x73B0;&#x8FC7;&#x4EE5;&#x4E0B;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5148;&#x8BB0;&#x5F55;&#x7740;&#xFF0C;&#x6709;&#x9047;&#x5230;&#x7684;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;</p>
+<p>&#x6253;&#x5F00;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x67E5;&#x770B;&#x4F1A;&#x6709;&#x4E00;&#x5806;&#x7684;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x51FA;&#x73B0;&#xFF0C;&#x6700;&#x5F00;&#x59CB;&#x7684;&#x662F;&#x4E0B;&#x9762;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code>EventSource&apos;s response has a MIME type (&quot;application/json&quot;) that is not &quot;text/event-stream&quot;. Aborting the connection.
+sockjs.min.js:2 Uncaught Error: Incompatibile SockJS! Main site uses: &quot;1.1.4&quot;, the iframe: &quot;1.0.0&quot;.
+</code></pre><p>&#x4E3B;&#x4E3B;&#x8981;&#x7684;&#x9519;&#x8BEF;&#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x8BF4; &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x7248;&#x672C;&#x662F;1.0.0,&#x800C;js&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x662F;1.1.4; &#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5176;&#x5B9E;&#x5728;<a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-fallback-xhr-vs-iframe" target="_blank">&#x5B98;&#x7F51;&#x6587;&#x6863;</a>&#x4E2D;&#x5DF2;&#x7ECF;&#x5199;&#x5230;&#x4E86;</p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;&#x5728;&#x914D;&#x7F6E;&#x7C7B;&#x4E2D;&#x914D;&#x7F6E;&#x548C;&#x524D;&#x7AEF;js&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7248;&#x672C;&#x7684;js</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">registerWebSocketHandlers</span><span class="token punctuation">(</span>WebSocketHandlerRegistry registry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// &#x8FD9;&#x91CC;&#x5F00;&#x542F;sockjs&#x534F;&#x8BAE;&#x652F;&#x6301;</span>
+    registry<span class="token punctuation">.</span><span class="token function">addHandler</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">MyHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;/api/myHandler&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAllowedOrigins</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">addInterceptors</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">HttpSessionHandshakeInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withSockJS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setClientLibraryUrl</span><span class="token punctuation">(</span><span class="token string">&quot;//cdn.jsdelivr.net/sockjs/1/sockjs.min.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;cdn&#x6307;&#x5411;&#x7684;&#x5730;&#x5740;&#x5C31;&#x662F; <a href="https://github.com/sockjs/sockjs-client" target="_blank">sockjs&#x5B98;&#x7F51;</a> &#x8D77;&#x6B65;&#x5B9E;&#x4F8B;&#x4E2D;&#x7684;cdn&#x6587;&#x4EF6;&#x3002;</p>
+<p><strong>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;&#x9519;&#x8BEF;&#x5219;&#x662F;&#xFF1A;</strong></p>
+<pre class="language-"><code class="lang-java">Caused by<span class="token operator">:</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>IllegalArgumentException<span class="token operator">:</span> Async support must be enabled on a servlet and <span class="token keyword">for</span> all filters involved in async request processing<span class="token punctuation">.</span> This is done in Java code using the Servlet API or by adding <span class="token string">&quot;&lt;async-supported&gt;true&lt;/async-supported&gt;&quot;</span> to servlet and filter declarations in web<span class="token punctuation">.</span>xml<span class="token punctuation">.</span> Also you must use a Servlet <span class="token number">3.0</span><span class="token operator">+</span> container
+</code></pre>
+<p>&#x770B;&#x8FD9;&#x91CC;&#x8981;&#x5F00;&#x542F;&#x5F02;&#x6B65;&#x652F;&#x6301;&#x3002;&#x7531;&#x4E8E;&#x6211;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;web.xml &#x6240;&#x4EE5;&#x5728;web.xml&#x4E2D;&#x5F00;&#x542F;,</p>
+<p>&#x8FD9;&#x4E2A;&#x5728;<a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/web.html#websocket-fallback-sockjs-servlet3-async" target="_blank">&#x5B98;&#x7F51;&#x6587;&#x6863;&#x4E2D;&#x63D0;&#x5230;&#x8FC7;&#x8981;&#x5F00;&#x542F;&#x5F02;&#x6B65;&#x652F;&#x6301;</a></p>
+<p>&#x5728;&#x7F51;&#x4E0A;&#x67E5;&#x4E86;&#x4E0B; web.xml&#x4E2D;&#x5F00;&#x542F;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;;</p>
+<pre class="language-"><code class="lang-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">&gt;</span></span>httpPutFormFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-class</span><span class="token punctuation">&gt;</span></span>org.springframework.web.filter.HttpPutFormContentFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-class</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>async-supported</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>async-supported</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">&gt;</span></span>mvcDispatcher<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">&gt;</span></span>org.springframework.web.servlet.DispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>init-param</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">&gt;</span></span>contextConfigLocation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">&gt;</span></span>classpath:spring/spring-mvc.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>init-param</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>load-on-startup</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>load-on-startup</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>async-supported</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>async-supported</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x53EA;&#x8981;&#x6709; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span><span class="token punctuation">&gt;</span></span></code>&#x7684;&#x5730;&#x65B9;&#x90FD;&#x8981;&#x6DFB;&#x52A0;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>async-supported</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>async-supported</span><span class="token punctuation">&gt;</span></span></code>,&#x8FD8;&#x6709;&#x5C31;&#x662F;mvcDispatcher&#x7684;&#x5165;&#x53E3;&#x5904;</p>
+<h3 id="&#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;"><a name="&#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;" class="anchor-navigation-ex-anchor" href="#&#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;"><i class="fa fa-link" aria-hidden="true"></i></a>12.1.1.2.3.1. &#x5931;&#x8D25;&#xFF1A;&#x8FDE;&#x63A5;&#x5728;&#x6536;&#x5230;&#x63E1;&#x624B;&#x54CD;&#x5E94;&#x4E4B;&#x524D;&#x5173;&#x95ED;</h3>
+<p>&#x6700;&#x4E3B;&#x8981;&#x7684;&#x662F;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x89E3;&#x51B3;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x4E0A;&#x5E76;&#x4E5F;&#x80FD;&#x524D;&#x7AEF;&#x5F80;&#x540E;&#x7AEF;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x4E86;&#x3002;&#x5728;&#x524D;&#x7AEF;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#xFF0C;&#x53C8;&#x5192;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x5982;&#x4E0B;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-javascript">websocket<span class="token punctuation">.</span>js<span class="token operator">?</span>0f24<span class="token punctuation">:</span><span class="token number">6</span> WebSocket connection to <span class="token string">&apos;ws://localhost:9105/api/myHandler/761/czzeyw3z/websocket&apos;</span> failed<span class="token punctuation">:</span> Connection closed before receiving a handshake response
+</code></pre>
+<p>&#x51FA;&#x73B0;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x540E;&#xFF0C;&#x4F46;&#x662F;&#x80FD;&#x6B63;&#x5E38;&#x7684;&#x901A;&#x4FE1;&#xFF1B;&#x53EA;&#x662F;&#x5728;&#x6253;&#x5370;open&#x4E4B;&#x524D;&#x62A5;&#x9519;&#x4E86;&#x3002;&#x540E;&#x6765;&#x627E;&#x5230;&#x4E86;&#x95EE;&#x9898;&#xFF1B;</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x7684;&#x662F;vue-cli&#x5F00;&#x53D1;&#xFF0C;&#x7528;&#x4E86;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x5230;&#x540E;&#x53F0;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x4E86;&#x524D;&#x7AEF;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8BA9;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x7684;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> sock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SockJS</span><span class="token punctuation">(</span><span class="token string">&apos;/api/myHandler&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x628A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x66F4;&#x6539;&#x4E3A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x7684;&#x76F4;&#x63A5;&#x8DEF;&#x5F84;&#xFF0C;&#x6210;&#x529F;&#x94FE;&#x63A5;&#x4E0A;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> sock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SockJS</span><span class="token punctuation">(</span><span class="token string">&apos;http://localhost:9104/api/myHandler&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2017-11-07 17:37:54 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="websocket.html" class="navigation navigation-prev " aria-label="Previous page: websocketDemo">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="stomp.html" class="navigation navigation-next " aria-label="Next page: stompDemo">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sockJsDemo","level":"12.1.1.2","depth":3,"next":{"title":"stompDemo","level":"12.1.1.3","depth":3,"path":"chapter/websocket/spring/stomp.md","ref":"chapter/websocket/spring/stomp.md","articles":[]},"previous":{"title":"websocketDemo","level":"12.1.1.1","depth":3,"path":"chapter/websocket/spring/websocket.md","ref":"chapter/websocket/spring/websocket.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","-github","prism","-highlight","expandable-chapters","page-footer-ex","anchor-navigation-ex","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"essay-note","language":"zh-hans","gitbook":"*","description":"随笔记未分类，也就是大杂烩的一本笔记"},"file":{"path":"chapter/websocket/spring/sockjs.md","mtime":"2017-11-07T09:37:54.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-09T08:39:30.471Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
