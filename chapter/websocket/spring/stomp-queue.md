@@ -274,4 +274,24 @@ ok，点对点的应用结束，后面的我就不记录了。直接在程序中
 
 websocket的知识还是有点多的感觉。使用上也是不同的。 这个只是我个人摸索得出来的一种使用方式。更多的还是去查看官网文档。这里带你入门
 
+### 取消订阅
 
+`stomp.subscribe()` 会返回一个实例，该实例标识和后端订阅的链接实例，可以用过调用该实例的`unsubscribe()`取消订阅。
+
+后端则可以在授权配置里面 通过 StompCommand 的类型来区分是链接？断开链接？订阅？取消订阅事件类型，而去做一些事情，比如清空该用户该类订阅的参数等等等。
+
+### 其他事件通知
+
+也可以通过全局的事件功能接口，来实现自己需要关注的事件。
+
+`SessionConnectListener implements ApplicationListener<SessionConnectEvent> `
+
+`SessionDisconnectListener implements ApplicationListener<SessionDisconnectEvent>`
+
+`SessionSubscribeListener implements ApplicationListener<SessionSubscribeEvent> `
+
+
+`SessionUnsubscribeListener implements ApplicationListener<SessionUnsubscribeEvent>`
+
+
+> **全文结束；**
