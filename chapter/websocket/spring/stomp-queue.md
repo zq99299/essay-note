@@ -32,10 +32,10 @@
 ```javascript
       comicSubscribe () {
         // 发送信息
-        this.varStore.stomp.send('/app/queue/other', {
+        this.varStore.stomp.send('/app/queue/other', {}, JSON.stringify({
           type: 1, // 订阅
           body: 'comic' // 订阅的内容是动漫
-        })
+        }))
       }
 ```
 
@@ -50,7 +50,30 @@
 ## 使用 `@MessageMapping`处理提交的条件信息
 
 ```java
+
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(Command command) {
+        System.out.println(command);
+    }
 ```
+
+测试发现报错了
+
+```java
+ org.springframework.messaging.converter.MessageConversionException: No converter found to convert to class cn.mrcode.javawebsocketdemo.stomp.controller.Command, message=GenericMessage [payload=byte[25], headers={simpMessageType=MESSAGE, stompCommand=SEND, nativeHeaders={destination=[/app/queue/other], content-length=[25]}, simpSessionAttributes={}, simpHeartbeat=[J@6a00f3b2, lookupDestination=/queue/other, simpSessionId=hkgcxx3t, simpDestination=/app/queue/other}]
+	at org.springframework.messaging.handler.annotation.support.PayloadArgumentResolver.resolveArgument(PayloadArgumentResolver.java:118)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:77)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:139)
+```
+
+错误原因： 发送消息的时候，消息解析会走这个方法，`org.springframework.messaging.converter.CompositeMessageConverter#fromMessage(org.springframework.messaging.Message<?>, java.lang.Class<?>, java.lang.Object)`里面有一些消息转换器，默认的有 `StringMessageConverter` 和 `ByteArrayMessageConverter` ; 那么这两个都不能解析我们发送的json字符串，他是根据你要接收信息的类型来判定的，如果是字符串，那么可能就成功了。但是这里后端提供的是一个对象。
+
+所以去仓库看了下依赖：
+`com.fasterxml.jackson.core » jackson-databind (optional)	2.8.5	2.9.2` ;[jackson是可选的](http://mvnrepository.com/artifact/org.springframework/spring-messaging/4.3.5.RELEASE)。 之前项目中也没有爆出这个错误，我同样跟踪了源码，发现多了一个转换器`MappingJackson2MessageConverter`； 这里就很明白了。 或许就是这个jackson包的问题。我又没有发现怎么自定义添加转换器，不得已，只能先加上这个包了；
+
+再次调试，发现果然多了一个转换器。该问题成功解决。
+
+
 
 
 -- 待续
