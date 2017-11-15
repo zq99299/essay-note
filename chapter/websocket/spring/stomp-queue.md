@@ -74,6 +74,194 @@
 再次调试，发现果然多了一个转换器。该问题成功解决。
 
 
+ok。这里可以接受消息了。那么来处理真正的需求
+
+## 授权认证
+
+点对点前面已经说到过了，需要一个用户名，或则一个能表示该用户的一个标识。那么这个标识怎么来呢？ 就是在链接的时候进行认证授权
 
 
--- 待续
+还记得在js中链接的时候 那个头吗。这里可以传递用户名什么的。 我处理的逻辑是用户登录后，然后再链接，这个时候已经拿到用户名或则用户Id了。直接传递一个login就行了。这里固定的写死。
+```javascript
+        let headers = {
+          login: 'mylogin',
+          passcode: 'mypasscode',
+          // additional header
+          'client-id': 'my-client-id'
+        }
+```
+
+后端要做的是
+在websocketconfig这里面注册拦截器
+
+```java
+    /**
+     * 以下是注册自定义身份验证拦截器的示例服务器端配置。
+     * 请注意，拦截器只需要认证并设置CONNECT上的用户头Message。
+     * Spring将注意并保存已验证的用户，并将其与后续STOMP消息相关联在一起：
+     * @param registration
+     */
+    @Override
+    public void configureClientInboundChannel(ChannelRegistration registration) {
+        registration.setInterceptors(new ChannelInterceptorAdapter() {
+
+            @Override
+            public Message<?> preSend(Message<?> message, MessageChannel channel) {
+                StompHeaderAccessor accessor =
+                        MessageHeaderAccessor.getAccessor(message, StompHeaderAccessor.class);
+
+
+                // 只要链接一次。后面每次都是根据类型走，而且用户都会存在
+                StompCommand command = accessor.getCommand();
+                if (StompCommand.CONNECT.equals(command)) {
+                    MyPrincipal principal = new MyPrincipal(accessor.getLogin());
+                    accessor.setUser(principal);
+                }
+                log.info("请求用户:{}", accessor.getUser());
+                return message;
+            }
+        });
+    }
+```
+
+在Controller方法声明中添加参数注入
+
+```java
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(@Payload Command command, Principal principal, SimpMessageHeaderAccessor headerAccessor) {
+        int type = command.getType();
+        if (type == 1) { // 订阅
+
+        }
+        System.out.println(command);
+        System.out.println(principal);
+    }
+```
+
+* `Principal` : 这里能获取在上面拦截器中我们自己setUser的对象
+* `SimpMessageHeaderAccessor` : 更详情的一些信息，包括 sessionId,消息id等
+* `@Payload` 注解表示你要用来接收消息内容的对象是哪一个
+
+
+到此位置，授权认证已经通过。我们也能拿到用户的信息了。
+
+
+## 完善订阅后端逻辑
+
+后端也需要开启一个线程来模拟有新的新闻出现，还要维护用户订阅的参数信息
+
+```java
+ /**
+     * 记住这里的地址
+     */
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(@Payload Command command, Principal principal, SimpMessageHeaderAccessor headerAccessor) {
+        int type = command.getType();
+        if (type == 1) { // 订阅
+            subscribeNews(principal.getName(), command.getBody());
+        }
+        System.out.println(command);
+        System.out.println(principal);
+    }
+
+    private Map<String, SubscribeParams> subscribeMap = new HashMap<>();
+
+    /**
+     * 订阅线程处理
+     */
+    private void mockSubscribeNews() {
+        while (true) {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            subscribeMap.forEach((user, params) -> {
+                JSONObject result = new JSONObject();
+                if (params.isComic()) {
+                    result.put("comics", buildComic());
+                }
+                if (params.isGossip()) {
+                    result.put("gossips", buildGossip());
+                }
+                template.convertAndSendToUser(user, "/queue/other", result.toJSONString());
+            });
+        }
+    }
+
+    private List<String> buildComic() {
+        List<String> list = new ArrayList<>();
+        list.add("久保带人大爆八卦内幕：「死神」差点拍好莱坞版？想休息15年不画新作品？ - " + randomInt());
+        list.add("1月霸权番预定？「DARLING in the FRANXX」首曝PV，户松遥等参演！ - " + randomInt());
+        return list;
+    }
+
+    private List<String> buildGossip() {
+        List<String> list = new ArrayList<>();
+        // 模拟产生3条
+        list.add("言承旭自卑感作祟感情路不顺 羡慕周杰伦完美成家 - " + randomInt());
+        list.add("贺涵老卓再合作？靳东晒和陈道明自拍笑出一脸褶 - " + randomInt());
+        list.add("林心如被娶走改追回林志玲？言承旭经纪人打脸回应 - " + randomInt());
+        return list;
+    }
+
+
+    /**
+     * 接受处理参数
+     * @param user     用户名
+     * @param newsType 订阅的新闻类别是什么
+     */
+    private void subscribeNews(String user, String newsType) {
+        SubscribeParams subscribeParams = null;
+        if (subscribeMap.containsKey(user)) {
+            subscribeParams = subscribeMap.get(user);
+        } else {
+            subscribeParams = new SubscribeParams();
+            subscribeMap.put(user, subscribeParams);
+        }
+
+        if ("comic".equals(newsType)) {
+            subscribeParams.setComic(true);
+        } else {
+            subscribeParams.setGossip(true);
+        }
+    }
+```
+
+这样后端完成了，前端需要订阅这个地址，才行。改造前端代码
+
+```javascript
+ // 动漫订阅
+      comicSubscribe () {
+        this.otherSubscribe('comic')
+        this.otherSubscribeInit()
+      },
+      otherSubscribeInit () {
+        // 如果还没有开启一个订阅实例，则开启
+        if (!this.varStore.otherSubscribe) {
+          // 注意这里的地址；和后端发送的地址是一样的;只是增加了/user的前端，该前缀标识是一个点对点的订阅
+          // 后端框架会特殊处理
+          this.varStore.otherSubscribe = this.varStore.stomp.subscribe('/user/queue/other', message => {
+            let news = JSON.parse(message.body)
+            // 把获取到的列表赋值给该变量，页面中会循环出该信息
+            this.subscribeNews.comics = news.comics
+            this.subscribeNews.gossips = news.gossips
+          })
+        }
+      },
+      otherSubscribe (type) {
+        // 发送信息
+        this.varStore.stomp.send('/app/queue/other', {}, JSON.stringify({
+          type: 1, // 订阅
+          body: type // 订阅的内容是动漫还是八卦类型
+        }))
+        if (type === 'comic') {
+          this.subscribeNews.comic = true
+        } else {
+          this.subscribeNews.gossip = true
+        }
+      }
+    }
+```
+
+现在可以测试了
