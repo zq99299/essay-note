@@ -32,10 +32,10 @@
 ```javascript
       comicSubscribe () {
         // 发送信息
-        this.varStore.stomp.send('/app/queue/other', {
+        this.varStore.stomp.send('/app/queue/other', {}, JSON.stringify({
           type: 1, // 订阅
           body: 'comic' // 订阅的内容是动漫
-        })
+        }))
       }
 ```
 
@@ -50,7 +50,249 @@
 ## 使用 `@MessageMapping`处理提交的条件信息
 
 ```java
+
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(Command command) {
+        System.out.println(command);
+    }
 ```
 
+测试发现报错了
 
--- 待续
+```java
+ org.springframework.messaging.converter.MessageConversionException: No converter found to convert to class cn.mrcode.javawebsocketdemo.stomp.controller.Command, message=GenericMessage [payload=byte[25], headers={simpMessageType=MESSAGE, stompCommand=SEND, nativeHeaders={destination=[/app/queue/other], content-length=[25]}, simpSessionAttributes={}, simpHeartbeat=[J@6a00f3b2, lookupDestination=/queue/other, simpSessionId=hkgcxx3t, simpDestination=/app/queue/other}]
+	at org.springframework.messaging.handler.annotation.support.PayloadArgumentResolver.resolveArgument(PayloadArgumentResolver.java:118)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:77)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:139)
+```
+
+错误原因： 发送消息的时候，消息解析会走这个方法，`org.springframework.messaging.converter.CompositeMessageConverter#fromMessage(org.springframework.messaging.Message<?>, java.lang.Class<?>, java.lang.Object)`里面有一些消息转换器，默认的有 `StringMessageConverter` 和 `ByteArrayMessageConverter` ; 那么这两个都不能解析我们发送的json字符串，他是根据你要接收信息的类型来判定的，如果是字符串，那么可能就成功了。但是这里后端提供的是一个对象。
+
+所以去仓库看了下依赖：
+`com.fasterxml.jackson.core » jackson-databind (optional)	2.8.5	2.9.2` ;[jackson是可选的](http://mvnrepository.com/artifact/org.springframework/spring-messaging/4.3.5.RELEASE)。 之前项目中也没有爆出这个错误，我同样跟踪了源码，发现多了一个转换器`MappingJackson2MessageConverter`； 这里就很明白了。 或许就是这个jackson包的问题。我又没有发现怎么自定义添加转换器，不得已，只能先加上这个包了；
+
+再次调试，发现果然多了一个转换器。该问题成功解决。
+
+
+ok。这里可以接受消息了。那么来处理真正的需求
+
+## 授权认证
+
+点对点前面已经说到过了，需要一个用户名，或则一个能表示该用户的一个标识。那么这个标识怎么来呢？ 就是在链接的时候进行认证授权
+
+
+还记得在js中链接的时候 那个头吗。这里可以传递用户名什么的。 我处理的逻辑是用户登录后，然后再链接，这个时候已经拿到用户名或则用户Id了。直接传递一个login就行了。这里固定的写死。
+```javascript
+        let headers = {
+          login: 'mylogin',
+          passcode: 'mypasscode',
+          // additional header
+          'client-id': 'my-client-id'
+        }
+```
+
+后端要做的是
+在websocketconfig这里面注册拦截器
+
+```java
+    /**
+     * 以下是注册自定义身份验证拦截器的示例服务器端配置。
+     * 请注意，拦截器只需要认证并设置CONNECT上的用户头Message。
+     * Spring将注意并保存已验证的用户，并将其与后续STOMP消息相关联在一起：
+     * @param registration
+     */
+    @Override
+    public void configureClientInboundChannel(ChannelRegistration registration) {
+        registration.setInterceptors(new ChannelInterceptorAdapter() {
+
+            @Override
+            public Message<?> preSend(Message<?> message, MessageChannel channel) {
+                StompHeaderAccessor accessor =
+                        MessageHeaderAccessor.getAccessor(message, StompHeaderAccessor.class);
+
+
+                // 只要链接一次。后面每次都是根据类型走，而且用户都会存在
+                StompCommand command = accessor.getCommand();
+                if (StompCommand.CONNECT.equals(command)) {
+                    MyPrincipal principal = new MyPrincipal(accessor.getLogin());
+                    accessor.setUser(principal);
+                }
+                log.info("请求用户:{}", accessor.getUser());
+                return message;
+            }
+        });
+    }
+```
+
+在Controller方法声明中添加参数注入
+
+```java
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(@Payload Command command, Principal principal, SimpMessageHeaderAccessor headerAccessor) {
+        int type = command.getType();
+        if (type == 1) { // 订阅
+
+        }
+        System.out.println(command);
+        System.out.println(principal);
+    }
+```
+
+* `Principal` : 这里能获取在上面拦截器中我们自己setUser的对象
+* `SimpMessageHeaderAccessor` : 更详情的一些信息，包括 sessionId,消息id等
+* `@Payload` 注解表示你要用来接收消息内容的对象是哪一个
+
+
+到此位置，授权认证已经通过。我们也能拿到用户的信息了。
+
+
+## 完善订阅后端逻辑
+
+后端也需要开启一个线程来模拟有新的新闻出现，还要维护用户订阅的参数信息
+
+```java
+ /**
+     * 记住这里的地址
+     */
+    @MessageMapping("/queue/other")
+    public void otherSubscribe(@Payload Command command, Principal principal, SimpMessageHeaderAccessor headerAccessor) {
+        int type = command.getType();
+        if (type == 1) { // 订阅
+            subscribeNews(principal.getName(), command.getBody());
+        }
+        System.out.println(command);
+        System.out.println(principal);
+    }
+
+    private Map<String, SubscribeParams> subscribeMap = new HashMap<>();
+
+    /**
+     * 订阅线程处理
+     */
+    private void mockSubscribeNews() {
+        while (true) {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            subscribeMap.forEach((user, params) -> {
+                JSONObject result = new JSONObject();
+                if (params.isComic()) {
+                    result.put("comics", buildComic());
+                }
+                if (params.isGossip()) {
+                    result.put("gossips", buildGossip());
+                }
+                template.convertAndSendToUser(user, "/queue/other", result.toJSONString());
+            });
+        }
+    }
+
+    private List<String> buildComic() {
+        List<String> list = new ArrayList<>();
+        list.add("久保带人大爆八卦内幕：「死神」差点拍好莱坞版？想休息15年不画新作品？ - " + randomInt());
+        list.add("1月霸权番预定？「DARLING in the FRANXX」首曝PV，户松遥等参演！ - " + randomInt());
+        return list;
+    }
+
+    private List<String> buildGossip() {
+        List<String> list = new ArrayList<>();
+        // 模拟产生3条
+        list.add("言承旭自卑感作祟感情路不顺 羡慕周杰伦完美成家 - " + randomInt());
+        list.add("贺涵老卓再合作？靳东晒和陈道明自拍笑出一脸褶 - " + randomInt());
+        list.add("林心如被娶走改追回林志玲？言承旭经纪人打脸回应 - " + randomInt());
+        return list;
+    }
+
+
+    /**
+     * 接受处理参数
+     * @param user     用户名
+     * @param newsType 订阅的新闻类别是什么
+     */
+    private void subscribeNews(String user, String newsType) {
+        SubscribeParams subscribeParams = null;
+        if (subscribeMap.containsKey(user)) {
+            subscribeParams = subscribeMap.get(user);
+        } else {
+            subscribeParams = new SubscribeParams();
+            subscribeMap.put(user, subscribeParams);
+        }
+
+        if ("comic".equals(newsType)) {
+            subscribeParams.setComic(true);
+        } else {
+            subscribeParams.setGossip(true);
+        }
+    }
+```
+
+这样后端完成了，前端需要订阅这个地址，才行。改造前端代码
+
+```javascript
+ // 动漫订阅
+      comicSubscribe () {
+        this.otherSubscribe('comic')
+        this.otherSubscribeInit()
+      },
+      otherSubscribeInit () {
+        // 如果还没有开启一个订阅实例，则开启
+        if (!this.varStore.otherSubscribe) {
+          // 注意这里的地址；和后端发送的地址是一样的;只是增加了/user的前端，该前缀标识是一个点对点的订阅
+          // 后端框架会特殊处理
+          this.varStore.otherSubscribe = this.varStore.stomp.subscribe('/user/queue/other', message => {
+            let news = JSON.parse(message.body)
+            // 把获取到的列表赋值给该变量，页面中会循环出该信息
+            this.subscribeNews.comics = news.comics
+            this.subscribeNews.gossips = news.gossips
+          })
+        }
+      },
+      otherSubscribe (type) {
+        // 发送信息
+        this.varStore.stomp.send('/app/queue/other', {}, JSON.stringify({
+          type: 1, // 订阅
+          body: type // 订阅的内容是动漫还是八卦类型
+        }))
+        if (type === 'comic') {
+          this.subscribeNews.comic = true
+        } else {
+          this.subscribeNews.gossip = true
+        }
+      }
+    }
+```
+
+ok，点对点的应用结束，后面的我就不记录了。直接在程序中写完这个demo。并放在git上。
+
+## 总结：
+
+1. 点对点发送，必须要在spring4.3.5+版本。才有效，才会有效的帮你转换订阅地址
+2. 订阅的地址是走代理的。前后都必须是同一个地址才会收到对应的消息。
+3. 由于框架的规则，前后写的时候 附带一些前缀，在视觉上除了前缀之外，其他的地址应该相同，对第二条的补充
+
+websocket的知识还是有点多的感觉。使用上也是不同的。 这个只是我个人摸索得出来的一种使用方式。更多的还是去查看官网文档。这里带你入门
+
+### 取消订阅
+
+`stomp.subscribe()` 会返回一个实例，该实例标识和后端订阅的链接实例，可以用过调用该实例的`unsubscribe()`取消订阅。
+
+后端则可以在授权配置里面 通过 StompCommand 的类型来区分是链接？断开链接？订阅？取消订阅事件类型，而去做一些事情，比如清空该用户该类订阅的参数等等等。
+
+### 其他事件通知
+
+也可以通过全局的事件功能接口，来实现自己需要关注的事件。
+
+`SessionConnectListener implements ApplicationListener<SessionConnectEvent> `
+
+`SessionDisconnectListener implements ApplicationListener<SessionDisconnectEvent>`
+
+`SessionSubscribeListener implements ApplicationListener<SessionSubscribeEvent> `
+
+
+`SessionUnsubscribeListener implements ApplicationListener<SessionUnsubscribeEvent>`
+
+有了这些事件的通知，就能设计出在什么情况下，去停止后端程序对该用户的推送。真正的做到了 需要的时候再推送，而不是以前的ajax轮询的方式
+
+> **全文结束；**
