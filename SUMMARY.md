@@ -80,6 +80,8 @@
   * [常用软件安装](chapter/linux/install.md)
   * [端口管理](chapter/linux/port.md)
   * [nginx](chapter/linux/nginx.md)
+  * [磁盘挂载](chapter/linux/mount.md)
+
 
 ---
 
