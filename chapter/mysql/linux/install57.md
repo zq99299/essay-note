@@ -70,9 +70,9 @@ cp -a /var/lib/mysql /home/mysql_data/
 接下来修改脚本和配置文件中用到的三个文件中的路径,主要目的是修改 datadir 的路径为 上面转移数据的目标路径
 
 ```bash
-vi /etc/my.cnf
-vi /etc/init.d/mysqld
-vi /usr/bin/mysqld_safe
+vi /etc/my.cnf        # 修改两处- datadir和socket的前缀路径
+vi /etc/init.d/mysqld    # 修改多处，需要用搜索查找/var/lib/mysql的路径，并替换掉
+vi /usr/bin/mysqld_safe  # 修改一处，datadir
 ```
 
 下面需要建立一个mysql.sock的链接：
