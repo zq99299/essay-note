@@ -87,7 +87,7 @@ vi /usr/bin/mysqld_safe
 service mysqld start
 ```
 
-如果是新安装的mysql的话，启动的时候会出现以下提示
+如果是新安装的mysql的话，启动的时候会出现以下提示,这个不用担心会自动生成的。
 ```bash
 /sbin/restorecon:  lstat(/data/mysql_data/mysql) failed:  No such file or directory
 Initializing MySQL database:                               [  OK  ]
