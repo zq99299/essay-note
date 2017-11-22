@@ -116,3 +116,50 @@ mysql > update user set password=password('123456') where user='root';
 第二条修改如果报错的话，没有关系。
 
 然后把登录验证打开。重启mysql即可
+
+## 第二次登录则提示还需要重置密码
+```bash
+mysql>  ALTER USER USER() IDENTIFIED BY '123456';
+ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
+```
+这里提示策略问题。那么就是密码不够复杂。如果为了测试就要简单的密码，则可以修改 validate_password_policy 值
+
+validate_password_policy有以下取值：
+
+| Policy	| Tests Performed
+| --------------------------
+| 0 or LOW	| Length
+| 1 or MEDIUM	| Length; numeric, lowercase/uppercase, and special characters
+| 2 or STRONG	| Length; numeric, lowercase/uppercase, and special characters; dictionary file
+
+默认是1，即MEDIUM，所以刚开始设置的密码必须符合长度，且必须含有数字，小写或大写字母，特殊字符。
+
+有时候，只是为了自己测试，不想密码设置得那么复杂，譬如说，我只想设置root的密码为123456。
+
+必须修改两个全局参数：
+
+首先，修改validate_password_policy参数的值
+
+```bash
+mysql> set global validate_password_policy=0;
+Query OK, 0 rows affected (0.00 sec)
+```
+这样，判断密码的标准就基于密码的长度了。这个由validate_password_length参数来决定。
+
+```bash
+mysql> select @@validate_password_length;
++----------------------------+
+| @@validate_password_length |
++----------------------------+
+|                          8 |
++----------------------------+
+1 row in set (0.00 sec)
+
+默认长度为8；这里修改下长度，有关长度计算有其他的参数决定
+mysql> set global validate_password_length=1;
+Query OK, 0 rows affected (0.00 sec)
+```
+
+
+
+
