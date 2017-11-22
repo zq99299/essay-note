@@ -78,7 +78,7 @@ vi /usr/bin/mysqld_safe  # 修改一处，datadir
 下面需要建立一个mysql.sock的链接：
 
 ```bash
-#ln -s /home/mysql_data/mysql/mysql.sock /var/lib/mysql/mysql.sock
+#ln -s /data/mysql_data/mysql/mysql.sock /var/lib/mysql/mysql.sock
 ```
 
 修改完成，启动mysql 服务
@@ -93,3 +93,26 @@ service mysqld start
 Initializing MySQL database:                               [  OK  ]
 Starting mysqld:                                           [  OK  ]
 ```
+
+## 5.7 初始密码修改
+```bash
+vim /etc/my.cnf
+
+加上这一行，关闭登录验证
+skip-grant-tables=1  
+```
+
+重启mysql,然后登录到mysql，进行修改密码
+```bash
+# service mysql restart
+# mysql
+
+// mysql 链接上之后，切换到mysql库
+
+mysql > use mysql
+mysql > UPDATE user SET authentication_string=PASSWORD("123456") WHERE user='root';   
+mysql > update user set password=password('123456') where user='root'; 
+```
+第二条修改如果报错的话，没有关系。
+
+然后把登录验证打开。重启mysql即可
