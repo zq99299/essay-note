@@ -160,6 +160,33 @@ mysql> set global validate_password_length=1;
 Query OK, 0 rows affected (0.00 sec)
 ```
 
+## 设置远程访问
+
+查看状态
+
+```bash
+mysql> select user,host from user;
++---------------+-----------+
+| user          | host      |
++---------------+-----------+
+| mysql.session | localhost |
+| mysql.sys     | localhost |
+| root          | localhost |
++---------------+-----------+
+```
+
+更改root账户可以为远程访问
+
+```bash
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'your_root_password' WITH GRANT OPTION; 
+```
+
+修改生效
+
+```bash
+mysql> FLUSH PRIVILEGES;
+```
+
 
 
 
