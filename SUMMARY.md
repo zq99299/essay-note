@@ -53,6 +53,7 @@
 
 * [Mysql](chapter/mysql/README.md)
   * [导出导入](chapter/mysql/导出导入.md)
+* [MyCat](chapter/mycat/README.md)
 
 ---
 
