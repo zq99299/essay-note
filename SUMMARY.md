@@ -52,6 +52,7 @@
 ---
 
 * [Mysql](chapter/mysql/README.md)
+  * [Mysql-linux在线安装5.7](chapter/mysql/linux/install57.md) 
   * [导出导入](chapter/mysql/导出导入.md)
 * [MyCat](chapter/mycat/README.md)
 
