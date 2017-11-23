@@ -6,7 +6,7 @@
 
 在mycat中看到有一个db1，下面有3张表
 ------------------------------------
- | mycat：192.168.1.5：8066
+ | mycat：192.168.1.5:8066
     |- db1
        |- table1
        |- table2
@@ -15,7 +15,7 @@
 
 但是这三张表有可能在物理机器上是这样分布的
 ------------------------------------
-| mysql：192.168.1.6：3306
+| mysql：192.168.1.6:3306
    |- db1
       |- table1
       |- table2
@@ -25,7 +25,7 @@
       |- table2
       |- table3
       
-| mysql：192.168.1.7：3306
+| mysql：192.168.1.7:3306
    |- db1
       |- table1
       |- table2
@@ -100,3 +100,69 @@
 table 标签中的`rule="auto-sharding-long"`是引用了 rule.xml中定义的分片规则。
 
 
+## rule.xml 定制分片规则
+
+```xml
+<mycat:rule xmlns:mycat="http://io.mycat/">
+	<tableRule name="auto-sharding-long">
+		<rule>
+			<columns>SITE_ID</columns>
+			<algorithm>rang-long</algorithm>
+		</rule>
+	</tableRule>
+	<function name="rang-long"
+		class="io.mycat.route.function.AutoPartitionByLong">
+		<property name="mapFile">autopartition-long.txt</property>
+	</function>
+</mycat:rule>
+```
+
+* tableRule  规则名称
+* `<columns>SITE_ID</columns>` 按表中的某一个字段进行分片
+* `<algorithm>rang-long</algorithm>` 分片规则的映射，对应 function标签
+
+这里用的范围分片规则
+
+* function标签 定义调用哪一个类来处理这个规则
+* mapFile 这里指定autopartition-long.txt文件来定义范围的规则
+
+autopartition-long.txt
+
+```
+# range start-end ,data node index
+# K=1000,M=10000.
+0-1=0
+1-2=1
+2-3=2
+4-5=3
+5-6=4
+6-7=5
+7-8=6
+8-9=7
+9-10=8
+11-12=9
+13-14=10
+18-19=11
+```
+这里我是想用site_id 的值来分片路由。从0开始，对应schema中的dataNode顺序。0-1分到第一个节点（顺序0），包含头不包含尾。
+
+我其实就是想按站点分片。把不同站点的数据分到一个库中去。
+
+## server.xml 服务配置
+
+这里只列出修改过的项目
+
+### system
+* sequnceHandlerType = 0 ，使用 `config/sequence_conf.properties` 作为全局id生成器配置文件
+
+配置逻辑库的授权信息。mycat是一个中间件，要链接mycat，在前面说过了假设有这么一个链接 `192.168.1.5:8066` 那么需要有用户名和密码。 就是这里配置的。
+`
+```xml
+<user name="root" defaultAccount="true">
+	<property name="password">123456</property>
+	<property name="schemas">TESTDB</property>
+</user>
+```
+* schemas ： 在schema.xml中schema中配置过的名称就是引用这里的
+
+到此为止。吗，mycat
