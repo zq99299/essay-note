@@ -165,4 +165,4 @@ autopartition-long.txt
 ```
 * schemas ： 在schema.xml中schema中配置过的名称就是引用这里的
 
-到此为止。吗，mycat
+到此为止。本次配ok。
