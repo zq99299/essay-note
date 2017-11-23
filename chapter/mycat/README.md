@@ -40,7 +40,63 @@
 也就是说mycat中的一个逻辑库其实就是由n个mysql的实际库支持起来的。
 ```
 
-## 配置分片表和节点
+## schema.xml 配置分片表和节点
+
 ```xml
-xx
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+	
+	<!-- 配置逻辑库 -->
+	<schema name="TESTDB" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn1">
+		<!-- auto sharding by id (long) -->
+		<!--<table name="sam_test" dataNode="dn1,dn2,dn3" rule="auto-sharding-long" autoIncrement="true" primaryKey="id_"/> -->
+		<table name="SLICE_USER" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="PRODUCT" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="SLICE_PRODUCT_BROWSE" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="SLICE_ORDER" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="SLICE_SUB_ORDER" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="SLICE_SUBSCRIBE" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+		<table name="SLICE_ORDER_SUMMARY_DAY" dataNode="dn1,dn2,dn3,dn4,dn5,dn6,dn7,dn8,dn9,dn10,dn11,dn12" rule="auto-sharding-long" autoIncrement="true" primaryKey="id"/>
+	</schema>
+	<dataNode name="dn1" dataHost="host112" database="mycat_test_db1" />
+	<dataNode name="dn2" dataHost="host112" database="mycat_test_db2" />
+	<dataNode name="dn3" dataHost="host112" database="mycat_test_db3" />
+	<dataNode name="dn4" dataHost="host112" database="mycat_test_db4" />
+	<dataNode name="dn5" dataHost="host112" database="mycat_test_db5" />
+	<dataNode name="dn6" dataHost="host112" database="mycat_test_db6" />
+	
+	<dataNode name="dn7" dataHost="host166" database="mycat_test_db7" />
+	<dataNode name="dn8" dataHost="host166" database="mycat_test_db8" />
+	<dataNode name="dn9" dataHost="host166" database="mycat_test_db9" />
+	<dataNode name="dn10" dataHost="host166" database="mycat_test_db10" />
+	<dataNode name="dn11" dataHost="host166" database="mycat_test_db11" />
+	<dataNode name="dn12" dataHost="host166" database="mycat_test_db12" />
+	
+	
+	<dataHost name="host112" maxCon="1000" minCon="10" balance="0"
+			  writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="hostM1" url="192.168.7.112:3306" user="root" password="123456">
+		</writeHost>
+	</dataHost>
+	
+	<dataHost name="host166" maxCon="1000" minCon="10" balance="0"
+			  writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="hostM1" url="192.168.7.166:3306" user="root" password="123456">
+	</writeHost>
+	</dataHost>
+</mycat:schema>
 ```
+
+* schema 配置逻辑库中的表分片在哪些节点上，和关联分片规则等
+* dataNode 分片节点，对应一个库
+* dataHost 配置具体物理机中的数据库链接等信息
+
+下面配置了2台物理机，和12个节点，一个节点对应一个库。
+对应的逻辑表中需要分片的表有7张，全部分片到12个节点中去。
+
+table 标签中的`rule="auto-sharding-long"`是引用了 rule.xml中定义的分片规则。
+
+
