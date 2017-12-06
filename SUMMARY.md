@@ -35,6 +35,7 @@
     * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
     * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
     * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
+    
 
 ---
 
@@ -56,6 +57,8 @@
   * [导出导入](chapter/mysql/导出导入.md)
 * [MyCat](chapter/mycat/README.md)
   * [分片规则](chapter/mycat/sharding_rule/index.md)
+  * [全局序列](chapter/mycat/sequence/index.md)
+
 
 ---
 
