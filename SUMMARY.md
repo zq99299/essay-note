@@ -55,6 +55,7 @@
   * [Mysql-linux在线安装5.7](chapter/mysql/linux/install57.md) 
   * [导出导入](chapter/mysql/导出导入.md)
 * [MyCat](chapter/mycat/README.md)
+  * [分片规则](chapter/mycat/sharding_rule/index.md)
 
 ---
 
