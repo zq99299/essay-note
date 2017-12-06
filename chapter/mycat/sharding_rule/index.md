@@ -83,7 +83,7 @@ public class AutoPartitionByCombinationField extends AbstractPartitionAlgorithm 
         if (ranges.containsKey(key)) {
             return ranges.get(key).nodId;
         }
-        throw new IllegalArgumentException("columnValue is " + columnValue + " not found nodeId");
+        throw new IllegalArgumentException("columnValue " + columnValue + " not found nodeId");
     }
 
     @Override
