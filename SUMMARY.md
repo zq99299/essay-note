@@ -63,6 +63,8 @@
 ### 服务器/容器/反向代理
 
 * [Tomcat](chapter/tomcat/index.md)
+  * [开启APR](chapter/tomcat/apr.md)
+  * [开启HTTPS](chapter/tomcat/https.md)
 
 
 
