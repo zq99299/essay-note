@@ -3,7 +3,21 @@
 * [前言](README.md)
 
 * [JAVA设计模式](chapter/design_pattern/index.md)
+  * [如何学习设计模式](chapter/design_pattern/如何学习设计模式.md)
+  * [简单工厂](chapter/design_pattern/简单工厂.md)
+  * [外观模式](chapter/design_pattern/外观模式.md)
+  * [适配器模式](chapter/design_pattern/适配器模式.md)
+  * [单例设计模式](chapter/design_pattern/单例设计模式.md)
+  * [工厂方法模式](chapter/design_pattern/工厂方法模式.md)
+  * [抽象工厂模式](chapter/design_pattern/抽象工厂模式.md)
+  * [生成器模式](chapter/design_pattern/生成器模式.md)
+  * [单例设计模式](chapter/design_pattern/单例设计模式.md)
+  * [中介者模式](chapter/design_pattern/中介者模式.md)
+  * [代理模式](chapter/design_pattern/代理模式.md)
+  * [观察者模式](chapter/design_pattern/观察者模式.md)
 
+
+  
 ---
 
 * [动脑学院公开课](chapter/dongnaoeduo_open/README.md)
