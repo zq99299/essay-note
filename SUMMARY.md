@@ -2,6 +2,8 @@
 
 * [前言](README.md)
 
+* [JAVA设计模式](chapter/design_pattern/index.md)
+
 ---
 
 * [动脑学院公开课](chapter/dongnaoeduo_open/README.md)
@@ -120,7 +122,7 @@
 
 ---
 
-* [JAVA设计模式](chapter/design_pattern/index.md)
+
 
 
 
