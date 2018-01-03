@@ -11,7 +11,7 @@
   * [工厂方法模式](chapter/design_pattern/工厂方法模式.md)
   * [抽象工厂模式](chapter/design_pattern/抽象工厂模式.md)
   * [生成器模式](chapter/design_pattern/生成器模式.md)
-  * [单例设计模式](chapter/design_pattern/单例设计模式.md)
+  * [原型模式](chapter/design_pattern/原型模式.md)
   * [中介者模式](chapter/design_pattern/中介者模式.md)
   * [代理模式](chapter/design_pattern/代理模式.md)
   * [观察者模式](chapter/design_pattern/观察者模式.md)
