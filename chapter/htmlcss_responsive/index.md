@@ -36,3 +36,5 @@ text-align: center;
 flex-direction: column; // 该属性是让布局成上到下排列
 ```
 
+横向布局垂直居中能用到很多场景中，导航
+
