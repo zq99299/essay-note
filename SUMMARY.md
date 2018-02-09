@@ -63,7 +63,7 @@
   * [margin2](chapter/htmlcss/margin2.md)
   * [border](chapter/htmlcss/border.md)
 * [HTML/CSS响应式](chapter/htmlcss_responsive/index.md)
-    [弹性布局与响应式图片](chapter/htmlcss_responsive/弹性布局与响应式图片.md)
+  * [弹性布局与响应式图片](chapter/htmlcss_responsive/弹性布局与响应式图片.md)
 
 
 
