@@ -24,3 +24,15 @@
 
 比如：200，660，100 的3栏布局；200对应的百分比应该是：200 / 960(总宽度) =20.8333%;
 
+### Flexbox
+
+垂直居中元素;以下代码让该容器内的所有元素都垂直居中了
+
+```css
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+flex-direction: column; // 该属性是让布局成上到下排列
+```
+
