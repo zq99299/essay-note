@@ -83,8 +83,6 @@
     * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
     * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
 
-* [ZooKeeper](chapter/zooKeeper/README.md)
-
 * [linux](chapter/linux/README.md)
   * [各种压缩/解压命令](chapter/linux/zip.md)
   * [常用软件安装](chapter/linux/install.md)
