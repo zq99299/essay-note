@@ -19,12 +19,6 @@
 
 ---
 
-* [Redis](chapter/redis/README.md)
-  * [windows](chapter/redis/windows.md)
-  * [集群](chapter/redis/cluster.md)
-
----
-
 * [Netty](chapter/netty/README.md)
   * [Nio入门](chapter/netty/niostart/README.md)
     * [传统BIO编程](chapter/netty/niostart/传统BIO编程.md)
@@ -61,6 +55,9 @@
 * [MyCat](chapter/mycat/README.md)
   * [分片规则](chapter/mycat/sharding_rule/index.md)
   * [全局序列](chapter/mycat/sequence/index.md)
+* [Redis](chapter/redis/README.md)
+  * [windows](chapter/redis/windows.md)
+  * [集群](chapter/redis/cluster.md)
 
 ## 服务器/容器/反向代理
 
