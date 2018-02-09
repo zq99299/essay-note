@@ -65,6 +65,13 @@
 * [HTML/CSS响应式](chapter/htmlcss_responsive/index.md)
 
 ## 其他
+* [linux](chapter/linux/README.md)
+  * [各种压缩/解压命令](chapter/linux/zip.md)
+  * [常用软件安装](chapter/linux/install.md)
+  * [端口管理](chapter/linux/port.md)
+  * [nginx](chapter/linux/nginx.md)
+  * [磁盘挂载](chapter/linux/mount.md)
+
 
 * [Netty](chapter/netty/README.md)
   * [Nio入门](chapter/netty/niostart/README.md)
@@ -82,13 +89,6 @@
     * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
     * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
     * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
-
-* [linux](chapter/linux/README.md)
-  * [各种压缩/解压命令](chapter/linux/zip.md)
-  * [常用软件安装](chapter/linux/install.md)
-  * [端口管理](chapter/linux/port.md)
-  * [nginx](chapter/linux/nginx.md)
-  * [磁盘挂载](chapter/linux/mount.md)
 
 * [ZooKeeper](chapter/zooKeeper/README.md)
 * [WebSocket](chapter/websocket/index.md)
