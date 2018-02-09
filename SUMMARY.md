@@ -17,26 +17,6 @@
 
 ---
 
----
-
-* [Netty](chapter/netty/README.md)
-  * [Nio入门](chapter/netty/niostart/README.md)
-    * [传统BIO编程](chapter/netty/niostart/传统BIO编程.md)
-    * [伪异步I/O模型编程](chapter/netty/niostart/伪异步IO模型编程.md)
-    * [NIO](chapter/netty/niostart/nio.md)
-    * [AIO](chapter/netty/niostart/Aio.md)
-    * [4种IO概念](chapter/netty/niostart/4种IO概念.md)
-  * [Netty入门](chapter/netty/nettystart/README.md)
-    * [入门应用](chapter/netty/nettystart/入门应用.md)
-    * [TCP粘包/拆包](chapter/netty/nettystart/TCP粘包_拆包.md)
-    * [分隔符和定长解码器](chapter/netty/nettystart/分隔符和定长解码器.md)
-  * [中级篇-编解码开发指南](chapter/netty/middleCodec/README.md)
-    * [编解码技术](chapter/netty/middleCodec/编解码技术.md)
-    * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
-    * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
-    * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
-
----
 
 * [GIT](chapter/git/README.md)
   * [GIT远程仓库回退](chapter/git/远程仓库回退.md)
@@ -84,7 +64,26 @@
   * [border](chapter/htmlcss/border.md)
 * [HTML/CSS响应式](chapter/htmlcss_responsive/index.md)
 
----
+## 其他
+
+* [Netty](chapter/netty/README.md)
+  * [Nio入门](chapter/netty/niostart/README.md)
+    * [传统BIO编程](chapter/netty/niostart/传统BIO编程.md)
+    * [伪异步I/O模型编程](chapter/netty/niostart/伪异步IO模型编程.md)
+    * [NIO](chapter/netty/niostart/nio.md)
+    * [AIO](chapter/netty/niostart/Aio.md)
+    * [4种IO概念](chapter/netty/niostart/4种IO概念.md)
+  * [Netty入门](chapter/netty/nettystart/README.md)
+    * [入门应用](chapter/netty/nettystart/入门应用.md)
+    * [TCP粘包/拆包](chapter/netty/nettystart/TCP粘包_拆包.md)
+    * [分隔符和定长解码器](chapter/netty/nettystart/分隔符和定长解码器.md)
+  * [中级篇-编解码开发指南](chapter/netty/middleCodec/README.md)
+    * [编解码技术](chapter/netty/middleCodec/编解码技术.md)
+    * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
+    * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
+    * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
+
+* [ZooKeeper](chapter/zooKeeper/README.md)
 
 * [linux](chapter/linux/README.md)
   * [各种压缩/解压命令](chapter/linux/zip.md)
@@ -93,12 +92,7 @@
   * [nginx](chapter/linux/nginx.md)
   * [磁盘挂载](chapter/linux/mount.md)
 
----
-
 * [ZooKeeper](chapter/zooKeeper/README.md)
-
----
-
 * [WebSocket](chapter/websocket/index.md)
   * [Spring-WebSocket](chapter/websocket/spring.md)
     * [websocketDemo](chapter/websocket/spring/websocket.md)
@@ -107,8 +101,6 @@
     * [stomp-新闻展示示例](chapter/websocket/spring/stomp-demo.md)
     * [stomp-广播-公共新闻订阅](chapter/websocket/spring/stomp-topic.md)
     * [stomp-点对点-自由订阅](chapter/websocket/spring/stomp-queue.md)
-
----
 
 * [监控相关](chapter/monitor/index.md)
 * [动脑学院公开课](chapter/dongnaoeduo_open/README.md)
