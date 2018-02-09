@@ -26,3 +26,19 @@ OK，xxx is...   // 单行截短
     white-space: no-wrap;
 }
 ```
+
+## 创建水平滚动面板
+
+就是横向滚动；
+
+```css
+.Scroll_Wrapper {
+    width: 100%;
+    white-space: nowrap; // 意思是有空白的时候不折行
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.Item {
+    display: inline-flex; // 把所有元素变为行内元素
+}
+```
