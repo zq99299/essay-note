@@ -39,5 +39,62 @@ flex-direction: column; // 该属性是让布局成上到下排列
 横向布局垂直居中能用到很多场景中；比如导航：结合`margin`可以达到平分空间居中等布局；
 
 * align-self ： 可以单独定义该元素的居中方式
+* justify-content：定义剩余未使用空间在元素之间的空白平分方式；把元素用空白分开的方式
+
+#### 简单的粘附页脚
+在内容不够长的时候，但是还是希望页脚在视口的底部位置；
+
+让html高度为100%，body高度也是100%；然后用flex列布局。主要内容`flex:1`; 
+
+footer占用的空间是固定的，主要内容`flex:1`就占用了剩余的所有空间
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            color: #ebebeb;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .MainContent {
+            flex: 1;
+            color: #333;
+            padding: .5rem;
+        }
+
+        .Footer {
+            background-color: violet;
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="MainContent">
+    Here is a bunch of text up at the top. But there isn't enough
+    content to push the footer to the bottom of the page.
+</div>
+<div class="Footer">
+    However, thanks to flexbox, I've been put in my place.
+</div>
+</body>
+</html>
+```
 
 
