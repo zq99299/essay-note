@@ -53,7 +53,7 @@
 * [IDEA](chapter/idea/README.md)
   * [快捷键篇](chapter/idea/快捷键篇.md)
 
----
+## 数据库系列
 
 * [Mysql](chapter/mysql/README.md)
   * [Mysql-linux在线安装5.7](chapter/mysql/linux/install57.md)
