@@ -19,6 +19,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 ## gradle
+下载
+```bash
+wget https://downloads.gradle.org/distributions/gradle-4.4.1-bin.zip
+```
 环境变量配置：
 ```bash
 export GRADLE_HOME=/mnt/sit/app/gradle-3.2.1

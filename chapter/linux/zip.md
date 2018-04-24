@@ -14,3 +14,9 @@ unrar e file.rar //解压rar
 
 unzip file.zip //解压zip
 ```
+
+## 压缩
+
+```
+zip -r file.zip /xxx/file
+```
