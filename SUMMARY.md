@@ -44,6 +44,7 @@
 * [Tomcat](chapter/tomcat/index.md)
   * [开启APR](chapter/tomcat/apr.md)
   * [开启HTTPS](chapter/tomcat/https.md)
+  * [开启Jconsloe](chapter/tomcat/Jconsloe.md)
 
 ## 前端开发系列
 
