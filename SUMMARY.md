@@ -71,8 +71,8 @@
   
 ## spring 系列
 
-* [springboot](chapter/springboot/README.md)
-* [spring-restdocs-asciidoctor](chapter/spring_restdocs_asciidoctor/index.md)
+* [springboot](chapter/spring/springboot/README.md)
+* [spring-restdocs-asciidoctor](chapter/spring/spring_restdocs_asciidoctor/index.md)
 
   
 
