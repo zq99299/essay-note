@@ -40,7 +40,7 @@ ext {
     // rest doc 3
     springRestdocsVersion = '2.0.2.BUILD-SNAPSHOT'
     // 测试用例api生成的片断代码目录 gradle默认在该目录下
-    //  
+    // 这里配置变量只是为了在后面的插件配置中使用该变量
     snippetsDir = file('build/generated-snippets')
 }
 dependencies {
