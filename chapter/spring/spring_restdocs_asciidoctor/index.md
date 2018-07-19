@@ -20,6 +20,8 @@
 我以gradle为例
 
 ## 增加依赖
+
+这里的依赖是在一个普通的 spring boot2 项目上增加的配置
 ```
 // rest doc 1  转成html插件
 plugins {
