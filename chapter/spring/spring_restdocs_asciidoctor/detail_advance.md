@@ -71,7 +71,6 @@ operation::fun1[]
         |- fun1_summary.adoc
         |- fun1_summary_2.adoc
 ```
-
 api_list.adoc 入口文件，汇总所有需要到一个html中的配置
 
 ```
@@ -104,3 +103,12 @@ include::{snippets}/fun1/http-response.adoc[]
 > {snippets} 忘记哪里来的了。好像是 转换插件里面的预定变量。指向了测试用例代码片断所在目录
 
 上面文件内容百分之98的内容都是根据 asciidoctor 官网文档 编写
+
+## 为 post 请求输出文档
+
+![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_123049.png)
+
+xxx
+
+
+
