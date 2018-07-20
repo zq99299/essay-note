@@ -88,6 +88,85 @@ public class HelloWordDocsControllerTest {
 
 ## 使用插件把这个代码片断转成 html文件
 
+需要在build.gradle中增加配置; 增加的配置项 都在 rest doc 1-4 之间进行了描述和说明
 
+```
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+plugins {
+    // rest doc 2 转换成html的插件
+    id "org.asciidoctor.convert" version "1.5.3"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'cn.mrcode.example.spring.restdocs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    // rest doc 1  org.asciidoctor.convert 插件不在中央仓库，增加该仓库地址
+    maven { url 'https://repo.spring.io/libs-snapshot' }
+}
+
+ext {
+    // rest doc 3 定义版本号和代码片断的输出目录
+    springRestdocsVersion = '2.0.2.BUILD-SNAPSHOT'
+    snippetsDir = file('build/generated-snippets')
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
+
+    // rest doc 4 增加依赖；这个依赖很重要，就算其他步骤都配置好了，这里依赖没有增加
+    // 将不会看到被转换的代码片断
+    asciidoctor "org.springframework.restdocs:spring-restdocs-asciidoctor:${springRestdocsVersion}"
+}
+```
+
+配置完成后，我们运行gradle命令 
+```
+$ gradle asciidoctor
+
+# 运行命令需要注意下：如果你构建gradle的时候不是选择本地的gradle版本
+# 而是选择 gradle/wrapper 的形式，那么有可能命令行中的gradle版本和项目版本不一致的情况
+# 所以注意版本统一，如果出现什么异常到时候不找到错误
+# 最好就是使用idea右侧 gradle面板中的ui去触发，这样就使用的是项目中依赖的gradle了
+```
+
+却发现什么也没有发生，也没有生成什么文件；这是由于少了一个步骤：
+
+## 为插件编写所需入口文件
+先来看一张图
+![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_100045.png)
+
+这个转换插件会在 src/docs/assciidoc 目录中寻找入口文件；然后转换此文件（这里一个文件会转换成一个页面）；
+
+上图的语法，`operation::fun1[]` 标识引用之前生成的代码片断目录下的所有文件，按照插件默认格式进行转换
+
+> 对于这个语法我没有在asciidoctor文档中找到，记不起来在什么地方看到的了，有可能是 这个转换插件的功能
+> 但是无关紧要，后面自定义排版的时候不会用到这个语法
+
+步骤：
+
+1. 在 `src/docs/assciidoc` 中新增fun1.adoc文件
+2. 运行 gradle asciidoctor 命令
+
+就能看到在 build/asciidoc/html5 中生成了一个同名的html文件；可以直接打开的
 
 
