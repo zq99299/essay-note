@@ -44,8 +44,6 @@ https://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document
 == fun api列表  
 
 operation::fun1[]
-
-`== fun api列表`     这里的问题，我目前不太清楚为什么不能在该文件中写== 加中文，但是在后面的include其他文件的时候  其他文件中却可以写
 ```
 
 
