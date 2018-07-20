@@ -15,3 +15,8 @@
 * 使用插件把文档api生成的.adoc文件转换成 html
 
 > github教程示例项目: https://github.com/zq99299/spring-restdocs-example
+
+学习这个的使用有几点别搞混了：
+
+1. asciidoctor 和 markdown 类似，与gitbook更类似，都是需要转换器进行转换
+2. 无侵入源代码，只是在测试用例的时候 附加生成文档
