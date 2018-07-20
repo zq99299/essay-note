@@ -73,6 +73,9 @@
 * [spring-restdocs-asciidoctor](chapter/spring/spring_restdocs_asciidoctor/index.md)
   * [restdocs详细教程-入门篇](chapter/spring/spring_restdocs_asciidoctor/detail.md)
   * [restdocs详细教程-进阶篇1](chapter/spring/spring_restdocs_asciidoctor/detail_advance.md)
+  * [restdocs详细教程-进阶篇2](chapter/spring/spring_restdocs_asciidoctor/detail_advance2.md)
+
+
 
 ## 其他
 
