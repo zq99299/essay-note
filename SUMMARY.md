@@ -73,6 +73,8 @@
 
 * [springboot](chapter/spring/springboot/README.md)
 * [spring-restdocs-asciidoctor](chapter/spring/spring_restdocs_asciidoctor/index.md)
+  * [restdocs详细教程](chapter/spring/spring_restdocs_asciidoctor/detail.md)
+
 
   
 
