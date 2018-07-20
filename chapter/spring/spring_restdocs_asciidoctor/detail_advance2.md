@@ -90,3 +90,6 @@ include::{snippets}/fun3_1/response-fields.adoc[]
 ```
 
 有没有发现效果图里面的json串没有格式化，这让一个强迫症的人很伤心
+
+## 对文档的请求和响应进行美化处理
+
