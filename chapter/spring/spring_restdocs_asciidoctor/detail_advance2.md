@@ -1,4 +1,4 @@
-![![](assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_134730.pn](assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_134730.png)g)# restdocs详细教程-进阶篇2
+# restdocs详细教程-进阶篇2
 
 本节内容：
 
