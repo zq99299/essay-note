@@ -63,6 +63,7 @@ operation::fun1[]
 
 新增两个文件；目录结构如下
 
+
 ```bash
 |-- docs
     |- asciidoc
@@ -108,7 +109,54 @@ include::{snippets}/fun1/http-response.adoc[]
 
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_123049.png)
 
-xxx
+效果图如上；
+
+**定义controller**
+
+```java
+    /**
+     * 接收一个对象，填充部分数据后 再返还该对象
+     * @param book
+     * @return
+     */
+    @PostMapping("/fun3")
+    public Book fun3(Book book) {
+        book.setAuthors(new String[]{"张三丰", "张4丰", "张5丰"});
+        return book;
+    }
+```
+
+编写测试用例
+
+```java
+    /**
+     * 增加请求参数 和 响应自定义pojo对象
+     * @throws Exception
+     */
+    @Test
+    public void fun3() throws Exception {
+//        Book book = new Book();
+//        book.setName("《spring resdocs进阶篇》");
+//        book.setPrice(13.2);
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.post("/fun3")
+                        // 表单提交是不能提交一个对象的，只能提交kv的形式
+                        .param("name", "《spring resdocs进阶篇》")
+                        .param("price", "13.2")
+                        // 请求类型也就是 平时开发的 form表单提交
+                        // jquery ajax 提交的form表单
+                        // contentType 就是这个
+//                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())  // 打印请求响应详细日志，可以在控制台看到详细的日志信息
+                .andDo(MockMvcRestDocumentation
+                               .document("fun3"));
+    }
+```
+
+
 
 
 
