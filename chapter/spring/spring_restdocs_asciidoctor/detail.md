@@ -123,9 +123,8 @@ repositories {
 }
 
 ext {
-    // rest doc 3 定义版本号和代码片断的输出目录
+    // rest doc 3 定义版本号
     springRestdocsVersion = '2.0.2.BUILD-SNAPSHOT'
-    snippetsDir = file('build/generated-snippets')
 }
 
 dependencies {
