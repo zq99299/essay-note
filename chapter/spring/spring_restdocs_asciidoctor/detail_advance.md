@@ -1,4 +1,4 @@
-# restdocs详细教程-进阶篇
+# restdocs详细教程-进阶篇1
 
 本章内容：
 
@@ -6,6 +6,8 @@
 2. 完成一个常见api文档的排版效果
 3. 侧边栏的配置
 4. 自定义文档内容的编写
+5. post参数提交
+6. 请求和响应参数的描述展示排版
 
 
 ## 实现左侧目录功能
@@ -179,12 +181,88 @@ include::./fun3.adoc[]
 但是这个api没有请求参数的字段描述，响应字段描述也没有，那么接下来继续
 
 ## 给文档添加请求响应字段的描述
+先来看效果图
+
+![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_130600.png)
 
 
+首先增加测试用例，并且需要在测试用例中对请求响应信息的描述
 
+```java
+    /**
+     * 增加请求参数 和 响应自定义pojo对象; 对post参数增加请求响应字段的描述
+     * 对应的官网文档地址
+     * https://docs.spring.io/spring-restdocs/docs/2.0.2.RELEASE/reference/html5/#documenting-your-api-request-parameters
+     * @throws Exception
+     */
+    @Test
+    public void fun3_1() throws Exception {
+        mockMvc.perform(
+                MockMvcRequestBuilders.post("/fun3")
+                        .param("name", "《spring resdocs进阶篇》")
+                        .param("price", "13.2")
+        )
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcRestDocumentation
+                               .document("fun3_1",
+                                         // post 的 APPLICATION_FORM_URLENCODED 和 get url中的参数 都可以用该方法获取
+                                         RequestDocumentation.requestParameters(
+                                                 RequestDocumentation.parameterWithName("name").description("书籍名称"),
+                                                 RequestDocumentation.parameterWithName("price").description("书籍价格")),
+                                         PayloadDocumentation.responseFields(
+                                                 PayloadDocumentation.fieldWithPath("name").description("书籍名称"),
+                                                 PayloadDocumentation.fieldWithPath("price").description("书籍价格"),
+                                                 // 这个api对于响应字段描述不完全的话会报错的
+                                                 // 可以尝试注释掉 authors的描述看看效果
+                                                 PayloadDocumentation.fieldWithPath("authors").description("书籍价格")
+                                         )
+                               )
+                );
+    }
+```
 
+注意：这个api如果对于响应的字段没有描述完整将会报错，比如 把 响应字段的 authors 描述去掉，则会报错
 
+```java
+org.springframework.restdocs.snippet.SnippetException: The following parts of the payload were not documented:
+{
+  "authors" : [ "张三丰", "张4丰", "张5丰" ]
+}
+```
 
+运行测试用例之后，比之前的方法多生成了2个代码片断，可以看出来了上面api配置的会生成对应的 adoc 文件；
+我们要做的就是在自定义排版里面把这两个文件引用进来
 
+```
+request-parameters.adoc
+response-fields.adoc
+```
+
+src/docs/asciidoc/fun3_1.adoc
+
+```
+== fun3_1 API
+
+.AP地址
+
+include::{snippets}/fun3_1/curl-request.adoc[]
+
+.HTTP request
+
+include::{snippets}/fun3_1/http-request.adoc[]
+
+.Request fields
+include::{snippets}/fun3_1/request-parameters.adoc[]
+
+.HTTP response
+
+include::{snippets}/fun3_1/http-response.adoc[]
+
+.Response fields
+include::{snippets}/fun3_1/response-fields.adoc[]
+
+```
+
+本节 restdocs详细教程-进阶篇1 结束；下一节 进阶篇2；继续深入
 
 
