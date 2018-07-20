@@ -27,6 +27,27 @@ https://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document
 再次运行 gradle asciidoctor 命令；打开 build/asciidoc/html5/fun1_summary.html 文件
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_111635.png)
 
+注意：如果你发现出现了如下的异常；
+```
+(ArgumentError) asciidoctor: FAILED: F:/dev/project/mrcode/example/spring/restdocs/spring-restdocs-example/src/docs/asciidoc/fun1_summary.adoc: Failed to load AsciiDoc document - asciidoctor: FAILED: <stdin>: Failed to load AsciiDoc document - invalid byte sequence in UTF-8
+```
+那么你的内容有可能是这样的
+```
+```
+= API列表
+:toc: left
+
+== fun api列表  
+
+operation::fun1[]
+```
+`== fun api列表`     这里的问题，我目前不太清楚为什么不能在该文件中写== 加中文，但是在后面的include其他文件的时候  其他文件中却可以写
+
+
+
+```
+
+
 目录已经出来了，但是效果并不好看。继续配置
 
 ## 左侧目录优化
