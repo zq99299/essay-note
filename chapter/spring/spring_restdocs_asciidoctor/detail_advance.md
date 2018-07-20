@@ -28,11 +28,13 @@ https://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_111635.png)
 
 注意：如果你发现出现了如下的异常；
+
 ```
 (ArgumentError) asciidoctor: FAILED: F:/dev/project/mrcode/example/spring/restdocs/spring-restdocs-example/src/docs/asciidoc/fun1_summary.adoc: Failed to load AsciiDoc document - asciidoctor: FAILED: <stdin>: Failed to load AsciiDoc document - invalid byte sequence in UTF-8
 ```
+
 那么你的内容有可能是这样的
-```
+
 ```
 = API列表
 :toc: left
@@ -40,17 +42,17 @@ https://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document
 == fun api列表  
 
 operation::fun1[]
-```
+
 `== fun api列表`     这里的问题，我目前不太清楚为什么不能在该文件中写== 加中文，但是在后面的include其他文件的时候  其他文件中却可以写
-
-
-
 ```
 
+
+`== fun api列表`     这里的问题，我目前不太清楚为什么不能在该文件中写== 加中文，但是在后面的include其他文件的时候  其他文件中却可以写
 
 目录已经出来了，但是效果并不好看。继续配置
 
 ## 左侧目录优化
+
 先来看一张效果图
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_112129.png)
 
@@ -72,6 +74,7 @@ operation::fun1[]
         |- fun1_summary.adoc
         |- fun1_summary_2.adoc
 ```
+
 api_list.adoc 入口文件，汇总所有需要到一个html中的配置
 
 ```
@@ -80,6 +83,7 @@ api_list.adoc 入口文件，汇总所有需要到一个html中的配置
 
 include::./fun1_summary_2.adoc[]
 ```
+
 include 指令，不用多说，引用了当前目录下的fun2自定义内容版本文件
 
 
@@ -155,6 +159,30 @@ include::{snippets}/fun1/http-response.adoc[]
                                .document("fun3"));
     }
 ```
+增加 src/docs/asciidoc/fun3.adoc 文件；内容和 src/docs/asciidoc/fun1_summary_2.adoc 中的类似；
+
+在 src/docs/asciidoc/api_list.adoc 文件中增加 对 fun3.adoc 的引用
+
+api_list.adoc 内容如下
+
+```
+= API列表
+:toc: left
+
+include::./fun1_summary_2.adoc[]
+
+include::./fun3.adoc[]
+```
+
+仔细看下，其实现在做的 对于adoc的操作并不多了，只是 restdocs api 和 测试用例的编写比较多了；
+
+但是这个api没有请求参数的字段描述，响应字段描述也没有，那么接下来继续
+
+## 给文档添加请求响应字段的描述
+
+
+
+
 
 
 
