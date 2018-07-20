@@ -1,4 +1,4 @@
-# restdocs详细教程
+# restdocs详细教程-入门篇
 
 ## spring boot2 项目搭建
 
@@ -171,5 +171,9 @@ $ gradle asciidoctor
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_101348.png)
 
 
+如果你仔细观察这个页面的结构，就知道 默认的格式只是把之前运行 test 方法生成的代码片断给拼起来了；
+这里也证明了 spring api 提供的功能只是提供程序来控制一些数据的生成符合asciidoctor语法的文件；
+如果你懂markdown，或则 gitbook的话，这就不难明白，先文件，然后再编译成html；
 
+restdocs详细教程-入门篇 结束，下一章节实现自定义格式和信息的教程；实现一个 常见的api文档；
 
