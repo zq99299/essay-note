@@ -17,7 +17,6 @@
 
 ---
 
-
 * [GIT](chapter/git/README.md)
   * [GIT远程仓库回退](chapter/git/远程仓库回退.md)
   * [分支管理](chapter/git/branch.md)
@@ -67,19 +66,15 @@
   * [弹性布局与响应式图片](chapter/htmlcss_responsive/弹性布局与响应式图片.md)
   * [HTML5与响应式Web设计](chapter/htmlcss_responsive/HTML5与响应式Web设计.md)
   * [CSS3新特性](chapter/htmlcss_responsive/CSS3新特性.md)
-  
-  
+
 ## spring 系列
 
 * [springboot](chapter/spring/springboot/README.md)
 * [spring-restdocs-asciidoctor](chapter/spring/spring_restdocs_asciidoctor/index.md)
-  * [restdocs详细教程](chapter/spring/spring_restdocs_asciidoctor/detail.md)
-
-
-  
-
+  * [restdocs详细入门教程](chapter/spring/spring_restdocs_asciidoctor/detail.md)
 
 ## 其他
+
 * [linux](chapter/linux/README.md)
   * [各种压缩/解压命令](chapter/linux/zip.md)
   * [常用软件安装](chapter/linux/install.md)
@@ -87,6 +82,7 @@
   * [nginx](chapter/linux/nginx.md)
   * [磁盘挂载](chapter/linux/mount.md)
 
+---
 
 * [Netty](chapter/netty/README.md)
   * [Nio入门](chapter/netty/niostart/README.md)
@@ -104,7 +100,6 @@
     * [MessagePack编解码](chapter/netty/middleCodec/MessagePack.md)
     * [GoogleProtobuf编解码](chapter/netty/middleCodec/GoogleProtobuf.md)
     * [JBossMarshalling编解码](chapter/netty/middleCodec/JBossMarshalling.md)
-
 * [ZooKeeper](chapter/zooKeeper/README.md)
 * [WebSocket](chapter/websocket/index.md)
   * [Spring-WebSocket](chapter/websocket/spring.md)
@@ -114,7 +109,6 @@
     * [stomp-新闻展示示例](chapter/websocket/spring/stomp-demo.md)
     * [stomp-广播-公共新闻订阅](chapter/websocket/spring/stomp-topic.md)
     * [stomp-点对点-自由订阅](chapter/websocket/spring/stomp-queue.md)
-
 * [监控相关](chapter/monitor/index.md)
 * [动脑学院公开课](chapter/dongnaoeduo_open/README.md)
   * [常见网站攻击方式以及防范手段](chapter/dongnaoeduo_open/常见网站攻击方式以及防范手段.md)
