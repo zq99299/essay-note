@@ -168,5 +168,8 @@ $ gradle asciidoctor
 2. 运行 gradle asciidoctor 命令
 
 就能看到在 build/asciidoc/html5 中生成了一个同名的html文件；可以直接打开的
+![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_101348.png)
+
+
 
 
