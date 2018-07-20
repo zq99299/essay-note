@@ -65,8 +65,10 @@ public class HelloWordDocsControllerTest {
     @Before
     public void setUp() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
-                .apply(documentationConfiguration(this.restDocumentation)
-                ).build();
+                // 这一段配置是 https://docs.spring.io/spring-restdocs/docs/current/reference/html5/ 官网中的配置
+                // 不需要生成文档的话 不用配置该项
+                .apply(documentationConfiguration(this.restDocumentation))
+                .build();
     }
 
     @Test
@@ -81,3 +83,11 @@ public class HelloWordDocsControllerTest {
 运行 `fun1()` 测试方法后，会默认在build/generated-snippets中生成fun1文档目录和响应的代码片断，如下图
 
 ![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_093241.png)
+
+这里生成的代码片断，也就是fun1目录下的.adoc文件，打开看的话都是很简单的 asciidoctor 语法；可以看到之前说的 spring提供的api就是为了抓取到相应的数据，然后按照 asciidoctor 语法生成文件；
+
+## 使用插件把这个代码片断转成 html文件
+
+
+
+
