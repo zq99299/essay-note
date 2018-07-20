@@ -1,4 +1,4 @@
-# restdocs详细教程-进阶篇2
+![![](assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_134730.pn](assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_134730.png)g)# restdocs详细教程-进阶篇2
 
 本节内容：
 
@@ -92,4 +92,57 @@ include::{snippets}/fun3_1/response-fields.adoc[]
 有没有发现效果图里面的json串没有格式化，这让一个强迫症的人很伤心
 
 ## 对文档的请求和响应进行美化处理
+
+![](/assets/image/spring/spring_restdocs_asciidoctor/snipaste_20180720_134730.png)
+
+
+这个配置就很简单了,使用预处理器；
+
+```java
+    @Before
+    public void setUp() {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
+                // 这一段配置是 https://docs.spring.io/spring-restdocs/docs/current/reference/html5/ 官网中的配置
+                // 不需要生成文档的话 不用配置该项
+                .apply(documentationConfiguration(this.restDocumentation)
+                               // 预处理器，这里设置的是对请求参数和响应参数进行美化输出
+                               // https://docs.spring.io/spring-restdocs/docs/2.0.2.RELEASE/reference/html5/#customizing-requests-and-responses-preprocessors-pretty-print
+                               // 预处理器的使用 在上面地址文档往上一点点
+                               .operationPreprocessors()  // 预处理器
+                               .withRequestDefaults(prettyPrint())
+                               .withResponseDefaults(prettyPrint())  // 格式化请求或响应参数，比如json串
+                )
+                .build();
+    }
+```
+
+增加预处理器后，重新执行fun4的测试用例，和 插件转换命令 ，就ok了。 
+如果发现没有效果。很有可能是缓存问题。手动把生成的相关文件删除，再尝试就能看到效果了；
+
+
+然后又发现一个问题，json串没有语法高亮效果
+
+## 为json串加上语法高亮效果
+
+这个配置很简单全是asciidoc的语法
+
+src/docs/asciidoc/api_list.adoc 中在顶部增加配置
+
+```
+= API列表
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toc-title: 目录
+:toclevels: 4
+:sectlinks:
+```
+
+英文好的应该能看明白了；
+* `:source-highlighter: highlightjs` 语法高亮
+* `:sectlinks:` 为1，2，3 级别标题增加锚点效果，熟悉markdown的人应该知道就是 h1-h6
+
+其他的配置含义官网有详细说明： https://asciidoctor.org/docs/user-manual/#attributes
+ 
 
