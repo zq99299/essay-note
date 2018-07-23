@@ -18,6 +18,11 @@
 
 通过联合字段分片：数字_日期； 定义成 1_2017 则可以同时满足业务规则数字1 又同时满足是2017年的数据分到一个片上。
 
+注意： 节点是按table标签上顺序来定义的，从0开始
+```xml
+如这里定义的 dataNode,分片规则返回的数值是对应这里的顺序
+<table name="sxx" autoIncrement="true"  primaryKey="id" dataNode="dn_smss1,dn_smss2,dn_smss3,dn_smss4,dn_smss5,dn_smss6,dn_smss7,dn_smss8,dn_smss9,dn_smss10,dn_smss11,dn_smss12," rule="sharding-by-month2"/>
+```
 ```java
 public class AutoPartitionByCombinationField extends AbstractPartitionAlgorithm {
     private String mapFile;
