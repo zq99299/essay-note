@@ -81,11 +81,18 @@ INSERT INTO MYCAT_SEQUENCE(name,current_value,increment) VALUES (‘GLOBAL’, 1
 GLOBAL=dnSEQUENCE
 ```
 
+## 表配置
+
+需要指定`primaryKey="id"`;配置该表的主键id字段
+```xml
+<table name="stable1" autoIncrement="true"  primaryKey="id" dataNode="dn1" rule="sharding-by-month"/>
+```
+
 ### 使用示例
 
-这里id使用了  GLOBAL  这个序列。
+这里id使用了  GLOBAL  这个序列。 注意：next value for **MYCATSEQ_**GLOBAL ； “MYCATSEQ_” 前缀必须
 ```sql
-insert into table1(id,name) values(next value for GLOBAL,‘test’);
+insert into table1(id,name) values(next value for MYCATSEQ_GLOBAL,‘test’);
 ```
 
 这个要起效果的话，数据库字段也要设置成 自增模式，mybatis中和之前一样也需要写上
