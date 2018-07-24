@@ -31,6 +31,7 @@
 * [Mysql](chapter/mysql/README.md)
   * [Mysql-linux在线安装5.7](chapter/mysql/linux/install57.md)
   * [导出导入](chapter/mysql/导出导入.md)
+  * [临时记录](chapter/mysql/temp.md)
 * [MyCat](chapter/mycat/README.md)
   * [分片规则](chapter/mycat/sharding_rule/index.md)
   * [全局序列](chapter/mycat/sequence/index.md)
