@@ -168,7 +168,7 @@ $ gradle asciidoctor
 
 步骤：
 
-1. 在 `src/docs/assciidoc` 中新增fun1.adoc文件
+1. 在 `src/docs/asciidoc` 中新增fun1.adoc文件
 2. 运行 gradle asciidoctor 命令
 
 就能看到在 build/asciidoc/html5 中生成了一个同名的html文件；可以直接打开的
