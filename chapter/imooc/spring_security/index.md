@@ -9,7 +9,7 @@ spring.session.store-type=none
 
 目录：
 
-* [简介](/chapter/imooc/spring_security/mvc_restfull_api/index.md)
+* [简介](/chapter/imooc/spring_security/index.md)
 * [开始开发]()
   - [项目结构](chapter/imooc/spring_security/start/项目结构.md)
 * [使用Spring MVC开发RESTful API]()
