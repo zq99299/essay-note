@@ -9,7 +9,7 @@ spring.session.store-type=none
 
 目录：
 
-* [简介](chapter/imooc/spring_security/mvc_restfull_api/index.md)
+* [简介](/chapter/imooc/spring_security/mvc_restfull_api/index.md)
 * [开始开发]()
   - [项目结构](chapter/imooc/spring_security/start/项目结构.md)
 * [使用Spring MVC开发RESTful API]()
@@ -19,3 +19,5 @@ spring.session.store-type=none
   - [用户信息修改和删除](chapter/imooc/spring_security/mvc_restfull_api/用户信息修改和删除.md)
   - [服务异常处理](chapter/imooc/spring_security/mvc_restfull_api/服务异常处理.md)
   - [使用切片拦截rest服务](chapter/imooc/spring_security/mvc_restfull_api/使用切片拦截rest服务.md)
+  - [rest服处理文件上传](chapter/imooc/spring_security/mvc_restfull_api/file_upload.md)
+  - [异步处理rest服务](chapter/imooc/spring_security/mvc_restfull_api/异步处理rest服务.md)
