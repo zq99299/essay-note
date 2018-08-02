@@ -17,3 +17,5 @@ spring.session.store-type=none
   - [编写用户详情服务](chapter/imooc/spring_security/mvc_restfull_api/编写用户详情服务.md)
   - [处理创建请求](chapter/imooc/spring_security/mvc_restfull_api/处理创建请求.md)
   - [用户信息修改和删除](chapter/imooc/spring_security/mvc_restfull_api/用户信息修改和删除.md)
+  - [服务异常处理](chapter/imooc/spring_security/mvc_restfull_api/服务异常处理.md)
+  - [使用切片拦截rest服务](chapter/imooc/spring_security/mvc_restfull_api/使用切片拦截rest服务.md)
