@@ -22,3 +22,4 @@ spring.session.store-type=none
   - [rest服处理文件上传](/chapter/imooc/spring_security/mvc_restfull_api/file_upload.md)
   - [异步处理rest服务](/chapter/imooc/spring_security/mvc_restfull_api/异步处理rest服务.md)
   - [使用swagger自动生成html文档](/chapter/imooc/spring_security/mvc_restfull_api/使用swagger自动生成html文档.md)
+  - [使用WireMock快速伪造restful服务](/chapter/imooc/spring_security/mvc_restfull_api/使用WireMock快速伪造restful服务.md)
