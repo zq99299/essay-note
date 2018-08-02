@@ -201,3 +201,6 @@ public class TimeAspect {
 * 切片（Aspect）
   - 拿不到http请求响应对象
   - 可以拦截的更多：比如拦截mybatis生成的dao接口方法执行
+
+处理顺序大概是下面这样；controllerAdvice是全局异常处理器
+![](/assets/image/imooc/spring_secunity/snipaste_20180802_161748.png)
