@@ -4,7 +4,7 @@
 ![](/assets/image/imooc/spring_secunity/snipaste_20180801_143958.png)
 
 ```
-spring.session.store-type=none
+MySQL Workbench 官方客户端；sql客户端
 ```
 
 目录：
@@ -25,6 +25,7 @@ spring.session.store-type=none
   - [使用WireMock快速伪造restful服务](/chapter/imooc/spring_security/mvc_restfull_api/使用WireMock快速伪造restful服务.md)
 * [spring secunity](/chapter/imooc/spring_security/security/index.md)
   - [基本原理](/chapter/imooc/spring_security/security/基本原理.md)
+  - [自定义用户认证逻辑](/chapter/imooc/spring_security/security/自定义用户认证逻辑.md)
   - [个性化用户认证流程1](/chapter/imooc/spring_security/security/个性化用户认证流程1.md)
   - [个性化用户认证流程2](/chapter/imooc/spring_security/security/个性化用户认证流程1.md)
   - [认证流程源码级详解](/chapter/imooc/spring_security/security/认证流程源码级详解.md)
