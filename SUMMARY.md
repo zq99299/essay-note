@@ -1,6 +1,15 @@
 # Summary
 
 * [前言](README.md)
+
+--------
+
+* [慕课网SpringSecurity视频教程笔记](chapter/imooc/spring_security/index.md)
+* [开发技巧](chapter/skill/index.md)
+* [英语单词工厂](chapter/english_factory/index.md)
+
+--------
+
 * [JAVA设计模式](chapter/design_pattern/index.md)
   * [如何学习设计模式](chapter/design_pattern/如何学习设计模式.md)
   * [简单工厂](chapter/design_pattern/简单工厂.md)
@@ -76,8 +85,6 @@
   * [restdocs详细教程-进阶篇1](chapter/spring/spring_restdocs_asciidoctor/detail_advance.md)
   * [restdocs详细教程-进阶篇2](chapter/spring/spring_restdocs_asciidoctor/detail_advance2.md)
 
-
-
 ## 其他
 
 * [linux](chapter/linux/README.md)
@@ -121,4 +128,3 @@
   * [缓存并发的解决和抽象](chapter/dongnaoeduo_open/缓存并发的解决和抽象.md)
   * [性能优化之数据库连接池原理详解](chapter/dongnaoeduo_open/性能优化之数据库连接池原理详解.md)
   * [Tomcat实现原理之手写实现](chapter/dongnaoeduo_open/Tomcat实现原理之手写实现.md)
-
