@@ -8,7 +8,7 @@ MySQL Workbench 官方客户端；sql客户端
 ```
 
 目录：
-
+* [Spring开发技巧](/chapter/imooc/spring_security/spring_sound_code_skill.md)
 * [简介](/chapter/imooc/spring_security/index.md)
 * [开始开发]()
   - [项目结构](/chapter/imooc/spring_security/start/项目结构.md)
