@@ -10,3 +10,11 @@
 * Holder 持有，持有人，持有者
   - `ValidateCodeProcessorHolder` 验证码处理器持有者
 * Generator 生成器、生产者；方法名：generate
+* 服务提供商 Provider
+* 资源所有者 Resource Owner
+* 第三方应用 Client
+* 认证服务器 Authorization Server
+* 授权码模式 Authorization code
+* 简化模式 implicit
+* 密码模式 resource owner Password credentials
+* 客户端模式 client credentials
