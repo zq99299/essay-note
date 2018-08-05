@@ -7,3 +7,6 @@
   - 示例：AbstractValidateCodeProcessor ：抽象验证码处理器
 * supports 支持
   - `provider.supports(toTest)` 是否支持某一种特性或则功能
+* Holder 持有，持有人，持有者
+  - `ValidateCodeProcessorHolder` 验证码处理器持有者
+* Generator 生成器、生产者；方法名：generate
