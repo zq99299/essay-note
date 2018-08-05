@@ -26,6 +26,15 @@
         return imageCodeGenerate;
     }
   ```
+# Bean注解
+```java
+@Bean
+@ConditionalOnMissingBean(name = "smsValidateCodeGenerator")
+// 注意方法名称：如果没有指定bean则按方法名称作为beanName返回
+public ValidateCodeGenerator smsCodeGenerate() {
+
+以上代码默认的BeanName是：smsCodeGenerate
+```
 
 ## 依赖查找
 ** 依赖查找：** 当有多个子类实现的时候，根据beanNam进行查找需要的子类；
@@ -35,4 +44,13 @@
 ```java
 @Autowired
 private Map<String, ValidateCodeGenerate> validateCodeGenerates;
+```
+
+## SpringBoot各种默认路径技巧
+有时候你引入一些包，就会发现会增加多个restfull服务，这些服务注意查看控制台日志，就能找到对应的处理器
+
+对于springboot默认提供处理错误的restfull服务如下
+```java
+// org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController
+                      // BasicErrorController 类提供的默认错误信息处理服务
 ```
