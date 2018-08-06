@@ -195,19 +195,3 @@ public class QQAuth2Template extends OAuth2Template {
 但是这里获取完用户信息，就跳转到了 http://mrcode.cn/signup ； 注册页面
 
 为什么会跳转到注册页面呢？下一节继续
-一步一步的跟着代码，发现报了一个错误
-```
-org.springframework.social.security.SocialAuthenticationProvider#authenticate
-
-String userId = toUserId(connection);
-  if (userId == null) {
-    throw new BadCredentialsException("Unknown access token");
-  }
-
-  protected String toUserId(Connection<?> connection) {
-		List<String> userIds = usersConnectionRepository.findUserIdsWithConnection(connection);
-		// only if a single userId is connected to this providerUserId
-		return (userIds.size() == 1) ? userIds.iterator().next() : null;
-	}
-看源码，这里使用了查询数据库，没有获取到userId,标识该用户还没有在我们的业务系统中绑定
-```
