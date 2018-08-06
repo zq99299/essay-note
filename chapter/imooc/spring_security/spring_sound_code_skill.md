@@ -54,3 +54,14 @@ private Map<String, ValidateCodeGenerate> validateCodeGenerates;
 // org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController
                       // BasicErrorController 类提供的默认错误信息处理服务
 ```
+
+## Configuration条件注解
+
+### ConditionalOnProperty
+在`imooc.security.social.qq`前缀下，当appId属性存在的时候才让该配置生效
+```java
+@Configuration
+// 当配置了app-id的时候才启用
+@ConditionalOnProperty(prefix = "imooc.security.social.qq", name = "app-id")
+public class QQAutoConfig extends SocialConfigurerAdapter {
+```
