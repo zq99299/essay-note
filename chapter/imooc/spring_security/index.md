@@ -6,6 +6,10 @@
 ```
 MySQL Workbench 官方客户端；sql客户端
 ```
+> 后补：重要事情
+
+** 在某些情况下，当你找不到错误问题的时候，不妨把日志级别调整为 debug **
+
 
 目录：
 * [Spring开发技巧](/chapter/imooc/spring_security/spring_sound_code_skill.md)
