@@ -66,13 +66,14 @@ security:
       client-secret: myid
 ```
 
+## 授权码模式-授权
 
 >官网文档  https://tools.ietf.org/html/rfc6749#section-4
 
 由于spring oath2实现的是标准的oat2协议，所以参数什么的一般可以参考官网文档，如上链接。
 获得授权部分
 
-访问以下地址缺报错了。
+需要在浏览器中访问（因为有跳转）：访问以下地址缺报错了。
 ```
 http://localhost:8080/oauth/authorize?response_type=code&client_id=myid&redirect_uri=http://www.example.com&scope=all
 
@@ -169,39 +170,93 @@ security:
 
 再次访问，出现了久违的需要同意授权的页面，授权后，跳转到了
 ```
-http://example.com/?code=nayO4i
+http://example.com/?code=CXf9ot
+```
+
+## 授权码模式-获取token
+获取token的端点在
+```java
+org.springframework.security.oauth2.provider.endpoint.TokenEndpoint#postAccessToken
+```
+
+只支持post请求，所以使用postman这样的工具发送；
+> 发送的参数: 参考oath2文档：https://tools.ietf.org/html/rfc6749#section-4.1.3
+
+** 唯一需要注意的是：** basic auth 填写用户名和密码的时候不是之前用admin和123登录的用户信息；
+
+basic信息：是client信息
+```
+client-id: myid
+client-secret: myid
+```
+
+```
+
+POST /oauth/token HTTP/1.1
+Host: localhost:8080
+Authorization: Basic bXlpZDpteWlk
+Content-Type: application/x-www-form-urlencoded
+
+参数如下：
+code=CXf9ot
+grant_type=authorization_code
+redirect_uri=http://example.com/
+client_id=myid
+scope=all
+```
+响应如下
+
+```json
+{
+    "access_token": "2836f983-bbe8-41d4-a2e0-adcaf8cb495b",
+    "token_type": "bearer",
+    "refresh_token": "e6bbbf09-1fab-4676-8b0c-03afc843fb27",
+    "expires_in": 43195,
+    "scope": "all"
+}
 ```
 
 ## 密码授权模式
+basic信息：是client信息
 
-访问
-`http://localhost:8080/oauth/token?grant_type=password&username=admin&password=123456&scope=all`
-
-弹出了basic的登录框，后台报错
 ```java
-org.springframework.security.access.AccessDeniedException: Access is denied  
+POST /oauth/token HTTP/1.1
+Host: localhost:8080
+Authorization: Basic bXlpZDpteWlk
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+Postman-Token: 56bd10f5-27fc-297e-047e-78f71bf89d94
 
-访问被拒绝
+grant_type=password&redirect_uri=http%3A%2F%2Fwww.example.com&client_id=myid&scope=all&username=admin&password=123456
+```
 
-原因就是:在demo里面配置了一个userdetails
+视频中说要添加一个  ROLE_USER 的角色；我这里特意UserDetails的角色赋值为null也可以，
+但是在调试的时候发现 authorities 被赋值了一个 ROLE_USER
 
-private SocialUser getUserDetails(String username) {
-    String password = passwordEncoder.encode("123456");
-    logger.info("数据库密码{}", password);
-    SocialUser admin = new SocialUser(username,
-//                              "{noop}123456",
-                                      password,
-                                      true, true, true, true,
-                                      AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
-    return admin;
-}
+注：授权码模式和密码模式获取的token是同一个，因为他们都用到了相同的client信息和同一个用户名密码
 
-需要添加一个  ROLE_USER 的角色；
+下面的客户端模式，只用到了client信息没有用户信息，所以和前面的不一样
+## 客户端模式
+> https://tools.ietf.org/html/rfc6749#section-4.4
+
+basic信息：是client信息
+
+```
+POST /oauth/token HTTP/1.1
+Host: localhost:8080
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic bXlpZDpteWlk
+Cache-Control: no-cache
+Postman-Token: 17c7f491-401c-f80b-5db2-db1f13bce8d7
+
+grant_type=client_credentials&scope=all
 ```
 
 
-
 ## 资源服务器
+
+**注意：** 不加资源服务器的时候，貌似任意服务都不能访问。不知道是不是配置了basic认证的问题
+
 ```java
 package cn.mrcode.imooc.springsecurity.securitycore;
 
@@ -218,7 +273,24 @@ public class MyResourcesServerConfig {
 访问任何信息都会报错:`Full authentication is required to access this resourceunauthorized`
 是因为没有携带token。
 
+## 携带token访问资源
 
+假设获取到token是
+```json
+{
+    "access_token": "fdaf3e93-9da4-4e7c-a319-79d50c96b997",
+    "token_type": "bearer",
+    "expires_in": 42587,
+    "scope": "all"
+}
+```
+访问资源:可使用get请求参数：
+http://localhost:8080/user/me?access_token=99800232-2564-4c72-9aae-f5d8594c4707  
 
-> 到现在都没有抛出来看到效果。也不知道是哪里的问题诶,可能是要真的配置 security才可以
->
+或则使用请求头模式：
+Authorization后面的 bearer就是对应上面返回的 token_type；后面是token
+```
+GET /user/me HTTP/1.1
+Host: localhost:8080
+Authorization: bearer 99800232-2564-4c72-9aae-f5d8594c4707
+```
