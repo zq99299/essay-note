@@ -15,3 +15,7 @@
 * AuthorizationServerTokenServices：
   - TokenStore ： 令牌存储
   - TokenEnhancer ：令牌加强器，可以对令牌进行改造加强
+
+## 密码模式跟踪源码
+
+http://localhost:8080/oauth/token?grant_type=password&username=admin&password=123456&scope=all
