@@ -30,7 +30,7 @@ compile('org.springframework.cloud:spring-cloud-starter-oauth2')
 
 ## 认证服务器
 ```java
-package cn.mrcode.imooc.springsecurity.securitycore;
+package cn.mrcode.imooc.springsecurity.securityapp;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
