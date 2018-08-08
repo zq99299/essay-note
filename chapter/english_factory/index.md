@@ -18,3 +18,5 @@
 * 简化模式 implicit
 * 密码模式 resource owner Password credentials
 * 客户端模式 client credentials
+
+* obtain 获得； obtainOpenId 从request中获取openid
