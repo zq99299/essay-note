@@ -26,7 +26,7 @@
         return imageCodeGenerate;
     }
   ```
-# Bean注解
+## Bean注解
 ```java
 @Bean
 @ConditionalOnMissingBean(name = "smsValidateCodeGenerator")
@@ -35,6 +35,36 @@ public ValidateCodeGenerator smsCodeGenerate() {
 
 以上代码默认的BeanName是：smsCodeGenerate
 ```
+
+## BeanPostProcessor 初始化钩子方法
+```java
+org.springframework.beans.factory.config.BeanPostProcessor
+
+@Component
+public class SpringSocialConfigurerPostProcessor implements BeanPostProcessor {
+    // 任何bean初始化回调之前
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        return bean;
+    }
+
+    //任何bean初始化回调之后
+    // 在这里把之前浏览器中配置的注册地址更改为app中的处理控制器
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        /**
+         * @see SpringSocialConfig#imoocSocialSecurityConfig()
+         */
+        if (beanName.equals("imoocSocialSecurityConfig")) {
+            SpringSocialConfigurer config = (SpringSocialConfigurer) bean;
+            config.signupUrl("/social/signUp");
+            return bean;
+        }
+        return bean;
+    }
+}
+
+````
 
 ## 依赖查找
 ** 依赖查找：** 当有多个子类实现的时候，根据beanNam进行查找需要的子类；
@@ -45,6 +75,8 @@ public ValidateCodeGenerator smsCodeGenerate() {
 @Autowired
 private Map<String, ValidateCodeGenerate> validateCodeGenerates;
 ```
+
+
 
 ## SpringBoot各种默认路径技巧
 有时候你引入一些包，就会发现会增加多个restfull服务，这些服务注意查看控制台日志，就能找到对应的处理器
