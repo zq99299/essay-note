@@ -26,6 +26,23 @@
         return imageCodeGenerate;
     }
   ```
+
+### `@ConditionalOnProperty`
+
+根据配置创建bean；
+```java
+    @Bean
+    @ConditionalOnProperty(prefix = "imooc.security.oauth2", name = "tokenStore", havingValue = "redis")
+    public TokenStore tokenStore() {
+        return new MyRedisTokenStore(redisConnectionFactory);
+    }
+
+    @Configuration
+    // matchIfMissing ：当tokenStore没有值的时候是否生效
+    // 当tokenStore = jwt的时候或则tokenStore没有配置的时候使用下面的配置
+    @ConditionalOnProperty(prefix = "imooc.security.oauth2", name = "tokenStore", havingValue = "jwt", matchIfMissing = true)
+    public static class JwtTokenConfig {
+```
 ## Bean注解
 ```java
 @Bean
