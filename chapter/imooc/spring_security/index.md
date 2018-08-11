@@ -62,5 +62,5 @@ MySQL Workbench 官方客户端；sql客户端
   - [重构注册逻辑](/chapter/imooc/spring_security/oauth/重构注册逻辑.md)
   - [令牌配置](/chapter/imooc/spring_security/oauth/令牌配置.md)
   - [使用JWT替换默认令牌](/chapter/imooc/spring_security/oauth/使用JWT替换默认令牌.md)
-  - [基于JWT实现SSO单点登录1](/chapter/imooc/spring_security/oauth/基于JWT实现SSO单点登录1.md)
-  - [基于JWT实现SSO单点登录2](/chapter/imooc/spring_security/oauth/基于JWT实现SSO单点登录2.md)
+  - [基于JWT实现SSO单点登录1](/chapter/imooc/spring_security/oauth/jwt_sso1.md)
+  - [基于JWT实现SSO单点登录2](/chapter/imooc/spring_security/oauth/jwt_sso2.md)
