@@ -64,3 +64,8 @@ MySQL Workbench 官方客户端；sql客户端
   - [使用JWT替换默认令牌](/chapter/imooc/spring_security/oauth/使用JWT替换默认令牌.md)
   - [基于JWT实现SSO单点登录1](/chapter/imooc/spring_security/oauth/jwt_sso1.md)
   - [基于JWT实现SSO单点登录2](/chapter/imooc/spring_security/oauth/jwt_sso2.md)
+* 使用Spring Security控制授权
+  - [Spring Security授权简介](/chapter/imooc/spring_security/authority/index.md)
+  - [Spring Security源码解析](/chapter/imooc/spring_security/authority/source_code_parsing.md)
+  - [权限表达式](/chapter/imooc/spring_security/authority/expression.md)
+  - [基于数据库Rbac数据模型控制权限](/chapter/imooc/spring_security/authority/rbac_db.md)
