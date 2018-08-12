@@ -114,3 +114,10 @@ private Map<String, ValidateCodeGenerate> validateCodeGenerates;
 @ConditionalOnProperty(prefix = "imooc.security.social.qq", name = "app-id")
 public class QQAutoConfig extends SocialConfigurerAdapter {
 ```
+
+
+## ``@FrameworkEndpoint``
+该注解只用于框架提供端点，语义和 Controller 注解一致，
+如果使用Controller提供了和FrameworkEndpoint标识的相同路径，则框架提供的端点不会被路由到；
+
+一般的场景用于：覆盖框架默认提供的端点；
