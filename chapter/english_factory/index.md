@@ -20,3 +20,4 @@
 * 客户端模式 client credentials
 
 * obtain 获得； obtainOpenId 从request中获取openid
+* invocation  调用； FilterInvocation 过滤器调用
