@@ -69,3 +69,4 @@ MySQL Workbench 官方客户端；sql客户端
   - [Spring Security源码解析](/chapter/imooc/spring_security/authority/source_code_parsing.md)
   - [权限表达式](/chapter/imooc/spring_security/authority/expression.md)
   - [基于数据库Rbac数据模型控制权限](/chapter/imooc/spring_security/authority/rbac_db.md)
+* [总结](/chapter/imooc/spring_security/summarize.md)
