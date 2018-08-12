@@ -121,3 +121,27 @@ public class QQAutoConfig extends SocialConfigurerAdapter {
 如果使用Controller提供了和FrameworkEndpoint标识的相同路径，则框架提供的端点不会被路由到；
 
 一般的场景用于：覆盖框架默认提供的端点；
+
+
+## `@Order` 注解
+
+### 可以为依赖查找集合按顺序注入
+
+比如以下场景，对于bean的注入顺序，可以按照order指定的来放入
+```java
+@Component
+public class DefaultAuthorizeConfigManager implements AuthorizeConfigManager {
+    // 由于需要有序的，所以不能再使用set了
+    // 依赖查找技巧
+    @Autowired
+    private List<AuthorizeConfigProvider> providers;
+
+@Component
+@Order(Integer.MIN_VALUE)
+public class CommonAuthorizeConfigProvider implements AuthorizeConfigProvider {
+
+@Component
+@Order(Integer.MAX_VALUE)
+public class DemoAuthorizeConfigProvider implements AuthorizeConfigProvider {
+
+```
