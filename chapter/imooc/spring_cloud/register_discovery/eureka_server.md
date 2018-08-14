@@ -65,7 +65,7 @@ spring-cloud-aws	1.2.3.RELEASE	2.0.0.RELEASE	2.0.1.BUILD-SNAPSHOT
 ```
 
 ## 启动
-初始化的项目，只要增加一个 @EnableEurekaServer  注解即可启动。访问 http://localhost:8080/ 能看到 eureka的页面
+初始化的项目，只要增加一个 `@EnableEurekaServer`  注解即可启动。访问 http://localhost:8080/ 能看到 eureka的页面
 
 ```java
 @SpringBootApplication
@@ -77,7 +77,20 @@ public class EurekaApplication {
 	}
 }
 ```
+> 技巧：写配置的时候可以用 application.properties ，因为在idea中在该文件中提示效果更好
 
-但是控制台一直报错：`com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server`
+自定义配置一些属性
+```
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false  # 自己作为一个服务端不需要再注册到服务端了
 
-原因是；
+spring:
+  application:
+   # 应用名，服务名
+    name: eureka
+server:
+  port: 8761  # 默认服务端口为8761，defaultZone中写的必须要和这里的端口一致
+```
