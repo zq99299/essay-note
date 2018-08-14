@@ -80,13 +80,38 @@ public class EurekaApplication {
 > 技巧：写配置的时候可以用 application.properties ，因为在idea中在该文件中提示效果更好
 
 自定义配置一些属性
-```
+```yml
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: false  # 自己作为一个服务端不需要再注册到服务端了
 
+spring:
+  application:
+   # 应用名，服务名
+    name: eureka
+server:
+  port: 8761  # 默认服务端口为8761，defaultZone中写的必须要和这里的端口一致
+```
+
+如果有以下异常，则配置两个属性即可
+```java
+Cannot execute request on any known server
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+```
+
+```yml
+eureka:
+  instance:
+    hostname: localhost   # 配置域名
+  client:
+    register-with-eureka: false  # 自己作为一个服务端不需要再注册到服务端了
+    fetchRegistry: false # 不要从服务器获取注册表
+    service-url:
+      # 这里其实就是引用 上面的配置 和 下面的配置； 和手动写是一样的效果
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    # defaultZone: http://localhost:8761/eureka/
 spring:
   application:
    # 应用名，服务名
