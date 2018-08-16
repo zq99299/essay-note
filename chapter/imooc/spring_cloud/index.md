@@ -26,7 +26,3 @@ Spring Cloud微服务实战
 * 第5章 应用通信
   - [应用间通信-框架与基本使用](/chapter/imooc/spring_cloud/communication/index.md)
   - [应用间通信-下](/chapter/imooc/spring_cloud/communication/应用间通信-下.md)
-  - [项目改造成多模块](/chapter/imooc/spring_cloud/communication/项目改造成多模块.md)
-  - [同步or异步](/chapter/imooc/spring_cloud/communication/同步or异步.md)
-  - [RabbitMQ的安装](/chapter/imooc/spring_cloud/communication/RabbitMQ的安装.md)
-  - [微服务，Docker和DevOps](/chapter/imooc/spring_cloud/communication/docker_devops.md)
