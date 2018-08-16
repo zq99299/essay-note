@@ -20,9 +20,7 @@ Spring Cloud微服务实战
   - [商品服务编码(上)](/chapter/imooc/spring_cloud/service_split/商品服务编码上.md)
   - [商品服务编码(下)](/chapter/imooc/spring_cloud/service_split/商品服务编码下.md)
   - [订单服务API和SQL介绍](/chapter/imooc/spring_cloud/service_split/订单服务API和SQL介绍.md)
-  - [订单服务dao](/chapter/imooc/spring_cloud/service_split/订单服务dao.md)
-  - [订单服务service](/chapter/imooc/spring_cloud/service_split/订单服务service.md)
-  - [订单服务controller](/chapter/imooc/spring_cloud/service_split/订单服务controller.md)
+  - [订单服务接口实现](/chapter/imooc/spring_cloud/service_split/订单服务接口实现.md)
   - [再看“拆数据”](/chapter/imooc/spring_cloud/service_split/再看“拆数据”.md)
 
 * 第5章 应用通信
