@@ -24,13 +24,8 @@ Spring Cloud微服务实战
   - [再看“拆数据”](/chapter/imooc/spring_cloud/service_split/再看“拆数据”.md)
 
 * 第5章 应用通信
-  - [HTTP vs RPC](/chapter/imooc/spring_cloud/communication/http_vs_rpc.md)
-  - [RestTemplate的三种使用方式](/chapter/imooc/spring_cloud/communication/RestTemplate的三种使用方式.md)
-  - [负载均衡器：Ribbon](/chapter/imooc/spring_cloud/communication/ribbon.md)
-  - [追踪源码自定义负载均衡策略](/chapter/imooc/spring_cloud/communication/追踪源码自定义负载均衡策略.md)
-  - [Feign的使用](/chapter/imooc/spring_cloud/communication/feign.md)
-  - [获取商品列表(Feign)](/chapter/imooc/spring_cloud/communication/获取商品列表Feign.md)
-  - [整合接口打通下单流程(Feign)](/chapter/imooc/spring_cloud/communication/整合接口打通下单流程Feign.md)
+  - [应用间通信-框架与基本使用](/chapter/imooc/spring_cloud/communication/index.md)
+  - [应用间通信-下](/chapter/imooc/spring_cloud/communication/应用间通信-下.md)
   - [项目改造成多模块](/chapter/imooc/spring_cloud/communication/项目改造成多模块.md)
   - [同步or异步](/chapter/imooc/spring_cloud/communication/同步or异步.md)
   - [RabbitMQ的安装](/chapter/imooc/spring_cloud/communication/RabbitMQ的安装.md)
