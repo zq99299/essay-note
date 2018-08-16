@@ -18,7 +18,6 @@ Spring Cloud微服务实战
   - [点餐业务服务拆分分析](/chapter/imooc/spring_cloud/service_split/点餐业务服务拆分分析.md)
   - [商品服务API和SQL介绍](/chapter/imooc/spring_cloud/service_split/商品服务API和SQL介绍.md)
   - [商品服务编码(上)](/chapter/imooc/spring_cloud/service_split/商品服务编码上.md)
-  - [商品服务编码(中)](/chapter/imooc/spring_cloud/service_split/商品服务编码中.md)
   - [商品服务编码(下)](/chapter/imooc/spring_cloud/service_split/商品服务编码下.md)
   - [订单服务API和SQL介绍](/chapter/imooc/spring_cloud/service_split/订单服务API和SQL介绍.md)
   - [订单服务dao](/chapter/imooc/spring_cloud/service_split/订单服务dao.md)
