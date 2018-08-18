@@ -7,7 +7,7 @@
 * [慕课网SpringSecurity视频教程笔记](chapter/imooc/spring_security/index.md)
 * [开发技巧](chapter/skill/index.md)
 * [英语单词工厂](chapter/english_factory/index.md)
-
+* [编辑器](chapter/editor/index.md)
 --------
 
 * [JAVA设计模式](chapter/design_pattern/index.md)
