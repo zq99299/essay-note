@@ -19,10 +19,11 @@
        ]
     },
     "anchor-navigation-ex":{
-       "multipleH1":false
+       "multipleH1":false,
+       "printLog":true
     },
     "theme-default": {
        "showLevel": true
     }
   }
-} 
+}
