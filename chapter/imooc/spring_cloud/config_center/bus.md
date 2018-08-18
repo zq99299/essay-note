@@ -9,6 +9,13 @@ bus ： 这里的意思是 总线 的意思
 
 ![](/assets/image/imooc/spring_cloud/snipaste_20180818_112415.png)
 
+* config-server 与 config-client 之间使用消息队列通信
+
+  当有新配置的时候，发送消息到client的队列中，然后client完成配置拉取和更新操作
+* bus-refresh 是通知config-server git上的配置已经更新，可以让客户端进行更新了
+
+  可以利用git的webooks功能自动触发 bus-refres的端点
+
 ## 初体验-configServer配置
 
 加入依赖
