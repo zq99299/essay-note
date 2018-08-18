@@ -1,5 +1,14 @@
-# 统一配置中心
+# 统一配置中心 - ConfigServer
+本节内容
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [统一配置中心 - ConfigServer](#统一配置中心-configserver)
+	- [统一配置中心概述](#统一配置中心概述)
+	- [创建config-server项目](#创建config-server项目)
+	- [config-server](#config-server)
+	- [自定义git克隆在本地的路径](#自定义git克隆在本地的路径)
+
+<!-- /TOC -->
 ## 统一配置中心概述
 为什么需要统一配置中心？
 
@@ -95,11 +104,18 @@ spring:
 
 再次启动项目能看到多了很多mapping
 ```
+// 默认使用master分支
+* name ： 文件名
+* profiles ：环境; 如 application-dev.yml 后面的dev就是环境，这个文件名格式也是环境文件
+
 {[/{name}-{profiles}.properties],methods=[GET]}
 {[/{name}/{profiles:.*[^-].*}],methods=[GET]}
 {[/{name}-{profiles}.yml || /{name}-{profiles}.yaml],methods=[GET]}
 {[/{name}-{profiles}.json],methods=[GET]}
 {[/{name}/{profiles}/{label:.*}],methods=[GET]
+
+// 指定分支
+* label : git分支名
 
 {[/{label}/{name}-{profiles}.yml || /{label}/{name}-{profiles}.yaml],methods=[GET]}
 {[/{label}/{name}-{profiles}.properties],methods=[GET]}
@@ -108,6 +124,7 @@ spring:
 {[/{name}/{profile}/{label}/**],methods=[GET]}
 {[/{name}/{profile}/**],methods=[GET]
 
+// 访问了下，提示没有公共变量
 {[/key],methods=[GET]}
 {[/key/{name}/{profiles}],methods=[GET]}
 
@@ -118,7 +135,7 @@ spring:
 {[/encrypt/status],methods=[GET]}
 ```
 
-访问刚才配置的order.yml文件
+访问刚才配置的order.yml文件；
 ```
 // org.springframework.cloud.config.server.environment.EnvironmentController#yaml
 // 访问到了这个控制器，[/{name}-{profiles}.yml || /{name}-{profiles}.yaml],methods=[GET]
@@ -127,4 +144,20 @@ http://localhost:9050/order-a.yml
 // 还可以访问下面的，会返回json数据
 http://localhost:9050/order-a.json
 
+```
+该控制器返回的配置对象，还有自动检测文件内容格式是否正确的功能；如果配置文件的格式不对的话，会报错
+
+
+## 自定义git克隆在本地的路径
+在项目启动打印日志里面你可能会看到这样的日志信息;那么该路径就是默认存储的
+```
+xxxx.NativeEnvironmentRepository  : Adding property source: file:/C:/Users/mrcode/AppData/Local/Temp/config-repo-1121197125805238075/order.yml
+```
+
+```yml
+cloud:
+   config:
+     server:
+       git:
+         basedir: 路径，但是不要配置在现有项目目录下，因为会被清空文件的
 ```

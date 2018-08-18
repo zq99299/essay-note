@@ -27,4 +27,4 @@ Spring Cloud微服务实战
   - [应用间通信-框架与基本使用](/chapter/imooc/spring_cloud/communication/index.md)
   - [应用间通信-下](/chapter/imooc/spring_cloud/communication/应用间通信-下.md)
 * 第6章 统一配置中心
-  - [统一配置中心](/chapter/imooc/spring_cloud/communication/index.md)
+  - [config-server的使用](/chapter/imooc/spring_cloud/config_center/config_server.md)
