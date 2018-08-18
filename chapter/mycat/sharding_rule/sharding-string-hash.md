@@ -1,4 +1,4 @@
-# sharding-string-hash
+# sharding-string-hash 哈希一致性
 功能： 根据分片键值 计算该串的 hash一致性hash值，即为最终dataNode
 ```xml
 	<tableRule name="sharding-by-stringhash">

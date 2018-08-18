@@ -3,4 +3,5 @@
 * [初体验](/chapter/mycat/README.md)
 * [全局序列](/chapter/mycat/sequence/index.md)
 * [分片规则](/chapter/mycat/sharding_rule/index.md)
+  - [自然月](/chapter/mycat/sharding_rule/partition_by_month.md)
   - [哈希一致性](/chapter/mycat/sharding_rule/sharding-string-hash.md)
