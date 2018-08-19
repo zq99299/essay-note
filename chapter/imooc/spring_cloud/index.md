@@ -34,3 +34,5 @@ Spring Cloud微服务实战
   - [rabbitMQ的基本使用](/chapter/imooc/spring_cloud/asyn_msg/rabbitMQ.md)
   - [SpringCloudStream](/chapter/imooc/spring_cloud/asyn_msg/spring_cloud_stream.md)
   - [业务中使用](/chapter/imooc/spring_cloud/asyn_msg/业务中使用.md)
+* 第8章 服务网关
+  - [服务网关](/chapter/imooc/spring_cloud/service_gateway/index.md)
