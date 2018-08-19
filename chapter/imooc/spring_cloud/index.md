@@ -33,3 +33,4 @@ Spring Cloud微服务实战
 * 第7章 异步和消息
   - [rabbitMQ的基本使用](/chapter/imooc/spring_cloud/asyn_msg/rabbitMQ.md)
   - [SpringCloudStream](/chapter/imooc/spring_cloud/asyn_msg/spring_cloud_stream.md)
+  - [业务中使用](/chapter/imooc/spring_cloud/asyn_msg/业务中使用.md)
