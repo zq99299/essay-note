@@ -36,3 +36,5 @@ Spring Cloud微服务实战
   - [业务中使用](/chapter/imooc/spring_cloud/asyn_msg/业务中使用.md)
 * 第8章 服务网关
   - [服务网关](/chapter/imooc/spring_cloud/service_gateway/index.md)
+* 第9章 Zuul综合使用
+  - [pre、post、使用和过滤器限流](/chapter/imooc/spring_cloud/zuul_synthesis/index.md)
