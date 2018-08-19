@@ -39,3 +39,6 @@ Spring Cloud微服务实战
 * 第9章 Zuul综合使用
   - [pre、post、使用和过滤器限流](/chapter/imooc/spring_cloud/zuul_synthesis/index.md)
   - [业务使用](/chapter/imooc/spring_cloud/zuul_synthesis/temp.md)
+* 第10章 服务容错
+  - [服务容错上 ](/chapter/imooc/spring_cloud/service_fault_tolerance/circuit_breaker.md)
+  - [服务容错下 ](/chapter/imooc/spring_cloud/service_fault_tolerance/service_fault_tolerance2.md)
