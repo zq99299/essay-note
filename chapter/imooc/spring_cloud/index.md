@@ -31,4 +31,5 @@ Spring Cloud微服务实战
   - [config-client的使用](/chapter/imooc/spring_cloud/config_center/config_client.md)
   - [SpringCoudBus](/chapter/imooc/spring_cloud/config_center/bus.md)
 * 第7章 异步和消息
-  - [config-server的使用](/chapter/imooc/spring_cloud/asyn_msg/index.md)
+  - [rabbitMQ的基本使用](/chapter/imooc/spring_cloud/asyn_msg/rabbitMQ.md)
+  - [SpringCloudStream](/chapter/imooc/spring_cloud/asyn_msg/spring_cloud_stream.md)
