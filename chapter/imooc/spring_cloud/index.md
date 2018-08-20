@@ -70,3 +70,5 @@ Spring Cloud微服务实战
   使用Docker容器+Rancher容器管理平台部署微服务, 资源弹性分配, 容器编排与调度.
 
   - [运行第一个docker容器](/chapter/imooc/spring_cloud/container_deployment/first.md)
+  * 以下不是视频内容
+  * [容器相关只是](/chapter/container/index.md)

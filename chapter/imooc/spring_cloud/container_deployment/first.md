@@ -36,7 +36,9 @@ docker run -p 8761:8761 -d springcloud2/eureka
 
 ## rancher
 > https://rancher.com
+>
 > https://www.cnrancher.com/
+>
 > https://www.cnrancher.com/quick-start/
 
 作用：更方便的管理docker
@@ -45,7 +47,7 @@ docker run -p 8761:8761 -d springcloud2/eureka
 quick-start 中只需要两部。
 
 1. 在一台linux系统上装docker
-2. 运行命令`$sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher`
+2. 运行命令`$ sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher`
 3. 访问这台服务器 `https://<server_ip>`
 
 
