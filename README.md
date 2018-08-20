@@ -8,7 +8,10 @@
 > Git-Page地址（不与本项目同步更新）：https://zq99299.github.io/essay-note/
 
 
-## 关于里面有些路径跳转失效
+## GitBook
+> https://zq99299.gitbooks.io/essay-note/content/ 与git同步
+
+关于里面有些路径跳转失效
 
 路径跳转的具体地址是.md后缀的时候，就是没有在 SUMMARY.md 中列出这些文件；
 
