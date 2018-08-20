@@ -1,4 +1,5 @@
 # 服务网关
+探讨微服务架构下的服务网关，介绍Spring Cloud Zuul的使用, 路由转发, Cookie处理, 动态路由等Zuul路由相关的功能，也探讨了Zuul的高可用
 
 ## 服务网关和Zuul
 

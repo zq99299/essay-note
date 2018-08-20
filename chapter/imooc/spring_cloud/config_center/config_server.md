@@ -1,4 +1,6 @@
 # 统一配置中心 - ConfigServer
+介绍Spring Cloud Config组件搭配Spring Cloud Bus, 实现配置自动更新, 集成WebHook
+
 本节内容
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 

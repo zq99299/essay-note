@@ -1,4 +1,5 @@
 # 服务容错 上
+探讨熔断机制，Spring Cloud Hystrix的使用, Feign+Hystrix服务降级.
 
 * 服务容错和 hystrix
 * hystrix
