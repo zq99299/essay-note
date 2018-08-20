@@ -259,3 +259,14 @@ c3ccaf24ee0e        hub.c.163.com/library/nginx   "nginx -g 'daemon ..."   About
 ```
 docker run -d hub.c.163.com/library/nginx
 ```
+进入容器，
+```
+# -it 分配一个伪终端。 29 是容器id部分字符串， bash 是要运行的命令
+[root@localhost ~]# docker exec -it 29 bash
+root@29dc6a24c527:/# which nginx
+/usr/sbin/nginx
+
+# 使用exit可以退出容器；
+```
+
+进入容器的感觉像是进入了一个linux服务器。但是我这里测试，发现好多命令永不了，不知道是怎么回事，包括  ll 显示目录的也不能使用
