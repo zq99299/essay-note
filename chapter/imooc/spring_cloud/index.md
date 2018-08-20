@@ -63,7 +63,8 @@ Spring Cloud微服务实战
 * 第11章 服务追踪
 
   Spring Cloud Sleuth的使用, Sleuth搭配Zipkin, 直观获取跟踪信息和分析请求链路明细.
-  - [服务追踪 ](/chapter/imooc/spring_cloud/service_tracking/inde.md)
+  - [服务追踪 上](/chapter/imooc/spring_cloud/service_tracking/inde1.md)
+  - [服务追踪 下](/chapter/imooc/spring_cloud/service_tracking/inde2.md)
 * 第12章 容器部署
 
   使用Docker容器+Rancher容器管理平台部署微服务, 资源弹性分配, 容器编排与调度.
