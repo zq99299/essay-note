@@ -7,4 +7,5 @@
 ![](/assets/image/container/snipaste_20180821_104912.png)
 
 对于linux中的固定ip来说，一定记得 dns也需要手动，否则会外网链接不上
+
 ![](/assets/image/container/snipaste_20180821_110938.png)

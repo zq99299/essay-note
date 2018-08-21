@@ -25,3 +25,78 @@ quick-start 中只需要两部。
 
   ![](/assets/image/imooc/spring_cloud/snipaste_20180820_221357.png)
   需要在另外的机器上执行这个命令，server 和 worker 不要放在一台上面
+
+
+执行这个命令后，注册的主机没有任何信息；通过 docker log 容器id 查看到的日志显示:rancher waiting for node to register
+
+下面两个地址也是出现了这样的情况，不知道该怎么继续下去了
+
+```
+https://forums.rancher.com/t/worker-node-waiting-to-register-in-vagrant-virtualbox/10078
+
+https://github.com/rancher/rancher/issues/11365
+```
+
+最后加了qq群。有人指点：
+```
+1.关闭seliunx
+2.永久修改hostName
+3.固定内网IP
+4.修改时区和时间
+5.重启服务器以上4点挨个验证
+```
+
+* 关闭seliunx
+  ```bash
+  # 查看 seliunx 状态
+  getenforce
+
+  # 修改配置文件关闭
+  vim /etc/selinux/config
+
+  # This file controls the state of SELinux on the system.
+  # SELINUX= can take one of these three values:
+  #     enforcing - SELinux security policy is enforced.
+  #     permissive - SELinux prints warnings instead of enforcing.
+  #     disabled - No SELinux policy is loaded.
+  SELINUX=enforcing    把这里修改成 disabled
+  # SELINUXTYPE= can take one of three two values:
+  #     targeted - Targeted processes are protected,
+  #     minimum - Modification of targeted policy. Only selected processes are protected.
+  #     mls - Multi Level Security protection.
+  SELINUXTYPE=targeted
+
+  ```
+* 永久修改hostName
+
+  ```bash
+  # 打开后修改成唯一命名，要参与集群的机器都不要重名
+  vim /etc/hostname
+  ```
+* 固定内网ip
+
+  这个在ui里面修改的很方便。在上面hostName的时候，就可以使用固定字符串+ip后缀的方式来命名
+* 修改时区和时间
+
+  CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7
+  ```bash
+  最好的方法是使用timedatectl命令
+
+  timedatectl list-timezones |grep Shanghai    #查找中国时区的完整名称
+  # Asia/Shanghai
+  timedatectl set-timezone Asia/Shanghai    #其他时区以此类推
+  ```
+
+在主机上执行加入集群前，执行清理脚本
+
+cleanup.sh
+```bash
+#!/bin/sh
+docker rm -f $(docker ps -qa)
+docker volume rm $(docker volume ls -q)
+cleanupdirs="/var/lib/etcd /etc/kubernetes /etc/cni /opt/cni /var/lib/cni /var/run/calico /opt/rke"
+for dir in $cleanupdirs; do
+  echo "Removing $dir"
+  rm -rf $dir
+done
+```
