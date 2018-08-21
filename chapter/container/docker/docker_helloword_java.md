@@ -270,3 +270,126 @@ root@29dc6a24c527:/# which nginx
 ```
 
 进入容器的感觉像是进入了一个linux服务器。但是我这里测试，发现好多命令永不了，不知道是怎么回事，包括  ll 显示目录的也不能使用
+
+## docker 网络
+
+* 网络类型 ：网络也是一种隔离类型
+  - bridge ： 桥接模式（默认）
+  - host ：与宿主机使用同一个
+  - none
+* 端口映射 ：容器内的网络是隔离的，所以需要一种手段来访问到容器内的网络端口
+
+  ![](/assets/image/container/docker/snipaste_20180821_230931.png)
+  大概意思就是：宿主机上的端口映射到容器内的端口
+
+使用端口映射来运行nginx
+```bash
+# -p 端口映射：8080 是宿主机上的端口，80 是容器内的端口
+# 运行之后，就可以通过访问宿主机8080端口进行访问容器内的nginx了
+# -P 大写P,是把所有端口使用随机端口映射，可以通过docker ps 看到端口映射的详情
+docker run -d -p 8080:80 hub.c.163.com/library/nginx
+
+# 查看 8080端口是否ok
+netstat -na|grep 8080
+```
+
+## 制作自己的镜像
+
+* Dockerfile  ： 如何制作镜像，写代码
+* docker build ： 构建
+* Jpress：
+
+  http://jpress.io/  下载这个博客应用，然后用这个项目来练手
+  https://gitee.com/fuhai/jpress/tree/alpha/wars 下载这个
+
+Dockerfile
+```
+# 继承一个镜像，这里找一个tomcat，意思是以tomcat为一个基础点
+# docker pull hub.c.163.com/library/tomcat:latest
+# 先让那个去下载，这里接着写，到时候就不用再下载了
+from hub.c.163.com/library/tomcat:latest
+
+# 容器信息
+MAINTAINER liuguoguo xxx@163.com
+
+# 把这个war文件copy到某一个地方
+# 这里把之前下载的war复制到 tomcat中的一个目录中去
+# 可以查看镜像仓库 刚才下载的地方有说明怎么使用的。里面有一个目录就是用来放war包的
+COPY jpress-web-newest.war /usr/local/tomcat/webapps
+```
+这里我新建了一个目录，把Dockerfile和要打包的war都放在这个目录里面了，执行命令也是在这个目录里面
+
+运行命令：`docker build .`
+
+```
+[root@localhost dockerdemo]# docker build .
+Sending build context to Docker daemon  20.8 MB
+Step 1/3 : FROM hub.c.163.com/library/tomcat:latest
+ ---> 72d2be374029
+Step 2/3 : MAINTAINER liuguoguo xxx@163.com
+ ---> Using cache
+ ---> af2a0019bc2d
+Step 3/3 : COPY jpress-web-newest.war /usr/local/tomcat/webapps
+ ---> 75a573e4e281
+Removing intermediate container 9c88b6be1ef3
+Successfully built 75a573e4e281
+```
+可以看到执行了3个步骤；最后一步是把镜像移动到了 docker中；
+
+查看镜像，发现出现一个 none的镜像；
+```
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+<none>                         <none>              75a573e4e281        54 seconds ago      313 MB
+```
+
+这个是打包的时候没有指定名称和版本；重新编译下
+```
+docker build . -t jpress:latest
+
+# 可以使用--help命令查看docker build 的帮助信息
+```
+再次查看
+```bash
+[root@localhost dockerdemo]# docker images
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+jpress                         latest              75a573e4e281        3 minutes ago       313 MB
+
+```
+
+## 运行自己的容器
+
+镜像打好了，来运行这个镜像
+
+```bash
+# 镜像内部端口需要查看tomcat默认开放的端口是什么，因为我们之前没有做任何的修改
+docker run -d -p 8080:8080 jpress
+
+# 查看是否已经运行
+docker ps
+
+# 查看8080端口是否已经使用
+netstat -na|grep 8080
+```
+
+访问地址：http://localhost:8080/ 可以看到tomcat的页面了。
+
+由于默认的tomcatwar 是增加了项目名；所以访问：http://localhost:8080/jpress-web-newest (war包名就是这个，所以项目名就是war包名)
+
+已经打开了，使用该博客打开就有一个引导，需要填写数据库；
+
+这里在docker中运行一个mysql
+```bash
+# -e 是设置环境参数，这个是在镜像描述使用说明里面看到的
+# 这样可以设置一个root的用户名和密码
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=jpress hub.c.163.com/library/mysql:latest
+```
+
+结果也没有在该博客配置mysql的地方连接上mysql。在windows中连接mysql信息能连接上；
+
+进入jpress容器ping宿主机也能ping通,但是jpress的日志一直报错连接不上
+
+## 总结
+
+* 集装箱，标准化，隔离
+* 镜像、容器、仓库（BUILD SHIP RUN）
+* docker命令 pull,build,run,stop,restart,exec...

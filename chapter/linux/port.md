@@ -5,6 +5,9 @@
 iptables -I INPUT -p tcp --dport 9101 -j ACCEPT
 service iptables save
 service iptables restart
+
+# 查看 8080端口是否使用
+netstat -na|grep 8080
 ```
 
 ## centos7
