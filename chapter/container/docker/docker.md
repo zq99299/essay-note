@@ -64,6 +64,14 @@
   docker ps -a | grep "Exited" | awk '{print $1 }'|xargs docker rm
   ```
 
+  ```
+  Error response from daemon: conflict: unable to delete 0763c7d87fdd (cannot be forced) - image is being used by running container 5dfb520b0f44
+
+  上面的异常说删除的镜像正运行在5dfb520b0f44的容器上，先停止该容器
+  docker stop 5dfb520b0f44
+  再继续执行上面的操作，最后再执行删除操作就能被删除掉了
+  ```
+
 ## 配置 docker镜像加速器
 
 > https://www.cnblogs.com/zhxshseu/p/5970a5a763c8fe2b01cd2eb63a8622b2.html
