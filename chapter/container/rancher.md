@@ -117,3 +117,16 @@ done
 
     查看日志就一直显示rancher waiting for node to register
 ![](/assets/image/container/snipaste_20180821_225033.png)
+
+后来看了下官网的基础文档，可能是需要自己搭建k8s集群，然后使用rancher来管理；
+
+开启三个角色的机器上，过一会，会在webui中显示如下图一行的红色提醒；这里提醒一个下载一个，看看最后能不能让它跑起来
+
+![](/assets/image/container/snipaste_20180822_010853.png)
+
+```
+docker pull rancher/rke-tools:v0.1.13
+docker pull rancher/hyperkube:v1.11.1-rancher1
+```
+下载完成这两个，发现ui中的红色信息变化了，最后部署ok了 停留在下面的图中
+![](/assets/image/container/snipaste_20180822_011327.png)
