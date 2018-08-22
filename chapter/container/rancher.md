@@ -7,6 +7,12 @@
 
 作用：更方便的管理docker
 
+> 以下尝试笨笨：
+
+* server端 rancher/rancher:latest  ,看不到具体的版本
+* agent 是2.0.7
+
+
 ## quick-start
 quick-start 中只需要两部。
 
@@ -76,6 +82,10 @@ https://github.com/rancher/rancher/issues/11365
 * 固定内网ip
 
   这个在ui里面修改的很方便。在上面hostName的时候，就可以使用固定字符串+ip后缀的方式来命名
+  ```
+  # 关闭防火墙：
+  systemctl disable firewalld.service
+  ```
 * 修改时区和时间
 
   CentOS7、RHEL7、Scientific Linux 7、Oracle Linux 7
@@ -129,4 +139,25 @@ docker pull rancher/rke-tools:v0.1.13
 docker pull rancher/hyperkube:v1.11.1-rancher1
 ```
 下载完成这两个，发现ui中的红色信息变化了，最后部署ok了 停留在下面的图中
+> 经过后续的观察，看到这个的时候
+> 	Runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized  基本上就是还在下载东西，只要等待就好了。一直挂着，如果你的网速很好，应该会很快
+
 ![](/assets/image/container/snipaste_20180822_011327.png)
+
+经过后面的观察，红色提示的应该是正在执行的操作，可能下载这个镜像很慢很慢的缘故
+
+实测这样是能激活的。 网速慢的话，会等待很久。可以一个容器一个容器的去查看日志信息。
+
+图中看到激活的这个大概等待了1个多小时。
+
+dc02这个worker去查看容器日志的话，会发现在大量的下载东西。可能是需要等待下载完成才可以链接上；看到日志中下载的大小 貌似都一两个g的东西
+![](/assets/image/container/snipaste_20180822_105255.png)
+
+![](/assets/image/container/snipaste_20180822_105537.png)
+
+可以在工作负载中来查看正在执行的任务；之前我在dc2也就是130上查看日志，
+
+就发现他在下载	nginx-ingress-controller 这个镜像
+
+现在看来。需要等待他这里的工作完成，才能链接上
+![](/assets/image/container/snipaste_20180822_111715.png)

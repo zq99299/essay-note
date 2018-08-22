@@ -71,4 +71,4 @@ Spring Cloud微服务实战
 
   - [运行第一个docker容器](/chapter/imooc/spring_cloud/container_deployment/first.md)
   * 以下不是视频内容
-  * [容器相关只是](/chapter/container/index.md)
+  * [容器相关知识](/chapter/container/index.md)

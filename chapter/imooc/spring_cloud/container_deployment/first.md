@@ -35,6 +35,11 @@ docker run -p 8761:8761 -d springcloud2/eureka
 
 
 ## rancher
+该章节请参考：[容器相关知识](/chapter/container/index.md)
+
+该章节老师并没有详细解说，是直接在他已经弄好的机器上演示的。
+并不是他演示那样（也就是下面笔记记录的这个），就能看到效果的
+
 > https://rancher.com
 >
 > https://www.cnrancher.com/
