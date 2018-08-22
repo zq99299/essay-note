@@ -64,6 +64,7 @@
     - [基于数据库Rbac数据模型控制权限](/chapter/imooc/spring_security/authority/rbac_db.md)
   * [总结](/chapter/imooc/spring_security/summarize.md)
 * [慕课网Spring Cloud微服务实战笔记](chapter/imooc/spring_cloud/index.md)
+* [慕课网JAVA设计模式精讲 Debug 方式+内存分析](chapter/imooc/design_pattern/index.md)
 * [开发技巧](chapter/skill/index.md)
 * [英语单词工厂](chapter/english_factory/index.md)
 * [编辑器](chapter/editor/index.md)
