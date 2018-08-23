@@ -14,4 +14,6 @@
 
 * markdown-img-paste  # 可以直接粘贴图片，简直太方便
 
-  默认把图片复制到当前md文件同级目录的assets目录中
+  默认把图片复制到当前md文件同级目录的assets目录中；
+
+  快捷键是：ctrl + shift + v 粘贴图片
