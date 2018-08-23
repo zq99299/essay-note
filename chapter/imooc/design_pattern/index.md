@@ -18,10 +18,13 @@
 
   本章节主要讲解大家能收获什么，课程具体包含哪些内容，通过哪些方式来学习设计模式，以及怎么讲，怎么安排，通过本章的学习，让大家为整个课程高效的学习打下基础。
   - [课程导学](/chapter/imooc/design_pattern/01/课程导学.md)
-  - [本章导航](/chapter/imooc/design_pattern/01/本章导航.md)
+
 * 第2章 UML急速入门
 
   本章节主要讲解UML基础、UML类图、UML类关系、UML时序图、UML类关系记忆技巧等，让大家急速入门UML，从而为后面设计模式的学习做好准备。
+
+  - [本章导航](/chapter/imooc/design_pattern/02_uml/本章导航.md)
+  - [UML 类图讲解](/chapter/imooc/design_pattern/02_uml/UML类图讲解.md)
 
 * 第3章 软件设计七大原则
 
