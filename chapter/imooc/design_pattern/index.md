@@ -29,7 +29,8 @@
 * 第3章 软件设计七大原则
 
   本章节主要讲解软件设计七大原则，同时结合业务场景及演进手把手coding，让大家更好的理解软件设计原则。
-
+  - [本章导航](/chapter/imooc/design_pattern/03_design_principles/本章导航.md)
+  - [开闭原则](/chapter/imooc/design_pattern/03_design_principles/open_close.md)
 * 第4章 简单工厂讲解+Coding+源码解析
 
   本章节主要讲解简单工厂定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对简单工厂在框架(jdk+slf4j等)源码中的应用进行解析，让大家领略简单工厂的妙用技巧。
