@@ -35,6 +35,7 @@
   - [单一职责原则](/chapter/imooc/design_pattern/03_design_principles/single_responsibility.md)
   - [接口隔离原则](/chapter/imooc/design_pattern/03_design_principles/interface_segregation.md)
   - [迪米特原则](/chapter/imooc/design_pattern/03_design_principles/demeter.md)
+  - [里氏替换原则](/chapter/imooc/design_pattern/03_design_principles/liskov_substitution.md)
 
 * 第4章 简单工厂讲解+Coding+源码解析
 
