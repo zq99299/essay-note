@@ -36,11 +36,11 @@
   - [接口隔离原则](/chapter/imooc/design_pattern/03_design_principles/interface_segregation.md)
   - [迪米特原则](/chapter/imooc/design_pattern/03_design_principles/demeter.md)
   - [里氏替换原则](/chapter/imooc/design_pattern/03_design_principles/liskov_substitution.md)
-  - [合成复用原则](/chapter/imooc/design_pattern/03_design_principles/合成复用.md)
+  - [合成复用原则](/chapter/imooc/design_pattern/03_design_principles/composition_aggeregation.md)
 * 第4章 简单工厂讲解+Coding+源码解析
 
   本章节主要讲解简单工厂定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对简单工厂在框架(jdk+slf4j等)源码中的应用进行解析，让大家领略简单工厂的妙用技巧。
-
+  - [简单工厂](/chapter/imooc/design_pattern/03_design_principles/simple_factory.md)
 * 第5章 工厂方法模式讲解+Coding+源码解析
 
   本章节主要讲解工厂方法模式定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对工厂方法模式在框架(jdk+slf4j等)源码中的应用进行解析，让大家领略工厂方法模式的妙用技巧。
