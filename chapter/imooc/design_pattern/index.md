@@ -32,6 +32,7 @@
   - [本章导航](/chapter/imooc/design_pattern/03_design_principles/本章导航.md)
   - [开闭原则](/chapter/imooc/design_pattern/03_design_principles/open_close.md)
   - [依赖倒置原则](/chapter/imooc/design_pattern/03_design_principles/dependency_inversion.md)
+  - [单一职责原则](/chapter/imooc/design_pattern/03_design_principles/single_responsibility.md)
 
 * 第4章 简单工厂讲解+Coding+源码解析
 
