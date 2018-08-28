@@ -180,6 +180,11 @@ public static Logger getLogger(String name) {
 }
 ```
 
+## 源码的阅读
+
+1. 可以通过上面类图的查看方式，了解一些主要类的情况
+2. 可以通过设计模式来聚焦理解
+
 ## 关联阅读
 
 [李兴华-简单工厂](/chapter/design_pattern/简单工厂.md)
