@@ -12,6 +12,8 @@
 
 ![](/assets/image/imooc/design_pattern/master.png)
 
+> 我自己使用jdk8.
+
 ## 导航目录
 
 * 第1章 课程导学

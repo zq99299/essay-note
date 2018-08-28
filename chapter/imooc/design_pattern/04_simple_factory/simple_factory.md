@@ -131,3 +131,55 @@ public class Test {
 这个改进在一定成都上满足了开闭原则，对于新增课程，工厂类不需要修改，但是 客户端又依赖了具体的实现类。
 
 所以说，设计模式和设计原则只能是适度，并且结合当前的业务模型，做一个权衡的取舍，没有固定的好方式
+
+## jdk 中部分类使用简单工厂的源码
+
+```java
+java.util.Calendar
+
+Calendar.getInstance() 获取日历对象的实例就是一个简单工厂
+
+public static Calendar getInstance()
+{
+    return createCalendar(TimeZone.getDefault(), Locale.getDefault(Locale.Category.FORMAT));
+}
+
+private static Calendar createCalendar(TimeZone zone,
+                                       Locale aLocale)
+{
+    CalendarProvider provider =
+        LocaleProviderAdapter.getAdapter(CalendarProvider.class, aLocale)
+                             .getCalendarProvider();
+    if (provider != null) {
+        try {
+            // 提供者，根据传入的时区和 地区 获取实例，这就是一个简单工厂的例子
+            return provider.getInstance(zone, aLocale);
+        } catch (IllegalArgumentException iae) {
+            // fall back to the default instantiation
+        }
+    }
+```
+
+这里记录下，在idea中怎么看uml类图，之前是不会看
+
+![](assets/markdown-img-paste-20180828221511718.png)
+
+上图打开之后，默认只会显示 这一个类的父类，子类怎么显示呢?
+
+![](assets/markdown-img-paste-20180828221613610.png)
+
+### 日志框架
+
+```java
+org.slf4j.LoggerFactory#getLogger(java.lang.Class<?>)
+
+public static Logger getLogger(String name) {
+    ILoggerFactory iLoggerFactory = getILoggerFactory();
+    // 也是根据名称返回实例
+    return iLoggerFactory.getLogger(name);
+}
+```
+
+## 关联阅读
+
+[李兴华-简单工厂](/chapter/design_pattern/简单工厂.md)
