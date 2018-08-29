@@ -43,13 +43,18 @@
 
   本章节主要讲解简单工厂定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对简单工厂在框架(jdk+slf4j等)源码中的应用进行解析，让大家领略简单工厂的妙用技巧。
   - [简单工厂](/chapter/imooc/design_pattern/04_simple_factory/simple_factory.md)
+
 * 第5章 工厂方法模式讲解+Coding+源码解析
 
   本章节主要讲解工厂方法模式定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对工厂方法模式在框架(jdk+slf4j等)源码中的应用进行解析，让大家领略工厂方法模式的妙用技巧。
 
+    - [工厂方法模式](/chapter/imooc/design_pattern/05_factory_method/factory_method.md)
+
 * 第6章 抽象工厂模式讲解+Coding+源码解析
 
   本章节主要讲解抽象工厂模式定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对抽象工厂模式在框架(jdk+mybatis等)源码中的应用进行解析，让大家领略抽象工厂模式的妙用技巧。
+
+    - [抽象工厂模式](/chapter/imooc/design_pattern/05_factory_method/factory_method.md)
 
 * 第7章 建造者模式讲解+Coding+源码解析
 

@@ -26,7 +26,7 @@
   增加新的产品，需要修改工厂类的判断逻辑，违背开闭原则
 ## coding
 
-> https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_Type
+> 维基百科： https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_Type
 
 Creational 中是没有简单工厂模式的。所以不属于 GOF23 种设计模式
 
