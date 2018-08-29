@@ -54,7 +54,7 @@
 
   本章节主要讲解抽象工厂模式定义及理解，适用场景，优缺点及扩展。并引入业务场景，一边coding一边讲解，最后对抽象工厂模式在框架(jdk+mybatis等)源码中的应用进行解析，让大家领略抽象工厂模式的妙用技巧。
 
-    - [抽象工厂模式](/chapter/imooc/design_pattern/05_factory_method/factory_method.md)
+    - [抽象工厂模式](/chapter/imooc/design_pattern/06_abstract_factory/abstract_factory.md)
 
 * 第7章 建造者模式讲解+Coding+源码解析
 
