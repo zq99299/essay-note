@@ -1,10 +1,12 @@
 # spring-restdocs-asciidoctor
 
-> spring官网教程 - 里面有相关构建工具的插件引入方式
-> https://docs.spring.io/spring-restdocs/docs/current/reference/html5/
->
-> asciidoctor 官网文档：生成的文档侧栏等信息 就是在该文档中找到的
-> https://asciidoctor.org/docs/user-manual/#left-or-right-column-layout
+*  [spring官网教程](https://docs.spring.io/spring-restdocs/docs/current/reference/html5/)
+
+    里面有相关构建工具的插件引入方式
+*  [AsciiDoc 官网文档](https://asciidoctor.org/docs/user-manual/#left-or-right-column-layout)：
+
+    生成的文档侧栏等信息 就是在该文档中找到的
+* [ AsciiDoc 语法快速参考](https://asciidoctor.org/docs/asciidoc-syntax-quick-reference)
 
 我在百度找了很多资料，基本上都是对官网文档的翻译，或则是很古老的版本； 这次是spring boot2版本；
 
