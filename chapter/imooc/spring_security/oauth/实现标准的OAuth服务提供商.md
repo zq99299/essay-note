@@ -218,6 +218,14 @@ scope=all
 }
 ```
 
+**注意：** 如果报错,那么就把 `redirect_uri=http://example.com/` 换成 `http://www.example.com`
+```javascript
+{
+    "error": "invalid_grant",
+    "error_description": "Redirect URI mismatch."
+}
+```
+
 ## 密码授权模式
 basic信息：是client信息
 
