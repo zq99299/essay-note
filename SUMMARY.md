@@ -63,6 +63,8 @@
     - [权限表达式](/chapter/imooc/spring_security/authority/expression.md)
     - [基于数据库Rbac数据模型控制权限](/chapter/imooc/spring_security/authority/rbac_db.md)
   * [总结](/chapter/imooc/spring_security/summarize.md)
+  * [个人实战技巧记录](/chapter/imooc/spring_security/actual_combat_skills.md)
+  * org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter#doFilter
 * [慕课网Spring Cloud微服务实战笔记](chapter/imooc/spring_cloud/index.md)
 * [慕课网JAVA设计模式精讲 Debug 方式+内存分析 笔记](chapter/imooc/design_pattern/index.md)
 * [开发技巧](chapter/skill/index.md)
