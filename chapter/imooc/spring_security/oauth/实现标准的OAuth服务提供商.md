@@ -114,6 +114,8 @@ public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter
 }
 ```
 
+**注意：** 只有正确的在 basic 登录框中输入了用户名密码，才会跳转，不然这个弹框会一直无限弹出的。
+
 再次登录再次报错：
 ```
 error="invalid_request", error_description="At least one redirect_uri must be registered with the client."
@@ -256,6 +258,9 @@ grant_type=client_credentials&scope=all
 ## 资源服务器
 
 **注意：** 不加资源服务器的时候，貌似任意服务都不能访问。不知道是不是配置了basic认证的问题
+
+> 后补：根据笔记实践的时候，只加 @EnableAuthorizationServer 配置，是不会拦截任何访问的，
+> 只有当开启了 资源服务器 @EnableResourceServer，访问任意资源才会被拦截，需要带上 token 进行访问
 
 ```java
 package cn.mrcode.imooc.springsecurity.securitycore;
