@@ -15,7 +15,7 @@ postman 中打印的是这样的信息
 ```javascript
 {
     "error": "invalid_token",
-    "error_description": "Invalid access token: 3475de40-6617-4831-9a28-ca42bae2ca97"
+    "error_description": "Access token expired: 13f43f2d-27b2-49b3-82f5-cf31838ef79b"
 }
 ```
 
