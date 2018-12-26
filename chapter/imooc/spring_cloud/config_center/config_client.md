@@ -58,6 +58,11 @@ spring:
 
 这个时候的解决访问就是；把eureka的配置放在  bootstrap.yml 中
 
+**注意：** bootstrap.yml 也可以分环境，但是必须 公共 bootstrap.yml 文件必须存在。才能添加 bootstrap-dev.yml;
+这样一来对于 eureka 的配置也能分环境加载了
+
+**注意：** 配置文件可以混合部署； 如：可以只把 prod 配置放在配置中心，dev 的就放在项目中
+
 ## 热更新测试
 
 当初使用配置中心的理由之一就是：需要不启动机器，配置也能进行热更新

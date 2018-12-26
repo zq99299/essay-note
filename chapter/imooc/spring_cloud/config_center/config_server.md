@@ -149,6 +149,15 @@ http://localhost:9050/order-a.json
 ```
 该控制器返回的配置对象，还有自动检测文件内容格式是否正确的功能；如果配置文件的格式不对的话，会报错
 
+## 对于配置文件的路径格式
+
+> [官网-查找远程配置资源](https://cloud.spring.io/spring-cloud-config/2.0.x/single/spring-cloud-config.html#_locating_remote_configuration_resources)
+
+文件命名格式：`{name}-{profile}-{label}.yml`
+
+- name: 应用名称 spring.application.name
+- profile：环境 spring.profiles.dev
+- label：文件存放在 git 上的分支，主分支可以不写
 
 ## 自定义git克隆在本地的路径
 在项目启动打印日志里面你可能会看到这样的日志信息;那么该路径就是默认存储的
