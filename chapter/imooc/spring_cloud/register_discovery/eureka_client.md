@@ -109,3 +109,31 @@ eureka:
 ```
 
 为啥在实际测试总，也没有看到有下线呢？很奇怪
+
+## 实战后补
+
+### 实例 id
+
+在 eureka 控制中心（web界面） 显示的每个实例的地址来源是：
+
+`${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}`
+
+比如：example myhost:myappname:8080
+
+也就是说只要更改以上信息，则会更改实例 id，那么实例 ID,文档是推荐使用 ip 而不是主机名，
+这里的 hostname 需要更改成 ip；如下：
+
+// 全局搜索 spring.cloud.client.hostname 能定位到以下类，并看到源码是自动填充的
+org.springframework.cloud.client.HostInfoEnvironmentPostProcessor#postProcessEnvironment
+
+```java
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true  # 使用 ip
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9500/eureka/
+```
+
+那么在注册中心界面上显示名：	UP (1) - USER-UHN4OVOOGF:应用名:9536 ，点击跳转的时候就是 ip:端口号，就能解决在正数环境中找不到 hostname 的问题了
