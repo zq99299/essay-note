@@ -99,6 +99,30 @@ public class EnvController {
 家里网络太差，在webHooks回调的时候，发生了参数解析异常。到时候再看看是怎么回事；
 
 码云的webhooks发送的参数，不能被正常解析，视频中说使用github来演示
+
+> 实战后补
+
+在 gitlab 中也出现了参数解析异常的，发送过来的 json 串多了最后一个字符"]"，导致 json 解析失败。
+
+解决方案：重新写一个 Controller 转调
+
+```java
+@RestController
+@Slf4j
+public class EventPushForwardController {
+    // 全文搜索 bus-refresh 找到目标类
+    @Autowired
+    private RefreshBusEndpoint refreshBusEndpoint;
+
+    @RequestMapping("/actuatorx/bus-refresh")
+    public void busRefresh() {
+        refreshBusEndpoint.busRefresh();
+        log.info("配置更新推送");
+    }
+}
+
+```
+
 ## natapp 使用教程
 > 官网：https://natapp.cn
 > 新手一分钟教程：https://natapp.cn/article/natapp_newbie
