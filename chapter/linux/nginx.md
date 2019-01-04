@@ -1,4 +1,4 @@
-# nginx 
+# nginx
 
 ## 安装
 
@@ -170,10 +170,10 @@ http {
 
     gzip  on;
     gzip_disable "msie6";
-    # gzip_static on; 
+    # gzip_static on;
     gzip_proxied any;
-    gzip_min_length 1000; 
-    gzip_comp_level 4; 
+    gzip_min_length 1000;
+    gzip_comp_level 4;
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
 
     server {
@@ -214,3 +214,33 @@ http {
 }
 
 ```
+
+## 通过 yum 安装
+
+```
+# 添加官网的源地址
+sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+# 6 版本装以下的 通过 lsb_release -a 查询版本
+sudo rpm -Uvh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm
+# 安装依赖
+sudo yum -y install gcc automake autoconf libtool make
+sudo yum install -y nginx
+```
+
+以下是Nginx的默认路径：
+
+(1) Nginx配置路径：/etc/nginx/
+
+(2) PID目录：/var/run/nginx.pid
+
+(3) 错误日志：/var/log/nginx/error.log
+
+(4) 访问日志：/var/log/nginx/access.log
+
+(5) 默认站点目录：/usr/share/nginx/html
+
+nginx   启动
+
+nginx -t  测试命令
+
+nginx -s reload 修改nginx.conf之后，可以重载
