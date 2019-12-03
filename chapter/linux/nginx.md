@@ -322,4 +322,8 @@ crontab -e
 # 每 3 个月的月末  23:50 分 执行一次
 # 通过调整 2、5、8、11 月
 50 23 28-31 2,5,8,11 * [ `date -d tomorrow +\%e` -eq 1 ] && /updatehttps.sh > /updatehttps.logs
+
+updatehttps.sh 内容如下
+#!/bin/sh
+certbot-auto renew
 ```
