@@ -244,3 +244,82 @@ nginx   启动
 nginx -t  测试命令
 
 nginx -s reload 修改nginx.conf之后，可以重载
+
+## 获得免费的 ssl 证书 https
+```bash
+server {
+        listen 80;
+        server_name mrcode.com;
+        charset utf-8;
+
+        #access_log  logs/host.access.log  main;
+        #gzip 参考 http://web.facesoho.com/server/nginx-precompression.html
+        #启动预压缩功能，对所有类型的文件都有效，优先找到xx.gz 的文件
+        gzip_static on;
+        #找不到预压缩文件，进行动态压缩
+        gzip on;
+        gzip_min_length 3k;
+        gzip_buffers 4 16k;
+        #gzip_http_version 1.0;
+        gzip_comp_level 2;
+        gzip_types text/plain application/x-javascript application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+        gzip_vary off;
+        gzip_disable "MSIE [1-6]\.";
+
+        location / {
+                root   /mnt/service/tlz-shopify-plugin-edm-app;
+                try_files $uri $uri/ /index.html =404;
+                # 测试功能，发布新版本后，不需要强刷，只需要按 f5 刷新，就能获取新版本
+                if ($request_filename ~* .*\.(?:htm|html)$){
+                        add_header Cache-Control "private, no-store, no-cache, must-revalidate, proxy-revalidate";
+                }
+                if ($request_filename ~* .*\.(?:js|css)$){
+                        expires      7d;
+                }
+                if ($request_filename ~* .*\.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm)$){
+                        expires      7d;
+                }
+        }
+        # 拦截api开头的请求，代理到目标地址
+        location ^~ /api/ {
+                        #设置主机头和客户端真实地址，以便服务器获取客户端真实 IP
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                #禁用缓存
+                proxy_buffering off;
+                proxy_pass http://localhost:15000;
+                client_max_body_size 500M;
+        }
+        # 这里的信息是下面的 certbot-auto 自动添加的
+        listen 443 ssl; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/em.pluginappstore.com/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/em.pluginappstore.com/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}        
+```
+
+certbot-auto 使用方法
+
+```bash
+# 前提是：你的域名 80 端口要先配置好，执行后会自动找到 80 端口的文件，然后帮你添加
+wget https://dl.eff.org/certbot-auto
+sudo mv certbot-auto /usr/local/bin/certbot-auto
+## 修改为你当前的用户
+sudo chown root /usr/local/bin/certbot-auto
+sudo chmod 0755 /usr/local/bin/certbot-auto                    
+# 在这期间，会要求你输入你的邮箱、域名
+sudo certbot-auto --nginx   
+
+certbot-auto renew 重新更新
+```
+
+crontab 脚本 3 个月更新一次证书
+
+```bash
+crontab -e
+# 每 3 个月的月末  23:50 分 执行一次
+# 通过调整 2、5、8、11 月
+50 23 28-31 2,5,8,11 * [ `date -d tomorrow +\%e` -eq 1 ] && /updatehttps.sh > /updatehttps.logs
+```
