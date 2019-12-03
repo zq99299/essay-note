@@ -1,4 +1,6 @@
-Spring Cloud微服务实战
+# Spring Cloud微服务实战
+
+笔记练习代码：https://github.com/zq99299/immoc-spring-cloud  （感觉笔记中已经包含了大部分练习代码）
 
 * [第1章 课程介绍](/chapter/imooc/spring_cloud/introduce.md)
 * 第2章 微服务介绍

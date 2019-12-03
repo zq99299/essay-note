@@ -18,7 +18,7 @@
   提供类似与正则表达式的字符串截取
   // callback( {"client_id":"YOUR_APPID","openid":"YOUR_OPENID"} );
   // 返回 YOUR_OPENID
-  StringUtils.substringBetween("\"openid\":", "\"}");
+  StringUtils.substringBetween(str,"\"openid\":", "\"}");
 
   ---------------------------------------------------------------
   替代传统多次按等号分割，但是又只想获取值的情况
